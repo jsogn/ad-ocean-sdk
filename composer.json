@@ -17,8 +17,6 @@
   "require": {
     "php": ">=8.2",
     "guzzlehttp/guzzle": "^7.8",
-    "doctrine/collections": "^2.1",
-    "symfony/string": "^6.3",
     "yzen.dev/plain-to-class": "^3.0",
     "w7/engine-validate": "^5.0"
   },

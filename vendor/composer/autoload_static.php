@@ -18,11 +18,8 @@ class ComposerStaticInitdc22ea779fb3bd8ebde790943e86d7ac
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'b08810a32608cd2896e9d6ceb0e330a7' => __DIR__ . '/..' . '/itwmw/validation/src/helper.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '30822179f1efc4fd22afa47e0cbdd6c5' => __DIR__ . '/..' . '/w7/engine-validate/src/Support/helpers.php',
     );
 
@@ -38,11 +35,8 @@ class ComposerStaticInitdc22ea779fb3bd8ebde790943e86d7ac
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
-            'Symfony\\Polyfill\\Intl\\Grapheme\\' => 31,
-            'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Mime\\' => 23,
         ),
         'P' => 
@@ -68,8 +62,6 @@ class ComposerStaticInitdc22ea779fb3bd8ebde790943e86d7ac
         ),
         'D' => 
         array (
-            'Doctrine\\Deprecations\\' => 22,
-            'Doctrine\\Common\\Collections\\' => 28,
             'DeepCopy\\' => 9,
         ),
         'C' => 
@@ -112,14 +104,6 @@ class ComposerStaticInitdc22ea779fb3bd8ebde790943e86d7ac
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
         ),
-        'Symfony\\Polyfill\\Intl\\Grapheme\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme',
-        ),
-        'Symfony\\Polyfill\\Ctype\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-        ),
         'Symfony\\Contracts\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation-contracts',
@@ -127,10 +111,6 @@ class ComposerStaticInitdc22ea779fb3bd8ebde790943e86d7ac
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Symfony\\Component\\String\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/string',
         ),
         'Symfony\\Component\\Mime\\' => 
         array (
@@ -186,14 +166,6 @@ class ComposerStaticInitdc22ea779fb3bd8ebde790943e86d7ac
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
-        ),
-        'Doctrine\\Deprecations\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
-        ),
-        'Doctrine\\Common\\Collections\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/collections/src',
         ),
         'DeepCopy\\' => 
         array (
