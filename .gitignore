@@ -3,4 +3,6 @@
 ./composer.lock
 ./index.php
 ./doc.json
-vendor
+/vendor/
+
+composer.lock
