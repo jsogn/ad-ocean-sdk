@@ -2,6 +2,7 @@
 
 namespace AdOceanSdk;
 
+use AdOceanSdk\Kernel\Interface\InterceptorInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use AdOceanSdk\Kernel\Data\Data;
@@ -19,9 +20,11 @@ class RequestClient implements RequestClientInterface
 
     private array $headers = [];
 
+    private InterceptorInterface $interceptor;
+
     private function __construct()
     {
-
+        $this->interceptor = new RequestClientInterceptor();
     }
 
     public function setAccessToken($token): self
@@ -58,10 +61,14 @@ class RequestClient implements RequestClientInterface
             $options['timeout'] = $requestApi->getTimeout();
         }
 
-        $response = $this->getHttpClient()
+        $options         = $this->interceptor->request($options);
+        $response        = $this->getHttpClient()
             ->request($method, $requestApi->getAddress(), $options);
+        $responseArray   = json_decode($response->getBody()->getContents(), true);
+        $requestResponse = RequestResponse::from($responseArray);
+        $requestResponse->setRawArray($responseArray);
 
-        return RequestResponse::fromJsonString($response->getBody()->getContents());
+        return $this->interceptor->response($requestResponse);
     }
 
     public static function make(): self
@@ -93,5 +100,17 @@ class RequestClient implements RequestClientInterface
         $this->headers[$key] = $value;
 
         return $this;
+    }
+
+    public function setInterceptor(InterceptorInterface $interceptor): RequestClient
+    {
+        $this->interceptor = $interceptor;
+
+        return $this;
+    }
+
+    private function responseInterceptor()
+    {
+
     }
 }

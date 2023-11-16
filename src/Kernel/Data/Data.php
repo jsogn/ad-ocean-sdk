@@ -8,13 +8,7 @@ abstract class Data implements DataInterface
 {
     public static function from(array $data): static
     {
-        $camelNameData = [];
-
-        foreach ($data as $key => $val) {
-            $camelNameData[$key] = $val;
-        }
-
-        return Hydrator::init()->create(static::class, $camelNameData);
+        return Hydrator::init()->create(static::class, $data);
     }
 
     public static function collection(array $data): array
@@ -48,7 +42,11 @@ abstract class Data implements DataInterface
         $array      = [];
 
         foreach ($properties as $key => $value) {
-            $array[$key] = $value;
+            if ($value instanceof Data) {
+                $array[$key] = $value->toArray();
+            } else {
+                $array[$key] = $value;
+            }
         }
 
         return $array;

@@ -1,8 +1,7 @@
 .idea
 *.iml
-./composer.lock
-./index.php
-./doc.json
+index.php
+doc.json
 /vendor/
 
 composer.lock

@@ -16,17 +16,4 @@ class RequestResponse extends Data implements ResponseInterface
     {
         return $this->data;
     }
-
-    /**
-     * 获取分页信息
-     * @return ResponsePageInfoData|null
-     */
-    public function getPageInfo(): ?ResponsePageInfoData
-    {
-        if ($this->data['page_info'] ?? null) {
-            return null;
-        }
-
-        return ResponsePageInfoData::from($this->data['page_info']);
-    }
 }

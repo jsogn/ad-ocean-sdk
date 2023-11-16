@@ -8,6 +8,8 @@ trait ResponseTrait
     public string $message;
     public string $request_id;
 
+    public array  $_rawArray = [];
+
     public static function fromJsonString(string $jsonString): static
     {
         $response = json_decode($jsonString, true);
@@ -33,5 +35,15 @@ trait ResponseTrait
     public function getRequestId(): string
     {
         return $this->request_id;
+    }
+
+    public function getRawArray(): array
+    {
+        return $this->_rawArray;
+    }
+
+    public function setRawArray(array $rawArray): void
+    {
+        $this->_rawArray = $rawArray;
     }
 }

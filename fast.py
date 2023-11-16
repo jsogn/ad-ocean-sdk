@@ -154,6 +154,9 @@ json_data = json.dumps(data, indent=4, ensure_ascii=False)
 with open("doc.json", "w") as file:
     file.write(json_data)
 
+if (sys.argv[2] is None):
+    exit('gen code path not valid')
+
 # 运行命令
 exit_code = os.system('cd ./script && php ./gen_code_template.php ' + sys.argv[2])
 # 检查命令的退出状态码
