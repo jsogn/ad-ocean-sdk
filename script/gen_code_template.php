@@ -162,7 +162,7 @@ CODE;
         }
 
         if (in_array($param['type'], ['string[]', 'number[]'])) {
-            $tipType = rtrim($param['type'], '[]');
+            $tipType = generatePhpType(rtrim($param['type'], '[]'));
             $docType = "array<{$tipType}>";
         }
 

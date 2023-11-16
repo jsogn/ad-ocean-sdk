@@ -24,6 +24,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取广告主账户头像
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710512904192
+    **/
+    'openAdvertiserAvatarGetApi' => [
+        'desc' => '获取广告主账户头像',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710512904192',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserAvatarGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserAvatarGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserAvatarGetResponse::class,
+    ],
+    /**
     * @desc 获取广告主信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710508983311
     **/
