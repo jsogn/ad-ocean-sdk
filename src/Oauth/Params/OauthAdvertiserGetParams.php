@@ -6,7 +6,7 @@ namespace AdOceanSdk\Oauth\Params;
 
 use AdOceanSdk\RequestParams;
 
-class AdvertiserGetParams extends RequestParams
+class OauthAdvertiserGetParams extends RequestParams
 {
 
     /**

@@ -4,7 +4,7 @@ namespace AdOceanSdk\Oauth\Data;
 
 use AdOceanSdk\Kernel\Data\Data;
 
-class AccessTokenGetData extends Data
+class OauthAccessTokenGetData extends Data
 {
     /**
      * @var string 用于验证权限的token

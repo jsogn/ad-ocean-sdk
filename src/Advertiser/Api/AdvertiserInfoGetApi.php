@@ -1,6 +1,6 @@
 <?php
 
-namespace AdOceanSdk\Account\Api;
+namespace AdOceanSdk\Advertiser\Api;
 
 use AdOceanSdk\Kernel\Interface\RequestParamInterface;
 use AdOceanSdk\RequestApi;
@@ -10,16 +10,16 @@ use AdOceanSdk\RequestMethodEnum;
  * @desc 获取广告主信息
  * @doc  https://open.oceanengine.com/labels/7/docs/1696710508983311
  */
-class AccountAdvertiserInfoGetApi extends RequestApi
+class AdvertiserInfoGetApi extends RequestApi
 {
     protected string $address = 'open_api/2/advertiser/info/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::GET;
 
-    public function call(\AdOceanSdk\Account\Params\AccountAdvertiserInfoGetParams|RequestParamInterface|array $params = []): \AdOceanSdk\Account\Response\AccountAdvertiserInfoGetResponse
+    public function call(\AdOceanSdk\Advertiser\Params\AdvertiserInfoGetParams|RequestParamInterface|array $params = []): \AdOceanSdk\Advertiser\Response\AdvertiserInfoGetResponse
     {
         $response = parent::call($params);
 
-        return \AdOceanSdk\Account\Response\AccountAdvertiserInfoGetResponse::from($response->toArray());
+        return \AdOceanSdk\Advertiser\Response\AdvertiserInfoGetResponse::from($response->toArray());
     }
 }

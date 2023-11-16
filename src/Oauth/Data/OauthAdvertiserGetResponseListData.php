@@ -7,7 +7,7 @@ namespace AdOceanSdk\Oauth\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // 账号列表
-class AdvertiserGetResponseListData extends Data
+class OauthAdvertiserGetResponseListData extends Data
 {
 
     /**
@@ -41,9 +41,9 @@ class AdvertiserGetResponseListData extends Data
     public string $account_role;
     
     /**
-     * @var array<\AdOceanSdk\Oauth\Data\AdvertiserGetResponseListCompanyListData> $company_list 代理商账户下勾选账户，但授权时选择的是代理商类型账户时，该字段才有意义company_list为空时，代表当前代理商账户下所有adv均可访问；不为空时，代表仅能访问该部分客户id下的adv
+     * @var array<\AdOceanSdk\Oauth\Data\OauthAdvertiserGetResponseListCompanyListData> $company_list 代理商账户下勾选账户，但授权时选择的是代理商类型账户时，该字段才有意义company_list为空时，代表当前代理商账户下所有adv均可访问；不为空时，代表仅能访问该部分客户id下的adv
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Oauth\Data\AdvertiserGetResponseListCompanyListData::class)]
+    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Oauth\Data\OauthAdvertiserGetResponseListCompanyListData::class)]
     public array $company_list;
     
 }

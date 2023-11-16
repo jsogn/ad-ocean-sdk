@@ -7,7 +7,7 @@ namespace AdOceanSdk\Oauth\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // json返回值
-class AppAccessTokenPostResponseData extends Data
+class OauthAppAccessTokenPostResponseData extends Data
 {
 
     /**

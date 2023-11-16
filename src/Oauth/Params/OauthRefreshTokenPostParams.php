@@ -4,7 +4,7 @@ namespace AdOceanSdk\Oauth\Params;
 
 use AdOceanSdk\RequestParams;
 
-class RefreshTokenPostParams extends RequestParams
+class OauthRefreshTokenPostParams extends RequestParams
 {
     /**
      * @var string 用于验证权限的token

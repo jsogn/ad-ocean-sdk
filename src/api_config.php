@@ -5,23 +5,23 @@ return [
     * @desc 修改广告主信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517205007
     **/
-    'openAccountAdvertiserUpdatePostApi' => [
+    'openAdvertiserUpdatePostApi' => [
         'desc' => '修改广告主信息',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710517205007',
-        'call' => AdOceanSdk\Account\Api\AccountAdvertiserUpdatePostApi::class,
-        'params' => AdOceanSdk\Account\Params\AccountAdvertiserUpdatePostParams::class,
-        'response' => AdOceanSdk\Account\Response\AccountAdvertiserUpdatePostResponse::class,
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserUpdatePostResponse::class,
     ],
     /**
     * @desc 获取广告主信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710508983311
     **/
-    'openAccountAdvertiserInfoGetApi' => [
+    'openAdvertiserInfoGetApi' => [
         'desc' => '获取广告主信息',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710508983311',
-        'call' => AdOceanSdk\Account\Api\AccountAdvertiserInfoGetApi::class,
-        'params' => AdOceanSdk\Account\Params\AccountAdvertiserInfoGetParams::class,
-        'response' => AdOceanSdk\Account\Response\AccountAdvertiserInfoGetResponse::class,
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserInfoGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserInfoGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserInfoGetResponse::class,
     ],
     /**
     * @desc 获取授权User信息
@@ -35,47 +35,47 @@ return [
         'response' => AdOceanSdk\Oauth\Response\OauthUserInfoGetResponse::class,
     ],
     /**
+    * @desc 获取APP Access Token
+    * @doc  https://open.oceanengine.com/labels/7/docs/1713655428885516
+    **/
+    'openOauthAppAccessTokenPostApi' => [
+        'desc' => '获取APP Access Token',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1713655428885516',
+        'call' => AdOceanSdk\Oauth\Api\OauthAppAccessTokenPostApi::class,
+        'params' => AdOceanSdk\Oauth\Params\OauthAppAccessTokenPostParams::class,
+        'response' => AdOceanSdk\Oauth\Response\OauthAppAccessTokenPostResponse::class,
+    ],
+    /**
     * @desc 获取已授权账户
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710506574848
     **/
-    'openAdvertiserGetApi' => [
+    'openOauthAdvertiserGetApi' => [
         'desc' => '获取已授权账户',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710506574848',
-        'call' => AdOceanSdk\Oauth\Api\AdvertiserGetApi::class,
-        'params' => AdOceanSdk\Oauth\Params\AdvertiserGetParams::class,
-        'response' => AdOceanSdk\Oauth\Response\AdvertiserGetResponse::class,
-    ],
-    /**
-    * @desc 获取Access Token
-    * @doc  https://open.oceanengine.com/labels/7/docs/1696710505596940
-    **/
-    'openAccessTokenGetApi' => [
-        'desc' => '获取Access Token',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710505596940',
-        'call' => AdOceanSdk\Oauth\Api\AccessTokenGetApi::class,
-        'params' => AdOceanSdk\Oauth\Params\AccessTokenGetParams::class,
-        'response' => AdOceanSdk\Oauth\Response\AccessTokenGetResponse::class,
+        'call' => AdOceanSdk\Oauth\Api\OauthAdvertiserGetApi::class,
+        'params' => AdOceanSdk\Oauth\Params\OauthAdvertiserGetParams::class,
+        'response' => AdOceanSdk\Oauth\Response\OauthAdvertiserGetResponse::class,
     ],
     /**
     * @desc 刷新Refresh Token
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710506097679
     **/
-    'openRefreshTokenPostApi' => [
+    'openOauthRefreshTokenPostApi' => [
         'desc' => '刷新Refresh Token',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710506097679',
-        'call' => AdOceanSdk\Oauth\Api\RefreshTokenPostApi::class,
-        'params' => AdOceanSdk\Oauth\Params\RefreshTokenPostParams::class,
-        'response' => AdOceanSdk\Oauth\Response\RefreshTokenPostResponse::class,
+        'call' => AdOceanSdk\Oauth\Api\OauthRefreshTokenPostApi::class,
+        'params' => AdOceanSdk\Oauth\Params\OauthRefreshTokenPostParams::class,
+        'response' => AdOceanSdk\Oauth\Response\OauthRefreshTokenPostResponse::class,
     ],
     /**
-    * @desc 获取APP Access Token
-    * @doc  https://open.oceanengine.com/labels/7/docs/1713655428885516
+    * @desc 获取Access Token
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710505596940
     **/
-    'openAppAccessTokenPostApi' => [
-        'desc' => '获取APP Access Token',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1713655428885516',
-        'call' => AdOceanSdk\Oauth\Api\AppAccessTokenPostApi::class,
-        'params' => AdOceanSdk\Oauth\Params\AppAccessTokenPostParams::class,
-        'response' => AdOceanSdk\Oauth\Response\AppAccessTokenPostResponse::class,
+    'openOauthAccessTokenGetApi' => [
+        'desc' => '获取Access Token',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710505596940',
+        'call' => AdOceanSdk\Oauth\Api\OauthAccessTokenGetApi::class,
+        'params' => AdOceanSdk\Oauth\Params\OauthAccessTokenGetParams::class,
+        'response' => AdOceanSdk\Oauth\Response\OauthAccessTokenGetResponse::class,
     ],
 ];

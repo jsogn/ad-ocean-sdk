@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace AdOceanSdk\Account\Data;
+namespace AdOceanSdk\Advertiser\Data;
 
 use AdOceanSdk\Kernel\Data\Data;
 
 // json返回值
-class AccountAdvertiserInfoGetResponseData extends Data
+class AdvertiserInfoGetResponseData extends Data
 {
 
     /**

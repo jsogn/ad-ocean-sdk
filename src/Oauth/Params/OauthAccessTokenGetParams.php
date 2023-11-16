@@ -4,7 +4,7 @@ namespace AdOceanSdk\Oauth\Params;
 
 use AdOceanSdk\RequestParams;
 
-class AccessTokenGetParams extends RequestParams
+class OauthAccessTokenGetParams extends RequestParams
 {
     /**
      * @var int 开发者申请的应用APP_ID

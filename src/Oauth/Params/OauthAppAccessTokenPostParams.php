@@ -6,7 +6,7 @@ namespace AdOceanSdk\Oauth\Params;
 
 use AdOceanSdk\RequestParams;
 
-class AppAccessTokenPostParams extends RequestParams
+class OauthAppAccessTokenPostParams extends RequestParams
 {
 
     /**

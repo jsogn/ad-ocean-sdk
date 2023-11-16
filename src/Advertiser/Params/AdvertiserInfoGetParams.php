@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace AdOceanSdk\Account\Params;
+namespace AdOceanSdk\Advertiser\Params;
 
 use AdOceanSdk\RequestParams;
 
-class AccountAdvertiserInfoGetParams extends RequestParams
+class AdvertiserInfoGetParams extends RequestParams
 {
 
     /**

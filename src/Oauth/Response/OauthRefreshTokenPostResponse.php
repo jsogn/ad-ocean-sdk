@@ -5,15 +5,15 @@ namespace AdOceanSdk\Oauth\Response;
 use AdOceanSdk\Kernel\Data\Data;
 use AdOceanSdk\Kernel\Interface\ResponseInterface;
 use AdOceanSdk\Kernel\Trait\ResponseTrait;
-use AdOceanSdk\Oauth\Data\AccessTokenGetData;
+use AdOceanSdk\Oauth\Data\OauthAccessTokenGetData;
 
-class RefreshTokenPostResponse extends Data implements ResponseInterface
+class OauthRefreshTokenPostResponse extends Data implements ResponseInterface
 {
     use ResponseTrait;
 
-    public AccessTokenGetData $data;
+    public OauthAccessTokenGetData $data;
 
-    public function getData(): AccessTokenGetData
+    public function getData(): OauthAccessTokenGetData
     {
         return $this->data;
     }
