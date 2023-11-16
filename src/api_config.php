@@ -2,15 +2,26 @@
 
 return [
     /**
-    * @desc 获取广告主信息接口
+    * @desc 获取广告主信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710508983311
     **/
-    'openAdvertiserInfoGetApi' => [
-        'desc' => '获取广告主信息接口',
+    'openAccountAdvertiserInfoGetApi' => [
+        'desc' => '获取广告主信息',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710508983311',
-        'call' => AdOceanSdk\Account\Advertiser\Api\AdvertiserInfoGetApi::class,
-        'params' => AdOceanSdk\Account\Advertiser\Params\AdvertiserInfoGetParams::class,
-        'response' => AdOceanSdk\Account\Advertiser\Response\AdvertiserInfoGetResponse::class,
+        'call' => AdOceanSdk\Account\Api\AccountAdvertiserInfoGetApi::class,
+        'params' => AdOceanSdk\Account\Params\AccountAdvertiserInfoGetParams::class,
+        'response' => AdOceanSdk\Account\Response\AccountAdvertiserInfoGetResponse::class,
+    ],
+    /**
+    * @desc 获取授权User信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710507039756
+    **/
+    'openOauthUserInfoGetApi' => [
+        'desc' => '获取授权User信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710507039756',
+        'call' => AdOceanSdk\Oauth\Api\OauthUserInfoGetApi::class,
+        'params' => AdOceanSdk\Oauth\Params\OauthUserInfoGetParams::class,
+        'response' => AdOceanSdk\Oauth\Response\OauthUserInfoGetResponse::class,
     ],
     /**
     * @desc 获取已授权账户
@@ -44,5 +55,16 @@ return [
         'call' => AdOceanSdk\Oauth\Api\RefreshTokenPostApi::class,
         'params' => AdOceanSdk\Oauth\Params\RefreshTokenPostParams::class,
         'response' => AdOceanSdk\Oauth\Response\RefreshTokenPostResponse::class,
+    ],
+    /**
+    * @desc 获取APP Access Token
+    * @doc  https://open.oceanengine.com/labels/7/docs/1713655428885516
+    **/
+    'openAppAccessTokenPostApi' => [
+        'desc' => '获取APP Access Token',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1713655428885516',
+        'call' => AdOceanSdk\Oauth\Api\AppAccessTokenPostApi::class,
+        'params' => AdOceanSdk\Oauth\Params\AppAccessTokenPostParams::class,
+        'response' => AdOceanSdk\Oauth\Response\AppAccessTokenPostResponse::class,
     ],
 ];

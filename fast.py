@@ -61,45 +61,46 @@ else:
 # 提取请求参数
 request_params = {}
 params_table_tag = soup.find(text='请求参数')
-params_table = params_table_tag.find_next(class_='table-container').find('table')
-param_rows = params_table.find_all('tr')
+if params_table_tag is not None:
+    params_table = params_table_tag.find_next(class_='table-container').find('table')
+    param_rows = params_table.find_all('tr')
 
-levelMap = {}
-for row in param_rows[1:]:
-    cells = row.find_all('td')
-    param_names = cells[0].find('p').text.split()
-    param_name = param_names[0]
+    levelMap = {}
+    for row in param_rows[1:]:
+        cells = row.find_all('td')
+        param_names = cells[0].find('p').text.split()
+        param_name = param_names[0]
 
-    param_required: int = 0
-    if len(param_names) >= 2 and param_names[1] == '必填':
-        param_required = 1
+        param_required: int = 0
+        if len(param_names) >= 2 and param_names[1] == '必填':
+            param_required = 1
 
-    param_type = cells[1].find('p').text.strip()
-    param_desc = cells[2].find('p').text.strip()
+        param_type = cells[1].find('p').text.strip()
+        param_desc = cells[2].find('p').text.strip()
 
-    node = {
-        'type': param_type,
-        'description': param_desc,
-        'required': param_required,
-        'level': 0,
-        'children': {}
-    }
+        node = {
+            'type': param_type,
+            'description': param_desc,
+            'required': param_required,
+            'level': 0,
+            'children': {}
+        }
 
-    is_sub = cells[0].find(attrs={"data-level": True})
-    level = 0
+        is_sub = cells[0].find(attrs={"data-level": True})
+        level = 0
 
-    if is_sub is not None:
-        level = int(is_sub.get('data-level'))
-        node['level'] = level
+        if is_sub is not None:
+            level = int(is_sub.get('data-level'))
+            node['level'] = level
 
-    if is_sub is not None and level > 0:
-        levelMap[level] = node
+        if is_sub is not None and level > 0:
+            levelMap[level] = node
 
-        if levelMap.get(level - 1) is not None:
-            levelMap[level - 1]['children'][param_name] = node
-    else:
-        levelMap = {0:node}
-        request_params[param_name] = node
+            if levelMap.get(level - 1) is not None:
+                levelMap[level - 1]['children'][param_name] = node
+        else:
+            levelMap = {0:node}
+            request_params[param_name] = node
 
 # 提取应答参数
 response_params = {}
@@ -162,7 +163,9 @@ exit_code = os.system('cd ./script && php ./gen_code_template.php ' + sys.argv[2
 # 检查命令的退出状态码
 if exit_code == 0:
     # 命令执行成功
-    print("命令执行成功")
+    print("生成模版命令执行成功")
 else:
     # 命令执行失败
-    print("命令执行失败")
+    print("生成命令执行失败")
+
+exit_code = os.system('sh ./gen_api.sh')
