@@ -100,4 +100,15 @@ return [
         'params' => AdOceanSdk\Oauth\Params\OauthAccessTokenGetParams::class,
         'response' => AdOceanSdk\Oauth\Response\OauthAccessTokenGetResponse::class,
     ],
+    /**
+    * @desc 获取微信小程序列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1771203622020111
+    **/
+    'openWechatAppletListGetApi' => [
+        'desc' => '获取微信小程序列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1771203622020111',
+        'call' => AdOceanSdk\Tools\Api\WechatAppletListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\WechatAppletListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\WechatAppletListGetResponse::class,
+    ],
 ];
