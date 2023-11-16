@@ -10,9 +10,9 @@ class AccountAdvertiserUpdatePostParams extends RequestParams
 {
 
     /**
-     * @var int $advertiser_id必填 广告主ID
+     * @var int $advertiser_id 必填 广告主ID
      */
-    public int $advertiser_id必填;
+    public int $advertiser_id;
     
     /**
      * @var string $name 账户名称
