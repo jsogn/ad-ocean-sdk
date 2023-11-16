@@ -105,6 +105,10 @@ if params_table_tag is not None:
 # 提取应答参数
 response_params = {}
 params_table_tag = soup.find(text='应答字段')
+
+if params_table_tag is None:
+    params_table_tag = soup.find(text='应答参数')
+
 params_table = params_table_tag.find_next(class_='table-container').find('table')
 param_rows = params_table.find_all('tr')
 
@@ -139,6 +143,8 @@ for row in param_rows[1:]:
             levelMap[level - 1]['children'][param_name] = node
     else:
         levelMap = {0:node}
+        if param_name =='date':
+            param_name = 'data'
         response_params[param_name] = node
 
 # 将提取的信息转换为JSON格式

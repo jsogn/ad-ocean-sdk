@@ -67,10 +67,12 @@ function generateResponseClass(string $classNameSpace, string $classPrefix, arra
     $fields = generateFields($classNameSpace, $classPrefix . 'Response', $data);
 
     if (in_array($params['data']['type'], ['list', 'object[]', 'json[]'])) {
-        $returnType = generatePhpType($data['type']);
+        $docType    = $returnType;
+        $returnType = generatePhpType($data['data']['type']);
         $fields     .= <<<FIELDS
+
     /**
-     * @var array<{$returnType}>
+     * @return array<{$docType}>
      */
 FIELDS;
     }
@@ -90,7 +92,6 @@ class {$classPrefix}Response extends Data implements ResponseInterface
     use ResponseTrait;
 
 {$fields}
-
     public function getData(): {$returnType}
     {
         return \$this->data;
@@ -247,8 +248,9 @@ function generatePhpType(string $type): string
         return 'array';
     }
     $typeMapping = [
-        'list'   => 'array',
-        'number' => 'int',
+        'list'     => 'array',
+        'number'   => 'int',
+        'object[]' => 'array',
     ];
 
     return $typeMapping[$type] ?? $type;

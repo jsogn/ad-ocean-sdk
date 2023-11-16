@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 获取广告主公开信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710511950860
+    **/
+    'openAdvertiserPublicInfoGetApi' => [
+        'desc' => '获取广告主公开信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710511950860',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserPublicInfoGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserPublicInfoGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserPublicInfoGetResponse::class,
+    ],
+    /**
     * @desc 修改广告主信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517205007
     **/
