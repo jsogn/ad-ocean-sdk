@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 修改广告主信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710517205007
+    **/
+    'openAccountAdvertiserUpdatePostApi' => [
+        'desc' => '修改广告主信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710517205007',
+        'call' => AdOceanSdk\Account\Api\AccountAdvertiserUpdatePostApi::class,
+        'params' => AdOceanSdk\Account\Params\AccountAdvertiserUpdatePostParams::class,
+        'response' => AdOceanSdk\Account\Response\AccountAdvertiserUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取广告主信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710508983311
     **/

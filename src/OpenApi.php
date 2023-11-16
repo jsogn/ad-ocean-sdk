@@ -7,6 +7,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
 /**
  * class OpenApi
  * 开放接口调度类
+ * @method \AdOceanSdk\Account\Response\AccountAdvertiserUpdatePostResponse openAccountAdvertiserUpdatePostApi(\AdOceanSdk\Account\Params\AccountAdvertiserUpdatePostParams|array $params) 修改广告主信息 https://open.oceanengine.com/labels/7/docs/1696710517205007
  * @method \AdOceanSdk\Account\Response\AccountAdvertiserInfoGetResponse openAccountAdvertiserInfoGetApi(\AdOceanSdk\Account\Params\AccountAdvertiserInfoGetParams|array $params) 获取广告主信息 https://open.oceanengine.com/labels/7/docs/1696710508983311
  * @method \AdOceanSdk\Oauth\Response\OauthUserInfoGetResponse openOauthUserInfoGetApi(\AdOceanSdk\Oauth\Params\OauthUserInfoGetParams|array $params) 获取授权User信息 https://open.oceanengine.com/labels/7/docs/1696710507039756
  * @method \AdOceanSdk\Oauth\Response\AdvertiserGetResponse openAdvertiserGetApi(\AdOceanSdk\Oauth\Params\AdvertiserGetParams|array $params) 获取已授权账户 https://open.oceanengine.com/labels/7/docs/1696710506574848
