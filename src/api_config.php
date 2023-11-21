@@ -90,6 +90,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserInfoGetResponse::class,
     ],
     /**
+    * @desc 提交投放资质（新版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761501324513352
+    **/
+    'openAdvertiserDeliveryQualificationSubmitPostApi' => [
+        'desc' => '提交投放资质（新版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761501324513352',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserDeliveryQualificationSubmitPostApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserDeliveryQualificationSubmitPostParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationSubmitPostResponse::class,
+    ],
+    /**
     * @desc 上传资质图片
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710599659532
     **/
