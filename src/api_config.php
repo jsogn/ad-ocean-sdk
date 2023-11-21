@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 更新广告主账户头像
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710512435215
+    **/
+    'openAdvertiserAvatarSubmitPostApi' => [
+        'desc' => '更新广告主账户头像',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710512435215',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserAvatarSubmitPostApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserAvatarSubmitPostParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserAvatarSubmitPostResponse::class,
+    ],
+    /**
     * @desc 获取广告主公开信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710511950860
     **/
