@@ -101,6 +101,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationSubmitPostResponse::class,
     ],
     /**
+    * @desc 查询推广产品资质规则配置
+    * @doc  https://open.oceanengine.com/labels/7/docs/1776710970860551
+    **/
+    'openAdvertiserDeliveryPkgConfigGetApi' => [
+        'desc' => '查询推广产品资质规则配置',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1776710970860551',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserDeliveryPkgConfigGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserDeliveryPkgConfigGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgConfigGetResponse::class,
+    ],
+    /**
     * @desc 上传资质图片
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710599659532
     **/
