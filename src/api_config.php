@@ -13,6 +13,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserAvatarSubmitPostResponse::class,
     ],
     /**
+    * @desc 获取主体资质（新版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1743294338713611
+    **/
+    'openAdvertiserQualificationGetApi' => [
+        'desc' => '获取主体资质（新版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1743294338713611',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserQualificationGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserQualificationGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserQualificationGetResponse::class,
+    ],
+    /**
     * @desc 获取广告主公开信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710511950860
     **/
