@@ -57,6 +57,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserQualificationSubmitPostResponse::class,
     ],
     /**
+    * @desc 查询投放资质（新版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761500990156815
+    **/
+    'openAdvertiserDeliveryQualificationListGetApi' => [
+        'desc' => '查询投放资质（新版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761500990156815',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserDeliveryQualificationListGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserDeliveryQualificationListGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationListGetResponse::class,
+    ],
+    /**
     * @desc 获取广告主账户头像
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710512904192
     **/
