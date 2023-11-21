@@ -57,6 +57,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserInfoGetResponse::class,
     ],
     /**
+    * @desc 上传资质图片
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710599659532
+    **/
+    'openFIleImageAdvertiserPostApi' => [
+        'desc' => '上传资质图片',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710599659532',
+        'call' => AdOceanSdk\File\Api\FIleImageAdvertiserPostApi::class,
+        'params' => AdOceanSdk\File\Params\FIleImageAdvertiserPostParams::class,
+        'response' => AdOceanSdk\File\Response\FIleImageAdvertiserPostResponse::class,
+    ],
+    /**
     * @desc 获取授权User信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710507039756
     **/
