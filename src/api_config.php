@@ -90,6 +90,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserInfoGetResponse::class,
     ],
     /**
+    * @desc 查询推广产品资质
+    * @doc  https://open.oceanengine.com/labels/7/docs/1776711148266572
+    **/
+    'openAdvertiserDeliveryPkgGetApi' => [
+        'desc' => '查询推广产品资质',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1776711148266572',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserDeliveryPkgGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserDeliveryPkgGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgGetResponse::class,
+    ],
+    /**
     * @desc 提交投放资质（新版）
     * @doc  https://open.oceanengine.com/labels/7/docs/1761501324513352
     **/
