@@ -24,6 +24,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserQualificationGetResponse::class,
     ],
     /**
+    * @desc 提交/编辑推广产品资质
+    * @doc  https://open.oceanengine.com/labels/7/docs/1776711210685572
+    **/
+    'openAdvertiserDeliveryPkgSubmitPostApi' => [
+        'desc' => '提交/编辑推广产品资质',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1776711210685572',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserDeliveryPkgSubmitPostApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserDeliveryPkgSubmitPostParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgSubmitPostResponse::class,
+    ],
+    /**
     * @desc 获取广告主公开信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710511950860
     **/
