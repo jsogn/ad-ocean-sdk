@@ -926,6 +926,17 @@ return [
         'response' => AdOceanSdk\File\Response\FIleImageAdvertiserPostResponse::class,
     ],
     /**
+    * @desc 上传广告图片
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710600176640
+    **/
+    'openFileImageAdPostApi' => [
+        'desc' => '上传广告图片',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710600176640',
+        'call' => AdOceanSdk\File\Api\FileImageAdPostApi::class,
+        'params' => AdOceanSdk\File\Params\FileImageAdPostParams::class,
+        'response' => AdOceanSdk\File\Response\FileImageAdPostResponse::class,
+    ],
+    /**
     * @desc 获取授权User信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710507039756
     **/
