@@ -138,17 +138,18 @@ params_table_tag = soup.find(text='应答字段')
 if params_table_tag is None:
     params_table_tag = soup.find(text='应答参数')
 
-params_table = params_table_tag.find_next(class_='table-container') and params_table_tag.find_next(class_='table-container').find('table')
-if params_table is not None:
-    param_rows = params_table.find_all('tr')
-    processor = TableContainerProcessor()
-    response_params = processor.process(param_rows)
+if params_table_tag is not None:
+    params_table = params_table_tag.find_next(class_='table-container') and params_table_tag.find_next(class_='table-container').find('table')
+    if params_table is not None:
+        param_rows = params_table.find_all('tr')
+        processor = TableContainerProcessor()
+        response_params = processor.process(param_rows)
 
-params_table = params_table_tag.find_next(class_='api-table')
-if params_table is not None:
-    param_rows = params_table.find_all('section')
-    processor = ApiTableProcessor()
-    response_params = processor.process(param_rows)
+    params_table = params_table_tag.find_next(class_='api-table')
+    if params_table is not None:
+        param_rows = params_table.find_all('section')
+        processor = ApiTableProcessor()
+        response_params = processor.process(param_rows)
 
 if "data" not in response_params:
     # 键不存在，添加键和值

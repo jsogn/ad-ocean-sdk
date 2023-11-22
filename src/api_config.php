@@ -90,6 +90,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 下载任务结果
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710563878927
+    **/
+    'openAsyncTaskDownloadGetApi' => [
+        'desc' => '下载任务结果',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710563878927',
+        'call' => AdOceanSdk\Report\Api\AsyncTaskDownloadGetApi::class,
+        'params' => AdOceanSdk\Report\Params\AsyncTaskDownloadGetParams::class,
+        'response' => AdOceanSdk\Report\Response\AsyncTaskDownloadGetResponse::class,
+    ],
+    /**
     * @desc 创建异步任务
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710562799616
     **/
