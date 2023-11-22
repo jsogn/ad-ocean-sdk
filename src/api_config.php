@@ -277,6 +277,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeMaterialMetricsGetResponse::class,
     ],
     /**
+    * @desc 批量删除预算组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780643886635008
+    **/
+    'openBudgetGroupDeletePostApi' => [
+        'desc' => '批量删除预算组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780643886635008',
+        'call' => AdOceanSdk\Advertising\Api\BudgetGroupDeletePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\BudgetGroupDeletePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\BudgetGroupDeletePostResponse::class,
+    ],
+    /**
     * @desc 获取项目列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1740937147595776
     **/
