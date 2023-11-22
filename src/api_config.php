@@ -1014,6 +1014,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageAdPostResponse::class,
     ],
     /**
+    * @desc 查询素材标签信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1763768835703812
+    **/
+    'openFileMaterialDetailGetApi' => [
+        'desc' => '查询素材标签信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1763768835703812',
+        'call' => AdOceanSdk\File\Api\FileMaterialDetailGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileMaterialDetailGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileMaterialDetailGetResponse::class,
+    ],
+    /**
     * @desc 获取低效素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1733880964883467
     **/
