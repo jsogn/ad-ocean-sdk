@@ -310,6 +310,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdMetricsGetGetResponse::class,
     ],
     /**
+    * @desc 批量更新项目投放时段
+    * @doc  https://open.oceanengine.com/labels/7/docs/1779260654537728
+    **/
+    'openProjectWeekScheduleUpdatePostApi' => [
+        'desc' => '批量更新项目投放时段',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1779260654537728',
+        'call' => AdOceanSdk\Advertising\Api\ProjectWeekScheduleUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectWeekScheduleUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectWeekScheduleUpdatePostResponse::class,
+    ],
+    /**
     * @desc 二级代理商列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
     **/
