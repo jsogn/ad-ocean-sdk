@@ -66,7 +66,6 @@ class RequestClient implements RequestClientInterface
             ->request($method, $requestApi->getAddress(), $options);
         $responseArray   = json_decode($response->getBody()->getContents(), true);
         $requestResponse = RequestResponse::from($responseArray);
-        $requestResponse->setRawArray($responseArray);
 
         return $this->interceptor->response($requestResponse);
     }

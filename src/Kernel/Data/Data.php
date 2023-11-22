@@ -47,17 +47,22 @@ abstract class Data implements DataInterface
     public function toArray(): array
     {
         $properties = get_object_vars($this);
-        $array      = [];
 
-        foreach ($properties as $key => $value) {
-            if ($value instanceof Data) {
-                $array[$key] = $value->toArray();
-            } else {
-                $array[$key] = $value;
+        return $this->convertArray($properties);
+    }
+
+    private function convertArray(mixed $value)
+    {
+        if ($value instanceof Data) {
+            return $value->toArray();
+        } else if (is_array($value)) {
+            $temp = [];
+            foreach ($value as $key => $val) {
+                $temp[$key] = $this->convertArray($val);
             }
+            return $temp;
         }
-
-        return $array;
+        return $value;
     }
 
 }
