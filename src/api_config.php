@@ -1025,6 +1025,17 @@ return [
         'response' => AdOceanSdk\Oauth\Response\OauthAccessTokenGetResponse::class,
     ],
     /**
+    * @desc 获取视频智能封面
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710602404864
+    **/
+    'openToolsVideoCoverSuggestGetApi' => [
+        'desc' => '获取视频智能封面',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710602404864',
+        'call' => AdOceanSdk\Tools\Api\ToolsVideoCoverSuggestGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsVideoCoverSuggestGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse::class,
+    ],
+    /**
     * @desc 获取微信小程序列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1771203622020111
     **/
