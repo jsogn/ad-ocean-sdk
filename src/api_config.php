@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 二级代理商列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
+    **/
+    'openAgentChildAgentSelectGetApi' => [
+        'desc' => '二级代理商列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710517693452',
+        'call' => AdOceanSdk\Agent\Api\AgentChildAgentSelectGetApi::class,
+        'params' => AdOceanSdk\Agent\Params\AgentChildAgentSelectGetParams::class,
+        'response' => AdOceanSdk\Agent\Response\AgentChildAgentSelectGetResponse::class,
+    ],
+    /**
     * @desc 获取代理商信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710518158351
     **/
