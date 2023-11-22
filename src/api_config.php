@@ -57,6 +57,28 @@ return [
         'response' => AdOceanSdk\Majordomo\Response\MajordomoAdvertiserSelectGetResponse::class,
     ],
     /**
+    * @desc 获取纵横组织下资产账户列表（分页）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710520884224
+    **/
+    'openCustomerCenterAdvertiserListGetApi' => [
+        'desc' => '获取纵横组织下资产账户列表（分页）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710520884224',
+        'call' => AdOceanSdk\Majordomo\Api\CustomerCenterAdvertiserListGetApi::class,
+        'params' => AdOceanSdk\Majordomo\Params\CustomerCenterAdvertiserListGetParams::class,
+        'response' => AdOceanSdk\Majordomo\Response\CustomerCenterAdvertiserListGetResponse::class,
+    ],
+    /**
+    * @desc 查询合作组织
+    * @doc  https://open.oceanengine.com/labels/7/docs/1710414874245133
+    **/
+    'openBusinessPlatformPartnerOrganizationListGetApi' => [
+        'desc' => '查询合作组织',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1710414874245133',
+        'call' => AdOceanSdk\Majordomo\Api\BusinessPlatformPartnerOrganizationListGetApi::class,
+        'params' => AdOceanSdk\Majordomo\Params\BusinessPlatformPartnerOrganizationListGetParams::class,
+        'response' => AdOceanSdk\Majordomo\Response\BusinessPlatformPartnerOrganizationListGetResponse::class,
+    ],
+    /**
     * @desc 更新广告主账户头像
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710512435215
     **/
