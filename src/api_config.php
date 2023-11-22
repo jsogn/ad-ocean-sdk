@@ -90,6 +90,28 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 创意详细信息（新）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1742668551117827
+    **/
+    'openCreativeDetailGetApi' => [
+        'desc' => '创意详细信息（新）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1742668551117827',
+        'call' => AdOceanSdk\Advertising\Api\CreativeDetailGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeDetailGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeDetailGetResponse::class,
+    ],
+    /**
+    * @desc 获取广告组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710532657164
+    **/
+    'openCampaignGetApi' => [
+        'desc' => '获取广告组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710532657164',
+        'call' => AdOceanSdk\Advertising\Api\CampaignGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CampaignGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CampaignGetResponse::class,
+    ],
+    /**
     * @desc 获取账户日预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710531128335
     **/
@@ -101,48 +123,59 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetGetResponse::class,
     ],
     /**
-    * @desc 创意详细信息（新）
-    * @doc  https://open.oceanengine.com/labels/7/docs/1742668551117827
+    * @desc 新建或修改配置，并保存到计划
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736244450483215
     **/
-    'openAdvertiserCreativeDetailGetApi' => [
-        'desc' => '创意详细信息（新）',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1742668551117827',
-        'call' => AdOceanSdk\Advertising\Api\CreativeDetailGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CreativeDetailGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CreativeDetailGetResponse::class,
-    ],
-    /**
-    * @desc 获取模板标签列表
-    * @doc  https://open.oceanengine.com/labels/7/docs/1736241004382219
-    **/
-    'openAdvertiserCreativeTemplateTagsGetApi' => [
-        'desc' => '获取模板标签列表',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736241004382219',
-        'call' => AdOceanSdk\Advertising\Api\CreativeTemplateTagsGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CreativeTemplateTagsGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CreativeTemplateTagsGetResponse::class,
-    ],
-    /**
-    * @desc 获取素材派生数据（素材维度）
-    * @doc  https://open.oceanengine.com/labels/7/docs/1755177023094787
-    **/
-    'openAdvertiserCreativeMaterialMetricsGetApi' => [
-        'desc' => '获取素材派生数据（素材维度）',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755177023094787',
-        'call' => AdOceanSdk\Advertising\Api\CreativeMaterialMetricsGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CreativeMaterialMetricsGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CreativeMaterialMetricsGetResponse::class,
+    'openCreativeAutoGenerateConfigCreatePostApi' => [
+        'desc' => '新建或修改配置，并保存到计划',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736244450483215',
+        'call' => AdOceanSdk\Advertising\Api\CreativeAutoGenerateConfigCreatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeAutoGenerateConfigCreatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeAutoGenerateConfigCreatePostResponse::class,
     ],
     /**
     * @desc 更改创意状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710543049740
     **/
-    'openAdvertiserCreativeUpdateStatusPostApi' => [
+    'openCreativeUpdateStatusPostApi' => [
         'desc' => '更改创意状态',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710543049740',
         'call' => AdOceanSdk\Advertising\Api\CreativeUpdateStatusPostApi::class,
         'params' => AdOceanSdk\Advertising\Params\CreativeUpdateStatusPostParams::class,
         'response' => AdOceanSdk\Advertising\Response\CreativeUpdateStatusPostResponse::class,
+    ],
+    /**
+    * @desc 获取模板列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736241054353421
+    **/
+    'openCreativeTemplateListGetApi' => [
+        'desc' => '获取模板列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736241054353421',
+        'call' => AdOceanSdk\Advertising\Api\CreativeTemplateListGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeTemplateListGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeTemplateListGetResponse::class,
+    ],
+    /**
+    * @desc 获取模板详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736243716320256
+    **/
+    'openCreativeTemplateDetailGetGetApi' => [
+        'desc' => '获取模板详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736243716320256',
+        'call' => AdOceanSdk\Advertising\Api\CreativeTemplateDetailGetGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeTemplateDetailGetGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeTemplateDetailGetGetResponse::class,
+    ],
+    /**
+    * @desc 获取创意列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
+    **/
+    'openCreativeGetApi' => [
+        'desc' => '获取创意列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710540735500',
+        'call' => AdOceanSdk\Advertising\Api\CreativeGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeGetResponse::class,
     ],
     /**
     * @desc 更新账户日预算
@@ -156,70 +189,48 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetUpdatePostResponse::class,
     ],
     /**
-    * @desc 新建或修改配置，并保存到计划
-    * @doc  https://open.oceanengine.com/labels/7/docs/1736244450483215
+    * @desc 获取创意审核建议
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710544068620
     **/
-    'openAdvertiserCreativeAutoGenerateConfigCreatePostApi' => [
-        'desc' => '新建或修改配置，并保存到计划',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736244450483215',
-        'call' => AdOceanSdk\Advertising\Api\CreativeAutoGenerateConfigCreatePostApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CreativeAutoGenerateConfigCreatePostParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CreativeAutoGenerateConfigCreatePostResponse::class,
+    'openCreativeRejectReasonGetApi' => [
+        'desc' => '获取创意审核建议',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710544068620',
+        'call' => AdOceanSdk\Advertising\Api\CreativeRejectReasonGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeRejectReasonGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeRejectReasonGetResponse::class,
     ],
     /**
-    * @desc 获取创意列表
-    * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
+    * @desc 获取模板标签列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736241004382219
     **/
-    'openAdvertiserCreativeGetApi' => [
-        'desc' => '获取创意列表',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710540735500',
-        'call' => AdOceanSdk\Advertising\Api\CreativeGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CreativeGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CreativeGetResponse::class,
+    'openCreativeTemplateTagsGetApi' => [
+        'desc' => '获取模板标签列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736241004382219',
+        'call' => AdOceanSdk\Advertising\Api\CreativeTemplateTagsGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeTemplateTagsGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeTemplateTagsGetResponse::class,
     ],
     /**
-    * @desc 获取广告组
-    * @doc  https://open.oceanengine.com/labels/7/docs/1696710532657164
+    * @desc 获取素材派生数据（素材维度）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755177023094787
     **/
-    'openAdvertiserCampaignGetApi' => [
-        'desc' => '获取广告组',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710532657164',
-        'call' => AdOceanSdk\Advertising\Api\CampaignGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CampaignGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CampaignGetResponse::class,
+    'openCreativeMaterialMetricsGetApi' => [
+        'desc' => '获取素材派生数据（素材维度）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755177023094787',
+        'call' => AdOceanSdk\Advertising\Api\CreativeMaterialMetricsGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeMaterialMetricsGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeMaterialMetricsGetResponse::class,
     ],
     /**
     * @desc 获取素材派生数据（计划维度）
     * @doc  https://open.oceanengine.com/labels/7/docs/1755177028152324
     **/
-    'openAdvertiserAdMetricsGetGetApi' => [
+    'openAdMetricsGetGetApi' => [
         'desc' => '获取素材派生数据（计划维度）',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1755177028152324',
         'call' => AdOceanSdk\Advertising\Api\AdMetricsGetGetApi::class,
         'params' => AdOceanSdk\Advertising\Params\AdMetricsGetGetParams::class,
         'response' => AdOceanSdk\Advertising\Response\AdMetricsGetGetResponse::class,
-    ],
-    /**
-    * @desc 获取模板详情
-    * @doc  https://open.oceanengine.com/labels/7/docs/1736243716320256
-    **/
-    'openAdvertiserCreativeTemplateDetailGetGetApi' => [
-        'desc' => '获取模板详情',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736243716320256',
-        'call' => AdOceanSdk\Advertising\Api\CreativeTemplateDetailGetGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CreativeTemplateDetailGetGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CreativeTemplateDetailGetGetResponse::class,
-    ],
-    /**
-    * @desc 获取模板列表
-    * @doc  https://open.oceanengine.com/labels/7/docs/1736241054353421
-    **/
-    'openAdvertiserCreativeTemplateListGetApi' => [
-        'desc' => '获取模板列表',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736241054353421',
-        'call' => AdOceanSdk\Advertising\Api\CreativeTemplateListGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\CreativeTemplateListGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\CreativeTemplateListGetResponse::class,
     ],
     /**
     * @desc 二级代理商列表
