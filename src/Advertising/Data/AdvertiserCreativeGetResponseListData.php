@@ -7,7 +7,7 @@ namespace AdOceanSdk\Advertising\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // 
-class AdvertiserCreativeGetGetResponseListData extends Data
+class AdvertiserCreativeGetResponseListData extends Data
 {
 
     /**
@@ -76,9 +76,9 @@ class AdvertiserCreativeGetGetResponseListData extends Data
     public string $third_party_id;
     
     /**
-     * @var array<\AdOceanSdk\Advertising\Data\AdvertiserCreativeGetGetResponseListMetarialsData> $metarials 素材信息列表，标题，图片，视频均是不同素材，注意部分老数据可能此结构为空
+     * @var array<\AdOceanSdk\Advertising\Data\AdvertiserCreativeGetResponseListMetarialsData> $metarials 素材信息列表，标题，图片，视频均是不同素材，注意部分老数据可能此结构为空
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\AdvertiserCreativeGetGetResponseListMetarialsData::class)]
+    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\AdvertiserCreativeGetResponseListMetarialsData::class)]
     public array $metarials;
     
     /**

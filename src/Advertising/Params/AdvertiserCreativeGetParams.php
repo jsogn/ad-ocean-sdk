@@ -6,7 +6,7 @@ namespace AdOceanSdk\Advertising\Params;
 
 use AdOceanSdk\RequestParams;
 
-class AdvertiserCreativeGetGetParams extends RequestParams
+class AdvertiserCreativeGetParams extends RequestParams
 {
 
     /**
@@ -15,9 +15,9 @@ class AdvertiserCreativeGetGetParams extends RequestParams
     public int $advertiser_id;
     
     /**
-     * @var \AdOceanSdk\Advertising\Data\AdvertiserCreativeGetGetParamFilteringData $filtering 过滤条件，若此字段不传，或传空则视为无限制条件
+     * @var \AdOceanSdk\Advertising\Data\AdvertiserCreativeGetParamFilteringData $filtering 过滤条件，若此字段不传，或传空则视为无限制条件
      */
-    public \AdOceanSdk\Advertising\Data\AdvertiserCreativeGetGetParamFilteringData $filtering;
+    public \AdOceanSdk\Advertising\Data\AdvertiserCreativeGetParamFilteringData $filtering;
     
     /**
      * @var array<string> $fields 查询字段集合, 如果指定, 则返回结果数组中, 每个元素是包含所查询字段的字典，默认全部指定允许值:"creative_id","ad_id","advertiser_id","status","opt_status","image_mode","title","creative_word_ids","third_party_id","image_ids","image_id","video_id","materials"

@@ -7,7 +7,7 @@ namespace AdOceanSdk\Advertising\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // 游标分页信息，当分页方式为cursor+count时返回
-class AdvertiserCreativeGetGetResponseCursorInfoData extends Data
+class AdvertiserCreativeGetResponseCursorInfoData extends Data
 {
 
     /**

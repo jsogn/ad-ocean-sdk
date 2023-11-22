@@ -7,7 +7,7 @@ namespace AdOceanSdk\Advertising\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // 素材信息列表，标题，图片，视频均是不同素材，注意部分老数据可能此结构为空
-class AdvertiserCreativeGetGetResponseListMetarialsData extends Data
+class AdvertiserCreativeGetResponseListMetarialsData extends Data
 {
 
     /**

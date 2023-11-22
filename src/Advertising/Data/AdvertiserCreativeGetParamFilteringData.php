@@ -7,7 +7,7 @@ namespace AdOceanSdk\Advertising\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // 过滤条件，若此字段不传，或传空则视为无限制条件
-class AdvertiserCreativeGetGetParamFilteringData extends Data
+class AdvertiserCreativeGetParamFilteringData extends Data
 {
 
     /**

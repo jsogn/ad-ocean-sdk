@@ -101,15 +101,26 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetGetResponse::class,
     ],
     /**
+    * @desc 获取模板标签列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736241004382219
+    **/
+    'openAdvertiserCreativeTemplateTagsGetApi' => [
+        'desc' => '获取模板标签列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736241004382219',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeTemplateTagsGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeTemplateTagsGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeTemplateTagsGetResponse::class,
+    ],
+    /**
     * @desc 获取创意列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
     **/
     'openAdvertiserCreativeGetGetApi' => [
         'desc' => '获取创意列表',
         'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710540735500',
-        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeGetGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeGetGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeGetGetResponse::class,
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeGetResponse::class,
     ],
     /**
     * @desc 更新账户日预算
