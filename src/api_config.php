@@ -1014,6 +1014,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileVideoAdPostResponse::class,
     ],
     /**
+    * @desc 批量删除图文
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773561744826380
+    **/
+    'openCarouselDeletePostApi' => [
+        'desc' => '批量删除图文',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773561744826380',
+        'call' => AdOceanSdk\File\Api\CarouselDeletePostApi::class,
+        'params' => AdOceanSdk\File\Params\CarouselDeletePostParams::class,
+        'response' => AdOceanSdk\File\Response\CarouselDeletePostResponse::class,
+    ],
+    /**
     * @desc 获取视频素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710601820172
     **/
