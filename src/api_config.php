@@ -123,6 +123,17 @@ return [
         'response' => AdOceanSdk\Report\Response\ReportCustomConfigGetResponse::class,
     ],
     /**
+    * @desc 获取任务列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710563323916
+    **/
+    'openAsyncTaskGetApi' => [
+        'desc' => '获取任务列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710563323916',
+        'call' => AdOceanSdk\Report\Api\AsyncTaskGetApi::class,
+        'params' => AdOceanSdk\Report\Params\AsyncTaskGetParams::class,
+        'response' => AdOceanSdk\Report\Response\AsyncTaskGetResponse::class,
+    ],
+    /**
     * @desc 批量更新广告启用状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1741031308559364
     **/
