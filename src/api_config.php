@@ -1410,6 +1410,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageDeletePostResponse::class,
     ],
     /**
+    * @desc 更新原生锚点
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780079786680328
+    **/
+    'openNativeAnchorUpdatePostApi' => [
+        'desc' => '更新原生锚点',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780079786680328',
+        'call' => AdOceanSdk\Tools\Api\NativeAnchorUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\NativeAnchorUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\NativeAnchorUpdatePostResponse::class,
+    ],
+    /**
     * @desc 通过优化目标获取橙子落地页站点信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1755162848410635
     **/
