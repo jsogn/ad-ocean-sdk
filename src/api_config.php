@@ -1311,6 +1311,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPreAuditGetResponse::class,
     ],
     /**
+    * @desc 事件资产下创建监测链接组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1727898582816775
+    **/
+    'openEventManagerTrackUrlCreatePostApi' => [
+        'desc' => '事件资产下创建监测链接组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1727898582816775',
+        'call' => AdOceanSdk\Tools\Api\EventManagerTrackUrlCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerTrackUrlCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerTrackUrlCreatePostResponse::class,
+    ],
+    /**
     * @desc 查看微信小游戏/小程序共享范围
     * @doc  https://open.oceanengine.com/labels/7/docs/1773105971421187
     **/
