@@ -1399,6 +1399,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse::class,
     ],
     /**
+    * @desc 创建动态创意词包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710717478927
+    **/
+    'openToolsCreativeWordCreatePostApi' => [
+        'desc' => '创建动态创意词包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710717478927',
+        'call' => AdOceanSdk\Tools\Api\ToolsCreativeWordCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCreativeWordCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCreativeWordCreatePostResponse::class,
+    ],
+    /**
     * @desc 更新微信小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1771744756803659
     **/
