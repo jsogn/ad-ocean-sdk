@@ -1982,6 +1982,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\EventManagerShareCancelPostResponse::class,
     ],
     /**
+    * @desc 关停正在起量的广告
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761603666011139
+    **/
+    'openToolsPromotionRaiseStopPostApi' => [
+        'desc' => '关停正在起量的广告',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761603666011139',
+        'call' => AdOceanSdk\Tools\Api\ToolsPromotionRaiseStopPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPromotionRaiseStopPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseStopPostResponse::class,
+    ],
+    /**
     * @desc 更新落地页组站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710629600256
     **/
