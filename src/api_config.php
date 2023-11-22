@@ -1047,6 +1047,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileVideoEfficiencyGetResponse::class,
     ],
     /**
+    * @desc 上传图文内的音频素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780005237921792
+    **/
+    'openFileAudioAdPostApi' => [
+        'desc' => '上传图文内的音频素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780005237921792',
+        'call' => AdOceanSdk\File\Api\FileAudioAdPostApi::class,
+        'params' => AdOceanSdk\File\Params\FileAudioAdPostParams::class,
+        'response' => AdOceanSdk\File\Response\FileAudioAdPostResponse::class,
+    ],
+    /**
     * @desc 获取同主体下广告主图片素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710602952719
     **/
