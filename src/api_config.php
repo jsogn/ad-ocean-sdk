@@ -1310,4 +1310,15 @@ return [
         'params' => AdOceanSdk\Tools\Params\WechatAppletListGetParams::class,
         'response' => AdOceanSdk\Tools\Response\WechatAppletListGetResponse::class,
     ],
+    /**
+    * @desc 获取橙子建站站点预览地址
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710619437056
+    **/
+    'openToolsSitePreviewGetApi' => [
+        'desc' => '获取橙子建站站点预览地址',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710619437056',
+        'call' => AdOceanSdk\Tools\Api\ToolsSitePreviewGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsSitePreviewGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsSitePreviewGetResponse::class,
+    ],
 ];

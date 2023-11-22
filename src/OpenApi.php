@@ -126,6 +126,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Tools\Response\ToolsSiteCreatePostResponse openToolsSiteCreatePostApi(\AdOceanSdk\Tools\Params\ToolsSiteCreatePostParams|array $params) 创建橙子建站站点 https://open.oceanengine.com/labels/7/docs/1696710617712640
  * @method \AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse openToolsVideoCoverSuggestGetApi(\AdOceanSdk\Tools\Params\ToolsVideoCoverSuggestGetParams|array $params) 获取视频智能封面 https://open.oceanengine.com/labels/7/docs/1696710602404864
  * @method \AdOceanSdk\Tools\Response\WechatAppletListGetResponse openWechatAppletListGetApi(\AdOceanSdk\Tools\Params\WechatAppletListGetParams|array $params) 获取微信小程序列表 https://open.oceanengine.com/labels/7/docs/1771203622020111
+ * @method \AdOceanSdk\Tools\Response\ToolsSitePreviewGetResponse openToolsSitePreviewGetApi(\AdOceanSdk\Tools\Params\ToolsSitePreviewGetParams|array $params) 获取橙子建站站点预览地址 https://open.oceanengine.com/labels/7/docs/1696710619437056
  */
 readonly class OpenApi
 {
