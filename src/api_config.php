@@ -90,6 +90,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 获取账户日预算
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710531128335
+    **/
+    'openAdvertiserBudgetGetApi' => [
+        'desc' => '获取账户日预算',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710531128335',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserBudgetGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserBudgetGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetGetResponse::class,
+    ],
+    /**
     * @desc 二级代理商列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
     **/
