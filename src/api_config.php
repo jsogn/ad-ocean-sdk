@@ -1421,6 +1421,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsOrangeSiteGetResponse::class,
     ],
     /**
+    * @desc 创建原生锚点
+    * @doc  https://open.oceanengine.com/labels/7/docs/1757798123491403
+    **/
+    'openNativeAnchorCreatePostApi' => [
+        'desc' => '创建原生锚点',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1757798123491403',
+        'call' => AdOceanSdk\Tools\Api\NativeAnchorCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\NativeAnchorCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\NativeAnchorCreatePostResponse::class,
+    ],
+    /**
     * @desc 素材前置预审送审
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273263150083
     **/
