@@ -134,6 +134,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeAutoGenerateConfigCreatePostResponse::class,
     ],
     /**
+    * @desc 批量更新广告出价
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741031138305028
+    **/
+    'openPromotionBidUpdatePostApi' => [
+        'desc' => '批量更新广告出价',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741031138305028',
+        'call' => AdOceanSdk\Advertising\Api\PromotionBidUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionBidUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionBidUpdatePostResponse::class,
+    ],
+    /**
     * @desc 更改创意状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710543049740
     **/
