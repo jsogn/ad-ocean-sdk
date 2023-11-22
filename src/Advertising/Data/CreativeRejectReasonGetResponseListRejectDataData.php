@@ -14,10 +14,10 @@ class CreativeRejectReasonGetResponseListRejectDataData extends Data
      * @var string $reject_item 审核项
      */
     public string $reject_item;
-    
+
     /**
-     * @var string $ 审核建议，审核中/审核通过创意也存在返回审核建议的情况
+     * @var string $reject_reason 审核建议，审核中/审核通过创意也存在返回审核建议的情况
      */
-    public string $;
-    
+    public string $reject_reason;
+
 }
