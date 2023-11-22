@@ -1432,6 +1432,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\NativeAnchorCreatePostResponse::class,
     ],
     /**
+    * @desc 删除原生锚点
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780079261760524
+    **/
+    'openNativeAnchorDeletePostApi' => [
+        'desc' => '删除原生锚点',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780079261760524',
+        'call' => AdOceanSdk\Tools\Api\NativeAnchorDeletePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\NativeAnchorDeletePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\NativeAnchorDeletePostResponse::class,
+    ],
+    /**
     * @desc 素材前置预审送审
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273263150083
     **/
