@@ -1355,6 +1355,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletListGetResponse::class,
     ],
     /**
+    * @desc 设置微信小游戏/小程序共享
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773089427219584
+    **/
+    'openToolsBpAssetManagementSharePostApi' => [
+        'desc' => '设置微信小游戏/小程序共享',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773089427219584',
+        'call' => AdOceanSdk\Tools\Api\ToolsBpAssetManagementSharePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsBpAssetManagementSharePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsBpAssetManagementSharePostResponse::class,
+    ],
+    /**
     * @desc 获取视频智能封面
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710602404864
     **/
