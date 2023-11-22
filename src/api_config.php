@@ -1388,6 +1388,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteHandselPostResponse::class,
     ],
     /**
+    * @desc 获取已创建资产列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1705976384784395
+    **/
+    'openToolsEventAssetsGetApi' => [
+        'desc' => '获取已创建资产列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1705976384784395',
+        'call' => AdOceanSdk\Tools\Api\ToolsEventAssetsGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEventAssetsGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEventAssetsGetResponse::class,
+    ],
+    /**
     * @desc 获取快投推荐出价系数
     * @doc  https://open.oceanengine.com/labels/7/docs/1740289237468175
     **/
