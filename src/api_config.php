@@ -178,6 +178,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectStatusUpdatePostResponse::class,
     ],
     /**
+    * @desc 批量更新项目投放时间
+    * @doc  https://open.oceanengine.com/labels/7/docs/1779258970970184
+    **/
+    'openProjectScheduleTimeUpdatePostApi' => [
+        'desc' => '批量更新项目投放时间',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1779258970970184',
+        'call' => AdOceanSdk\Advertising\Api\ProjectScheduleTimeUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectScheduleTimeUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectScheduleTimeUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取创意列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
     **/
