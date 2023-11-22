@@ -14,11 +14,11 @@ class AsyncTaskDownloadGetResponse extends Data implements ResponseInterface
 
 
     /**
-     * @var object $data 返回数据
+     * @var array $data 返回数据
      */
-    public object $data;
-    
-    public function getData(): \AdOceanSdk\Report\Data\AsyncTaskDownloadGetResponseData
+    public array $data;
+
+    public function getData(): array
     {
         return $this->data;
     }
