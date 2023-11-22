@@ -1388,6 +1388,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\WechatAppletListGetResponse::class,
     ],
     /**
+    * @desc 获取账户下原生锚点
+    * @doc  https://open.oceanengine.com/labels/7/docs/1757715831323652
+    **/
+    'openNativeAnchorGetApi' => [
+        'desc' => '获取账户下原生锚点',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1757715831323652',
+        'call' => AdOceanSdk\Tools\Api\NativeAnchorGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\NativeAnchorGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\NativeAnchorGetResponse::class,
+    ],
+    /**
     * @desc 删除定向包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710732991488
     **/
