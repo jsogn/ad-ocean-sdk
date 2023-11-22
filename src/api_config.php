@@ -937,6 +937,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageAdPostResponse::class,
     ],
     /**
+    * @desc 上传视频
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710600730639
+    **/
+    'openFileVideoAdPostApi' => [
+        'desc' => '上传视频',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710600730639',
+        'call' => AdOceanSdk\File\Api\FileVideoAdPostApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoAdPostParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoAdPostResponse::class,
+    ],
+    /**
     * @desc 获取授权User信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710507039756
     **/
