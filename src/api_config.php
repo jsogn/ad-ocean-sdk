@@ -1366,6 +1366,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSitePreviewGetResponse::class,
     ],
     /**
+    * @desc 获取落地页组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710629043212
+    **/
+    'openToolsLandingGroupGetApi' => [
+        'desc' => '获取落地页组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710629043212',
+        'call' => AdOceanSdk\Tools\Api\ToolsLandingGroupGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsLandingGroupGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupGetResponse::class,
+    ],
+    /**
     * @desc 创建落地页组
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710628472844
     **/
