@@ -3,17 +3,25 @@
 namespace AdOceanSdk\Kernel\Data;
 
 use ClassTransformer\Hydrator;
+use ClassTransformer\HydratorConfig;
 
 abstract class Data implements DataInterface
 {
+    public static function make(): static
+    {
+        return static::from([]);
+    }
+
     public static function from(array $data): static
     {
-        return Hydrator::init()->create(static::class, $data);
+        return Hydrator::init(new HydratorConfig(true))
+            ->create(static::class, $data);
     }
 
     public static function collection(array $data): array
     {
-        return Hydrator::init()->createCollection(static::class, $data);
+        return Hydrator::init(new HydratorConfig(true))
+            ->createCollection(static::class, $data);
     }
 
     private static function snakeToCamelCase(string $input): string
