@@ -1046,15 +1046,4 @@ return [
         'params' => AdOceanSdk\Tools\Params\WechatAppletListGetParams::class,
         'response' => AdOceanSdk\Tools\Response\WechatAppletListGetResponse::class,
     ],
-    /**
-    * @desc 获取同主体下广告主图片素材
-    * @doc  https://open.oceanengine.com/labels/7/docs/1696710602952719
-    **/
-    'openFileImageAdGetApi' => [
-        'desc' => '获取同主体下广告主图片素材',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710602952719',
-        'call' => AdOceanSdk\Tools\Api\FileImageAdGetApi::class,
-        'params' => AdOceanSdk\Tools\Params\FileImageAdGetParams::class,
-        'response' => AdOceanSdk\Tools\Response\FileImageAdGetResponse::class,
-    ],
 ];
