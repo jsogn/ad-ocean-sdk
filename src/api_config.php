@@ -123,6 +123,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetUpdatePostResponse::class,
     ],
     /**
+    * @desc 新建或修改配置，并保存到计划
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736244450483215
+    **/
+    'openAdvertiserCreativeAutoGenerateConfigCreatePostApi' => [
+        'desc' => '新建或修改配置，并保存到计划',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736244450483215',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeAutoGenerateConfigCreatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeAutoGenerateConfigCreatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeAutoGenerateConfigCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取创意列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
     **/
