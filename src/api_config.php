@@ -112,6 +112,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeTemplateTagsGetResponse::class,
     ],
     /**
+    * @desc 获取素材派生数据（素材维度）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755177023094787
+    **/
+    'openAdvertiserCreativeMaterialMetricsGetApi' => [
+        'desc' => '获取素材派生数据（素材维度）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755177023094787',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeMaterialMetricsGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeMaterialMetricsGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeMaterialMetricsGetResponse::class,
+    ],
+    /**
     * @desc 更新账户日预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710531631116
     **/
