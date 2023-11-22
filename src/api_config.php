@@ -233,6 +233,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationSubmitPostResponse::class,
     ],
     /**
+    * @desc 查询账号流水明细
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710527205388
+    **/
+    'openAdvertiserFundTransactionGetApi' => [
+        'desc' => '查询账号流水明细',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710527205388',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserFundTransactionGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserFundTransactionGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserFundTransactionGetResponse::class,
+    ],
+    /**
     * @desc 查询推广产品资质规则配置
     * @doc  https://open.oceanengine.com/labels/7/docs/1776710970860551
     **/
