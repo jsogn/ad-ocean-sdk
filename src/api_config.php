@@ -1366,6 +1366,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsOrangeSiteGetResponse::class,
     ],
     /**
+    * @desc 素材前置预审送审
+    * @doc  https://open.oceanengine.com/labels/7/docs/1722273263150083
+    **/
+    'openToolsPreAuditSendPostApi' => [
+        'desc' => '素材前置预审送审',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1722273263150083',
+        'call' => AdOceanSdk\Tools\Api\ToolsPreAuditSendPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPreAuditSendPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPreAuditSendPostResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点预览地址
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710619437056
     **/
