@@ -1454,6 +1454,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse::class,
     ],
     /**
+    * @desc 日志查询
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710682956815
+    **/
+    'openToolsLogSearchGetApi' => [
+        'desc' => '日志查询',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710682956815',
+        'call' => AdOceanSdk\Tools\Api\ToolsLogSearchGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsLogSearchGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsLogSearchGetResponse::class,
+    ],
+    /**
     * @desc 删除动态创意词包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710719368207
     **/
