@@ -52,13 +52,13 @@ def process_params(param_rows, cell_type_dict):
         if not cells:
             continue
 
-        param_name = cells[0].find('p').text.strip()
+        param_name = cells[0].find('p').text.strip().replace(' ', '').replace('必填', '')
         param_type = cells[1].find('p').text.strip()
 
         if cells[2].find('p') is None:
-            param_desc = cells[2].text.strip()
+            param_desc = cells[2].text.strip().replace(' ', '')
         else:
-            param_desc = cells[2].find('p').text.strip()
+            param_desc = cells[2].find('p').text.strip().replace(' ', '')
 
         if '废弃' in param_name:
             continue

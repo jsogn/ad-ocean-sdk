@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 获取代理商信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710518158351
+    **/
+    'openAgentInfoGetApi' => [
+        'desc' => '获取代理商信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710518158351',
+        'call' => AdOceanSdk\Agent\Api\AgentInfoGetApi::class,
+        'params' => AdOceanSdk\Agent\Params\AgentInfoGetParams::class,
+        'response' => AdOceanSdk\Agent\Response\AgentInfoGetResponse::class,
+    ],
+    /**
     * @desc 代理商管理账户列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710516003852
     **/
