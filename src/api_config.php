@@ -1058,6 +1058,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileVideoGetResponse::class,
     ],
     /**
+    * @desc 获取抖音主页视频
+    * @doc  https://open.oceanengine.com/labels/7/docs/1729982871844879
+    **/
+    'openFileVideoAwemeGetApi' => [
+        'desc' => '获取抖音主页视频',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1729982871844879',
+        'call' => AdOceanSdk\File\Api\FileVideoAwemeGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoAwemeGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoAwemeGetResponse::class,
+    ],
+    /**
     * @desc 获取授权User信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710507039756
     **/
