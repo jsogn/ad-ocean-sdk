@@ -148,6 +148,14 @@ if params_table is not None:
     processor = ApiTableProcessor()
     response_params = processor.process(param_rows)
 
+if "data" not in response_params:
+    # 键不存在，添加键和值
+    response_params["data"] = {
+        'type': 'object',
+        'description': '返回数据',
+        'level': 0,
+        'children': {}
+    }
 # 将提取的信息转换为JSON格式
 data = {
     'request_title': title,

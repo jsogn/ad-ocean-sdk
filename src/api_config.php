@@ -101,6 +101,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetGetResponse::class,
     ],
     /**
+    * @desc 更新账户日预算
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710531631116
+    **/
+    'openAdvertiserBudgetUpdatePostApi' => [
+        'desc' => '更新账户日预算',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710531631116',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserBudgetUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserBudgetUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetUpdatePostResponse::class,
+    ],
+    /**
     * @desc 二级代理商列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
     **/
