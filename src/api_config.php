@@ -1267,6 +1267,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteUpdatePostResponse::class,
     ],
     /**
+    * @desc 素材前置预审结果获取
+    * @doc  https://open.oceanengine.com/labels/7/docs/1722273278471172
+    **/
+    'openToolsPreAuditGetApi' => [
+        'desc' => '素材前置预审结果获取',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1722273278471172',
+        'call' => AdOceanSdk\Tools\Api\ToolsPreAuditGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPreAuditGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPreAuditGetResponse::class,
+    ],
+    /**
     * @desc 更改橙子建站站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710618884096
     **/
