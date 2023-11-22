@@ -112,6 +112,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取广告组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710532657164
+    **/
+    'openAdvertiserCampaignGetApi' => [
+        'desc' => '获取广告组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710532657164',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCampaignGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCampaignGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCampaignGetResponse::class,
+    ],
+    /**
     * @desc 二级代理商列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
     **/

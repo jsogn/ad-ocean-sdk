@@ -52,7 +52,7 @@ def process_params(param_rows, cell_type_dict):
         if not cells:
             continue
 
-        param_name = cells[0].find('p').text.strip().replace(' ', '').replace('必填', '')
+        param_name = cells[0].find('p').text.strip().replace(' ', '').replace('必填', '').replace('条件', '')
         param_type = cells[1].find('p').text.strip()
 
         if cells[2].find('p') is None:
