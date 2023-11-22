@@ -1278,6 +1278,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteUpdateStatusPostResponse::class,
     ],
     /**
+    * @desc 建站工具-建站转赠
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710623352844
+    **/
+    'openToolsSiteHandselPostApi' => [
+        'desc' => '建站工具-建站转赠',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710623352844',
+        'call' => AdOceanSdk\Tools\Api\ToolsSiteHandselPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsSiteHandselPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsSiteHandselPostResponse::class,
+    ],
+    /**
     * @desc 创建橙子建站站点
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710617712640
     **/
