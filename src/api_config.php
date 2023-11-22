@@ -937,6 +937,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageGetResponse::class,
     ],
     /**
+    * @desc 素材推送
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710604852236
+    **/
+    'openFileMaterialBindPostApi' => [
+        'desc' => '素材推送',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710604852236',
+        'call' => AdOceanSdk\File\Api\FileMaterialBindPostApi::class,
+        'params' => AdOceanSdk\File\Params\FileMaterialBindPostParams::class,
+        'response' => AdOceanSdk\File\Response\FileMaterialBindPostResponse::class,
+    ],
+    /**
     * @desc 上传资质图片
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710599659532
     **/
