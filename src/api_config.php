@@ -134,12 +134,12 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeMaterialMetricsGetResponse::class,
     ],
     /**
-    * @desc 更新创意状态
-    * @doc  https://open.oceanengine.com/labels/7/docs/1700170319321092
+    * @desc 更改创意状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710543049740
     **/
     'openAdvertiserCreativeUpdateStatusPostApi' => [
-        'desc' => '更新创意状态',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1700170319321092',
+        'desc' => '更改创意状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710543049740',
         'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeUpdateStatusPostApi::class,
         'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeUpdateStatusPostParams::class,
         'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeUpdateStatusPostResponse::class,

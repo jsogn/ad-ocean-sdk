@@ -14,11 +14,11 @@ class AdvertiserCreativeUpdateStatusPostResponse extends Data implements Respons
 
 
     /**
-     * @var array $data 返回数据
+     * @var \AdOceanSdk\Advertising\Data\AdvertiserCreativeUpdateStatusPostResponseData $data 返回数据
      */
-    public array $data;
-
-    public function getData(): array
+    public \AdOceanSdk\Advertising\Data\AdvertiserCreativeUpdateStatusPostResponseData $data;
+    
+    public function getData(): \AdOceanSdk\Advertising\Data\AdvertiserCreativeUpdateStatusPostResponseData
     {
         return $this->data;
     }

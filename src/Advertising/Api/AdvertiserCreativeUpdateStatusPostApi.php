@@ -7,12 +7,12 @@ use AdOceanSdk\RequestApi;
 use AdOceanSdk\RequestMethodEnum;
 
 /**
- * @desc 更新创意状态
- * @doc  https://open.oceanengine.com/labels/7/docs/1700170319321092
+ * @desc 更改创意状态
+ * @doc  https://open.oceanengine.com/labels/7/docs/1696710543049740
  */
 class AdvertiserCreativeUpdateStatusPostApi extends RequestApi
 {
-    protected string $address = 'open_api/2/creative/update/status/';
+    protected string $address = 'athena/faq/index.html?plat_id=7&id=228';
 
     protected RequestMethodEnum $method = RequestMethodEnum::POST;
 
