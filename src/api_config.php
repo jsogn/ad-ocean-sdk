@@ -1410,6 +1410,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse::class,
     ],
     /**
+    * @desc 删除动态创意词包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710719368207
+    **/
+    'openToolsCreativeWordDeletePostApi' => [
+        'desc' => '删除动态创意词包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710719368207',
+        'call' => AdOceanSdk\Tools\Api\ToolsCreativeWordDeletePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCreativeWordDeletePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCreativeWordDeletePostResponse::class,
+    ],
+    /**
     * @desc 创建动态创意词包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710717478927
     **/
