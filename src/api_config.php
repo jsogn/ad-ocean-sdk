@@ -112,17 +112,6 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeTemplateTagsGetResponse::class,
     ],
     /**
-    * @desc 获取创意列表
-    * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
-    **/
-    'openAdvertiserCreativeGetGetApi' => [
-        'desc' => '获取创意列表',
-        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710540735500',
-        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeGetApi::class,
-        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeGetParams::class,
-        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeGetResponse::class,
-    ],
-    /**
     * @desc 更新账户日预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710531631116
     **/
@@ -134,6 +123,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取创意列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
+    **/
+    'openAdvertiserCreativeGetApi' => [
+        'desc' => '获取创意列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710540735500',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeGetResponse::class,
+    ],
+    /**
     * @desc 获取广告组
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710532657164
     **/
@@ -143,6 +143,17 @@ return [
         'call' => AdOceanSdk\Advertising\Api\AdvertiserCampaignGetApi::class,
         'params' => AdOceanSdk\Advertising\Params\AdvertiserCampaignGetParams::class,
         'response' => AdOceanSdk\Advertising\Response\AdvertiserCampaignGetResponse::class,
+    ],
+    /**
+    * @desc 获取模板列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736241054353421
+    **/
+    'openAdvertiserCreativeTemplateListGetApi' => [
+        'desc' => '获取模板列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736241054353421',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeTemplateListGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeTemplateListGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeTemplateListGetResponse::class,
     ],
     /**
     * @desc 二级代理商列表
