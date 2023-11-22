@@ -1398,4 +1398,15 @@ return [
         'params' => AdOceanSdk\Tools\Params\ToolsSiteCopyPostParams::class,
         'response' => AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse::class,
     ],
+    /**
+    * @desc 更新落地页组站点状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710629600256
+    **/
+    'openToolsLandingGroupSiteOptStatusUpdatePostApi' => [
+        'desc' => '更新落地页组站点状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710629600256',
+        'call' => AdOceanSdk\Tools\Api\ToolsLandingGroupSiteOptStatusUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsLandingGroupSiteOptStatusUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse::class,
+    ],
 ];

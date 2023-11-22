@@ -134,6 +134,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupGetResponse openToolsLandingGroupGetApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupGetParams|array $params) 获取落地页组 https://open.oceanengine.com/labels/7/docs/1696710629043212
  * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupCreatePostResponse openToolsLandingGroupCreatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupCreatePostParams|array $params) 创建落地页组 https://open.oceanengine.com/labels/7/docs/1696710628472844
  * @method \AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse openToolsSiteCopyPostApi(\AdOceanSdk\Tools\Params\ToolsSiteCopyPostParams|array $params) 建站工具-建站复制 https://open.oceanengine.com/labels/7/docs/1696710623908864
+ * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse openToolsLandingGroupSiteOptStatusUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupSiteOptStatusUpdatePostParams|array $params) 更新落地页组站点状态 https://open.oceanengine.com/labels/7/docs/1696710629600256
  */
 readonly class OpenApi
 {
