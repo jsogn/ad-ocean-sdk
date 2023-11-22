@@ -112,6 +112,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeDetailGetResponse::class,
     ],
     /**
+    * @desc 新建/修改白盒配置（广告升级版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1760943644787716
+    **/
+    'openPromotionAutoGenerateConfigCreatePostApi' => [
+        'desc' => '新建/修改白盒配置（广告升级版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1760943644787716',
+        'call' => AdOceanSdk\Advertising\Api\PromotionAutoGenerateConfigCreatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionAutoGenerateConfigCreatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionAutoGenerateConfigCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取广告组
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710532657164
     **/
