@@ -1894,6 +1894,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdQualityGetResponse::class,
     ],
     /**
+    * @desc 事件管理资产取消共享
+    * @doc  https://open.oceanengine.com/labels/7/docs/1738862469146628
+    **/
+    'openEventManagerShareCancelPostApi' => [
+        'desc' => '事件管理资产取消共享',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1738862469146628',
+        'call' => AdOceanSdk\Tools\Api\EventManagerShareCancelPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerShareCancelPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerShareCancelPostResponse::class,
+    ],
+    /**
     * @desc 更新落地页组站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710629600256
     **/
