@@ -1267,6 +1267,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteUpdatePostResponse::class,
     ],
     /**
+    * @desc 更改橙子建站站点状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710618884096
+    **/
+    'openToolsSiteUpdateStatusPostApi' => [
+        'desc' => '更改橙子建站站点状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710618884096',
+        'call' => AdOceanSdk\Tools\Api\ToolsSiteUpdateStatusPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsSiteUpdateStatusPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsSiteUpdateStatusPostResponse::class,
+    ],
+    /**
     * @desc 创建橙子建站站点
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710617712640
     **/
