@@ -1421,6 +1421,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse::class,
     ],
     /**
+    * @desc 查询动态创意词包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710718137356
+    **/
+    'openToolsCreativeWordSelectGetApi' => [
+        'desc' => '查询动态创意词包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710718137356',
+        'call' => AdOceanSdk\Tools\Api\ToolsCreativeWordSelectGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCreativeWordSelectGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCreativeWordSelectGetResponse::class,
+    ],
+    /**
     * @desc 更新落地页组信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710630182912
     **/
