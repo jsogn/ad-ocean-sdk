@@ -36,9 +36,9 @@ class FileVideoAdPostResponseData extends Data
     public string $video_url;
     
     /**
-     * @var double $duration 视频时长
+     * @var float $duration 视频时长
      */
-    public double $duration;
+    public float $duration;
     
     /**
      * @var int $material_id 素材id，即多合一报表中的素材id，一个素材唯一对应一个素材id
