@@ -1542,6 +1542,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse::class,
     ],
     /**
+    * @desc 资产下创建事件
+    * @doc  https://open.oceanengine.com/labels/7/docs/1709792900524035
+    **/
+    'openEventManagerEventsCreatePostApi' => [
+        'desc' => '资产下创建事件',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1709792900524035',
+        'call' => AdOceanSdk\Tools\Api\EventManagerEventsCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerEventsCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerEventsCreatePostResponse::class,
+    ],
+    /**
     * @desc 查询动态创意词包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710718137356
     **/
