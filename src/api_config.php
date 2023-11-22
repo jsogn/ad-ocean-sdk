@@ -1322,6 +1322,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse::class,
     ],
     /**
+    * @desc 更新落地页组信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710630182912
+    **/
+    'openToolsLandingGroupUpdatePostApi' => [
+        'desc' => '更新落地页组信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710630182912',
+        'call' => AdOceanSdk\Tools\Api\ToolsLandingGroupUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsLandingGroupUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710620579852
     **/
