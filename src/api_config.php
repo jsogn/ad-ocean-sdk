@@ -1850,6 +1850,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPreAuditSendPostResponse::class,
     ],
     /**
+    * @desc 采纳广告诊断建议
+    * @doc  https://open.oceanengine.com/labels/7/docs/1754716131916803
+    **/
+    'openToolsPromotionDiagnosisSuggestionAcceptPostApi' => [
+        'desc' => '采纳广告诊断建议',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1754716131916803',
+        'call' => AdOceanSdk\Tools\Api\ToolsPromotionDiagnosisSuggestionAcceptPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPromotionDiagnosisSuggestionAcceptPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPromotionDiagnosisSuggestionAcceptPostResponse::class,
+    ],
+    /**
     * @desc 引流下单转化信息获取
     * @doc  https://open.oceanengine.com/labels/7/docs/1774836168252548
     **/
