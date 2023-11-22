@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 创建转账交易号
+    * @doc  https://open.oceanengine.com/labels/7/docs/1758606134468620
+    **/
+    'openCustomerCenterFundTransferSeqCreatePostApi' => [
+        'desc' => '创建转账交易号',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1758606134468620',
+        'call' => AdOceanSdk\Fund\Api\CustomerCenterFundTransferSeqCreatePostApi::class,
+        'params' => AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCreatePostParams::class,
+        'response' => AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取可转账户列表（客户中心&广告主）
     * @doc  https://open.oceanengine.com/labels/7/docs/1758605359659008
     **/

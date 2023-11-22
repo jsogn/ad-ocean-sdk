@@ -7,6 +7,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
 /**
  * class OpenApi
  * 开放接口调度类
+ * @method \AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse openCustomerCenterFundTransferSeqCreatePostApi(\AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCreatePostParams|array $params) 创建转账交易号 https://open.oceanengine.com/labels/7/docs/1758606134468620
  * @method \AdOceanSdk\Fund\Response\CustomerCenterAdvertiserTransferableListGetResponse openCustomerCenterAdvertiserTransferableListGetApi(\AdOceanSdk\Fund\Params\CustomerCenterAdvertiserTransferableListGetParams|array $params) 获取可转账户列表（客户中心&广告主） https://open.oceanengine.com/labels/7/docs/1758605359659008
  * @method \AdOceanSdk\Fund\Response\FundSharedWalletBalanceGetResponse openFundSharedWalletBalanceGetApi(\AdOceanSdk\Fund\Params\FundSharedWalletBalanceGetParams|array $params) 获取返货共享钱包余额 https://open.oceanengine.com/labels/7/docs/1703323812831239
  * @method \AdOceanSdk\Agent\Response\AgentChildAgentSelectGetResponse openAgentChildAgentSelectGetApi(\AdOceanSdk\Agent\Params\AgentChildAgentSelectGetParams|array $params) 二级代理商列表 https://open.oceanengine.com/labels/7/docs/1696710517693452
