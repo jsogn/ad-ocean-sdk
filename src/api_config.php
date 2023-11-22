@@ -101,6 +101,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetGetResponse::class,
     ],
     /**
+    * @desc 获取创意列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
+    **/
+    'openAdvertiserCreativeGetGetApi' => [
+        'desc' => '获取创意列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710540735500',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeGetGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeGetGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeGetGetResponse::class,
+    ],
+    /**
     * @desc 更新账户日预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710531631116
     **/
