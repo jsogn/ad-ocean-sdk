@@ -145,6 +145,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserCampaignGetResponse::class,
     ],
     /**
+    * @desc 获取模板详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1736243716320256
+    **/
+    'openAdvertiserCreativeTemplateDetailGetGetApi' => [
+        'desc' => '获取模板详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1736243716320256',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeTemplateDetailGetGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeTemplateDetailGetGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeTemplateDetailGetGetResponse::class,
+    ],
+    /**
     * @desc 获取模板列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1736241054353421
     **/
