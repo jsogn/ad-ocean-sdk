@@ -1344,6 +1344,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteCreatePostResponse::class,
     ],
     /**
+    * @desc 更新动态创意词包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710718730240
+    **/
+    'openToolsCreativeWordUpdatePostApi' => [
+        'desc' => '更新动态创意词包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710718730240',
+        'call' => AdOceanSdk\Tools\Api\ToolsCreativeWordUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCreativeWordUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCreativeWordUpdatePostResponse::class,
+    ],
+    /**
     * @desc 创建微信小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1771744149686286
     **/
