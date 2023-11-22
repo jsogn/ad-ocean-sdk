@@ -20,6 +20,7 @@ generateResponseClass($classNameSpace, $classPrefix, $responseParams);
 generateApiClass($classNameSpace, $classPrefix, $docData);
 function generateApiClass(string $classNameSpace, string $classPrefix, array $data): void
 {
+    $classPrefix   = trim($classPrefix);
     $className     = $classPrefix . 'Api';
     $namespace     = "{$classNameSpace}\\Api";
     $parentClass   = 'RequestApi';
@@ -61,6 +62,7 @@ CODE;
 
 function generateResponseClass(string $classNameSpace, string $classPrefix, array $params): void
 {
+    $classPrefix  = trim($classPrefix);
     $data['data'] = $params['data'];
     $returnType   = "\\{$classNameSpace}\\Data\\{$classPrefix}ResponseData";
 
@@ -104,7 +106,8 @@ CODE;
 
 function generateParamClass(string $classNameSpace, string $classPrefix, array $params): void
 {
-    $fields = generateFields($classNameSpace, $classPrefix . 'Param', $params);
+    $classPrefix = trim($classPrefix);
+    $fields      = generateFields($classNameSpace, $classPrefix . 'Param', $params);
 
     $code = <<<CODE
 <?php
@@ -144,7 +147,8 @@ function generateFile(string $path, string $content): void
 
 function generateFields(string $classNameSpace, string $classPrefix, array $params): string
 {
-    $code = "";
+    $classPrefix = trim($classPrefix);
+    $code        = "";
     foreach ($params as $key => $param) {
         $varType = generatePhpType($param['type']);
         $docType = $varType;
@@ -173,7 +177,8 @@ CODE;
             } else {
                 $typeClass = "\\$classNameSpace\\Data\\" . "{$classPrefix}" . toCamelCase($key) . 'Data';
             }
-            $docType = $typeClass;
+            $typeClass = trim($typeClass);
+            $docType   = $typeClass;
 
             if ($varType === 'array') {
                 $annot   = "#[\ClassTransformer\Attributes\ConvertArray({$typeClass}::class)]";
@@ -215,7 +220,8 @@ CODE;
 
 function generateDataClass(string $classNameSpace, string $classPrefix, array $params, string $desc = ''): void
 {
-    $fields = generateFields($classNameSpace, $classPrefix, $params);
+    $classPrefix = trim($classPrefix);
+    $fields      = generateFields($classNameSpace, $classPrefix, $params);
 
     $code = <<<CODE
 <?php
@@ -251,6 +257,7 @@ function generatePhpType(string $type): string
     $typeMapping = [
         'list'     => 'array',
         'number'   => 'int',
+        'double'   => 'float',
         'object[]' => 'array',
     ];
 

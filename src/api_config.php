@@ -948,6 +948,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileVideoPausePostResponse::class,
     ],
     /**
+    * @desc 【代理商】明点无效素材查询
+    * @doc  https://open.oceanengine.com/labels/7/docs/1779971491239040
+    **/
+    'openFileRebateMaterialSearchGetApi' => [
+        'desc' => '【代理商】明点无效素材查询',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1779971491239040',
+        'call' => AdOceanSdk\File\Api\FileRebateMaterialSearchGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileRebateMaterialSearchGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileRebateMaterialSearchGetResponse::class,
+    ],
+    /**
     * @desc 获取同主体下广告主视频素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710603509772
     **/
@@ -1014,6 +1025,28 @@ return [
         'response' => AdOceanSdk\File\Response\FIleImageAdvertiserPostResponse::class,
     ],
     /**
+    * @desc 获取图文素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773554026740736
+    **/
+    'openCarouselListGetApi' => [
+        'desc' => '获取图文素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773554026740736',
+        'call' => AdOceanSdk\File\Api\CarouselListGetApi::class,
+        'params' => AdOceanSdk\File\Params\CarouselListGetParams::class,
+        'response' => AdOceanSdk\File\Response\CarouselListGetResponse::class,
+    ],
+    /**
+    * @desc 获取同主体下广告主图文素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773560989475840
+    **/
+    'openCarouselAdGetApi' => [
+        'desc' => '获取同主体下广告主图文素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773560989475840',
+        'call' => AdOceanSdk\File\Api\CarouselAdGetApi::class,
+        'params' => AdOceanSdk\File\Params\CarouselAdGetParams::class,
+        'response' => AdOceanSdk\File\Response\CarouselAdGetResponse::class,
+    ],
+    /**
     * @desc 上传广告图片
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710600176640
     **/
@@ -1023,6 +1056,17 @@ return [
         'call' => AdOceanSdk\File\Api\FileImageAdPostApi::class,
         'params' => AdOceanSdk\File\Params\FileImageAdPostParams::class,
         'response' => AdOceanSdk\File\Response\FileImageAdPostResponse::class,
+    ],
+    /**
+    * @desc 更新图文信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773554529716228
+    **/
+    'openCarouselUpdatePostApi' => [
+        'desc' => '更新图文信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773554529716228',
+        'call' => AdOceanSdk\File\Api\CarouselUpdatePostApi::class,
+        'params' => AdOceanSdk\File\Params\CarouselUpdatePostParams::class,
+        'response' => AdOceanSdk\File\Response\CarouselUpdatePostResponse::class,
     ],
     /**
     * @desc 查询素材标签信息
@@ -1089,6 +1133,17 @@ return [
         'call' => AdOceanSdk\File\Api\FileVideoAdPostApi::class,
         'params' => AdOceanSdk\File\Params\FileVideoAdPostParams::class,
         'response' => AdOceanSdk\File\Response\FileVideoAdPostResponse::class,
+    ],
+    /**
+    * @desc 上传图文
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773552433235140
+    **/
+    'openCarouselCreatePostApi' => [
+        'desc' => '上传图文',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773552433235140',
+        'call' => AdOceanSdk\File\Api\CarouselCreatePostApi::class,
+        'params' => AdOceanSdk\File\Params\CarouselCreatePostParams::class,
+        'response' => AdOceanSdk\File\Response\CarouselCreatePostResponse::class,
     ],
     /**
     * @desc 批量删除图文
