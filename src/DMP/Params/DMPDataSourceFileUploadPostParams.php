@@ -15,9 +15,9 @@ class DMPDataSourceFileUploadPostParams extends RequestParams
     public int $advertiser_id;
     
     /**
-     * @var file $file 文件
+     * @var mixed $file 文件
      */
-    public file $file;
+    public mixed $file;
     
     /**
      * @var string $file_signature 文件MD5
