@@ -24,6 +24,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCommitPostResponse::class,
     ],
     /**
+    * @desc 提交退款交易号（方舟）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1766755445237824
+    **/
+    'openAgentRefundTransferSeqCommitPostApi' => [
+        'desc' => '提交退款交易号（方舟）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1766755445237824',
+        'call' => AdOceanSdk\Fund\Api\AgentRefundTransferSeqCommitPostApi::class,
+        'params' => AdOceanSdk\Fund\Params\AgentRefundTransferSeqCommitPostParams::class,
+        'response' => AdOceanSdk\Fund\Response\AgentRefundTransferSeqCommitPostResponse::class,
+    ],
+    /**
     * @desc 获取可转账户列表（客户中心&广告主）
     * @doc  https://open.oceanengine.com/labels/7/docs/1758605359659008
     **/
