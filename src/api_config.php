@@ -90,6 +90,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 创建异步任务
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710562799616
+    **/
+    'openAsyncTaskCreatePostApi' => [
+        'desc' => '创建异步任务',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710562799616',
+        'call' => AdOceanSdk\Report\Api\AsyncTaskCreatePostApi::class,
+        'params' => AdOceanSdk\Report\Params\AsyncTaskCreatePostParams::class,
+        'response' => AdOceanSdk\Report\Response\AsyncTaskCreatePostResponse::class,
+    ],
+    /**
     * @desc 自定义报表
     * @doc  https://open.oceanengine.com/labels/7/docs/1741387668314126
     **/
