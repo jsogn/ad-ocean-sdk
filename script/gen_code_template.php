@@ -152,6 +152,7 @@ function generateFields(string $classNameSpace, string $classPrefix, array $para
 
         if ($key === 'page_info') {
             $code .= <<<CODE
+
     /**
      * @var \AdOceanSdk\ResponsePageInfoData \${$key} 分页信息
      */

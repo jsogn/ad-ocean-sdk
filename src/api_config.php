@@ -46,6 +46,17 @@ return [
         'response' => AdOceanSdk\Agent\Response\AgentAdvertiserSelectGetResponse::class,
     ],
     /**
+    * @desc 获取主体下的账户列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741479196149775
+    **/
+    'openBusinessPlatformCompanyAccountGetApi' => [
+        'desc' => '获取主体下的账户列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741479196149775',
+        'call' => AdOceanSdk\Majordomo\Api\BusinessPlatformCompanyAccountGetApi::class,
+        'params' => AdOceanSdk\Majordomo\Params\BusinessPlatformCompanyAccountGetParams::class,
+        'response' => AdOceanSdk\Majordomo\Response\BusinessPlatformCompanyAccountGetResponse::class,
+    ],
+    /**
     * @desc 获取纵横组织下资产账户列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710519607296
     **/
