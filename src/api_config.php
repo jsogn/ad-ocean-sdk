@@ -1443,6 +1443,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSearchBidRatioGetResponse::class,
     ],
     /**
+    * @desc 获取事件资产下的监测链接组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1727901957092365
+    **/
+    'openEventManagerTrackUrlGetApi' => [
+        'desc' => '获取事件资产下的监测链接组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1727901957092365',
+        'call' => AdOceanSdk\Tools\Api\EventManagerTrackUrlGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerTrackUrlGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerTrackUrlGetResponse::class,
+    ],
+    /**
     * @desc 创建橙子建站站点
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710617712640
     **/
