@@ -1597,6 +1597,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse::class,
     ],
     /**
+    * @desc 事件管理资产查看共享范围
+    * @doc  https://open.oceanengine.com/labels/7/docs/1738862504734731
+    **/
+    'openEventManagerShareGetApi' => [
+        'desc' => '事件管理资产查看共享范围',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1738862504734731',
+        'call' => AdOceanSdk\Tools\Api\EventManagerShareGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerShareGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerShareGetResponse::class,
+    ],
+    /**
     * @desc 资产下创建事件
     * @doc  https://open.oceanengine.com/labels/7/docs/1709792900524035
     **/
