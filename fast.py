@@ -106,7 +106,7 @@ address_tag = soup.find(id='link-0')
 request_url = address_tag.find_next('a')['href']
 
 # 提取请求方式
-request_tag = soup.find(text="请求方法")
+request_tag = soup.find(text="请求方法") or soup.find(text="请求方式")
 request_method = request_tag.find_next('p').find('strong')
 
 if (request_method is None):

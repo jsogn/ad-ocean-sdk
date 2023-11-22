@@ -2,6 +2,28 @@
 
 return [
     /**
+    * @desc 获取可转账户列表（客户中心&广告主）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1758605359659008
+    **/
+    'openCustomerCenterAdvertiserTransferableListGetApi' => [
+        'desc' => '获取可转账户列表（客户中心&广告主）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1758605359659008',
+        'call' => AdOceanSdk\Fund\Api\CustomerCenterAdvertiserTransferableListGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\CustomerCenterAdvertiserTransferableListGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\CustomerCenterAdvertiserTransferableListGetResponse::class,
+    ],
+    /**
+    * @desc 获取返货共享钱包余额
+    * @doc  https://open.oceanengine.com/labels/7/docs/1703323812831239
+    **/
+    'openFundSharedWalletBalanceGetApi' => [
+        'desc' => '获取返货共享钱包余额',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1703323812831239',
+        'call' => AdOceanSdk\Fund\Api\FundSharedWalletBalanceGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\FundSharedWalletBalanceGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\FundSharedWalletBalanceGetResponse::class,
+    ],
+    /**
     * @desc 二级代理商列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
     **/
@@ -231,6 +253,17 @@ return [
         'call' => AdOceanSdk\Advertiser\Api\AdvertiserDeliveryQualificationSubmitPostApi::class,
         'params' => AdOceanSdk\Advertiser\Params\AdvertiserDeliveryQualificationSubmitPostParams::class,
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationSubmitPostResponse::class,
+    ],
+    /**
+    * @desc 查询账户可转余额
+    * @doc  https://open.oceanengine.com/labels/7/docs/1725634464247879
+    **/
+    'openAdvertiserTransferableFundGetApi' => [
+        'desc' => '查询账户可转余额',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1725634464247879',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserTransferableFundGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserTransferableFundGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserTransferableFundGetResponse::class,
     ],
     /**
     * @desc 查询账号流水明细
