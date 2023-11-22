@@ -376,6 +376,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeMaterialMetricsGetResponse::class,
     ],
     /**
+    * @desc 批量获取广告成本保障状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755355980850191
+    **/
+    'openPromotionCostProtectStatusGetApi' => [
+        'desc' => '批量获取广告成本保障状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755355980850191',
+        'call' => AdOceanSdk\Advertising\Api\PromotionCostProtectStatusGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionCostProtectStatusGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionCostProtectStatusGetResponse::class,
+    ],
+    /**
     * @desc 批量修改深度出价
     * @doc  https://open.oceanengine.com/labels/7/docs/1755355890182159
     **/
