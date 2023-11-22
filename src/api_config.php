@@ -1410,6 +1410,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPreAuditSendPostResponse::class,
     ],
     /**
+    * @desc 更新定向包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710732349455
+    **/
+    'openAudiencePackageUpdatePostApi' => [
+        'desc' => '更新定向包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710732349455',
+        'call' => AdOceanSdk\Tools\Api\AudiencePackageUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\AudiencePackageUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\AudiencePackageUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点预览地址
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710619437056
     **/
