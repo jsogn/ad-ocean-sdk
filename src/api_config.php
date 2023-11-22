@@ -1278,6 +1278,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPreAuditGetResponse::class,
     ],
     /**
+    * @desc 获取定向包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710731761676
+    **/
+    'openAudiencePackageGetApi' => [
+        'desc' => '获取定向包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710731761676',
+        'call' => AdOceanSdk\Tools\Api\AudiencePackageGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\AudiencePackageGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\AudiencePackageGetResponse::class,
+    ],
+    /**
     * @desc 更改橙子建站站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710618884096
     **/
