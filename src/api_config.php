@@ -156,6 +156,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeTemplateListGetResponse::class,
     ],
     /**
+    * @desc 获取预算组列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780644067911818
+    **/
+    'openBudgetGroupListGetApi' => [
+        'desc' => '获取预算组列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780644067911818',
+        'call' => AdOceanSdk\Advertising\Api\BudgetGroupListGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\BudgetGroupListGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\BudgetGroupListGetResponse::class,
+    ],
+    /**
     * @desc 获取模板详情
     * @doc  https://open.oceanengine.com/labels/7/docs/1736243716320256
     **/
