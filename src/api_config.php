@@ -211,6 +211,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeGetResponse::class,
     ],
     /**
+    * @desc 创建广告
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740946299496459
+    **/
+    'openPromotionCreatePostApi' => [
+        'desc' => '创建广告',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740946299496459',
+        'call' => AdOceanSdk\Advertising\Api\PromotionCreatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionCreatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionCreatePostResponse::class,
+    ],
+    /**
     * @desc 更新账户日预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710531631116
     **/

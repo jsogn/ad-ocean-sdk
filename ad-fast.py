@@ -117,7 +117,15 @@ request_method = request_method.replace('Query-String', '').replace('Request-Bod
 
 # 提取请求参数
 # 给定的数组
-tags = ['请求参数', '搜索快投', '搜索快投关键词', '关联产品投放', '投放内容', '优化目标','推广目的为电商店铺推广（landing_type=SHOP）时投放目标参数', '投放版位', '商品定向（当landing_type=DPA时投放目标参数）', '人群定向', '人群定向（线索智投场景）', '排期与预算出价', '监测链接']  # 在这里添加更多标签
+tags = [
+    '请求参数',
+    'DPA素材',
+    '直播素材与广告素材组合',
+    '原生广告设置',
+    '创意设置',
+    '广告预算与出价',
+    '搜索流量',
+]
 # 初始化 request_params
 request_params = {}
 for tag in tags:
