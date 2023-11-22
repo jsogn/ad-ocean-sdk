@@ -1520,6 +1520,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageCreatePostResponse::class,
     ],
     /**
+    * @desc 查询建议出价（巨量广告升级版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1771363823169544
+    **/
+    'openToolsBidsSuggestGetApi' => [
+        'desc' => '查询建议出价（巨量广告升级版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1771363823169544',
+        'call' => AdOceanSdk\Tools\Api\ToolsBidsSuggestGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsBidsSuggestGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsBidsSuggestGetResponse::class,
+    ],
+    /**
     * @desc 获取微信小程序列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1771203622020111
     **/
