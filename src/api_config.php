@@ -1717,4 +1717,15 @@ return [
         'params' => AdOceanSdk\Tools\Params\ToolsLandingGroupSiteOptStatusUpdatePostParams::class,
         'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse::class,
     ],
+    /**
+    * @desc 行动号召字段内容获取
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710684229644
+    **/
+    'openToolsActionTextGetApi' => [
+        'desc' => '行动号召字段内容获取',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710684229644',
+        'call' => AdOceanSdk\Tools\Api\ToolsActionTextGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsActionTextGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsActionTextGetResponse::class,
+    ],
 ];
