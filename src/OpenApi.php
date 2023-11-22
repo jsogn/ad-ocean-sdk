@@ -102,6 +102,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Oauth\Response\OauthAccessTokenGetResponse openOauthAccessTokenGetApi(\AdOceanSdk\Oauth\Params\OauthAccessTokenGetParams|array $params) 获取Access Token https://open.oceanengine.com/labels/7/docs/1696710505596940
  * @method \AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse openToolsVideoCoverSuggestGetApi(\AdOceanSdk\Tools\Params\ToolsVideoCoverSuggestGetParams|array $params) 获取视频智能封面 https://open.oceanengine.com/labels/7/docs/1696710602404864
  * @method \AdOceanSdk\Tools\Response\WechatAppletListGetResponse openWechatAppletListGetApi(\AdOceanSdk\Tools\Params\WechatAppletListGetParams|array $params) 获取微信小程序列表 https://open.oceanengine.com/labels/7/docs/1771203622020111
+ * @method \AdOceanSdk\Tools\Response\FileImageAdGetResponse openFileImageAdGetApi(\AdOceanSdk\Tools\Params\FileImageAdGetParams|array $params) 获取同主体下广告主图片素材 https://open.oceanengine.com/labels/7/docs/1696710602952719
  */
 readonly class OpenApi
 {
