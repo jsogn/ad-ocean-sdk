@@ -13,6 +13,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 提交转账交易号（方舟）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1766755371753487
+    **/
+    'openAgentTransferSeqCommitPostApi' => [
+        'desc' => '提交转账交易号（方舟）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1766755371753487',
+        'call' => AdOceanSdk\Fund\Api\AgentTransferSeqCommitPostApi::class,
+        'params' => AdOceanSdk\Fund\Params\AgentTransferSeqCommitPostParams::class,
+        'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCommitPostResponse::class,
+    ],
+    /**
     * @desc 获取可转账户列表（客户中心&广告主）
     * @doc  https://open.oceanengine.com/labels/7/docs/1758605359659008
     **/
