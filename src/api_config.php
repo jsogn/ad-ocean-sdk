@@ -299,6 +299,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeRejectReasonGetResponse::class,
     ],
     /**
+    * @desc 获取模板（白盒策略）列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1758356001909828
+    **/
+    'openCreativeStrategyListGetApi' => [
+        'desc' => '获取模板（白盒策略）列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1758356001909828',
+        'call' => AdOceanSdk\Advertising\Api\CreativeStrategyListGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CreativeStrategyListGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CreativeStrategyListGetResponse::class,
+    ],
+    /**
     * @desc 获取模板标签列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1736241004382219
     **/
