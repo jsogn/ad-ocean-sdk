@@ -1960,6 +1960,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdQualityGetResponse::class,
     ],
     /**
+    * @desc 获取起量版本信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761603462670403
+    **/
+    'openToolsPromotionRaiseVersionGetApi' => [
+        'desc' => '获取起量版本信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761603462670403',
+        'call' => AdOceanSdk\Tools\Api\ToolsPromotionRaiseVersionGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPromotionRaiseVersionGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseVersionGetResponse::class,
+    ],
+    /**
     * @desc 事件管理资产取消共享
     * @doc  https://open.oceanengine.com/labels/7/docs/1738862469146628
     **/
