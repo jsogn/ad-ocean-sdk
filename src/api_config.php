@@ -1465,6 +1465,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsLogSearchGetResponse::class,
     ],
     /**
+    * @desc 建议日预算及预期成本
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710676657164
+    **/
+    'openToolsBidSuggestGetApi' => [
+        'desc' => '建议日预算及预期成本',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710676657164',
+        'call' => AdOceanSdk\Tools\Api\ToolsBidSuggestGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsBidSuggestGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsBidSuggestGetResponse::class,
+    ],
+    /**
     * @desc 删除动态创意词包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710719368207
     **/
