@@ -211,6 +211,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeTemplateTagsGetResponse::class,
     ],
     /**
+    * @desc 创建项目
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740868093375503
+    **/
+    'openProjectCreatePostApi' => [
+        'desc' => '创建项目',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740868093375503',
+        'call' => AdOceanSdk\Advertising\Api\ProjectCreatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectCreatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取素材派生数据（素材维度）
     * @doc  https://open.oceanengine.com/labels/7/docs/1755177023094787
     **/

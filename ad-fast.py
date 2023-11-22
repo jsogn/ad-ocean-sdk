@@ -46,7 +46,6 @@ def process_params(param_rows, cell_type_dict):
     levelMap = {}
     params = {}
     for row in param_rows[1:]:
-#         cells = row.find_all(class_='col')
         cells = row.find_all(**cell_type_dict)
 
         if not cells:
@@ -117,19 +116,26 @@ else:
 request_method = request_method.replace('Query-String', '').replace('Request-Body', '').strip()
 
 # 提取请求参数
-params_table_tag = soup.find(text='请求参数')
-if params_table_tag is not None:
-    params_table = params_table_tag.find_next(class_='table-container') and params_table_tag.find_next(class_='table-container').find('table')
-    if params_table is not None:
-        param_rows = params_table.find_all('tr')
-        processor = TableContainerProcessor()
-        request_params = processor.process(param_rows)
+# 给定的数组
+tags = ['请求参数', '搜索快投', '搜索快投关键词', '关联产品投放', '投放内容', '优化目标','推广目的为电商店铺推广（landing_type=SHOP）时投放目标参数', '投放版位', '商品定向（当landing_type=DPA时投放目标参数）', '人群定向', '人群定向（线索智投场景）', '排期与预算出价', '监测链接']  # 在这里添加更多标签
+# 初始化 request_params
+request_params = {}
+for tag in tags:
+    params_table_tag = soup.find(text=tag)
+    if params_table_tag is not None:
+        params_table = params_table_tag.find_next(class_='table-container') and params_table_tag.find_next(class_='table-container').find('table')
+        if params_table is not None:
+            param_rows = params_table.find_all('tr')
+            processor = TableContainerProcessor()
+            params = processor.process(param_rows)
+            request_params.update(params)
 
-    params_table = params_table_tag.find_next(class_='api-table')
-    if params_table is not None:
-        param_rows = params_table.find_all(class_='row')
-        processor = ApiTableProcessor()
-        request_params = processor.process(param_rows)
+        params_table = params_table_tag.find_next(class_='api-table')
+        if params_table is not None:
+            param_rows = params_table.find_all(class_='row')
+            processor = ApiTableProcessor()
+            params = processor.process(param_rows)
+            request_params.update(params)
 
 # 提取应答参数
 response_params = {}
