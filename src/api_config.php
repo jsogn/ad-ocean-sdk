@@ -112,6 +112,17 @@ return [
         'response' => AdOceanSdk\Report\Response\AsyncTaskCreatePostResponse::class,
     ],
     /**
+    * @desc 橙子建站落地页数据
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710565390348
+    **/
+    'openReportSitePageGetApi' => [
+        'desc' => '橙子建站落地页数据',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710565390348',
+        'call' => AdOceanSdk\Report\Api\ReportSitePageGetApi::class,
+        'params' => AdOceanSdk\Report\Params\ReportSitePageGetParams::class,
+        'response' => AdOceanSdk\Report\Response\ReportSitePageGetResponse::class,
+    ],
+    /**
     * @desc 自定义报表
     * @doc  https://open.oceanengine.com/labels/7/docs/1741387668314126
     **/
