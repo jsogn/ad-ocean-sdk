@@ -1542,6 +1542,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupCreatePostResponse::class,
     ],
     /**
+    * @desc 创建字节小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780613896121344
+    **/
+    'openToolsMicroAppCreatePostApi' => [
+        'desc' => '创建字节小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780613896121344',
+        'call' => AdOceanSdk\Tools\Api\ToolsMicroAppCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsMicroAppCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsMicroAppCreatePostResponse::class,
+    ],
+    /**
     * @desc 建站工具-建站复制
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710623908864
     **/
