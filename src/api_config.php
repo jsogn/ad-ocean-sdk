@@ -101,6 +101,17 @@ return [
         'response' => AdOceanSdk\Report\Response\ReportCustomGetResponse::class,
     ],
     /**
+    * @desc 获取自定义报表可用指标和维度
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755261744248832
+    **/
+    'openReportCustomConfigGetApi' => [
+        'desc' => '获取自定义报表可用指标和维度',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755261744248832',
+        'call' => AdOceanSdk\Report\Api\ReportCustomConfigGetApi::class,
+        'params' => AdOceanSdk\Report\Params\ReportCustomConfigGetParams::class,
+        'response' => AdOceanSdk\Report\Response\ReportCustomConfigGetResponse::class,
+    ],
+    /**
     * @desc 批量更新广告启用状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1741031308559364
     **/
