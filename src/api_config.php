@@ -1707,6 +1707,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageDeletePostResponse::class,
     ],
     /**
+    * @desc 事件管理资产共享
+    * @doc  https://open.oceanengine.com/labels/7/docs/1738862409262084
+    **/
+    'openEventManagerSharePostApi' => [
+        'desc' => '事件管理资产共享',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1738862409262084',
+        'call' => AdOceanSdk\Tools\Api\EventManagerSharePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerSharePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerSharePostResponse::class,
+    ],
+    /**
     * @desc 更新原生锚点
     * @doc  https://open.oceanengine.com/labels/7/docs/1780079786680328
     **/
