@@ -24,6 +24,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\CustomerCenterAdvertiserTransferableListGetResponse::class,
     ],
     /**
+    * @desc 提交转账交易号
+    * @doc  https://open.oceanengine.com/labels/7/docs/1758606542833678
+    **/
+    'openCustomerCenterFundTransferSeqCommitPostApi' => [
+        'desc' => '提交转账交易号',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1758606542833678',
+        'call' => AdOceanSdk\Fund\Api\CustomerCenterFundTransferSeqCommitPostApi::class,
+        'params' => AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCommitPostParams::class,
+        'response' => AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCommitPostResponse::class,
+    ],
+    /**
     * @desc 获取返货共享钱包余额
     * @doc  https://open.oceanengine.com/labels/7/docs/1703323812831239
     **/
@@ -33,6 +44,17 @@ return [
         'call' => AdOceanSdk\Fund\Api\FundSharedWalletBalanceGetApi::class,
         'params' => AdOceanSdk\Fund\Params\FundSharedWalletBalanceGetParams::class,
         'response' => AdOceanSdk\Fund\Response\FundSharedWalletBalanceGetResponse::class,
+    ],
+    /**
+    * @desc 创建转账交易号（方舟）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1766755293435980
+    **/
+    'openAgentTransferSeqCreatePostApi' => [
+        'desc' => '创建转账交易号（方舟）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1766755293435980',
+        'call' => AdOceanSdk\Fund\Api\AgentTransferSeqCreatePostApi::class,
+        'params' => AdOceanSdk\Fund\Params\AgentTransferSeqCreatePostParams::class,
+        'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse::class,
     ],
     /**
     * @desc 二级代理商列表
