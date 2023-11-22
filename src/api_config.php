@@ -1322,6 +1322,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteCreatePostResponse::class,
     ],
     /**
+    * @desc 创建微信小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1771744149686286
+    **/
+    'openToolsWechatAppletCreatePostApi' => [
+        'desc' => '创建微信小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1771744149686286',
+        'call' => AdOceanSdk\Tools\Api\ToolsWechatAppletCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsWechatAppletCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点详细信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710620022799
     **/
