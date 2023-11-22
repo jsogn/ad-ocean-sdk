@@ -13,6 +13,17 @@ return [
         'response' => AdOceanSdk\Agent\Response\AgentChildAgentSelectGetResponse::class,
     ],
     /**
+    * @desc 广告主账户复制
+    * @doc  https://open.oceanengine.com/labels/7/docs/1775097300794371
+    **/
+    'openAgentAdvertiserCopyPostApi' => [
+        'desc' => '广告主账户复制',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1775097300794371',
+        'call' => AdOceanSdk\Agent\Api\AgentAdvertiserCopyPostApi::class,
+        'params' => AdOceanSdk\Agent\Params\AgentAdvertiserCopyPostParams::class,
+        'response' => AdOceanSdk\Agent\Response\AgentAdvertiserCopyPostResponse::class,
+    ],
+    /**
     * @desc 获取代理商信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710518158351
     **/
