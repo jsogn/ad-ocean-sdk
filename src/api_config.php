@@ -1322,6 +1322,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageGetResponse::class,
     ],
     /**
+    * @desc 查询在投计划配额
+    * @doc  https://open.oceanengine.com/labels/7/docs/1731070251873293
+    **/
+    'openToolsQuotaGetApi' => [
+        'desc' => '查询在投计划配额',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1731070251873293',
+        'call' => AdOceanSdk\Tools\Api\ToolsQuotaGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsQuotaGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsQuotaGetResponse::class,
+    ],
+    /**
     * @desc 获取抖音授权关系
     * @doc  https://open.oceanengine.com/labels/7/docs/1729983667746823
     **/
