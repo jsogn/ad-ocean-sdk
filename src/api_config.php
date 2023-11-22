@@ -1322,6 +1322,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAwemeAuthListGetResponse::class,
     ],
     /**
+    * @desc 查询广告计划学习期状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710684841984
+    **/
+    'openToolsAdStatExtraInfoGetApi' => [
+        'desc' => '查询广告计划学习期状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710684841984',
+        'call' => AdOceanSdk\Tools\Api\ToolsAdStatExtraInfoGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsAdStatExtraInfoGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsAdStatExtraInfoGetResponse::class,
+    ],
+    /**
     * @desc 更改橙子建站站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710618884096
     **/
