@@ -1839,6 +1839,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPreAuditSendPostResponse::class,
     ],
     /**
+    * @desc 引流下单转化信息获取
+    * @doc  https://open.oceanengine.com/labels/7/docs/1774836168252548
+    **/
+    'openAdvConvertOleConvertPostApi' => [
+        'desc' => '引流下单转化信息获取',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1774836168252548',
+        'call' => AdOceanSdk\Tools\Api\AdvConvertOleConvertPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\AdvConvertOleConvertPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\AdvConvertOleConvertPostResponse::class,
+    ],
+    /**
     * @desc 更新定向包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710732349455
     **/
