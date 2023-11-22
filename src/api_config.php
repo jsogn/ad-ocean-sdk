@@ -1256,6 +1256,17 @@ return [
         'response' => AdOceanSdk\Oauth\Response\OauthAccessTokenGetResponse::class,
     ],
     /**
+    * @desc 取消微信小游戏/小程序共享关系
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773102677218368
+    **/
+    'openToolsBpAssetManagementShareCancelPostApi' => [
+        'desc' => '取消微信小游戏/小程序共享关系',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773102677218368',
+        'call' => AdOceanSdk\Tools\Api\ToolsBpAssetManagementShareCancelPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsBpAssetManagementShareCancelPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsBpAssetManagementShareCancelPostResponse::class,
+    ],
+    /**
     * @desc 修改橙子建站站点
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710618300431
     **/
