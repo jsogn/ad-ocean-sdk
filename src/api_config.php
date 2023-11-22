@@ -244,6 +244,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeMaterialMetricsGetResponse::class,
     ],
     /**
+    * @desc 获取项目列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740937147595776
+    **/
+    'openProjectListGetApi' => [
+        'desc' => '获取项目列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740937147595776',
+        'call' => AdOceanSdk\Advertising\Api\ProjectListGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectListGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectListGetResponse::class,
+    ],
+    /**
     * @desc 获取素材派生数据（计划维度）
     * @doc  https://open.oceanengine.com/labels/7/docs/1755177028152324
     **/

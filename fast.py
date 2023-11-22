@@ -114,7 +114,7 @@ if (request_method is None):
 else:
     request_method = request_tag.find_next('p').find('strong').text.strip()
 
-request_method = request_method.replace('Query-String', '').replace('Request-Body', '').strip()
+request_method = request_method.replace('Query-String', '').replace('Request-Query', '').replace('Request-Body', '').strip()
 
 # 提取请求参数
 params_table_tag = soup.find(text='请求参数')
