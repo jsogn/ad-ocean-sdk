@@ -46,6 +46,17 @@ return [
         'response' => AdOceanSdk\Agent\Response\AgentAdvertiserSelectGetResponse::class,
     ],
     /**
+    * @desc 获取纵横组织下资产账户列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710519607296
+    **/
+    'openMajordomoAdvertiserSelectGetApi' => [
+        'desc' => '获取纵横组织下资产账户列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710519607296',
+        'call' => AdOceanSdk\Majordomo\Api\MajordomoAdvertiserSelectGetApi::class,
+        'params' => AdOceanSdk\Majordomo\Params\MajordomoAdvertiserSelectGetParams::class,
+        'response' => AdOceanSdk\Majordomo\Response\MajordomoAdvertiserSelectGetResponse::class,
+    ],
+    /**
     * @desc 更新广告主账户头像
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710512435215
     **/
