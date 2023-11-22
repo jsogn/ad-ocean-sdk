@@ -376,6 +376,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeMaterialMetricsGetResponse::class,
     ],
     /**
+    * @desc 批量修改深度出价
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755355890182159
+    **/
+    'openPromotionDeepBidUpdatePostApi' => [
+        'desc' => '批量修改深度出价',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755355890182159',
+        'call' => AdOceanSdk\Advertising\Api\PromotionDeepBidUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionDeepBidUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionDeepBidUpdatePostResponse::class,
+    ],
+    /**
     * @desc 批量删除预算组
     * @doc  https://open.oceanengine.com/labels/7/docs/1780643886635008
     **/
