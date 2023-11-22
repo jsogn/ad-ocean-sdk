@@ -299,6 +299,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeTemplateTagsGetResponse::class,
     ],
     /**
+    * @desc 批量更新广告素材启用状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755355780973568
+    **/
+    'openMaterialStatusUpdatePostApi' => [
+        'desc' => '批量更新广告素材启用状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755355780973568',
+        'call' => AdOceanSdk\Advertising\Api\MaterialStatusUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\MaterialStatusUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\MaterialStatusUpdatePostResponse::class,
+    ],
+    /**
     * @desc 更新项目
     * @doc  https://open.oceanengine.com/labels/7/docs/1740936504522831
     **/
