@@ -1289,6 +1289,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPreAuditGetResponse::class,
     ],
     /**
+    * @desc 查看微信小游戏/小程序共享范围
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773105971421187
+    **/
+    'openToolsBpAssetManagementShareGetApi' => [
+        'desc' => '查看微信小游戏/小程序共享范围',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773105971421187',
+        'call' => AdOceanSdk\Tools\Api\ToolsBpAssetManagementShareGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsBpAssetManagementShareGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsBpAssetManagementShareGetResponse::class,
+    ],
+    /**
     * @desc 获取定向包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710731761676
     **/
