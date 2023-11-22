@@ -1333,6 +1333,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteReadGetResponse::class,
     ],
     /**
+    * @desc 获取微信小程序列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1771203622020111
+    **/
+    'openToolsWechatAppletListGetApi' => [
+        'desc' => '获取微信小程序列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1771203622020111',
+        'call' => AdOceanSdk\Tools\Api\ToolsWechatAppletListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsWechatAppletListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletListGetResponse::class,
+    ],
+    /**
     * @desc 获取视频智能封面
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710602404864
     **/
