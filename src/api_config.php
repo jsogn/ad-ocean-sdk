@@ -332,6 +332,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectCreatePostResponse::class,
     ],
     /**
+    * @desc 批量获取广告审核建议
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741031528693771
+    **/
+    'openPromotionRejectReasonGetApi' => [
+        'desc' => '批量获取广告审核建议',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741031528693771',
+        'call' => AdOceanSdk\Advertising\Api\PromotionRejectReasonGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionRejectReasonGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionRejectReasonGetResponse::class,
+    ],
+    /**
     * @desc 批量删除项目
     * @doc  https://open.oceanengine.com/labels/7/docs/1740944781036608
     **/

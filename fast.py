@@ -186,3 +186,6 @@ else:
     print("生成命令执行失败")
 
 exit_code = os.system('sh ./gen_api.sh')
+
+if exit_code == 0:
+    exit_code = os.system('git add . && git commit "{}"'.format(data['request_title']) )
