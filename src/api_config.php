@@ -1366,6 +1366,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse::class,
     ],
     /**
+    * @desc 更新微信小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1771744756803659
+    **/
+    'openToolsWechatAppletUpdatePostApi' => [
+        'desc' => '更新微信小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1771744756803659',
+        'call' => AdOceanSdk\Tools\Api\ToolsWechatAppletUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsWechatAppletUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse::class,
+    ],
+    /**
     * @desc 更新落地页组信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710630182912
     **/
