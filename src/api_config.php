@@ -376,6 +376,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectDeletePostResponse::class,
     ],
     /**
+    * @desc 查询配置详情（广告升级版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1760943993851915
+    **/
+    'openPromotionAutoGenerateConfigGetApi' => [
+        'desc' => '查询配置详情（广告升级版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1760943993851915',
+        'call' => AdOceanSdk\Advertising\Api\PromotionAutoGenerateConfigGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionAutoGenerateConfigGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionAutoGenerateConfigGetResponse::class,
+    ],
+    /**
     * @desc 获取素材派生数据（素材维度）
     * @doc  https://open.oceanengine.com/labels/7/docs/1755177023094787
     **/
