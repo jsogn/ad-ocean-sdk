@@ -187,5 +187,5 @@ else:
 
 exit_code = os.system('sh ./gen_api.sh')
 
-if exit_code == 0:
-    exit_code = os.system('git add . && git commit "{}"'.format(data['request_title']) )
+# if exit_code == 0:
+#     exit_code = os.system('git add . && git commit "{}"'.format(data['request_title']) )
