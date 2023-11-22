@@ -684,6 +684,17 @@ return [
         'response' => AdOceanSdk\Majordomo\Response\BusinessPlatformPartnerOrganizationListGetResponse::class,
     ],
     /**
+    * @desc 发布人群包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710571768844
+    **/
+    'openDMPCustomAudiencePublishPostApi' => [
+        'desc' => '发布人群包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710571768844',
+        'call' => AdOceanSdk\DMP\Api\DMPCustomAudiencePublishPostApi::class,
+        'params' => AdOceanSdk\DMP\Params\DMPCustomAudiencePublishPostParams::class,
+        'response' => AdOceanSdk\DMP\Response\DMPCustomAudiencePublishPostResponse::class,
+    ],
+    /**
     * @desc 人群包列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710570721295
     **/
