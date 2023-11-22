@@ -277,6 +277,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectListGetResponse::class,
     ],
     /**
+    * @desc 批量更新项目预算
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755353873798155
+    **/
+    'openProjectBudgetUpdatePostApi' => [
+        'desc' => '批量更新项目预算',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755353873798155',
+        'call' => AdOceanSdk\Advertising\Api\ProjectBudgetUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectBudgetUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectBudgetUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取素材派生数据（计划维度）
     * @doc  https://open.oceanengine.com/labels/7/docs/1755177028152324
     **/
