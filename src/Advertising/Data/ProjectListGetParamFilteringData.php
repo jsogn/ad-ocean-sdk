@@ -81,9 +81,9 @@ class ProjectListGetParamFilteringData extends Data
     public string $inventory_type;
     
     /**
-     * @var string $ 按平台过滤，允许值：IOS、ANDROID
+     * @var string $platform 按平台过滤，允许值：IOS、ANDROID
      */
-    public string $;
+    public string $platform;
     
     /**
      * @var int $budget_group_id 按预算组ID过滤，仅允许传入1个，该功能白名单开放，如需使用请联系销售
