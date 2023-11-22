@@ -103,6 +103,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\File\Response\FileImageAdGetResponse openFileImageAdGetApi(\AdOceanSdk\File\Params\FileImageAdGetParams|array $params) 获取同主体下广告主图片素材 https://open.oceanengine.com/labels/7/docs/1696710602952719
  * @method \AdOceanSdk\File\Response\FileVideoAdPostResponse openFileVideoAdPostApi(\AdOceanSdk\File\Params\FileVideoAdPostParams|array $params) 上传视频 https://open.oceanengine.com/labels/7/docs/1696710600730639
  * @method \AdOceanSdk\File\Response\CarouselDeletePostResponse openCarouselDeletePostApi(\AdOceanSdk\File\Params\CarouselDeletePostParams|array $params) 批量删除图文 https://open.oceanengine.com/labels/7/docs/1773561744826380
+ * @method \AdOceanSdk\File\Response\FileMaterialListGetResponse openFileMaterialListGetApi(\AdOceanSdk\File\Params\FileMaterialListGetParams|array $params) 获取素材标签列表 https://open.oceanengine.com/labels/7/docs/1761499216182279
  * @method \AdOceanSdk\File\Response\FileVideoGetResponse openFileVideoGetApi(\AdOceanSdk\File\Params\FileVideoGetParams|array $params) 获取视频素材 https://open.oceanengine.com/labels/7/docs/1696710601820172
  * @method \AdOceanSdk\File\Response\FileVideoAwemeGetResponse openFileVideoAwemeGetApi(\AdOceanSdk\File\Params\FileVideoAwemeGetParams|array $params) 获取抖音主页视频 https://open.oceanengine.com/labels/7/docs/1729982871844879
  * @method \AdOceanSdk\Oauth\Response\OauthUserInfoGetResponse openOauthUserInfoGetApi(\AdOceanSdk\Oauth\Params\OauthUserInfoGetParams|array $params) 获取授权User信息 https://open.oceanengine.com/labels/7/docs/1696710507039756

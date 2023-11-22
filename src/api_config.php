@@ -1058,6 +1058,17 @@ return [
         'response' => AdOceanSdk\File\Response\CarouselDeletePostResponse::class,
     ],
     /**
+    * @desc 获取素材标签列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761499216182279
+    **/
+    'openFileMaterialListGetApi' => [
+        'desc' => '获取素材标签列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761499216182279',
+        'call' => AdOceanSdk\File\Api\FileMaterialListGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileMaterialListGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileMaterialListGetResponse::class,
+    ],
+    /**
     * @desc 获取视频素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710601820172
     **/
