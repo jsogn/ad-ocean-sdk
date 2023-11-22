@@ -1740,6 +1740,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse::class,
     ],
     /**
+    * @desc 查询广告质量度
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710677262351
+    **/
+    'openToolsAdQualityGetApi' => [
+        'desc' => '查询广告质量度',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710677262351',
+        'call' => AdOceanSdk\Tools\Api\ToolsAdQualityGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsAdQualityGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsAdQualityGetResponse::class,
+    ],
+    /**
     * @desc 更新落地页组站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710629600256
     **/

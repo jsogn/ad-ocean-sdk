@@ -165,6 +165,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Tools\Response\ToolsMicroAppUpdatePostResponse openToolsMicroAppUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsMicroAppUpdatePostParams|array $params) 更新字节小程序 https://open.oceanengine.com/labels/7/docs/1780614097935372
  * @method \AdOceanSdk\Tools\Response\ToolsMicroAppCreatePostResponse openToolsMicroAppCreatePostApi(\AdOceanSdk\Tools\Params\ToolsMicroAppCreatePostParams|array $params) 创建字节小程序 https://open.oceanengine.com/labels/7/docs/1780613896121344
  * @method \AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse openToolsSiteCopyPostApi(\AdOceanSdk\Tools\Params\ToolsSiteCopyPostParams|array $params) 建站工具-建站复制 https://open.oceanengine.com/labels/7/docs/1696710623908864
+ * @method \AdOceanSdk\Tools\Response\ToolsAdQualityGetResponse openToolsAdQualityGetApi(\AdOceanSdk\Tools\Params\ToolsAdQualityGetParams|array $params) 查询广告质量度 https://open.oceanengine.com/labels/7/docs/1696710677262351
  * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse openToolsLandingGroupSiteOptStatusUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupSiteOptStatusUpdatePostParams|array $params) 更新落地页组站点状态 https://open.oceanengine.com/labels/7/docs/1696710629600256
  * @method \AdOceanSdk\Tools\Response\ToolsActionTextGetResponse openToolsActionTextGetApi(\AdOceanSdk\Tools\Params\ToolsActionTextGetParams|array $params) 行动号召字段内容获取 https://open.oceanengine.com/labels/7/docs/1696710684229644
  */
