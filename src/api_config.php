@@ -90,6 +90,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 批量更新广告启用状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741031308559364
+    **/
+    'openPromotionStatusUpdatePostApi' => [
+        'desc' => '批量更新广告启用状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741031308559364',
+        'call' => AdOceanSdk\Advertising\Api\PromotionStatusUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionStatusUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionStatusUpdatePostResponse::class,
+    ],
+    /**
     * @desc 创意详细信息（新）
     * @doc  https://open.oceanengine.com/labels/7/docs/1742668551117827
     **/
