@@ -1498,6 +1498,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsLogSearchGetResponse::class,
     ],
     /**
+    * @desc 创建事件资产
+    * @doc  https://open.oceanengine.com/labels/7/docs/1709792943937547
+    **/
+    'openEventManagerAssetsCreatePostApi' => [
+        'desc' => '创建事件资产',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1709792943937547',
+        'call' => AdOceanSdk\Tools\Api\EventManagerAssetsCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerAssetsCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerAssetsCreatePostResponse::class,
+    ],
+    /**
     * @desc 建议日预算及预期成本
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710676657164
     **/
