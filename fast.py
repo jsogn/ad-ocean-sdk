@@ -46,7 +46,8 @@ def process_params(param_rows, cell_type_dict):
     levelMap = {}
     params = {}
     for row in param_rows[1:]:
-        cells = row.find_all(class_='col')
+#         cells = row.find_all(class_='col')
+        cells = row.find_all(**cell_type_dict)
 
         if not cells:
             continue
@@ -74,7 +75,7 @@ def process_params(param_rows, cell_type_dict):
             is_sub = row.has_attr("data-level") and row
 
         level = 0
-        if is_sub is not None:
+        if is_sub is not None and is_sub is not False:
             level = int(is_sub.get('data-level'))
             node['level'] = level
 

@@ -21,17 +21,17 @@ class AdvertiserQualificationSubmitPostParamSubjectData extends Data
     public string $company_name;
     
     /**
-     * @var string $company_type 公司类型，允许值:COMPANY 企业、INDIVIDUAL 个人
+     * @var string $company_type 公司类型，允许值:COMPANY企业、INDIVIDUAL个人
      */
     public string $company_type;
     
     /**
-     * @var string $check_type 对公验证类型，允许值:COMPANY 企业、GOVERNMENT 政府组织机构/事业单位、HK_MACAO_TAIWAN 港澳台、INDIVIDUAL 个人、OTHERS 其他机构（如民办机构）、OVERSEA 海外、SELF_EMPLOY 个体工商户
+     * @var string $check_type 对公验证类型，允许值:COMPANY企业、GOVERNMENT政府组织机构/事业单位、HK_MACAO_TAIWAN港澳台、INDIVIDUAL个人、OTHERS其他机构（如民办机构）、OVERSEA海外、SELF_EMPLOY个体工商户
      */
     public string $check_type;
     
     /**
-     * @var string $qualification_type 资质类型，允许值:ASSOCIATION_REGISTER_CODE 社会团体法人登记证书编号COMMERCIAL_REGISTER_NUMBER 商业登记证号码COMPANY_CREDIT_CODE 企业营业执照统一社会信用代码COMPANY_REGISTER_CODE 企业营业执照注册号CREDIT_CODE 统一社会信用代码证书编号HK_MACAO_TAIWAN_ID 港澳/台湾居民往来大陆通行证证件号码HK_REGISTER_CODE 香港公司注册证书编号ID 身份证号INDIVIDUAL_CREDIT_CODE 个体工商户营业执照统一社会信用代码INDIVIDUAL_REGISTER_CODE 个体工商户营业执照注册号LAWYER_CERTIFICATE_NUMBER 律师执业证书执业证号LAWYER_PERMIT_CODE 律师事务所执业许可证编号LEGAL_PERSON_CREDIT_CODE 事业单位法人证书统一社会信用代码ORGANIZATION_REGISTER_CODE 组织机构代码证代号OTHER 其他编号OVERSEA_REGISTER_CODE 外国（地区）企业常驻代表机构登记证编号PASSPORT_ID 护照号SCHOOL_PERMIT_CODE 民办学校办学许可证编号SOCIAL_REGISTER_CODE 民办非企业单位登记证书编号
+     * @var string $qualification_type 资质类型，允许值:ASSOCIATION_REGISTER_CODE社会团体法人登记证书编号COMMERCIAL_REGISTER_NUMBER商业登记证号码COMPANY_CREDIT_CODE企业营业执照统一社会信用代码COMPANY_REGISTER_CODE企业营业执照注册号CREDIT_CODE统一社会信用代码证书编号HK_MACAO_TAIWAN_ID港澳/台湾居民往来大陆通行证证件号码HK_REGISTER_CODE香港公司注册证书编号ID身份证号INDIVIDUAL_CREDIT_CODE个体工商户营业执照统一社会信用代码INDIVIDUAL_REGISTER_CODE个体工商户营业执照注册号LAWYER_CERTIFICATE_NUMBER律师执业证书执业证号LAWYER_PERMIT_CODE律师事务所执业许可证编号LEGAL_PERSON_CREDIT_CODE事业单位法人证书统一社会信用代码ORGANIZATION_REGISTER_CODE组织机构代码证代号OTHER其他编号OVERSEA_REGISTER_CODE外国（地区）企业常驻代表机构登记证编号PASSPORT_ID护照号SCHOOL_PERMIT_CODE民办学校办学许可证编号SOCIAL_REGISTER_CODE民办非企业单位登记证书编号
      */
     public string $qualification_type;
     

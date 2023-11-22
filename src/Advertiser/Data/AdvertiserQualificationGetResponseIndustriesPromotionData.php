@@ -21,7 +21,7 @@ class AdvertiserQualificationGetResponseIndustriesPromotionData extends Data
     public string $content;
     
     /**
-     * @var string $status 状态，枚举值：STATUS_NOT_SUBMIT 未提交、STATUS_WAIT_CONFIRM 待审核、STATUS_PENDING_CONFIRM 审核中、STATUS_CONFIRM 审核通过、STATUS_CONFIRM_FAIL 审核不通过
+     * @var string $status 状态，枚举值：STATUS_NOT_SUBMIT未提交、STATUS_WAIT_CONFIRM待审核、STATUS_PENDING_CONFIRM审核中、STATUS_CONFIRM审核通过、STATUS_CONFIRM_FAIL审核不通过
      */
     public string $status;
     

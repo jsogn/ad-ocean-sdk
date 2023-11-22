@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 代理商管理账户列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710516003852
+    **/
+    'openAgentAdvertiserSelectGetApi' => [
+        'desc' => '代理商管理账户列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710516003852',
+        'call' => AdOceanSdk\Agent\Api\AgentAdvertiserSelectGetApi::class,
+        'params' => AdOceanSdk\Agent\Params\AgentAdvertiserSelectGetParams::class,
+        'response' => AdOceanSdk\Agent\Response\AgentAdvertiserSelectGetResponse::class,
+    ],
+    /**
     * @desc 更新广告主账户头像
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710512435215
     **/
