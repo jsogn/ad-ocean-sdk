@@ -684,6 +684,17 @@ return [
         'response' => AdOceanSdk\Majordomo\Response\BusinessPlatformPartnerOrganizationListGetResponse::class,
     ],
     /**
+    * @desc 删除人群包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710572836879
+    **/
+    'openDMPCustomAudienceDeletePostApi' => [
+        'desc' => '删除人群包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710572836879',
+        'call' => AdOceanSdk\DMP\Api\DMPCustomAudienceDeletePostApi::class,
+        'params' => AdOceanSdk\DMP\Params\DMPCustomAudienceDeletePostParams::class,
+        'response' => AdOceanSdk\DMP\Response\DMPCustomAudienceDeletePostResponse::class,
+    ],
+    /**
     * @desc 推送人群包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710572311552
     **/
