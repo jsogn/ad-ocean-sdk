@@ -1872,6 +1872,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsMicroAppUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取可用深度优化方式（广告投放升级版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1754875889727563
+    **/
+    'openEventManagerDeepBidTypeGetApi' => [
+        'desc' => '获取可用深度优化方式（广告投放升级版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1754875889727563',
+        'call' => AdOceanSdk\Tools\Api\EventManagerDeepBidTypeGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerDeepBidTypeGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerDeepBidTypeGetResponse::class,
+    ],
+    /**
     * @desc 创建字节小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1780613896121344
     **/
