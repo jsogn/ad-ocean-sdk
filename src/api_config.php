@@ -189,6 +189,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectStatusUpdatePostResponse::class,
     ],
     /**
+    * @desc 修改广告
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740952287987719
+    **/
+    'openPromotionUpdatePostApi' => [
+        'desc' => '修改广告',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740952287987719',
+        'call' => AdOceanSdk\Advertising\Api\PromotionUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionUpdatePostResponse::class,
+    ],
+    /**
     * @desc 批量更新项目投放时间
     * @doc  https://open.oceanengine.com/labels/7/docs/1779258970970184
     **/
@@ -264,6 +275,17 @@ return [
         'call' => AdOceanSdk\Advertising\Api\ProjectUpdatePostApi::class,
         'params' => AdOceanSdk\Advertising\Params\ProjectUpdatePostParams::class,
         'response' => AdOceanSdk\Advertising\Response\ProjectUpdatePostResponse::class,
+    ],
+    /**
+    * @desc 批量更新广告预算
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741030872454148
+    **/
+    'openPromotionBudgetUpdatePostApi' => [
+        'desc' => '批量更新广告预算',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741030872454148',
+        'call' => AdOceanSdk\Advertising\Api\PromotionBudgetUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionBudgetUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionBudgetUpdatePostResponse::class,
     ],
     /**
     * @desc 创建项目
