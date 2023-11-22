@@ -1674,6 +1674,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\NativeAnchorUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取资产下已创建事件列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1709793086075972
+    **/
+    'openEventManagerEventConfigsGetApi' => [
+        'desc' => '获取资产下已创建事件列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1709793086075972',
+        'call' => AdOceanSdk\Tools\Api\EventManagerEventConfigsGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerEventConfigsGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerEventConfigsGetResponse::class,
+    ],
+    /**
     * @desc 通过优化目标获取橙子落地页站点信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1755162848410635
     **/
