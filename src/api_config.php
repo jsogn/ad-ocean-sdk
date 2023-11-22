@@ -1014,6 +1014,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageAdPostResponse::class,
     ],
     /**
+    * @desc 获取低效素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1733880964883467
+    **/
+    'openFileVideoEfficiencyGetApi' => [
+        'desc' => '获取低效素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1733880964883467',
+        'call' => AdOceanSdk\File\Api\FileVideoEfficiencyGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoEfficiencyGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoEfficiencyGetResponse::class,
+    ],
+    /**
     * @desc 获取同主体下广告主图片素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710602952719
     **/
