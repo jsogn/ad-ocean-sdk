@@ -1354,4 +1354,15 @@ return [
         'params' => AdOceanSdk\Tools\Params\ToolsSitePreviewGetParams::class,
         'response' => AdOceanSdk\Tools\Response\ToolsSitePreviewGetResponse::class,
     ],
+    /**
+    * @desc 建站工具-建站复制
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710623908864
+    **/
+    'openToolsSiteCopyPostApi' => [
+        'desc' => '建站工具-建站复制',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710623908864',
+        'call' => AdOceanSdk\Tools\Api\ToolsSiteCopyPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsSiteCopyPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse::class,
+    ],
 ];
