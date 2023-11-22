@@ -167,6 +167,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CreativeTemplateDetailGetGetResponse::class,
     ],
     /**
+    * @desc 批量更新项目状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740941413906432
+    **/
+    'openProjectStatusUpdatePostApi' => [
+        'desc' => '批量更新项目状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740941413906432',
+        'call' => AdOceanSdk\Advertising\Api\ProjectStatusUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectStatusUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectStatusUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取创意列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710540735500
     **/
