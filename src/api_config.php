@@ -1278,6 +1278,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteUpdatePostResponse::class,
     ],
     /**
+    * @desc 查询受众预估结果
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710675422208
+    **/
+    'openToolsEstimateAudienceGetApi' => [
+        'desc' => '查询受众预估结果',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710675422208',
+        'call' => AdOceanSdk\Tools\Api\ToolsEstimateAudienceGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEstimateAudienceGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEstimateAudienceGetResponse::class,
+    ],
+    /**
     * @desc 素材前置预审结果获取
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273278471172
     **/
