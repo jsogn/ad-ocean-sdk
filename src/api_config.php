@@ -1487,6 +1487,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\NativeAnchorDeletePostResponse::class,
     ],
     /**
+    * @desc 获取字节小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1778249831680135
+    **/
+    'openToolsMicroAppListGetApi' => [
+        'desc' => '获取字节小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1778249831680135',
+        'call' => AdOceanSdk\Tools\Api\ToolsMicroAppListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsMicroAppListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsMicroAppListGetResponse::class,
+    ],
+    /**
     * @desc 素材前置预审送审
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273263150083
     **/
