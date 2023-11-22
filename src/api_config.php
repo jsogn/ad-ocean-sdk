@@ -1311,6 +1311,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageGetResponse::class,
     ],
     /**
+    * @desc 获取抖音授权关系
+    * @doc  https://open.oceanengine.com/labels/7/docs/1729983667746823
+    **/
+    'openToolsAwemeAuthListGetApi' => [
+        'desc' => '获取抖音授权关系',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1729983667746823',
+        'call' => AdOceanSdk\Tools\Api\ToolsAwemeAuthListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsAwemeAuthListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsAwemeAuthListGetResponse::class,
+    ],
+    /**
     * @desc 更改橙子建站站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710618884096
     **/
