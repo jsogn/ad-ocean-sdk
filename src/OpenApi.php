@@ -129,6 +129,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse openToolsVideoCoverSuggestGetApi(\AdOceanSdk\Tools\Params\ToolsVideoCoverSuggestGetParams|array $params) 获取视频智能封面 https://open.oceanengine.com/labels/7/docs/1696710602404864
  * @method \AdOceanSdk\Tools\Response\ToolsSiteGetResponse openToolsSiteGetApi(\AdOceanSdk\Tools\Params\ToolsSiteGetParams|array $params) 获取橙子建站站点列表 https://open.oceanengine.com/labels/7/docs/1696710620579852
  * @method \AdOceanSdk\Tools\Response\WechatAppletListGetResponse openWechatAppletListGetApi(\AdOceanSdk\Tools\Params\WechatAppletListGetParams|array $params) 获取微信小程序列表 https://open.oceanengine.com/labels/7/docs/1771203622020111
+ * @method \AdOceanSdk\Tools\Response\ToolsOrangeSiteGetResponse openToolsOrangeSiteGetApi(\AdOceanSdk\Tools\Params\ToolsOrangeSiteGetParams|array $params) 通过优化目标获取橙子落地页站点信息 https://open.oceanengine.com/labels/7/docs/1755162848410635
  * @method \AdOceanSdk\Tools\Response\ToolsSitePreviewGetResponse openToolsSitePreviewGetApi(\AdOceanSdk\Tools\Params\ToolsSitePreviewGetParams|array $params) 获取橙子建站站点预览地址 https://open.oceanengine.com/labels/7/docs/1696710619437056
  * @method \AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse openToolsSiteCopyPostApi(\AdOceanSdk\Tools\Params\ToolsSiteCopyPostParams|array $params) 建站工具-建站复制 https://open.oceanengine.com/labels/7/docs/1696710623908864
  */

@@ -1344,6 +1344,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\WechatAppletListGetResponse::class,
     ],
     /**
+    * @desc 通过优化目标获取橙子落地页站点信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755162848410635
+    **/
+    'openToolsOrangeSiteGetApi' => [
+        'desc' => '通过优化目标获取橙子落地页站点信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755162848410635',
+        'call' => AdOceanSdk\Tools\Api\ToolsOrangeSiteGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsOrangeSiteGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsOrangeSiteGetResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点预览地址
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710619437056
     **/
