@@ -1740,6 +1740,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageDeletePostResponse::class,
     ],
     /**
+    * @desc 获取广告诊断建议
+    * @doc  https://open.oceanengine.com/labels/7/docs/1754715780584459
+    **/
+    'openToolsPromotionDiagnosisSuggestionGetApi' => [
+        'desc' => '获取广告诊断建议',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1754715780584459',
+        'call' => AdOceanSdk\Tools\Api\ToolsPromotionDiagnosisSuggestionGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPromotionDiagnosisSuggestionGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPromotionDiagnosisSuggestionGetResponse::class,
+    ],
+    /**
     * @desc 事件管理资产共享
     * @doc  https://open.oceanengine.com/labels/7/docs/1738862409262084
     **/
