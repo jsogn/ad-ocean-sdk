@@ -90,6 +90,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 自定义报表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741387668314126
+    **/
+    'openReportCustomGetApi' => [
+        'desc' => '自定义报表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741387668314126',
+        'call' => AdOceanSdk\Report\Api\ReportCustomGetApi::class,
+        'params' => AdOceanSdk\Report\Params\ReportCustomGetParams::class,
+        'response' => AdOceanSdk\Report\Response\ReportCustomGetResponse::class,
+    ],
+    /**
     * @desc 批量更新广告启用状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1741031308559364
     **/
