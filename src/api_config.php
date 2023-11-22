@@ -937,6 +937,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageDeletePostResponse::class,
     ],
     /**
+    * @desc 批量暂停素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1779985717273613
+    **/
+    'openFileVideoPausePostApi' => [
+        'desc' => '批量暂停素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1779985717273613',
+        'call' => AdOceanSdk\File\Api\FileVideoPausePostApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoPausePostParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoPausePostResponse::class,
+    ],
+    /**
     * @desc 获取同主体下广告主视频素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710603509772
     **/
