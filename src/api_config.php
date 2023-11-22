@@ -244,6 +244,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectCreatePostResponse::class,
     ],
     /**
+    * @desc 批量删除项目
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740944781036608
+    **/
+    'openProjectDeletePostApi' => [
+        'desc' => '批量删除项目',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740944781036608',
+        'call' => AdOceanSdk\Advertising\Api\ProjectDeletePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectDeletePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectDeletePostResponse::class,
+    ],
+    /**
     * @desc 获取素材派生数据（素材维度）
     * @doc  https://open.oceanengine.com/labels/7/docs/1755177023094787
     **/
