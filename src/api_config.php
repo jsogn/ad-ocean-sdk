@@ -717,6 +717,17 @@ return [
         'response' => AdOceanSdk\DMP\Response\DMPDataSourceFileUploadPostResponse::class,
     ],
     /**
+    * @desc 人群包详细信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710571259916
+    **/
+    'openDMPCustomAudienceReadGetApi' => [
+        'desc' => '人群包详细信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710571259916',
+        'call' => AdOceanSdk\DMP\Api\DMPCustomAudienceReadGetApi::class,
+        'params' => AdOceanSdk\DMP\Params\DMPCustomAudienceReadGetParams::class,
+        'response' => AdOceanSdk\DMP\Response\DMPCustomAudienceReadGetResponse::class,
+    ],
+    /**
     * @desc 更新广告主账户头像
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710512435215
     **/
