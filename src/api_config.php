@@ -1586,6 +1586,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsBidSuggestGetResponse::class,
     ],
     /**
+    * @desc 开启/更新一键起量
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761603589597259
+    **/
+    'openToolsPromotionRaiseSetPostApi' => [
+        'desc' => '开启/更新一键起量',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761603589597259',
+        'call' => AdOceanSdk\Tools\Api\ToolsPromotionRaiseSetPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPromotionRaiseSetPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseSetPostResponse::class,
+    ],
+    /**
     * @desc 删除动态创意词包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710719368207
     **/
@@ -1784,6 +1795,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\NativeAnchorCreatePostResponse::class,
     ],
     /**
+    * @desc 获取广告起量状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1765406483367948
+    **/
+    'openToolsPromotionRaiseStatusCurrentIdsGetApi' => [
+        'desc' => '获取广告起量状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1765406483367948',
+        'call' => AdOceanSdk\Tools\Api\ToolsPromotionRaiseStatusCurrentIdsGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPromotionRaiseStatusCurrentIdsGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseStatusCurrentIdsGetResponse::class,
+    ],
+    /**
     * @desc 删除原生锚点
     * @doc  https://open.oceanengine.com/labels/7/docs/1780079261760524
     **/
@@ -1870,6 +1892,17 @@ return [
         'call' => AdOceanSdk\Tools\Api\ToolsLandingGroupCreatePostApi::class,
         'params' => AdOceanSdk\Tools\Params\ToolsLandingGroupCreatePostParams::class,
         'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupCreatePostResponse::class,
+    ],
+    /**
+    * @desc 获取一键起量方案列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761603513577476
+    **/
+    'openToolsPromotionRaiseStatusGetApi' => [
+        'desc' => '获取一键起量方案列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761603513577476',
+        'call' => AdOceanSdk\Tools\Api\ToolsPromotionRaiseStatusGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsPromotionRaiseStatusGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseStatusGetResponse::class,
     ],
     /**
     * @desc 更新字节小程序
