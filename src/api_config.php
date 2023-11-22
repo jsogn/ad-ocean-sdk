@@ -288,6 +288,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectListGetResponse::class,
     ],
     /**
+    * @desc 创建预算组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780159359081540
+    **/
+    'openBudgetGroupCreatePostApi' => [
+        'desc' => '创建预算组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780159359081540',
+        'call' => AdOceanSdk\Advertising\Api\BudgetGroupCreatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\BudgetGroupCreatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\BudgetGroupCreatePostResponse::class,
+    ],
+    /**
     * @desc 批量更新项目预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1755353873798155
     **/
