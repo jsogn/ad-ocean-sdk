@@ -1542,6 +1542,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupCreatePostResponse::class,
     ],
     /**
+    * @desc 更新字节小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1780614097935372
+    **/
+    'openToolsMicroAppUpdatePostApi' => [
+        'desc' => '更新字节小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1780614097935372',
+        'call' => AdOceanSdk\Tools\Api\ToolsMicroAppUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsMicroAppUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsMicroAppUpdatePostResponse::class,
+    ],
+    /**
     * @desc 创建字节小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1780613896121344
     **/
