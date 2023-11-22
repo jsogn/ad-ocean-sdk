@@ -1289,6 +1289,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteCreatePostResponse::class,
     ],
     /**
+    * @desc 获取橙子建站站点详细信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710620022799
+    **/
+    'openToolsSiteReadGetApi' => [
+        'desc' => '获取橙子建站站点详细信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710620022799',
+        'call' => AdOceanSdk\Tools\Api\ToolsSiteReadGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsSiteReadGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsSiteReadGetResponse::class,
+    ],
+    /**
     * @desc 获取视频智能封面
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710602404864
     **/
