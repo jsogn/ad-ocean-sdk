@@ -981,6 +981,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageGetResponse::class,
     ],
     /**
+    * @desc 下载清理任务结果
+    * @doc  https://open.oceanengine.com/labels/7/docs/1764216974179400
+    **/
+    'openFileVideoMaterialClearTaskResultGetApi' => [
+        'desc' => '下载清理任务结果',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1764216974179400',
+        'call' => AdOceanSdk\File\Api\FileVideoMaterialClearTaskResultGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoMaterialClearTaskResultGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoMaterialClearTaskResultGetResponse::class,
+    ],
+    /**
     * @desc 素材推送
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710604852236
     **/
@@ -1047,6 +1058,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageAdGetResponse::class,
     ],
     /**
+    * @desc 创建素材清理任务
+    * @doc  https://open.oceanengine.com/labels/7/docs/1764209655140366
+    **/
+    'openFileVideoMaterialClearTaskCreatePostApi' => [
+        'desc' => '创建素材清理任务',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1764209655140366',
+        'call' => AdOceanSdk\File\Api\FileVideoMaterialClearTaskCreatePostApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoMaterialClearTaskCreatePostParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoMaterialClearTaskCreatePostResponse::class,
+    ],
+    /**
     * @desc 上传视频
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710600730639
     **/
@@ -1100,6 +1122,17 @@ return [
         'call' => AdOceanSdk\File\Api\FileVideoAwemeGetApi::class,
         'params' => AdOceanSdk\File\Params\FileVideoAwemeGetParams::class,
         'response' => AdOceanSdk\File\Response\FileVideoAwemeGetResponse::class,
+    ],
+    /**
+    * @desc 获取清理任务列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1764210394714119
+    **/
+    'openFileVideoMaterialClearTaskGetApi' => [
+        'desc' => '获取清理任务列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1764210394714119',
+        'call' => AdOceanSdk\File\Api\FileVideoMaterialClearTaskGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoMaterialClearTaskGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoMaterialClearTaskGetResponse::class,
     ],
     /**
     * @desc 获取授权User信息
