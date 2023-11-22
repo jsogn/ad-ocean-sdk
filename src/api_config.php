@@ -1377,6 +1377,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdStatExtraInfoGetResponse::class,
     ],
     /**
+    * @desc 事件资产下更新监测链接组
+    * @doc  https://open.oceanengine.com/labels/7/docs/1727899035395079
+    **/
+    'openEventManagerTrackUrlUpdatePostApi' => [
+        'desc' => '事件资产下更新监测链接组',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1727899035395079',
+        'call' => AdOceanSdk\Tools\Api\EventManagerTrackUrlUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerTrackUrlUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerTrackUrlUpdatePostResponse::class,
+    ],
+    /**
     * @desc 更改橙子建站站点状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710618884096
     **/
