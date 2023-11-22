@@ -125,6 +125,7 @@ tags = [
     '创意设置',
     '广告预算与出价',
     '搜索流量',
+    '广告素材组合'
 ]
 # 初始化 request_params
 request_params = {}
