@@ -134,6 +134,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CampaignGetResponse::class,
     ],
     /**
+    * @desc 获取关联云图的广告主账户信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1768100113310735
+    **/
+    'openCDPBrandGetApi' => [
+        'desc' => '获取关联云图的广告主账户信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1768100113310735',
+        'call' => AdOceanSdk\Advertising\Api\CDPBrandGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\CDPBrandGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\CDPBrandGetResponse::class,
+    ],
+    /**
     * @desc 获取账户日预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710531128335
     **/
