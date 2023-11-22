@@ -684,6 +684,17 @@ return [
         'response' => AdOceanSdk\Majordomo\Response\BusinessPlatformPartnerOrganizationListGetResponse::class,
     ],
     /**
+    * @desc 数据源文件上传
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710568556544
+    **/
+    'openDMPDataSourceFileUploadPostApi' => [
+        'desc' => '数据源文件上传',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710568556544',
+        'call' => AdOceanSdk\DMP\Api\DMPDataSourceFileUploadPostApi::class,
+        'params' => AdOceanSdk\DMP\Params\DMPDataSourceFileUploadPostParams::class,
+        'response' => AdOceanSdk\DMP\Response\DMPDataSourceFileUploadPostResponse::class,
+    ],
+    /**
     * @desc 更新广告主账户头像
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710512435215
     **/
