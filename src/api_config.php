@@ -57,6 +57,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\FundSharedWalletBalanceGetResponse::class,
     ],
     /**
+    * @desc 创建退款交易号（方舟）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1766755414170636
+    **/
+    'openAgentRefundTransferSeqCreatePostApi' => [
+        'desc' => '创建退款交易号（方舟）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1766755414170636',
+        'call' => AdOceanSdk\Fund\Api\AgentRefundTransferSeqCreatePostApi::class,
+        'params' => AdOceanSdk\Fund\Params\AgentRefundTransferSeqCreatePostParams::class,
+        'response' => AdOceanSdk\Fund\Response\AgentRefundTransferSeqCreatePostResponse::class,
+    ],
+    /**
     * @desc 创建转账交易号（方舟）
     * @doc  https://open.oceanengine.com/labels/7/docs/1766755293435980
     **/
