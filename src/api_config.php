@@ -68,6 +68,17 @@ return [
         'response' => AdOceanSdk\Majordomo\Response\CustomerCenterAdvertiserListGetResponse::class,
     ],
     /**
+    * @desc 获取纵横组织下所有主体信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741478619724813
+    **/
+    'openBusinessPlatformCompanyInfoGetApi' => [
+        'desc' => '获取纵横组织下所有主体信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741478619724813',
+        'call' => AdOceanSdk\Majordomo\Api\BusinessPlatformCompanyInfoGetApi::class,
+        'params' => AdOceanSdk\Majordomo\Params\BusinessPlatformCompanyInfoGetParams::class,
+        'response' => AdOceanSdk\Majordomo\Response\BusinessPlatformCompanyInfoGetResponse::class,
+    ],
+    /**
     * @desc 查询合作组织
     * @doc  https://open.oceanengine.com/labels/7/docs/1710414874245133
     **/
