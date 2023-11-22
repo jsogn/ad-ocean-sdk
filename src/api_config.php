@@ -255,6 +255,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\PromotionCreatePostResponse::class,
     ],
     /**
+    * @desc 批量删除广告
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741031376580675
+    **/
+    'openPromotionDeletePostApi' => [
+        'desc' => '批量删除广告',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741031376580675',
+        'call' => AdOceanSdk\Advertising\Api\PromotionDeletePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionDeletePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionDeletePostResponse::class,
+    ],
+    /**
     * @desc 更新账户日预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710531631116
     **/
