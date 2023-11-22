@@ -1663,6 +1663,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSitePreviewGetResponse::class,
     ],
     /**
+    * @desc 获取预估点击成本
+    * @doc  https://open.oceanengine.com/labels/7/docs/1717213696709710
+    **/
+    'openToolsEstimatedPriceGetApi' => [
+        'desc' => '获取预估点击成本',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1717213696709710',
+        'call' => AdOceanSdk\Tools\Api\ToolsEstimatedPriceGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEstimatedPriceGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEstimatedPriceGetResponse::class,
+    ],
+    /**
     * @desc 获取落地页组
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710629043212
     **/
