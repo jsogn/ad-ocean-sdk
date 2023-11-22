@@ -1344,6 +1344,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteHandselPostResponse::class,
     ],
     /**
+    * @desc 获取快投推荐出价系数
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740289237468175
+    **/
+    'openToolsSearchBidRatioGetApi' => [
+        'desc' => '获取快投推荐出价系数',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740289237468175',
+        'call' => AdOceanSdk\Tools\Api\ToolsSearchBidRatioGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsSearchBidRatioGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsSearchBidRatioGetResponse::class,
+    ],
+    /**
     * @desc 创建橙子建站站点
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710617712640
     **/
