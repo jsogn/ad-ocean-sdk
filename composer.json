@@ -21,7 +21,7 @@
   ],
   "require": {
     "php": ">=8.2",
-    "guzzlehttp/guzzle": "^7.8",
+    "guzzlehttp/guzzle": "^7.5.0",
     "yzen.dev/plain-to-class": "^3.0",
     "w7/engine-validate": "^5.0"
   },
