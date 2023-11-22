@@ -167,6 +167,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserCampaignGetResponse::class,
     ],
     /**
+    * @desc 获取素材派生数据（计划维度）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1755177028152324
+    **/
+    'openAdvertiserAdMetricsGetGetApi' => [
+        'desc' => '获取素材派生数据（计划维度）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1755177028152324',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserAdMetricsGetGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserAdMetricsGetGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserAdMetricsGetGetResponse::class,
+    ],
+    /**
     * @desc 获取模板详情
     * @doc  https://open.oceanengine.com/labels/7/docs/1736243716320256
     **/
