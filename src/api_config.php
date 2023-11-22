@@ -101,6 +101,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdvertiserBudgetGetResponse::class,
     ],
     /**
+    * @desc 创意详细信息（新）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1742668551117827
+    **/
+    'openAdvertiserCreativeDetailGetApi' => [
+        'desc' => '创意详细信息（新）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1742668551117827',
+        'call' => AdOceanSdk\Advertising\Api\AdvertiserCreativeDetailGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\AdvertiserCreativeDetailGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\AdvertiserCreativeDetailGetResponse::class,
+    ],
+    /**
     * @desc 获取模板标签列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1736241004382219
     **/
