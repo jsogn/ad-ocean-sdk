@@ -926,6 +926,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileVideoDeletePostResponse::class,
     ],
     /**
+    * @desc 批量删除图片素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761577471849479
+    **/
+    'openFileImageDeletePostApi' => [
+        'desc' => '批量删除图片素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761577471849479',
+        'call' => AdOceanSdk\File\Api\FileImageDeletePostApi::class,
+        'params' => AdOceanSdk\File\Params\FileImageDeletePostParams::class,
+        'response' => AdOceanSdk\File\Response\FileImageDeletePostResponse::class,
+    ],
+    /**
     * @desc 获取同主体下广告主视频素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710603509772
     **/
