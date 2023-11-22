@@ -1333,6 +1333,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteUpdateStatusPostResponse::class,
     ],
     /**
+    * @desc 获取广告预览二维码（升级版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1763117461145604
+    **/
+    'openToolsAdPreviewQrcodeGetApi' => [
+        'desc' => '获取广告预览二维码（升级版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1763117461145604',
+        'call' => AdOceanSdk\Tools\Api\ToolsAdPreviewQrcodeGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsAdPreviewQrcodeGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsAdPreviewQrcodeGetResponse::class,
+    ],
+    /**
     * @desc 建站工具-建站转赠
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710623352844
     **/
