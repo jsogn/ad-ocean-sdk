@@ -1278,6 +1278,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取可创建事件列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1709793059412996
+    **/
+    'openEventManagerAvailableEventsGetApi' => [
+        'desc' => '获取可创建事件列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1709793059412996',
+        'call' => AdOceanSdk\Tools\Api\EventManagerAvailableEventsGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerAvailableEventsGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerAvailableEventsGetResponse::class,
+    ],
+    /**
     * @desc 查询受众预估结果
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710675422208
     **/
