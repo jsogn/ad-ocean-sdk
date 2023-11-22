@@ -1366,6 +1366,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteGetResponse::class,
     ],
     /**
+    * @desc 创建定向包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710735901711
+    **/
+    'openAudiencePackageCreatePostApi' => [
+        'desc' => '创建定向包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710735901711',
+        'call' => AdOceanSdk\Tools\Api\AudiencePackageCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\AudiencePackageCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\AudiencePackageCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取微信小程序列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1771203622020111
     **/
