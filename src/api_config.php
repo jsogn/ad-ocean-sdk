@@ -1333,6 +1333,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsBpAssetManagementShareGetResponse::class,
     ],
     /**
+    * @desc 获取广告建议起量预算
+    * @doc  https://open.oceanengine.com/labels/7/docs/1761603631358979
+    **/
+    'openToolsSuggestBudgetGetApi' => [
+        'desc' => '获取广告建议起量预算',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1761603631358979',
+        'call' => AdOceanSdk\Tools\Api\ToolsSuggestBudgetGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsSuggestBudgetGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsSuggestBudgetGetResponse::class,
+    ],
+    /**
     * @desc 获取定向包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710731761676
     **/
