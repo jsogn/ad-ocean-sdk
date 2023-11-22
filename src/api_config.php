@@ -1410,6 +1410,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdPreviewQrcodeGetResponse::class,
     ],
     /**
+    * @desc 获取可用优化目标（巨量广告升级版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1740944984250381
+    **/
+    'openEventManagerOptimizedGoalV2GetApi' => [
+        'desc' => '获取可用优化目标（巨量广告升级版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1740944984250381',
+        'call' => AdOceanSdk\Tools\Api\EventManagerOptimizedGoalV2GetApi::class,
+        'params' => AdOceanSdk\Tools\Params\EventManagerOptimizedGoalV2GetParams::class,
+        'response' => AdOceanSdk\Tools\Response\EventManagerOptimizedGoalV2GetResponse::class,
+    ],
+    /**
     * @desc 建站工具-建站转赠
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710623352844
     **/
