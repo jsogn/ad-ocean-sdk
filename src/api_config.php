@@ -189,6 +189,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserAvatarGetResponse::class,
     ],
     /**
+    * @desc 查询账号余额
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710526192652
+    **/
+    'openAdvertiserFundGetApi' => [
+        'desc' => '查询账号余额',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710526192652',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserFundGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserFundGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserFundGetResponse::class,
+    ],
+    /**
     * @desc 获取广告主信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710508983311
     **/
