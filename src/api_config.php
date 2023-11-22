@@ -1388,6 +1388,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\WechatAppletListGetResponse::class,
     ],
     /**
+    * @desc 删除定向包
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710732991488
+    **/
+    'openAudiencePackageDeletePostApi' => [
+        'desc' => '删除定向包',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710732991488',
+        'call' => AdOceanSdk\Tools\Api\AudiencePackageDeletePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\AudiencePackageDeletePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\AudiencePackageDeletePostResponse::class,
+    ],
+    /**
     * @desc 通过优化目标获取橙子落地页站点信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1755162848410635
     **/
