@@ -14,11 +14,11 @@ class NativeAnchorDeletePostResponse extends Data implements ResponseInterface
 
 
     /**
-     * @var json $data json返回值
+     * @var array $data json返回值
      */
-    public json $data;
-    
-    public function getData(): \AdOceanSdk\Tools\Data\NativeAnchorDeletePostResponseData
+    public array $data;
+
+    public function getData(): array
     {
         return $this->data;
     }

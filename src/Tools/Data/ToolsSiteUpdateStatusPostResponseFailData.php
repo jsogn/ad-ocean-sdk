@@ -16,8 +16,8 @@ class ToolsSiteUpdateStatusPostResponseFailData extends Data
     public string $message;
     
     /**
-     * @var 站点id $site_id 更新失败的site_id
+     * @var int $site_id 更新失败的site_id
      */
-    public 站点id $site_id;
+    public int $site_id;
     
 }

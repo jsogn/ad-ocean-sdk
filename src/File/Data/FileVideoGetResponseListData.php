@@ -51,9 +51,9 @@ class FileVideoGetResponseListData extends Data
     public string $poster_url;
     
     /**
-     * @var double $duration 码率，单位bps
+     * @var float $duration 码率，单位bps
      */
-    public double $duration;
+    public float $duration;
     
     /**
      * @var int $material_id 视频时长

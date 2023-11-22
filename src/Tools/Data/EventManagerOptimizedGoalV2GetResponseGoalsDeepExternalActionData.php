@@ -16,14 +16,14 @@ class EventManagerOptimizedGoalV2GetResponseGoalsDeepExternalActionData extends 
     public string $optimization_name;
     
     /**
-     * @var boolean $history_back 历史有无回传,TRUE表示有，FALSE表示无
+     * @var bool $history_back 历史有无回传,TRUE表示有，FALSE表示无
      */
-    public boolean $history_back;
+    public bool $history_back;
     
     /**
-     * @var boolean $twenty_four_hour_back 24 小时历史有无回传,TRUE表示有，FALSE表示无
+     * @var bool $twenty_four_hour_back 24 小时历史有无回传,TRUE表示有，FALSE表示无
      */
-    public boolean $twenty_four_hour_back;
+    public bool $twenty_four_hour_back;
     
     /**
      * @var array<string> $asset_types 资产类型，枚举值：APP应用

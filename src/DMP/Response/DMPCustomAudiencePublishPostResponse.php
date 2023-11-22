@@ -14,11 +14,11 @@ class DMPCustomAudiencePublishPostResponse extends Data implements ResponseInter
 
 
     /**
-     * @var json $data json返回值,返回的操作状态信息和失败后的错误信息
+     * @var array $data json返回值,返回的操作状态信息和失败后的错误信息
      */
-    public json $data;
-    
-    public function getData(): \AdOceanSdk\DMP\Data\DMPCustomAudiencePublishPostResponseData
+    public array $data;
+
+    public function getData(): array
     {
         return $this->data;
     }

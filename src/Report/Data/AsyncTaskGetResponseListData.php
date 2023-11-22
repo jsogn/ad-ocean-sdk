@@ -21,9 +21,9 @@ class AsyncTaskGetResponseListData extends Data
     public int $task_id;
     
     /**
-     * @var json $task_params 任务参数
+     * @var array $task_params 任务参数
      */
-    public json $task_params;
+    public array $task_params;
     
     /**
      * @var string $task_name 任务名称

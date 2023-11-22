@@ -7,7 +7,7 @@ namespace AdOceanSdk\Tools\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // 公司主体信息，一次最多操作1个
-当share_mode为 COMPANY_ALL_ACCOUNTS时有效且必填
+//当share_mode为 COMPANY_ALL_ACCOUNTS时有效且必填
 class ToolsBpAssetManagementSharePostParamAllAccountsByCompanyData extends Data
 {
 

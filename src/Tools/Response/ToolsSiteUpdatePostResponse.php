@@ -14,11 +14,11 @@ class ToolsSiteUpdatePostResponse extends Data implements ResponseInterface
 
 
     /**
-     * @var json $data json返回值，此处为{}
+     * @var array $data json返回值，此处为{}
      */
-    public json $data;
+    public array $data;
     
-    public function getData(): \AdOceanSdk\Tools\Data\ToolsSiteUpdatePostResponseData
+    public function getData(): array
     {
         return $this->data;
     }

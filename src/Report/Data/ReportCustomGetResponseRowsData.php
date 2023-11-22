@@ -11,13 +11,13 @@ class ReportCustomGetResponseRowsData extends Data
 {
 
     /**
-     * @var dict[string] $metrics 指标数据
+     * @var string $metrics 指标数据
      */
-    public dict[string] $metrics;
+    public string $metrics;
     
     /**
-     * @var dict[string] $dimensions 维度数据
+     * @var string $dimensions 维度数据
      */
-    public dict[string] $dimensions;
+    public string $dimensions;
     
 }

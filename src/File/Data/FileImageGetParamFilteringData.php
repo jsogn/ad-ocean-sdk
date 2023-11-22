@@ -32,14 +32,14 @@ class FileImageGetParamFilteringData extends Data
     public array $signatures;
     
     /**
-     * @var double $width 图片宽度
+     * @var float $width 图片宽度
      */
-    public double $width;
+    public float $width;
     
     /**
-     * @var double $height 图片高度
+     * @var float $height 图片高度
      */
-    public double $height;
+    public float $height;
     
     /**
      * @var array $ratio 图片宽高比，eg: [1.7, 2.5]，输入1.7则搜索满足宽高比介于1.65-1.75之间的图片，即精度上下浮动0.05

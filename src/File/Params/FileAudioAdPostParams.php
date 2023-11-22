@@ -26,9 +26,9 @@ class FileAudioAdPostParams extends RequestParams
     public string $audio_signature;
     
     /**
-     * @var file $audio_file 音频文件，upload_type为UPLOAD_BY_FILE时必填
+     * @var mixed $audio_file 音频文件，upload_type为UPLOAD_BY_FILE时必填
      */
-    public file $audio_file;
+    public mixed $audio_file;
     
     /**
      * @var string $audio_url 音频url地址，如http://xxx.xxx，upload_type为UPLOAD_BY_URL必填

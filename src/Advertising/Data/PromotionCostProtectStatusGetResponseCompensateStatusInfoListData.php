@@ -26,14 +26,14 @@ class PromotionCostProtectStatusGetResponseCompensateStatusInfoListData extends 
     public string $compensate_status;
     
     /**
-     * @var dict[string] $invalid_reasons 成本保障失效原因 枚举值:
+     * @var string $invalid_reasons 成本保障失效原因 枚举值:
      */
-    public dict[string] $invalid_reasons;
+    public string $invalid_reasons;
     
     /**
-     * @var dict[string] $end_reasons 成本保障结束原因
+     * @var string $end_reasons 成本保障结束原因
      */
-    public dict[string] $end_reasons;
+    public string $end_reasons;
     
     /**
      * @var int $compensate_amount 赔付金额

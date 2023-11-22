@@ -66,14 +66,14 @@ class AudiencePackageGetResponseAudiencePackagesAudienceData extends Data
     public array $platform;
     
     /**
-     * @var json $app_category APP行为定向,分类集合, 详见【附件-app_category.json】
+     * @var array $app_category APP行为定向,分类集合, 详见【附件-app_category.json】
      */
-    public json $app_category;
+    public array $app_category;
     
     /**
-     * @var json $app_ids APP行为定向,APP集合
+     * @var array $app_ids APP行为定向,APP集合
      */
-    public json $app_ids;
+    public array $app_ids;
     
     /**
      * @var array<int> $launch_price 手机价格定向,传入价格区间，最高传入11000（表示1w以上）传值示例 "launch_price": [2000, 11000]，表示2000元以上

@@ -14,11 +14,11 @@ class EventManagerEventsCreatePostResponse extends Data implements ResponseInter
 
 
     /**
-     * @var json $data json返回值
+     * @var array $data json返回值
      */
-    public json $data;
+    public array $data;
     
-    public function getData(): \AdOceanSdk\Tools\Data\EventManagerEventsCreatePostResponseData
+    public function getData(): array
     {
         return $this->data;
     }

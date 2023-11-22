@@ -26,8 +26,8 @@ class ToolsEstimateAudienceGetResponseData extends Data
     public \AdOceanSdk\Tools\Data\ToolsEstimateAudienceGetResponseVideoAppData $video_app;
     
     /**
-     * @var json $hotsoon 火山视频预估用户覆盖量结果
+     * @var array $hotsoon 火山视频预估用户覆盖量结果
      */
-    public json $hotsoon;
+    public array $hotsoon;
     
 }

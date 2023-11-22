@@ -14,11 +14,11 @@ class EventManagerTrackUrlUpdatePostResponse extends Data implements ResponseInt
 
 
     /**
-     * @var object $data 返回数据
+     * @var array $data 返回数据
      */
-    public object $data;
+    public array $data;
     
-    public function getData(): \AdOceanSdk\Tools\Data\EventManagerTrackUrlUpdatePostResponseData
+    public function getData(): array
     {
         return $this->data;
     }

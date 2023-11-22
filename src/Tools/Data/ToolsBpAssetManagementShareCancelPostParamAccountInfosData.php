@@ -7,7 +7,7 @@ namespace AdOceanSdk\Tools\Data;
 use AdOceanSdk\Kernel\Data\Data;
 
 // 取消指定共享账号信息，一次最多取消共享到100个账号
-当 share_mode 为PART时可用且必填
+//当 share_mode 为PART时可用且必填
 class ToolsBpAssetManagementShareCancelPostParamAccountInfosData extends Data
 {
 

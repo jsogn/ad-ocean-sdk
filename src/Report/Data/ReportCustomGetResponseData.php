@@ -17,9 +17,9 @@ class ReportCustomGetResponseData extends Data
     public array $rows;
     
     /**
-     * @var dict[string] $total_metrics 指标汇总数据
+     * @var string $total_metrics 指标汇总数据
      */
-    public dict[string] $total_metrics;
+    public string $total_metrics;
     
     /**
      * @var \AdOceanSdk\ResponsePageInfoData $page_info 分页信息

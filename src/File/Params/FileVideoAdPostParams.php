@@ -26,9 +26,9 @@ upload_type为UPLOAD_BY_File必填
     public string $video_signature;
     
     /**
-     * @var file $video_file upload_type为UPLOAD_BY_File必填
+     * @var mixed $video_file upload_type为UPLOAD_BY_File必填
      */
-    public file $video_file;
+    public mixed $video_file;
     
     /**
      * @var string $filename upload_type为UPLOAD_BY_URL必填
