@@ -915,6 +915,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgConfigGetResponse::class,
     ],
     /**
+    * @desc 获取图片素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710601254912
+    **/
+    'openFileImageGetApi' => [
+        'desc' => '获取图片素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710601254912',
+        'call' => AdOceanSdk\File\Api\FileImageGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileImageGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileImageGetResponse::class,
+    ],
+    /**
     * @desc 上传资质图片
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710599659532
     **/
