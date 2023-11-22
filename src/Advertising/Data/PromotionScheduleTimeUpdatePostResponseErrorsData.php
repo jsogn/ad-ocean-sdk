@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace AdOceanSdk\Advertising\Data;
+
+use AdOceanSdk\Kernel\Data\Data;
+
+// 更新失败的广告ID列表
+class PromotionScheduleTimeUpdatePostResponseErrorsData extends Data
+{
+
+    /**
+     * @var int $promotion_id 广告ID
+     */
+    public int $promotion_id;
+    
+    /**
+     * @var string $error_message 错误信息
+     */
+    public string $error_message;
+    
+}

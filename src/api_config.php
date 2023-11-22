@@ -134,6 +134,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\CampaignGetResponse::class,
     ],
     /**
+    * @desc 批量更新广告投放时段
+    * @doc  https://open.oceanengine.com/labels/7/docs/1769912402184199
+    **/
+    'openPromotionScheduleTimeUpdatePostApi' => [
+        'desc' => '批量更新广告投放时段',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1769912402184199',
+        'call' => AdOceanSdk\Advertising\Api\PromotionScheduleTimeUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionScheduleTimeUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionScheduleTimeUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取关联云图的广告主账户信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1768100113310735
     **/
