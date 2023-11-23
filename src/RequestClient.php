@@ -37,37 +37,46 @@ class RequestClient implements RequestClientInterface
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function call(RequestApi|string $requestApi, RequestParamInterface|array $params = []): ResponseInterface&Data
+    public function call(RequestApi|string $requestApi, RequestParamInterface|array $requestParams = []): ResponseInterface&Data
     {
         $requestApi = is_string($requestApi) ? $requestApi::make() : $requestApi;
-        $method     = match ($requestApi->getMethod()) {
+        if (!is_array($requestParams)) {
+            $requestParams->validate();
+            $requestParams = $requestParams->toArray();
+        }
+
+        $requestMethod = match ($requestApi->getMethod()) {
             RequestMethodEnum::GET => 'GET',
             RequestMethodEnum::POST => 'POST',
         };
-        $format     = match ($requestApi->getRequestFormat()) {
+        $paramsFormat  = match ($requestApi->getRequestFormat()) {
             RequestFormatEnum::BODY => RequestOptions::BODY,
             RequestFormatEnum::JSON => RequestOptions::JSON,
             RequestFormatEnum::QUERY => RequestOptions::QUERY,
             RequestFormatEnum::MULTIPART => RequestOptions::MULTIPART,
             RequestFormatEnum::FORM_PARAMS => RequestOptions::FORM_PARAMS,
         };
-        if (!is_array($params)) {
-            $params->validate();
-            $params = $params->toArray();
-        }
-        $options[$format]   = $params;
-        $options['headers'] = $requestApi->getHeaders();
+
+        $requestParams          = $this->interceptor->params($requestParams, $requestApi);
+        $options[$paramsFormat] = $requestParams;
+        $options['headers']     = $requestApi->getHeaders();
+
         if ($requestApi->getTimeout()) {
             $options['timeout'] = $requestApi->getTimeout();
         }
 
-        $options         = $this->interceptor->request($options);
-        $response        = $this->getHttpClient()
-            ->request($method, $requestApi->getAddress(), $options);
-        $responseArray   = json_decode($response->getBody()->getContents(), true);
-        $requestResponse = RequestResponse::from($responseArray);
+        $options    = $this->interceptor->options($options);
+        $requestApi = $this->interceptor->request($requestApi, $requestParams, $options);
 
-        return $this->interceptor->response($requestResponse);
+        try {
+            $response = $this->getHttpClient()
+                ->request($requestMethod, $requestApi->getAddress(), $options);
+        } catch (\GuzzleHttp\Exception\GuzzleException $e) {
+            $this->interceptor->exception($e);
+            throw $e;
+        }
+
+        return $this->interceptor->response($response, $requestApi, $requestParams, $options);
     }
 
     public static function make(): self

@@ -8,5 +8,5 @@ interface RequestClientInterface
 {
     public static function make(): self;
 
-    public function call(RequestApi|string $requestApi, RequestParamInterface|array $params = []): ResponseInterface;
+    public function call(RequestApi|string $requestApi, RequestParamInterface|array $requestParams = []): ResponseInterface;
 }
