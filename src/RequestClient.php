@@ -14,8 +14,6 @@ class RequestClient implements RequestClientInterface
 {
     private int $timeout = 20;
 
-    private string $accessToken = '';
-
     private string $domain = 'https://api.oceanengine.com/';
 
     private array $headers = [];
@@ -29,7 +27,7 @@ class RequestClient implements RequestClientInterface
 
     public function setAccessToken($token): self
     {
-        $this->accessToken = $token;
+        $this->headers['Access-Token'] = $token;
 
         return $this;
     }
@@ -59,7 +57,7 @@ class RequestClient implements RequestClientInterface
 
         $requestParams          = $this->interceptor->params($requestParams, $requestApi);
         $options[$paramsFormat] = $requestParams;
-        $options['headers']     = $requestApi->getHeaders();
+        $options['headers']     = [...$this->headers, ...$requestApi->getHeaders()];
 
         if ($requestApi->getTimeout()) {
             $options['timeout'] = $requestApi->getTimeout();
@@ -89,10 +87,7 @@ class RequestClient implements RequestClientInterface
         return new Client([
             'base_uri' => $this->domain,
             'timeout'  => $this->timeout,
-            'headers'  => [
-                'Access-Token' => $this->accessToken,
-                ...$this->headers
-            ],
+            'headers'  => $this->headers
         ]);
     }
 
@@ -115,10 +110,5 @@ class RequestClient implements RequestClientInterface
         $this->interceptor = $interceptor;
 
         return $this;
-    }
-
-    private function responseInterceptor()
-    {
-
     }
 }
