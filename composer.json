@@ -20,7 +20,7 @@
     "ad sdk"
   ],
   "require": {
-    "php": ">=8.2",
+    "php": ">=8.1",
     "guzzlehttp/guzzle": "^7.5.0",
     "yzen.dev/plain-to-class": "3.0.3",
     "w7/engine-validate": "^5.0"
