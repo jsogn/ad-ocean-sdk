@@ -1861,6 +1861,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsMicroAppListGetResponse::class,
     ],
     /**
+    * @desc 获取行政信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1709606596424718
+    **/
+    'openToolsAdminInfoGetApi' => [
+        'desc' => '获取行政信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1709606596424718',
+        'call' => AdOceanSdk\Tools\Api\ToolsAdminInfoGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsAdminInfoGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsAdminInfoGetResponse::class,
+    ],
+    /**
     * @desc 素材前置预审送审
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273263150083
     **/
