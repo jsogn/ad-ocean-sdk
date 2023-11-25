@@ -1553,6 +1553,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse::class,
     ],
     /**
+    * @desc 获取地域列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710678458380
+    **/
+    'openToolsRegionGetApi' => [
+        'desc' => '获取地域列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710678458380',
+        'call' => AdOceanSdk\Tools\Api\ToolsRegionGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsRegionGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsRegionGetResponse::class,
+    ],
+    /**
     * @desc 日志查询
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710682956815
     **/
