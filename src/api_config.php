@@ -1344,6 +1344,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSuggestBudgetGetResponse::class,
     ],
     /**
+    * @desc 查询国家/区域信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1709606374050823
+    **/
+    'openToolsCountryInfoGetApi' => [
+        'desc' => '查询国家/区域信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1709606374050823',
+        'call' => AdOceanSdk\Tools\Api\ToolsCountryInfoGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCountryInfoGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCountryInfoGetResponse::class,
+    ],
+    /**
     * @desc 获取定向包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710731761676
     **/
