@@ -43,11 +43,20 @@ class RequestClient implements RequestClientInterface
             $requestParams = $requestParams->toArray();
         }
 
+        if (RequestFormatEnum::QUERY === $requestApi->getRequestFormat()) {
+            foreach ($requestParams as &$value) {
+                if (is_array($value)) {
+                    $value = json_encode($value);
+                }
+            }
+        }
+
         $requestMethod = match ($requestApi->getMethod()) {
             RequestMethodEnum::GET => 'GET',
             RequestMethodEnum::POST => 'POST',
         };
-        $paramsFormat  = match ($requestApi->getRequestFormat()) {
+
+        $paramsFormat = match ($requestApi->getRequestFormat()) {
             RequestFormatEnum::BODY => RequestOptions::BODY,
             RequestFormatEnum::JSON => RequestOptions::JSON,
             RequestFormatEnum::QUERY => RequestOptions::QUERY,

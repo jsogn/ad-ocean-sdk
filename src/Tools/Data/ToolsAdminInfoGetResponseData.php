@@ -15,10 +15,10 @@ class ToolsAdminInfoGetResponseData extends Data
      */
     #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsAdminInfoGetResponseDistrictsData::class)]
     public array $districts;
-    
+
     /**
      * @var string $version 行政信息版本号
      */
     public string $version;
-    
+
 }

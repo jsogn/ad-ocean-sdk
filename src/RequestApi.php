@@ -32,7 +32,18 @@ abstract class RequestApi
             return $this->requestFormat;
         }
 
+        if ($this->method === RequestMethodEnum::GET) {
+            return RequestFormatEnum::QUERY;
+        }
+
         return RequestFormatEnum::JSON;
+    }
+
+    public function setRequestFormat(?RequestFormatEnum $requestFormat): RequestApi
+    {
+        $this->requestFormat = $requestFormat;
+
+        return $this;
     }
 
     public function getDomain(): ?string
