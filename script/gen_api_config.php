@@ -1,5 +1,5 @@
 <?php
-require_once '../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 function scanClasses($directory)
 {
