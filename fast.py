@@ -101,7 +101,7 @@ soup = BeautifulSoup(html, 'html.parser')
 title = soup.find(class_='qz-editor-render-title').text.strip()
 print(title)
 # 提取请求地址
-address_tag = soup.find(id='link-0')
+address_tag = soup.find(text="请求地址")
 # 获取紧随其后的 a 标签的 href 属性值
 request_url = address_tag.find_next('a')['href']
 

@@ -882,6 +882,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationSubmitPostResponse::class,
     ],
     /**
+    * @desc 查询账户日流水
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710526682112
+    **/
+    'openAdvertiserFundDailyStatGetApi' => [
+        'desc' => '查询账户日流水',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710526682112',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserFundDailyStatGetApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserFundDailyStatGetParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserFundDailyStatGetResponse::class,
+    ],
+    /**
     * @desc 查询账户可转余额
     * @doc  https://open.oceanengine.com/labels/7/docs/1725634464247879
     **/
