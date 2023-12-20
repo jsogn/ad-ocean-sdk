@@ -1817,6 +1817,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\EventManagerEventConfigsGetResponse::class,
     ],
     /**
+    * @desc 获取字节小程序/小游戏详情内容
+    * @doc  https://open.oceanengine.com/labels/7/docs/1778265753535620
+    **/
+    'openToolsAssetLinkListGetApi' => [
+        'desc' => '获取字节小程序/小游戏详情内容',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1778265753535620',
+        'call' => AdOceanSdk\Tools\Api\ToolsAssetLinkListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsAssetLinkListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsAssetLinkListGetResponse::class,
+    ],
+    /**
     * @desc 通过优化目标获取橙子落地页站点信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1755162848410635
     **/
