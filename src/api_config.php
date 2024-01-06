@@ -486,6 +486,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\PromotionAutoGenerateConfigGetResponse::class,
     ],
     /**
+    * @desc 获取广告列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1741028841006095
+    **/
+    'openPromotionListGetApi' => [
+        'desc' => '获取广告列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1741028841006095',
+        'call' => AdOceanSdk\Advertising\Api\PromotionListGetApi::class,
+        'params' => AdOceanSdk\Advertising\Params\PromotionListGetParams::class,
+        'response' => AdOceanSdk\Advertising\Response\PromotionListGetResponse::class,
+    ],
+    /**
     * @desc 获取素材派生数据（素材维度）
     * @doc  https://open.oceanengine.com/labels/7/docs/1755177023094787
     **/

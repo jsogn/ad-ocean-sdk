@@ -32,6 +32,11 @@ class RequestClient implements RequestClientInterface
         return $this;
     }
 
+    public function getAccessToken(): string
+    {
+        return $this->headers['Access-Token'] ?? '';
+    }
+
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
