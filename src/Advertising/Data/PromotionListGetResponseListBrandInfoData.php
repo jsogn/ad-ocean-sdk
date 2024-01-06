@@ -18,12 +18,12 @@ class PromotionListGetResponseListBrandInfoData extends Data
     /**
      * @var array<string> $sub_brand_names 子品牌名称
      */
-    public array $sub_brand_names;
+    public ?array $sub_brand_names;
     
     /**
      * @var array<string> $sub_brand_ids 子品牌id（对应创建和修改广告中的sub_brand_name_ids）
      */
-    public array $sub_brand_ids;
+    public ?array $sub_brand_ids;
     
     /**
      * @var int $cdp_brand_id cdp品牌id

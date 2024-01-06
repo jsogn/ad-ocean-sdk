@@ -18,7 +18,7 @@ class PromotionListGetResponseListPromotionMaterialsTitleMaterialListData extend
     /**
      * @var array<int> $dpa_word_list DPA词包ID列表
      */
-    public array $dpa_word_list;
+    public ?array $dpa_word_list;
     
     /**
      * @var string $title 创意标题
@@ -28,6 +28,6 @@ class PromotionListGetResponseListPromotionMaterialsTitleMaterialListData extend
     /**
      * @var array<int> $word_list 动态词包ID
      */
-    public array $word_list;
+    public ?array $word_list;
     
 }
