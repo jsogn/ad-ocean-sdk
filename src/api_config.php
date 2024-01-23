@@ -1487,6 +1487,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsEventAssetsGetResponse::class,
     ],
     /**
+    * @desc 获取原生锚点详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1786407342576640
+    **/
+    'openNativeAnchorDetailGetApi' => [
+        'desc' => '获取原生锚点详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1786407342576640',
+        'call' => AdOceanSdk\Tools\Api\NativeAnchorDetailGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\NativeAnchorDetailGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\NativeAnchorDetailGetResponse::class,
+    ],
+    /**
     * @desc 获取快投推荐出价系数
     * @doc  https://open.oceanengine.com/labels/7/docs/1740289237468175
     **/

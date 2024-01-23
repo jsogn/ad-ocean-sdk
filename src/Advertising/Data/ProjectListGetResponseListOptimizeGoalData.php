@@ -13,7 +13,7 @@ class ProjectListGetResponseListOptimizeGoalData extends Data
     /**
      * @var array<int> $asset_ids 事件管理资产id
      */
-    public array $asset_ids;
+    public ?array $asset_ids;
     
     /**
      * @var int $convert_id 转化跟踪id
