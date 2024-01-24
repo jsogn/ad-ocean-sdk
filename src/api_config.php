@@ -1498,6 +1498,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsEventAssetsGetResponse::class,
     ],
     /**
+    * @desc 获取模板/站点URL
+    * @doc  https://open.oceanengine.com/labels/7/docs/1772995231995911
+    **/
+    'openSiteTemplatePicUrlGetApi' => [
+        'desc' => '获取模板/站点URL',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1772995231995911',
+        'call' => AdOceanSdk\Tools\Api\SiteTemplatePicUrlGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\SiteTemplatePicUrlGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\SiteTemplatePicUrlGetResponse::class,
+    ],
+    /**
     * @desc 获取原生锚点详情
     * @doc  https://open.oceanengine.com/labels/7/docs/1786407342576640
     **/
