@@ -1916,6 +1916,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdminInfoGetResponse::class,
     ],
     /**
+    * @desc 基于站点创建模板
+    * @doc  https://open.oceanengine.com/labels/7/docs/1722273160450059
+    **/
+    'openSiteTemplateCreatePostApi' => [
+        'desc' => '基于站点创建模板',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1722273160450059',
+        'call' => AdOceanSdk\Tools\Api\SiteTemplateCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\SiteTemplateCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\SiteTemplateCreatePostResponse::class,
+    ],
+    /**
     * @desc 素材前置预审送审
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273263150083
     **/
