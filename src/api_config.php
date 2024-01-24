@@ -1377,6 +1377,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsCountryInfoGetResponse::class,
     ],
     /**
+    * @desc 获取模版预览链接
+    * @doc  https://open.oceanengine.com/labels/7/docs/1722273233146891
+    **/
+    'openSiteTemplatePreviewGetApi' => [
+        'desc' => '获取模版预览链接',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1722273233146891',
+        'call' => AdOceanSdk\Tools\Api\SiteTemplatePreviewGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\SiteTemplatePreviewGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\SiteTemplatePreviewGetResponse::class,
+    ],
+    /**
     * @desc 获取定向包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710731761676
     **/
