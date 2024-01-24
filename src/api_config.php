@@ -1729,6 +1729,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取站点模版列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1722273219292292
+    **/
+    'openSiteTemplateGetApi' => [
+        'desc' => '获取站点模版列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1722273219292292',
+        'call' => AdOceanSdk\Tools\Api\SiteTemplateGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\SiteTemplateGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\SiteTemplateGetResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710620579852
     **/
