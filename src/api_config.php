@@ -2081,6 +2081,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdQualityGetResponse::class,
     ],
     /**
+    * @desc 基于模板创建站点
+    * @doc  https://open.oceanengine.com/labels/7/docs/1722273197263875
+    **/
+    'openSiteTemplateSiteCreatePostApi' => [
+        'desc' => '基于模板创建站点',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1722273197263875',
+        'call' => AdOceanSdk\Tools\Api\SiteTemplateSiteCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\SiteTemplateSiteCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\SiteTemplateSiteCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取起量版本信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1761603462670403
     **/
