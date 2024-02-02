@@ -9,15 +9,16 @@ use AdOceanSdk\Kernel\Data\Data;
 // json返回值
 class ToolsSiteHandselPostResponseData extends Data
 {
+    /**
+     * @var array<\AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseSuccessListData> $success_list 转赠成功列表，整体失败不返回该列表
+     */
+    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseSuccessListData::class)]
+    public array $success_list;
 
     /**
-     * @var \AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseSuccessListData $success_list 转赠成功列表，整体失败不返回该列表
+     * @var array<\AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseErrorListData> $error_list 转赠失败列表，整体成功不返回该列表
      */
-    public \AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseSuccessListData $success_list;
-    
-    /**
-     * @var \AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseErrorListData $error_list 转赠失败列表，整体成功不返回该列表
-     */
-    public \AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseErrorListData $error_list;
-    
+    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsSiteHandselPostResponseErrorListData::class)]
+    public array $error_list;
+
 }

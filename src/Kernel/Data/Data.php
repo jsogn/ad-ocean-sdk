@@ -14,13 +14,13 @@ abstract class Data implements DataInterface
 
     public static function from(array $data): static
     {
-        return Hydrator::init(new HydratorConfig(true))
+        return Hydrator::init(new HydratorConfig(false))
             ->create(static::class, $data);
     }
 
     public static function collection(array $data): array
     {
-        return Hydrator::init(new HydratorConfig(true))
+        return Hydrator::init(new HydratorConfig(false))
             ->createCollection(static::class, $data);
     }
 
