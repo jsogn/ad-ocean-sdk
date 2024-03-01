@@ -156,6 +156,17 @@ return [
         'response' => AdOceanSdk\Report\Response\ReportCustomConfigGetResponse::class,
     ],
     /**
+    * @desc 广告组数据
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710551161856
+    **/
+    'openReportCampaignGetApi' => [
+        'desc' => '广告组数据',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710551161856',
+        'call' => AdOceanSdk\Report\Api\ReportCampaignGetApi::class,
+        'params' => AdOceanSdk\Report\Params\ReportCampaignGetParams::class,
+        'response' => AdOceanSdk\Report\Response\ReportCampaignGetResponse::class,
+    ],
+    /**
     * @desc 获取任务列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710563323916
     **/
