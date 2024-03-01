@@ -101,6 +101,17 @@ return [
         'response' => AdOceanSdk\Report\Response\AsyncTaskDownloadGetResponse::class,
     ],
     /**
+    * @desc 广告主数据
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710550620160
+    **/
+    'openReportAdvertiserGetApi' => [
+        'desc' => '广告主数据',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710550620160',
+        'call' => AdOceanSdk\Report\Api\ReportAdvertiserGetApi::class,
+        'params' => AdOceanSdk\Report\Params\ReportAdvertiserGetParams::class,
+        'response' => AdOceanSdk\Report\Response\ReportAdvertiserGetResponse::class,
+    ],
+    /**
     * @desc 创建异步任务
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710562799616
     **/
