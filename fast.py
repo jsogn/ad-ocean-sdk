@@ -34,7 +34,7 @@ def get_html_content(url):
         driver.get(url)
         wait = WebDriverWait(driver, 10)
         wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))  # 等待页面加载完成
-        time.sleep(2)  # 等待5秒钟，可以根据需要进行调整
+        time.sleep(5)  # 等待5秒钟，可以根据需要进行调整
 
         return driver.page_source
     except Exception as e:

@@ -123,6 +123,17 @@ return [
         'response' => AdOceanSdk\Report\Response\AsyncTaskCreatePostResponse::class,
     ],
     /**
+    * @desc 多合一数据报表接口
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710554400780
+    **/
+    'openReportIntergratedGetApi' => [
+        'desc' => '多合一数据报表接口',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710554400780',
+        'call' => AdOceanSdk\Report\Api\ReportIntergratedGetApi::class,
+        'params' => AdOceanSdk\Report\Params\ReportIntergratedGetParams::class,
+        'response' => AdOceanSdk\Report\Response\ReportIntergratedGetResponse::class,
+    ],
+    /**
     * @desc 橙子建站落地页数据
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710565390348
     **/
