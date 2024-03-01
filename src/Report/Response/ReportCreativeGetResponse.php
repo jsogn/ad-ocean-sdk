@@ -8,17 +8,17 @@ use AdOceanSdk\Kernel\Data\Data;
 use AdOceanSdk\Kernel\Interface\ResponseInterface;
 use AdOceanSdk\Kernel\Trait\ResponseTrait;
 
-class ReportCampaignGetResponse extends Data implements ResponseInterface
+class ReportCreativeGetResponse extends Data implements ResponseInterface
 {
     use ResponseTrait;
 
 
     /**
-     * @var array $data json返回值
+     * @var json $data json返回值
      */
-    public array $data;
-
-    public function getData(): array
+    public json $data;
+    
+    public function getData(): \AdOceanSdk\Report\Data\ReportCreativeGetResponseData
     {
         return $this->data;
     }

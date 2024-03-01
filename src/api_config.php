@@ -134,6 +134,17 @@ return [
         'response' => AdOceanSdk\Report\Response\ReportSitePageGetResponse::class,
     ],
     /**
+    * @desc 广告创意数据
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710552261644
+    **/
+    'openReportCreativeGetApi' => [
+        'desc' => '广告创意数据',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710552261644',
+        'call' => AdOceanSdk\Report\Api\ReportCreativeGetApi::class,
+        'params' => AdOceanSdk\Report\Params\ReportCreativeGetParams::class,
+        'response' => AdOceanSdk\Report\Response\ReportCreativeGetResponse::class,
+    ],
+    /**
     * @desc 自定义报表
     * @doc  https://open.oceanengine.com/labels/7/docs/1741387668314126
     **/
