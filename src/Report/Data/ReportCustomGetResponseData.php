@@ -11,19 +11,19 @@ class ReportCustomGetResponseData extends Data
 {
 
     /**
-     * @var array<\AdOceanSdk\Report\Data\ReportCustomGetResponseRowsData> $rows 
+     * @var array<\AdOceanSdk\Report\Data\ReportCustomGetResponseRowsData> $rows
      */
     #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomGetResponseRowsData::class)]
     public array $rows;
-    
+
     /**
-     * @var string $total_metrics 指标汇总数据
+     * @var array $total_metrics 指标汇总数据
      */
-    public string $total_metrics;
-    
+    public array $total_metrics;
+
     /**
      * @var \AdOceanSdk\ResponsePageInfoData $page_info 分页信息
      */
     public \AdOceanSdk\ResponsePageInfoData $page_info;
-    
+
 }
