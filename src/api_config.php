@@ -717,6 +717,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPAProductCreatePostResponse::class,
     ],
     /**
+    * @desc 删除DPA商品
+    * @doc  https://open.oceanengine.com/labels/7/docs/1726629070419968
+    **/
+    'openDPAProductDeletePostApi' => [
+        'desc' => '删除DPA商品',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1726629070419968',
+        'call' => AdOceanSdk\DPA\Api\DPAProductDeletePostApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPAProductDeletePostParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPAProductDeletePostResponse::class,
+    ],
+    /**
     * @desc 获取DPA分类
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710580168716
     **/
