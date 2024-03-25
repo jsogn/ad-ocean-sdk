@@ -684,6 +684,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPADetailGetGetResponse::class,
     ],
     /**
+    * @desc 获取DPA分类
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710580168716
+    **/
+    'openDPACategoryGetGetApi' => [
+        'desc' => '获取DPA分类',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710580168716',
+        'call' => AdOceanSdk\DPA\Api\DPACategoryGetGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPACategoryGetGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPACategoryGetGetResponse::class,
+    ],
+    /**
     * @desc 二级代理商列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
     **/
