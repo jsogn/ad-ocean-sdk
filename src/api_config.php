@@ -728,6 +728,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPAProductDeletePostResponse::class,
     ],
     /**
+    * @desc 获取线索商品列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1779430442685440
+    **/
+    'openDPAClueProductListGetApi' => [
+        'desc' => '获取线索商品列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1779430442685440',
+        'call' => AdOceanSdk\DPA\Api\DPAClueProductListGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPAClueProductListGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPAClueProductListGetResponse::class,
+    ],
+    /**
     * @desc 获取DPA分类
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710580168716
     **/
