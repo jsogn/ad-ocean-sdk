@@ -651,6 +651,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPAProductAvailablesGetResponse::class,
     ],
     /**
+    * @desc 获取商品库元信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710577566735
+    **/
+    'openDPAMetaGetGetApi' => [
+        'desc' => '获取商品库元信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710577566735',
+        'call' => AdOceanSdk\DPA\Api\DPAMetaGetGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPAMetaGetGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPAMetaGetGetResponse::class,
+    ],
+    /**
     * @desc 二级代理商列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710517693452
     **/
