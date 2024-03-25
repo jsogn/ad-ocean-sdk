@@ -640,6 +640,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectWeekScheduleUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取商品详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710578614272
+    **/
+    'openDPAProductDetailGetGetApi' => [
+        'desc' => '获取商品详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710578614272',
+        'call' => AdOceanSdk\DPA\Api\DPAProductDetailGetGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPAProductDetailGetGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPAProductDetailGetGetResponse::class,
+    ],
+    /**
     * @desc 获取商品库信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710577036288
     **/
