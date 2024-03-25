@@ -662,6 +662,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPAProductAvailablesGetResponse::class,
     ],
     /**
+    * @desc 批量修改DPA商品状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1726637930114048
+    **/
+    'openDPAProductStatusBatchUpdatePostApi' => [
+        'desc' => '批量修改DPA商品状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1726637930114048',
+        'call' => AdOceanSdk\DPA\Api\DPAProductStatusBatchUpdatePostApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPAProductStatusBatchUpdatePostParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPAProductStatusBatchUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取商品库元信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710577566735
     **/
