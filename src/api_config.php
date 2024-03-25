@@ -695,6 +695,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPAProductUpdatePostResponse::class,
     ],
     /**
+    * @desc 创建DPA商品（无商品id）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1726081113859075
+    **/
+    'openDPAProductCreatePostApi' => [
+        'desc' => '创建DPA商品（无商品id）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1726081113859075',
+        'call' => AdOceanSdk\DPA\Api\DPAProductCreatePostApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPAProductCreatePostParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPAProductCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取DPA分类
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710580168716
     **/
