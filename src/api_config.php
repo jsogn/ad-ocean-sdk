@@ -695,6 +695,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPADetailGetGetResponse::class,
     ],
     /**
+    * @desc 获取线索商品详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1779436000953415
+    **/
+    'openDPAClueProductDetailGetApi' => [
+        'desc' => '获取线索商品详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1779436000953415',
+        'call' => AdOceanSdk\DPA\Api\DPAClueProductDetailGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DPAClueProductDetailGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DPAClueProductDetailGetResponse::class,
+    ],
+    /**
     * @desc 创建DPA商品（已有商品id）/修改DPA商品
     * @doc  https://open.oceanengine.com/labels/7/docs/1726081566816271
     **/
