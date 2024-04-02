@@ -26,9 +26,9 @@ class EventManagerEventConfigsGetResponseEventConfigsPropertiesData extends Data
     public string $variable_type;
 
     /**
-     * @var string $enum_value 附加属性枚举值
+     * @var array $enum_value 附加属性枚举值
      */
-    public string $enum_value;
+    public array $enum_value;
 
     /**
      * @var string $unit 附加属性单位
