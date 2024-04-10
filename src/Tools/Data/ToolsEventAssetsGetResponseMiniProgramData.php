@@ -14,15 +14,20 @@ class ToolsEventAssetsGetResponseMiniProgramData extends Data
      * @var int $asset_id 字节小程序资产id
      */
     public int $asset_id;
-    
+
     /**
      * @var string $asset_name 字节小程序资产名称
      */
     public string $asset_name;
-    
+
     /**
      * @var string $mini_program_id 字节小程序id
      */
     public string $mini_program_id;
-    
+
+    /**
+     * @var int $instance_id 字节小程序资产实例id
+     */
+    public int $instance_id;
+
 }
