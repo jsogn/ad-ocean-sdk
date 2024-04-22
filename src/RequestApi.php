@@ -81,7 +81,14 @@ abstract class RequestApi
         return $this->timeout;
     }
 
-    public function setClient(RequestClientInterface &$client): static
+    public function setTimeout(int $timeout): static
+    {
+        $this->timeout = $timeout;
+
+        return $this;
+    }
+
+    public function setClient(RequestClientInterface $client): static
     {
         $this->requestClient = $client;
 

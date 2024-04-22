@@ -125,4 +125,11 @@ class RequestClient implements RequestClientInterface
 
         return $this;
     }
+
+    public function setTimeout(int $timeout): RequestClient
+    {
+        $this->timeout = $timeout;
+
+        return $this;
+    }
 }
