@@ -35,6 +35,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCommitPostResponse::class,
     ],
     /**
+    * @desc 查询代理商转账记录
+    * @doc  https://open.oceanengine.com/labels/7/docs/1795124749017235
+    **/
+    'openAgentTransferTransactionRecordGetApi' => [
+        'desc' => '查询代理商转账记录',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1795124749017235',
+        'call' => AdOceanSdk\Fund\Api\AgentTransferTransactionRecordGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\AgentTransferTransactionRecordGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\AgentTransferTransactionRecordGetResponse::class,
+    ],
+    /**
     * @desc 提交退款交易号（方舟）
     * @doc  https://open.oceanengine.com/labels/7/docs/1766755445237824
     **/
