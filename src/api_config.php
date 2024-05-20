@@ -13,6 +13,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse::class,
     ],
     /**
+    * @desc 批量查询账户余额
+    * @doc  https://open.oceanengine.com/labels/7/docs/1799006604968971
+    **/
+    'openAccountFundGetGetApi' => [
+        'desc' => '批量查询账户余额',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1799006604968971',
+        'call' => AdOceanSdk\Fund\Api\AccountFundGetGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\AccountFundGetGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\AccountFundGetGetResponse::class,
+    ],
+    /**
     * @desc 提交转账交易号（方舟）
     * @doc  https://open.oceanengine.com/labels/7/docs/1766755371753487
     **/

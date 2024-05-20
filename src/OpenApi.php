@@ -8,6 +8,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * class OpenApi
  * 开放接口调度类
  * @method \AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse openCustomerCenterFundTransferSeqCreatePostApi(\AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCreatePostParams|array $params) 创建转账交易号 https://open.oceanengine.com/labels/7/docs/1758606134468620
+ * @method \AdOceanSdk\Fund\Response\AccountFundGetGetResponse openAccountFundGetGetApi(\AdOceanSdk\Fund\Params\AccountFundGetGetParams|array $params) 批量查询账户余额 https://open.oceanengine.com/labels/7/docs/1799006604968971
  * @method \AdOceanSdk\Fund\Response\AgentTransferSeqCommitPostResponse openAgentTransferSeqCommitPostApi(\AdOceanSdk\Fund\Params\AgentTransferSeqCommitPostParams|array $params) 提交转账交易号（方舟） https://open.oceanengine.com/labels/7/docs/1766755371753487
  * @method \AdOceanSdk\Fund\Response\AgentRefundTransferSeqCommitPostResponse openAgentRefundTransferSeqCommitPostApi(\AdOceanSdk\Fund\Params\AgentRefundTransferSeqCommitPostParams|array $params) 提交退款交易号（方舟） https://open.oceanengine.com/labels/7/docs/1766755445237824
  * @method \AdOceanSdk\Fund\Response\CustomerCenterAdvertiserTransferableListGetResponse openCustomerCenterAdvertiserTransferableListGetApi(\AdOceanSdk\Fund\Params\CustomerCenterAdvertiserTransferableListGetParams|array $params) 获取可转账户列表（客户中心&广告主） https://open.oceanengine.com/labels/7/docs/1758605359659008
