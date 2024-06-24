@@ -28,7 +28,7 @@ class AdvertiserAvatarUploadPostApi extends RequestApi
             if ($key === 'image_file') {
                 $formParams[] = [
                     'name'     => $key,
-                    'contents' => is_string($params['image_file']) ? Utils::tryFopen($params['image_file'], 'r') : $params['image_file'],
+                    'contents' => str_contains($params['image_file'], 'http') ? file_get_contents($params['image_file']) : $params['image_file'],
                     'filename' => $params['filename'] ?? '',
                 ];
             } else {
