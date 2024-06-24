@@ -15,8 +15,8 @@ class AdvertiserAvatarUploadPostParams extends RequestParams
     public int $advertiser_id;
     
     /**
-     * @var file $image_file 图片文件
+     * @var mixed $image_file 图片文件
      */
-    public file $image_file;
+    public mixed $image_file;
     
 }

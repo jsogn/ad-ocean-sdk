@@ -4,7 +4,9 @@ namespace AdOceanSdk\Advertiser\Api;
 
 use AdOceanSdk\Kernel\Interface\RequestParamInterface;
 use AdOceanSdk\RequestApi;
+use AdOceanSdk\RequestFormatEnum;
 use AdOceanSdk\RequestMethodEnum;
+use GuzzleHttp\Psr7\Utils;
 
 /**
  * @desc 获取广告主账户头像ID
@@ -16,9 +18,28 @@ class AdvertiserAvatarUploadPostApi extends RequestApi
 
     protected RequestMethodEnum $method = RequestMethodEnum::POST;
 
+    protected ?RequestFormatEnum $requestFormat = RequestFormatEnum::MULTIPART;
+
     public function call(\AdOceanSdk\Advertiser\Params\AdvertiserAvatarUploadPostParams|RequestParamInterface|array $params = []): \AdOceanSdk\Advertiser\Response\AdvertiserAvatarUploadPostResponse
     {
-        $response = parent::call($params);
+        $formParams = [];
+
+        foreach ($params as $key => $val) {
+            if ($key === 'image_file') {
+                $formParams[] = [
+                    'name'     => $key,
+                    'contents' => is_string($params['image_file']) ? Utils::tryFopen($params['image_file'], 'r') : $params['image_file'],
+                    'filename' => $params['filename'] ?? '',
+                ];
+            } else {
+                $formParams[] = [
+                    'name'     => $key,
+                    'contents' => $val
+                ];
+            }
+        }
+
+        $response = parent::call($formParams);
 
         return \AdOceanSdk\Advertiser\Response\AdvertiserAvatarUploadPostResponse::from($response->toArray());
     }
