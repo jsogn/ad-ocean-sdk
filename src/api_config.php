@@ -1135,6 +1135,17 @@ return [
         'response' => AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgConfigGetResponse::class,
     ],
     /**
+    * @desc 获取广告主账户头像ID
+    * @doc  https://open.oceanengine.com/labels/7/docs/1794039016601604
+    **/
+    'openAdvertiserAvatarUploadPostApi' => [
+        'desc' => '获取广告主账户头像ID',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1794039016601604',
+        'call' => AdOceanSdk\Advertiser\Api\AdvertiserAvatarUploadPostApi::class,
+        'params' => AdOceanSdk\Advertiser\Params\AdvertiserAvatarUploadPostParams::class,
+        'response' => AdOceanSdk\Advertiser\Response\AdvertiserAvatarUploadPostResponse::class,
+    ],
+    /**
     * @desc 批量删除视频素材
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710605373455
     **/
