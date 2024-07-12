@@ -2334,6 +2334,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdQualityGetResponse::class,
     ],
     /**
+    * @desc 获取账户下资产列表（新）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1800985709803914
+    **/
+    'openToolsEventAllAssetsListGetApi' => [
+        'desc' => '获取账户下资产列表（新）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1800985709803914',
+        'call' => AdOceanSdk\Tools\Api\ToolsEventAllAssetsListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEventAllAssetsListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEventAllAssetsListGetResponse::class,
+    ],
+    /**
     * @desc 基于模板创建站点
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273197263875
     **/
