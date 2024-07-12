@@ -2136,6 +2136,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\NativeAnchorDeletePostResponse::class,
     ],
     /**
+    * @desc 获取已创建资产详情（新）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1800988620664954
+    **/
+    'openToolsEventAllAssetsDetailGetApi' => [
+        'desc' => '获取已创建资产详情（新）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1800988620664954',
+        'call' => AdOceanSdk\Tools\Api\ToolsEventAllAssetsDetailGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEventAllAssetsDetailGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEventAllAssetsDetailGetResponse::class,
+    ],
+    /**
     * @desc 获取字节小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1778249831680135
     **/
