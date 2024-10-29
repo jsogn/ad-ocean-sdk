@@ -1289,6 +1289,17 @@ return [
         'response' => AdOceanSdk\File\Response\CarouselAdGetResponse::class,
     ],
     /**
+    * @desc 获取异步上传视频文件结果
+    * @doc  https://open.oceanengine.com/labels/7/docs/1801544428603604?origin=left_nav
+    **/
+    'openFileVideoUploadTaskListGetApi' => [
+        'desc' => '获取异步上传视频文件结果',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1801544428603604?origin=left_nav',
+        'call' => AdOceanSdk\File\Api\FileVideoUploadTaskListGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileVideoUploadTaskListGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileVideoUploadTaskListGetResponse::class,
+    ],
+    /**
     * @desc 上传广告图片
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710600176640
     **/
