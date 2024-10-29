@@ -1289,6 +1289,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileImageAdPostResponse::class,
     ],
     /**
+    * @desc 获取视频素材评估标签（新版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1789500809829388
+    **/
+    'openFileMaterialAttributesListGetApi' => [
+        'desc' => '获取视频素材评估标签（新版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1789500809829388',
+        'call' => AdOceanSdk\File\Api\FileMaterialAttributesListGetApi::class,
+        'params' => AdOceanSdk\File\Params\FileMaterialAttributesListGetParams::class,
+        'response' => AdOceanSdk\File\Response\FileMaterialAttributesListGetResponse::class,
+    ],
+    /**
     * @desc 更新图文信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1773554529716228
     **/
