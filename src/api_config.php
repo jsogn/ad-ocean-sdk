@@ -1179,6 +1179,17 @@ return [
         'response' => AdOceanSdk\File\Response\FileVideoPausePostResponse::class,
     ],
     /**
+    * @desc 异步上传视频文件
+    * @doc  https://open.oceanengine.com/labels/7/docs/1801533703648324?origin=left_nav
+    **/
+    'openFileUploadTaskCreatePostApi' => [
+        'desc' => '异步上传视频文件',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1801533703648324?origin=left_nav',
+        'call' => AdOceanSdk\File\Api\FileUploadTaskCreatePostApi::class,
+        'params' => AdOceanSdk\File\Params\FileUploadTaskCreatePostParams::class,
+        'response' => AdOceanSdk\File\Response\FileUploadTaskCreatePostResponse::class,
+    ],
+    /**
     * @desc 【代理商】明点无效素材查询
     * @doc  https://open.oceanengine.com/labels/7/docs/1779971491239040
     **/
