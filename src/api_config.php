@@ -2070,6 +2070,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageDeletePostResponse::class,
     ],
     /**
+    * @desc 获取活动记录
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710632392704
+    **/
+    'openToolsKeyActionGetApi' => [
+        'desc' => '获取活动记录',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710632392704',
+        'call' => AdOceanSdk\Tools\Api\ToolsKeyActionGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsKeyActionGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsKeyActionGetResponse::class,
+    ],
+    /**
     * @desc 获取广告诊断建议
     * @doc  https://open.oceanengine.com/labels/7/docs/1754715780584459
     **/
