@@ -2411,6 +2411,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseVersionGetResponse::class,
     ],
     /**
+    * @desc 回传有效线索
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710631812096
+    **/
+    'openToolsClueCallbackPostApi' => [
+        'desc' => '回传有效线索',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710631812096',
+        'call' => AdOceanSdk\Tools\Api\ToolsClueCallbackPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsClueCallbackPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsClueCallbackPostResponse::class,
+    ],
+    /**
     * @desc 事件管理资产取消共享
     * @doc  https://open.oceanengine.com/labels/7/docs/1738862469146628
     **/
