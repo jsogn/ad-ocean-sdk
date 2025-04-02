@@ -2136,6 +2136,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsOrangeSiteGetResponse::class,
     ],
     /**
+    * @desc 获取线索列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1696710631271436
+    **/
+    'openToolsClueGetApi' => [
+        'desc' => '获取线索列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1696710631271436',
+        'call' => AdOceanSdk\Tools\Api\ToolsClueGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsClueGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsClueGetResponse::class,
+    ],
+    /**
     * @desc 创建原生锚点
     * @doc  https://open.oceanengine.com/labels/7/docs/1757798123491403
     **/
