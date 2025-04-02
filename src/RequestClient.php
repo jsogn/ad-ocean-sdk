@@ -44,7 +44,6 @@ class RequestClient implements RequestClientInterface
     {
         $requestApi = is_string($requestApi) ? $requestApi::make() : $requestApi;
         if (!is_array($requestParams)) {
-            $requestParams->validate();
             $requestParams = $requestParams->toArray();
         }
 
