@@ -5,3 +5,4 @@ doc.json
 /vendor/
 
 composer.lock
+.python-version

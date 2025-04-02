@@ -12,13 +12,12 @@ class ToolsClueCallbackPostResponse extends Data implements ResponseInterface
 {
     use ResponseTrait;
 
-
     /**
-     * @var json $data json返回值
+     * @var array $data json返回值
      */
-    public json $data;
-    
-    public function getData(): \AdOceanSdk\Tools\Data\ToolsClueCallbackPostResponseData
+    public array $data;
+
+    public function getData(): array
     {
         return $this->data;
     }
