@@ -2224,6 +2224,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsAdminInfoGetResponse::class,
     ],
     /**
+    * @desc 获取评论统计指标
+    * @doc  https://open.oceanengine.com/labels/7/docs/1779551814119427
+    **/
+    'openToolsCommentMetricsGetApi' => [
+        'desc' => '获取评论统计指标',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1779551814119427',
+        'call' => AdOceanSdk\Tools\Api\ToolsCommentMetricsGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCommentMetricsGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCommentMetricsGetResponse::class,
+    ],
+    /**
     * @desc 基于站点创建模板
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273160450059
     **/
