@@ -1894,6 +1894,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\EventManagerAssetsCreatePostResponse::class,
     ],
     /**
+    * @desc 回复评论
+    * @doc  https://open.oceanengine.com/labels/7/docs/1754803971592192
+    **/
+    'openToolsCommentReplyPostApi' => [
+        'desc' => '回复评论',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1754803971592192',
+        'call' => AdOceanSdk\Tools\Api\ToolsCommentReplyPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCommentReplyPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCommentReplyPostResponse::class,
+    ],
+    /**
     * @desc 建议日预算及预期成本
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710676657164
     **/
