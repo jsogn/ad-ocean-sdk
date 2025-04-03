@@ -2378,6 +2378,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse::class,
     ],
     /**
+    * @desc 获取评论列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1754803808580608
+    **/
+    'openToolsCommentGetApi' => [
+        'desc' => '获取评论列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1754803808580608',
+        'call' => AdOceanSdk\Tools\Api\ToolsCommentGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCommentGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCommentGetResponse::class,
+    ],
+    /**
     * @desc 查询广告质量度
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710677262351
     **/
