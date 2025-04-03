@@ -2026,6 +2026,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsSiteGetResponse::class,
     ],
     /**
+    * @desc 隐藏评论
+    * @doc  https://open.oceanengine.com/labels/7/docs/1754804147204108
+    **/
+    'openToolsCommentHidePostApi' => [
+        'desc' => '隐藏评论',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1754804147204108',
+        'call' => AdOceanSdk\Tools\Api\ToolsCommentHidePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCommentHidePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCommentHidePostResponse::class,
+    ],
+    /**
     * @desc 创建定向包
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710735901711
     **/
