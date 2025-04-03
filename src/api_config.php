@@ -2367,6 +2367,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseStatusGetResponse::class,
     ],
     /**
+    * @desc 获取评论视频ID列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1773084580896776
+    **/
+    'openToolsCommentMid2itemIdGetApi' => [
+        'desc' => '获取评论视频ID列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1773084580896776',
+        'call' => AdOceanSdk\Tools\Api\ToolsCommentMid2itemIdGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsCommentMid2itemIdGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsCommentMid2itemIdGetResponse::class,
+    ],
+    /**
     * @desc 更新字节小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1780614097935372
     **/
