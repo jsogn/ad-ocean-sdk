@@ -171,9 +171,9 @@ class ToolsClueGetResponseListData extends Data
     public string $remark;
     
     /**
-     * @var object $remark_dict 广告主自定义的其它字段信息，可自定义获取例：若创建表单时自定义了"test_case"字段的设置，则产生的remark_dict线索为："test_case": "xxx"
+     * @var array $remark_dict 广告主自定义的其它字段信息，可自定义获取例：若创建表单时自定义了"test_case"字段的设置，则产生的remark_dict线索为："test_case": "xxx"
      */
-    public object $remark_dict;
+    public array $remark_dict;
     
     /**
      * @var string $form_remark 广告主表单自定义字段，无业务逻辑，仅作表单标志
