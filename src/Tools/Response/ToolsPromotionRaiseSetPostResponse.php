@@ -14,11 +14,11 @@ class ToolsPromotionRaiseSetPostResponse extends Data implements ResponseInterfa
 
 
     /**
-     * @var object $data 返回数据
+     * @var array $data 返回数据
      */
-    public object $data;
-    
-    public function getData(): \AdOceanSdk\Tools\Data\ToolsPromotionRaiseSetPostResponseData
+    public array $data;
+
+    public function getData(): array
     {
         return $this->data;
     }
