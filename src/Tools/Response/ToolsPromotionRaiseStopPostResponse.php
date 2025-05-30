@@ -14,11 +14,11 @@ class ToolsPromotionRaiseStopPostResponse extends Data implements ResponseInterf
 
 
     /**
-     * @var object $data 返回数据
+     * @var array $data 返回数据
      */
-    public object $data;
+    public array $data;
     
-    public function getData(): \AdOceanSdk\Tools\Data\ToolsPromotionRaiseStopPostResponseData
+    public function getData(): array
     {
         return $this->data;
     }
