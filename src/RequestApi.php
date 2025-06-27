@@ -21,6 +21,11 @@ abstract class RequestApi
 
     protected ?RequestClientInterface $requestClient = null;
 
+    public function __construct()
+    {
+        $this->requestClient = RequestClient::make();
+    }
+
     public static function make(RequestParamInterface|array $params = []): static
     {
         return new static();
