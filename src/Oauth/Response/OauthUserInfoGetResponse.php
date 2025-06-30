@@ -8,7 +8,6 @@ use AdOceanSdk\Kernel\Data\Data;
 use AdOceanSdk\Kernel\Interface\ResponseInterface;
 use AdOceanSdk\Kernel\Trait\ResponseTrait;
 use AdOceanSdk\Oauth\Data\OauthUserInfoGetResponseData;
-use ClassTransformer\Attributes\ConvertArray;
 
 class OauthUserInfoGetResponse extends Data implements ResponseInterface
 {
@@ -16,16 +15,15 @@ class OauthUserInfoGetResponse extends Data implements ResponseInterface
 
 
     /**
-     * @var array<OauthUserInfoGetResponseData> $data 返回数据
+     * @var OauthUserInfoGetResponseData $data 返回数据
      */
-    #[ConvertArray(OauthUserInfoGetResponseData::class)]
-    public array $data;
+    public OauthUserInfoGetResponseData $data;
 
 
     /**
-     * @return array<OauthUserInfoGetResponseData>
+     * @return OauthUserInfoGetResponseData
      */
-    public function getData(): array
+    public function getData(): OauthUserInfoGetResponseData
     {
         return $this->data;
     }
