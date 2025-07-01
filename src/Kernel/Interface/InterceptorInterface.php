@@ -9,6 +9,7 @@ use Psr\Http\Message\ResponseInterface;
 
 interface InterceptorInterface
 {
+    /** * @Deprecated */
     public function request(RequestApi $requestApi, array $requestParams, array $options): RequestApi;
 
     public function options(array $options): array;
@@ -18,4 +19,6 @@ interface InterceptorInterface
     public function params(array $params, RequestApi $requestApi): array;
 
     public function exception(GuzzleException $exception): void;
+
+    public function handler(RequestApi $requestApi, array &$requestParams, array &$options): void;
 }

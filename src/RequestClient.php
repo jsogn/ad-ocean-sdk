@@ -79,6 +79,8 @@ class RequestClient implements RequestClientInterface
         $options    = $this->interceptor->options($options);
         $requestApi = $this->interceptor->request($requestApi, $requestParams, $options);
 
+        $this->interceptor->handler($requestApi, $requestParams, $options);
+
         try {
             $response = $this->getHttpClient()
                 ->request($requestMethod, $requestApi->getAddress(), $options);

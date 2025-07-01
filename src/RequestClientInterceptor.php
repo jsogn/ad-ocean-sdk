@@ -40,4 +40,9 @@ class RequestClientInterceptor implements InterceptorInterface
     {
         throw $exception;
     }
+
+    public function handler(RequestApi $requestApi, array &$requestParams, array &$options): void
+    {
+
+    }
 }
