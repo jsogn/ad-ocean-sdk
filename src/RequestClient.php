@@ -71,15 +71,14 @@ class RequestClient implements RequestClientInterface
         $requestParams          = $this->interceptor->params($requestParams, $requestApi);
         $options[$paramsFormat] = $requestParams;
         $options['headers']     = [...$this->headers, ...$requestApi->getHeaders()];
+        $requestApi             = $this->interceptor->request($requestApi, $requestParams, $options);
+        $options                = $this->interceptor->options($options);
+
+        $this->interceptor->handler($requestApi, $requestParams, $options);
 
         if ($requestApi->getTimeout()) {
             $options['timeout'] = $requestApi->getTimeout();
         }
-
-        $options    = $this->interceptor->options($options);
-        $requestApi = $this->interceptor->request($requestApi, $requestParams, $options);
-
-        $this->interceptor->handler($requestApi, $requestParams, $options);
 
         try {
             $response = $this->getHttpClient()
