@@ -112,6 +112,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCommitPostResponse::class,
     ],
     /**
+    * @desc 工作台转账-发起转账
+    * @doc  https://open.oceanengine.com/labels/7/docs/1816052723776516
+    **/
+    'openCgTransferTransferCreatePostApi' => [
+        'desc' => '工作台转账-发起转账',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1816052723776516',
+        'call' => AdOceanSdk\Fund\Api\CgTransferTransferCreatePostApi::class,
+        'params' => AdOceanSdk\Fund\Params\CgTransferTransferCreatePostParams::class,
+        'response' => AdOceanSdk\Fund\Response\CgTransferTransferCreatePostResponse::class,
+    ],
+    /**
     * @desc 获取返货共享钱包余额
     * @doc  https://open.oceanengine.com/labels/7/docs/1703323812831239
     **/
