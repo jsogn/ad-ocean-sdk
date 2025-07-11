@@ -101,6 +101,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\CustomerCenterAdvertiserTransferableListGetResponse::class,
     ],
     /**
+    * @desc 工作台转账-查询转账单信息
+    * @doc  https://open.oceanengine.com/labels/7/docs/1816052335753539
+    **/
+    'openCgTransferTransferDetailGetApi' => [
+        'desc' => '工作台转账-查询转账单信息',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1816052335753539',
+        'call' => AdOceanSdk\Fund\Api\CgTransferTransferDetailGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\CgTransferTransferDetailGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\CgTransferTransferDetailGetResponse::class,
+    ],
+    /**
     * @desc 提交转账交易号
     * @doc  https://open.oceanengine.com/labels/7/docs/1758606542833678
     **/
