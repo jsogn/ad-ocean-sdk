@@ -8,6 +8,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * class OpenApi
  * 开放接口调度类
  * @method \AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse openCustomerCenterFundTransferSeqCreatePostApi(\AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCreatePostParams|array $params) 创建转账交易号 https://open.oceanengine.com/labels/7/docs/1758606134468620
+ * @method \AdOceanSdk\Fund\Response\CgTransferCanTransferBalanceGetResponse openCgTransferCanTransferBalanceGetApi(\AdOceanSdk\Fund\Params\CgTransferCanTransferBalanceGetParams|array $params) 工作台转账-获取最大可转余额 https://open.oceanengine.com/labels/7/docs/1816052561374300
  * @method \AdOceanSdk\Fund\Response\AccountFundGetGetResponse openAccountFundGetGetApi(\AdOceanSdk\Fund\Params\AccountFundGetGetParams|array $params) 批量查询账户余额 https://open.oceanengine.com/labels/7/docs/1799006604968971
  * @method \AdOceanSdk\Fund\Response\AgentTransferSeqCommitPostResponse openAgentTransferSeqCommitPostApi(\AdOceanSdk\Fund\Params\AgentTransferSeqCommitPostParams|array $params) 提交转账交易号（方舟） https://open.oceanengine.com/labels/7/docs/1766755371753487
  * @method \AdOceanSdk\Fund\Response\CgTransferCanTransferTargetListGetResponse openCgTransferCanTransferTargetListGetApi(\AdOceanSdk\Fund\Params\CgTransferCanTransferTargetListGetParams|array $params) 工作台转账-获取可转列表 https://open.oceanengine.com/labels/7/docs/1816052658391124
