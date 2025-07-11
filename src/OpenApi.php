@@ -7,6 +7,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
 /**
  * class OpenApi
  * 开放接口调度类
+ * @method \AdOceanSdk\Fund\Response\CgTransferTransferBalanceGetResponse openCgTransferTransferBalanceGetApi(\AdOceanSdk\Fund\Params\CgTransferTransferBalanceGetParams|array $params) 工作台转账-查询账户转账余额 https://open.oceanengine.com/labels/7/docs/1816052431206464
  * @method \AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse openCustomerCenterFundTransferSeqCreatePostApi(\AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCreatePostParams|array $params) 创建转账交易号 https://open.oceanengine.com/labels/7/docs/1758606134468620
  * @method \AdOceanSdk\Fund\Response\CgTransferCanTransferBalanceGetResponse openCgTransferCanTransferBalanceGetApi(\AdOceanSdk\Fund\Params\CgTransferCanTransferBalanceGetParams|array $params) 工作台转账-获取最大可转余额 https://open.oceanengine.com/labels/7/docs/1816052561374300
  * @method \AdOceanSdk\Fund\Response\AccountFundGetGetResponse openAccountFundGetGetApi(\AdOceanSdk\Fund\Params\AccountFundGetGetParams|array $params) 批量查询账户余额 https://open.oceanengine.com/labels/7/docs/1799006604968971

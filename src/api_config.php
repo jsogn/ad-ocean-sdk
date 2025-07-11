@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 工作台转账-查询账户转账余额
+    * @doc  https://open.oceanengine.com/labels/7/docs/1816052431206464
+    **/
+    'openCgTransferTransferBalanceGetApi' => [
+        'desc' => '工作台转账-查询账户转账余额',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1816052431206464',
+        'call' => AdOceanSdk\Fund\Api\CgTransferTransferBalanceGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\CgTransferTransferBalanceGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\CgTransferTransferBalanceGetResponse::class,
+    ],
+    /**
     * @desc 创建转账交易号
     * @doc  https://open.oceanengine.com/labels/7/docs/1758606134468620
     **/
