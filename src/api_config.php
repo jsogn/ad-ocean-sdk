@@ -35,6 +35,17 @@ return [
         'response' => AdOceanSdk\Fund\Response\AgentTransferSeqCommitPostResponse::class,
     ],
     /**
+    * @desc 工作台转账-获取可转列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1816052658391124
+    **/
+    'openCgTransferCanTransferTargetListGetApi' => [
+        'desc' => '工作台转账-获取可转列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1816052658391124',
+        'call' => AdOceanSdk\Fund\Api\CgTransferCanTransferTargetListGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\CgTransferCanTransferTargetListGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\CgTransferCanTransferTargetListGetResponse::class,
+    ],
+    /**
     * @desc 查询代理商转账记录
     * @doc  https://open.oceanengine.com/labels/7/docs/1795124749017235
     **/
