@@ -7,6 +7,7 @@ use AdOceanSdk\RequestApi;
 use AdOceanSdk\RequestMethodEnum;
 
 /**
+ * @deprecated 已被废弃，无法使用
  * @desc 提交转账交易号
  * @doc  https://open.oceanengine.com/labels/7/docs/1758606542833678
  */

@@ -7,6 +7,7 @@ use AdOceanSdk\RequestApi;
 use AdOceanSdk\RequestMethodEnum;
 
 /**
+ * @deprecated 已被废弃，无法使用
  * @desc 获取可转账户列表（客户中心&广告主）
  * @doc  https://open.oceanengine.com/labels/7/docs/1758605359659008
  */
