@@ -2,6 +2,17 @@
 
 return [
     /**
+    * @desc 资金共享-共享钱包信息查询
+    * @doc  https://open.oceanengine.com/labels/7/docs/1798465885126668
+    **/
+    'openSharedWalletMainWalletGetApi' => [
+        'desc' => '资金共享-共享钱包信息查询',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1798465885126668',
+        'call' => AdOceanSdk\Fund\Api\SharedWalletMainWalletGetApi::class,
+        'params' => AdOceanSdk\Fund\Params\SharedWalletMainWalletGetParams::class,
+        'response' => AdOceanSdk\Fund\Response\SharedWalletMainWalletGetResponse::class,
+    ],
+    /**
     * @desc 工作台转账-查询账户转账余额
     * @doc  https://open.oceanengine.com/labels/7/docs/1816052431206464
     **/
