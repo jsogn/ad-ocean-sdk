@@ -82,7 +82,6 @@ class PromotionUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionUpdatePostParamKeywordsData> $keywords 关键词列表，关键词和智能拓流二者必须开启一个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionUpdatePostParamKeywordsData::class)]
     public array $keywords;
 
 }

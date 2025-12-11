@@ -13,7 +13,6 @@ class ToolsEventAllAssetsListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsEventAllAssetsListGetResponseAssetListData> $asset_list 账户下的资产列表，不支持查询已删除的资产
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsEventAllAssetsListGetResponseAssetListData::class)]
     public array $asset_list;
     
     /**

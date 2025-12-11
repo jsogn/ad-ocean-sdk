@@ -32,7 +32,6 @@ class ReportCustomGetParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportCustomGetParamFiltersData> $filters 过滤条件。获取方式：1.巨量引擎体验版—>报表—>新建/编辑自定义报表—>API参数生成。该字段从前端自定义报表中获取，建议不要修改。2.可通过【获取自定义报表可用维度和指标】接口获取不同数据主题下的可用维度和指标
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomGetParamFiltersData::class)]
     public array $filters;
     
     /**
@@ -48,7 +47,6 @@ class ReportCustomGetParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportCustomGetParamOrderByData> $order_by 排序
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomGetParamOrderByData::class)]
     public array $order_by;
     
     /**

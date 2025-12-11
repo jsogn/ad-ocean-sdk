@@ -18,7 +18,6 @@ class ProjectStatusUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectStatusUpdatePostResponseErrorsData> $errors 更新失败的广告项目列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectStatusUpdatePostResponseErrorsData::class)]
     public array $errors;
     
 }

@@ -13,7 +13,6 @@ class NativeAnchorGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorGetResponseListData> $list 广告账户下原生锚点列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorGetResponseListData::class)]
     public array $list;
     
     /**

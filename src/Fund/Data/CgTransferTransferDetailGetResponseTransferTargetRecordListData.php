@@ -33,7 +33,6 @@ class CgTransferTransferDetailGetResponseTransferTargetRecordListData extends Da
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferTransferDetailGetResponseTransferTargetRecordListTransferCapitalRecordListData> $transfer_capital_record_list 转账资金类型列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferTransferDetailGetResponseTransferTargetRecordListTransferCapitalRecordListData::class)]
     public array $transfer_capital_record_list;
     
 }

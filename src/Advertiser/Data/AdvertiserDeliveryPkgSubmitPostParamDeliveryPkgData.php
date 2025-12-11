@@ -33,7 +33,6 @@ class AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgData extends Data
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgUnnecessaryCombinesData> $unnecessary_combines 选填资质模块，数组长度0~30
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgUnnecessaryCombinesData::class)]
     public array $unnecessary_combines;
     
 }

@@ -13,7 +13,6 @@ class CreativeDetailGetResponseCreativeListImageMaterialsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListImageMaterialsImageInfoData> $image_info 图片素材信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListImageMaterialsImageInfoData::class)]
     public array $image_info;
     
     /**

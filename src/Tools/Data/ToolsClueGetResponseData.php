@@ -18,7 +18,6 @@ class ToolsClueGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsClueGetResponseListData> $list 线索列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsClueGetResponseListData::class)]
     public array $list;
     
 }

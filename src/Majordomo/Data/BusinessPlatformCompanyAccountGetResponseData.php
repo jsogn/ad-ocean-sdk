@@ -13,7 +13,6 @@ class BusinessPlatformCompanyAccountGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Majordomo\Data\BusinessPlatformCompanyAccountGetResponseAccountListData> $account_list 账户列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Majordomo\Data\BusinessPlatformCompanyAccountGetResponseAccountListData::class)]
     public array $account_list;
 
     /**

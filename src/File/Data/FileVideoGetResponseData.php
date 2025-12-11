@@ -13,7 +13,6 @@ class FileVideoGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\FileVideoGetResponseListData> $list json返回值
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileVideoGetResponseListData::class)]
     public array $list;
     
     /**

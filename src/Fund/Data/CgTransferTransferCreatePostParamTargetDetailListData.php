@@ -18,7 +18,6 @@ class CgTransferTransferCreatePostParamTargetDetailListData extends Data
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferTransferCreatePostParamTargetDetailListTransferCapitalDetailListData> $transfer_capital_detail_list 锚定账户与目标账户转账资金列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferTransferCreatePostParamTargetDetailListTransferCapitalDetailListData::class)]
     public array $transfer_capital_detail_list;
     
 }

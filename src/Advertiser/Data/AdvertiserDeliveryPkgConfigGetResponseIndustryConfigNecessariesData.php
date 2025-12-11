@@ -23,7 +23,6 @@ class AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesData extend
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesRulesData> $rules 具体的资质规则
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesRulesData::class)]
     public array $rules;
     
 }

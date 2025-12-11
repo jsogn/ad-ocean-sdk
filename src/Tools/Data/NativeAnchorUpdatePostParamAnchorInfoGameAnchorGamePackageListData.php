@@ -28,7 +28,6 @@ class NativeAnchorUpdatePostParamAnchorInfoGameAnchorGamePackageListData extends
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoGameAnchorGamePackageListGiftData> $gift 礼包内的礼品配置，数量限制0～8
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoGameAnchorGamePackageListGiftData::class)]
     public array $gift;
     
     /**

@@ -38,7 +38,6 @@ class ProjectListGetResponseListAudienceData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectListGetResponseListAudienceGeolocationData> $geolocation 从地图添加(地图位置)
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectListGetResponseListAudienceGeolocationData::class)]
     public ?array $geolocation;
 
     /**

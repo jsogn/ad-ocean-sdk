@@ -13,7 +13,6 @@ class ToolsPromotionRaiseVersionGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionRaiseVersionGetResponseRaiseVersionListData> $raise_version_list 起量版本列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionRaiseVersionGetResponseRaiseVersionListData::class)]
     public array $raise_version_list;
     
     /**

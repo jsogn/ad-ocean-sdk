@@ -13,7 +13,6 @@ class FileMaterialBindPostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\FileMaterialBindPostResponseFailListData> $fail_list 推送失败列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileMaterialBindPostResponseFailListData::class)]
     public array $fail_list;
     
 }

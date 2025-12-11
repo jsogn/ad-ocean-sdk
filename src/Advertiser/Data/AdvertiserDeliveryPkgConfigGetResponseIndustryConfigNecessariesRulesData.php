@@ -28,7 +28,6 @@ class AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesRulesData e
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesRulesQualTypesData> $qual_types 资质类型
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesRulesQualTypesData::class)]
     public array $qual_types;
     
 }

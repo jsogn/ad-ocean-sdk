@@ -48,7 +48,6 @@ class NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorHeadImageListData> $head_image_list 顶部头部图片，推荐尺寸为2：1的横图
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorHeadImageListData::class)]
     public array $head_image_list;
     
     /**
@@ -69,7 +68,6 @@ class NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorIconImagesData> $icon_images 应用icon图，网服锚点类型且net_service_type为MICRO_APP 微信小程序、QUICK_APP快应用时必填
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorIconImagesData::class)]
     public array $icon_images;
     
     /**
@@ -90,7 +88,6 @@ class NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorAppImagesData> $app_images APP图片，图片个数 3～8
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorUpdatePostParamAnchorInfoNetServiceAnchorAppImagesData::class)]
     public array $app_images;
     
     /**

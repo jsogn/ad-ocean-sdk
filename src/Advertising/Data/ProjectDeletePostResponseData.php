@@ -18,7 +18,6 @@ class ProjectDeletePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectDeletePostResponseErrorsData> $errors 删除失败的广告项目列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectDeletePostResponseErrorsData::class)]
     public array $errors;
     
 }

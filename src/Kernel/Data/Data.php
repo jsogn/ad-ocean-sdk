@@ -2,67 +2,59 @@
 
 namespace AdOceanSdk\Kernel\Data;
 
-use ClassTransformer\Hydrator;
-use ClassTransformer\HydratorConfig;
+use AdOceanSdk\Kernel\Trait\DynamicPropertiesTrait;
+use AdOceanSdk\Kernel\Trait\HydrationTrait;
+use AdOceanSdk\Kernel\Trait\SerializableTrait;
+use AdOceanSdk\Kernel\Trait\TypeConversionTrait;
 
+/**
+ * Data 基类
+ *
+ * 提供数据对象的核心功能：
+ * - 数组到对象的自动映射
+ * - 类型自动转换
+ * - 动态属性支持
+ * - 序列化能力
+ *
+ * @package AdOceanSdk\Kernel\Data
+ */
 abstract class Data implements DataInterface
 {
+    use DynamicPropertiesTrait;
+    use HydrationTrait;
+    use TypeConversionTrait;
+    use SerializableTrait;
+
+    /**
+     * 创建空实例
+     */
     public static function make(): static
     {
         return static::from([]);
     }
 
+    /**
+     * 从数组创建实例
+     * @param array<string, mixed> $data
+     */
     public static function from(array $data): static
     {
-        return Hydrator::init(new HydratorConfig(false))
-            ->create(static::class, $data);
+        $instance = new static();
+        $instance->hydrate($data);
+        return $instance;
     }
 
+    /**
+     * 批量创建实例集合
+     * @param array<array<string, mixed>> $data
+     * @return array<static>
+     */
     public static function collection(array $data): array
     {
-        return Hydrator::init(new HydratorConfig(false))
-            ->createCollection(static::class, $data);
-    }
-
-    private static function snakeToCamelCase(string $input): string
-    {
-        return lcfirst(str_replace('_', '', ucwords($input, '_')));
-    }
-
-    private static function camelToSnakeCase(string $input): string
-    {
-        return strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $input));
-    }
-
-    public function __toString(): string
-    {
-        return $this->toJson();
-    }
-
-    public function toJson(): string
-    {
-        return json_encode($this->toArray());
-    }
-
-    public function toArray(): array
-    {
-        $properties = get_object_vars($this);
-
-        return $this->convertArray($properties);
-    }
-
-    private function convertArray(mixed $value)
-    {
-        if ($value instanceof Data) {
-            return $value->toArray();
-        } else if (is_array($value)) {
-            $temp = [];
-            foreach ($value as $key => $val) {
-                $temp[$key] = $this->convertArray($val);
-            }
-            return $temp;
+        $result = [];
+        foreach ($data as $item) {
+            $result[] = static::from($item);
         }
-        return $value;
+        return $result;
     }
-
 }

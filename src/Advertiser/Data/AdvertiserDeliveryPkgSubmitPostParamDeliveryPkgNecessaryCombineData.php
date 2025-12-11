@@ -18,7 +18,6 @@ class AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgNecessaryCombineData extend
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgNecessaryCombineDeliveryRulesData> $delivery_rules 资质规则的组成类型，数组长度最小为1
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgNecessaryCombineDeliveryRulesData::class)]
     public array $delivery_rules;
     
 }

@@ -23,7 +23,6 @@ class ToolsPromotionDiagnosisSuggestionGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListData> $suggestion_list 获取的诊断建议列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListData::class)]
     public array $suggestion_list;
     
 }

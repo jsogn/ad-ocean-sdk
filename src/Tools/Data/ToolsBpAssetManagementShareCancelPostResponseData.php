@@ -13,7 +13,6 @@ class ToolsBpAssetManagementShareCancelPostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsBpAssetManagementShareCancelPostResponseErrorListData> $error_list 取消共享失败的账号列表，该字段为空则代表全部取消成功
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsBpAssetManagementShareCancelPostResponseErrorListData::class)]
     public array $error_list;
     
 }

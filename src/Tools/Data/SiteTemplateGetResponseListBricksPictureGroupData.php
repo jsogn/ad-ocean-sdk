@@ -13,7 +13,6 @@ class SiteTemplateGetResponseListBricksPictureGroupData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\SiteTemplateGetResponseListBricksPictureGroupContentData> $content 组图内容列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\SiteTemplateGetResponseListBricksPictureGroupContentData::class)]
     public array $content;
     
     /**

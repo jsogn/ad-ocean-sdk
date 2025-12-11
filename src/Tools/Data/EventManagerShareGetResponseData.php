@@ -13,7 +13,6 @@ class EventManagerShareGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\EventManagerShareGetResponseListData> $list 共享账户ID（adv+bpid+枚举值）集合
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\EventManagerShareGetResponseListData::class)]
     public array $list;
     
     /**

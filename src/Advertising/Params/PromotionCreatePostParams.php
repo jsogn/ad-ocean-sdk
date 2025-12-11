@@ -107,7 +107,6 @@ class PromotionCreatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamKeywordsData> $keywords 关键词列表，关键词和智能拓流二者必须开启一个，一个广告最多可添加1000个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamKeywordsData::class)]
     public array $keywords;
     
 }

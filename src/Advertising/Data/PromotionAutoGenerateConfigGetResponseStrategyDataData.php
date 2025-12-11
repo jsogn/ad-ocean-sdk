@@ -33,7 +33,6 @@ class PromotionAutoGenerateConfigGetResponseStrategyDataData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseStrategyDataStrategyStateData> $strategy_state 策略配置项列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseStrategyDataStrategyStateData::class)]
     public array $strategy_state;
     
 }

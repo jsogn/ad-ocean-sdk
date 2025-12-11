@@ -18,7 +18,6 @@ class ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListData extends Dat
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListData> $scene_list 广告对应的场景列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListData::class)]
     public array $scene_list;
     
 }

@@ -163,7 +163,6 @@ class AudiencePackageGetResponseAudiencePackagesAudienceData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\AudiencePackageGetResponseAudiencePackagesAudienceGeolocationData> $geolocation 地图位置，district为BUSINESS_DISTRICT才有效
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\AudiencePackageGetResponseAudiencePackagesAudienceGeolocationData::class)]
     public array $geolocation;
     
     /**

@@ -18,7 +18,6 @@ class PromotionAutoGenerateConfigCreatePostParamStrategyDataData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigCreatePostParamStrategyDataStrategyStateData> $strategy_state 策略配置项列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigCreatePostParamStrategyDataStrategyStateData::class)]
     public array $strategy_state;
     
 }

@@ -113,7 +113,6 @@ class ProjectListGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectListGetResponseListKeywordsData> $keywords 搜索关键词列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectListGetResponseListKeywordsData::class)]
     public ?array $keywords;
 
     /**
@@ -129,7 +128,6 @@ class ProjectListGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectListGetResponseListDpaProductTargetData> $dpa_product_target 自定义筛选条件（商品投放条件）
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectListGetResponseListDpaProductTargetData::class)]
     public ?array $dpa_product_target;
 
     /**

@@ -23,7 +23,6 @@ class CDPBrandGetResponseBrandCategoryInfoData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CDPBrandGetResponseBrandCategoryInfoChildrenData> $children 
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CDPBrandGetResponseBrandCategoryInfoChildrenData::class)]
     public array $children;
     
 }

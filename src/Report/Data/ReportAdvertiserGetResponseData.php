@@ -13,7 +13,6 @@ class ReportAdvertiserGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportAdvertiserGetResponseListData> $list 数据列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportAdvertiserGetResponseListData::class)]
     public array $list;
     
     /**

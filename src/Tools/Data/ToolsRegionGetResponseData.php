@@ -13,7 +13,6 @@ class ToolsRegionGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsRegionGetResponseListData> $list 行业列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsRegionGetResponseListData::class)]
     public array $list;
     
 }

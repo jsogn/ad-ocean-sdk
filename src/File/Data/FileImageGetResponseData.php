@@ -13,7 +13,6 @@ class FileImageGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\FileImageGetResponseListData> $list 
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileImageGetResponseListData::class)]
     public array $list;
     
     /**

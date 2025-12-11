@@ -18,7 +18,6 @@ class AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgNecessaryCombineDeliveryRul
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgNecessaryCombineDeliveryRulesDeliveriesData> $deliveries 具体的资质信息，数组长度最小为1
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgSubmitPostParamDeliveryPkgNecessaryCombineDeliveryRulesDeliveriesData::class)]
     public array $deliveries;
     
 }

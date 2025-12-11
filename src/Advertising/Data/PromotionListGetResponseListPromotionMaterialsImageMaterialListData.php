@@ -18,7 +18,6 @@ class PromotionListGetResponseListPromotionMaterialsImageMaterialListData extend
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsImageMaterialListImagesData> $images 图片ID数组
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsImageMaterialListImagesData::class)]
     public array $images;
     
 }

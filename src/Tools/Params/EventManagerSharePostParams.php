@@ -27,7 +27,6 @@ class EventManagerSharePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\EventManagerSharePostParamAccountInfosData> $account_infos 共享账户信息，一次最多操作10个当share_mode="PART"时必填
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\EventManagerSharePostParamAccountInfosData::class)]
     public array $account_infos;
     
     /**

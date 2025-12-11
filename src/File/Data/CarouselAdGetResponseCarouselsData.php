@@ -28,13 +28,11 @@ class CarouselAdGetResponseCarouselsData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselAdGetResponseCarouselsImagesData> $images 图片信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselAdGetResponseCarouselsImagesData::class)]
     public array $images;
     
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselAdGetResponseCarouselsAudioData> $audio 音频信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselAdGetResponseCarouselsAudioData::class)]
     public array $audio;
     
     /**

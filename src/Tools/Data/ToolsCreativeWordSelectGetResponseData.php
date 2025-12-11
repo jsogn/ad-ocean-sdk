@@ -13,7 +13,6 @@ class ToolsCreativeWordSelectGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsCreativeWordSelectGetResponseCreativeWordData> $creative_word 创意词包列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsCreativeWordSelectGetResponseCreativeWordData::class)]
     public array $creative_word;
     
 }

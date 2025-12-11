@@ -11,7 +11,6 @@ class BusinessPlatformPartnerOrganizationListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Majordomo\Data\BusinessPlatformPartnerOrganizationListGetResponseListData> $list 应用列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Majordomo\Data\BusinessPlatformPartnerOrganizationListGetResponseListData::class)]
     public array $list;
 
     /**

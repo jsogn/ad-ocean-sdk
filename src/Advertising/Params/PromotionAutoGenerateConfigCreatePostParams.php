@@ -22,7 +22,6 @@ class PromotionAutoGenerateConfigCreatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigCreatePostParamStrategyDataData> $strategy_data 策略数据(列表中strategy_id需唯一, 即同一个策略（strategy）的策略配置项列表(strategy_state)，需放到同一个对象内，不可分开传递)
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigCreatePostParamStrategyDataData::class)]
     public array $strategy_data;
     
 }

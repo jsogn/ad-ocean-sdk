@@ -18,7 +18,6 @@ class PromotionBidUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionBidUpdatePostResponseErrorsData> $errors 更新失败的广告列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionBidUpdatePostResponseErrorsData::class)]
     public array $errors;
     
 }

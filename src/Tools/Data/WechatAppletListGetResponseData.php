@@ -12,6 +12,5 @@ class WechatAppletListGetResponseData extends Data
     /**
      * @var WechatAppletListGetResponseDataListData[] 微信小程序列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(WechatAppletListGetResponseDataListData::class)]
     public array $list;
 }

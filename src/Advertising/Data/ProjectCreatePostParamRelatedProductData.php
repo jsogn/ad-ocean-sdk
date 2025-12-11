@@ -33,7 +33,6 @@ class ProjectCreatePostParamRelatedProductData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectCreatePostParamRelatedProductProductsData> $products 产品ID列表，上限为10，delivery_mode =PROCEDURAL 自动投放模式 且 推广目的landing_type =销售线索 LINK时，products结构体必传
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectCreatePostParamRelatedProductProductsData::class)]
     public array $products;
     
 }

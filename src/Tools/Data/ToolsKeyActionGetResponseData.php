@@ -18,7 +18,6 @@ class ToolsKeyActionGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsKeyActionGetResponseListData> $list 线索列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsKeyActionGetResponseListData::class)]
     public array $list;
     
 }

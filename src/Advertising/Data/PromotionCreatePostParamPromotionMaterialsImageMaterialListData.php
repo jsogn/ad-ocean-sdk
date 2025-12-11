@@ -18,7 +18,6 @@ class PromotionCreatePostParamPromotionMaterialsImageMaterialListData extends Da
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsImageMaterialListImagesData> $images 图片ID数组，目前仅支持传入1个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsImageMaterialListImagesData::class)]
     public array $images;
     
 }

@@ -18,7 +18,6 @@ class PromotionDeletePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionDeletePostResponseErrorsData> $errors 删除失败的广告列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionDeletePostResponseErrorsData::class)]
     public array $errors;
     
 }

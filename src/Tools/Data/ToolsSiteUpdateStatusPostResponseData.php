@@ -13,7 +13,6 @@ class ToolsSiteUpdateStatusPostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsSiteUpdateStatusPostResponseFailData> $fail 更新失败的site_id的list及失败的原因。如果全部更新成功，len(list) = 0
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsSiteUpdateStatusPostResponseFailData::class)]
     public array $fail;
 
     /**

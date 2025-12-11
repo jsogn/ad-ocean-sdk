@@ -13,7 +13,6 @@ class ToolsBpAssetManagementSharePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsBpAssetManagementSharePostResponseErrorListData> $error_list 共享失败列表，列表为空则代表全部共享成功
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsBpAssetManagementSharePostResponseErrorListData::class)]
     public array $error_list;
     
 }

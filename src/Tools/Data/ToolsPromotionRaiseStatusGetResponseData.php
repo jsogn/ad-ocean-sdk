@@ -13,7 +13,6 @@ class ToolsPromotionRaiseStatusGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionRaiseStatusGetResponseListData> $list 
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionRaiseStatusGetResponseListData::class)]
     public array $list;
     
 }

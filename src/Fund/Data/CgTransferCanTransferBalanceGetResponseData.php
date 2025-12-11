@@ -13,7 +13,6 @@ class CgTransferCanTransferBalanceGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListData> $can_transfer_detail_list 可转余额信息列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListData::class)]
     public array $can_transfer_detail_list;
     
 }

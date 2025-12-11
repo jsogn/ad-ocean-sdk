@@ -33,13 +33,11 @@ class AdvertiserDeliveryPkgConfigGetResponseIndustryConfigData extends Data
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesData> $necessaries 必填资质模块配置
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigNecessariesData::class)]
     public array $necessaries;
     
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigUnnecessariesData> $unnecessaries 选填资质模块配置
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgConfigGetResponseIndustryConfigUnnecessariesData::class)]
     public array $unnecessaries;
     
 }

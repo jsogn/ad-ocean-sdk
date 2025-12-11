@@ -58,13 +58,11 @@ class DPAClueProductDetailGetResponseProductsData extends Data
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPAClueProductDetailGetResponseProductsImagesUrlData> $images_url 商品组图
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPAClueProductDetailGetResponseProductsImagesUrlData::class)]
     public array $images_url;
     
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPAClueProductDetailGetResponseProductsVideosData> $videos 商品视频列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPAClueProductDetailGetResponseProductsVideosData::class)]
     public array $videos;
     
     /**

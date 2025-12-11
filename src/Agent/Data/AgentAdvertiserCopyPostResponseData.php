@@ -18,7 +18,6 @@ class AgentAdvertiserCopyPostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Agent\Data\AgentAdvertiserCopyPostResponseItemData> $item 复制结果，包括单个账户的失败原因
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Agent\Data\AgentAdvertiserCopyPostResponseItemData::class)]
     public array $item;
     
 }

@@ -13,7 +13,6 @@ class OauthAdvertiserGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Oauth\Data\OauthAdvertiserGetResponseListData> $list 账号列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Oauth\Data\OauthAdvertiserGetResponseListData::class)]
     public array $list;
     
 }

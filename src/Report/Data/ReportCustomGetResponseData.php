@@ -13,7 +13,6 @@ class ReportCustomGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportCustomGetResponseRowsData> $rows
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomGetResponseRowsData::class)]
     public array $rows;
 
     /**

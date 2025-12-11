@@ -17,7 +17,6 @@ class FileVideoUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\File\Data\FileVideoUpdatePostParamVideosData> $videos 限制最多 100 个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileVideoUpdatePostParamVideosData::class)]
     public array $videos;
     
 }

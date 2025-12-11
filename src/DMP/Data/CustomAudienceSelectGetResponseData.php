@@ -13,7 +13,6 @@ class CustomAudienceSelectGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\DMP\Data\CustomAudienceSelectGetResponseCustomAudienceListData> $custom_audience_list 人群包列表数据
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DMP\Data\CustomAudienceSelectGetResponseCustomAudienceListData::class)]
     public array $custom_audience_list;
     
     /**

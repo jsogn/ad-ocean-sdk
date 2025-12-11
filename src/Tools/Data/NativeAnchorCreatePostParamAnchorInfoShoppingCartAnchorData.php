@@ -18,7 +18,6 @@ class NativeAnchorCreatePostParamAnchorInfoShoppingCartAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoShoppingCartAnchorProductImagesData> $product_images 必填，商品图片，比例1:1，至少1张
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoShoppingCartAnchorProductImagesData::class)]
     public array $product_images;
     
     /**

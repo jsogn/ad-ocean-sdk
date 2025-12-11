@@ -33,7 +33,6 @@ class ToolsAdminInfoGetResponseDistrictsSubDistrictsData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsAdminInfoGetResponseDistrictsSubDistrictsSubDistrictsData> $sub_districts 子行政层级信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsAdminInfoGetResponseDistrictsSubDistrictsSubDistrictsData::class)]
     public ?array $sub_districts = null;
     
 }

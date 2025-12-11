@@ -38,7 +38,6 @@ class ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListSuggest
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListSuggestionsToolsData> $tools 工具列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListSuggestionsToolsData::class)]
     public array $tools;
     
 }

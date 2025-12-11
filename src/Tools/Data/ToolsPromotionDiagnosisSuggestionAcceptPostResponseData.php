@@ -18,7 +18,6 @@ class ToolsPromotionDiagnosisSuggestionAcceptPostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionAcceptPostResponseSuggestionAcceptFailedData> $suggestion_accept_failed 采纳失败的工具列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionAcceptPostResponseSuggestionAcceptFailedData::class)]
     public array $suggestion_accept_failed;
     
 }

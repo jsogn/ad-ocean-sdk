@@ -17,7 +17,6 @@ class ProjectScheduleTimeUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectScheduleTimeUpdatePostParamData> $data 批量修改投放时间，限制最多批量修改10个项目
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectScheduleTimeUpdatePostParamData::class)]
     public array $data;
     
 }

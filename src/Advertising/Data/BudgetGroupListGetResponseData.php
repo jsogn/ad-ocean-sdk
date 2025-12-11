@@ -13,7 +13,6 @@ class BudgetGroupListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\BudgetGroupListGetResponseBudgetGroupsData> $budget_groups 预算组信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\BudgetGroupListGetResponseBudgetGroupsData::class)]
     public array $budget_groups;
     
     /**

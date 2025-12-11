@@ -13,7 +13,6 @@ class FileVideoMaterialClearTaskResultGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\FileVideoMaterialClearTaskResultGetResponseClearResultData> $clear_result 清理结果
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileVideoMaterialClearTaskResultGetResponseClearResultData::class)]
     public array $clear_result;
     
     /**

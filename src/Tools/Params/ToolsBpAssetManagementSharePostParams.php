@@ -37,14 +37,12 @@ class ToolsBpAssetManagementSharePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsBpAssetManagementSharePostParamAccountInfosData> $account_infos 共享账号信息，当share_mode= PART时有效且必填，一次共享最多支持100个账号信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsBpAssetManagementSharePostParamAccountInfosData::class)]
     public array $account_infos;
     
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsBpAssetManagementSharePostParamAllAccountsByCompanyData> $all_accounts_by_company 公司主体信息，一次最多操作1个
 当share_mode为 COMPANY_ALL_ACCOUNTS时有效且必填
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsBpAssetManagementSharePostParamAllAccountsByCompanyData::class)]
     public array $all_accounts_by_company;
     
 }

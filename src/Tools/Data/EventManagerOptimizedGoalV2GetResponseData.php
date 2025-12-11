@@ -18,7 +18,6 @@ class EventManagerOptimizedGoalV2GetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\EventManagerOptimizedGoalV2GetResponseGoalsData> $goals 优化目标数据列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\EventManagerOptimizedGoalV2GetResponseGoalsData::class)]
     public array $goals;
     
 }

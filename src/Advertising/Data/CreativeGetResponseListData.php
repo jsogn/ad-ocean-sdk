@@ -78,7 +78,6 @@ class CreativeGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeGetResponseListMetarialsData> $metarials 素材信息列表，标题，图片，视频均是不同素材，注意部分老数据可能此结构为空
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeGetResponseListMetarialsData::class)]
     public array $metarials;
     
     /**

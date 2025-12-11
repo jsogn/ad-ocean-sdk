@@ -33,7 +33,6 @@ class ProjectListGetResponseListRelatedProductData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectListGetResponseListRelatedProductProductsData> $products 产品ID列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectListGetResponseListRelatedProductProductsData::class)]
     public array $products;
     
 }

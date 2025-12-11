@@ -23,7 +23,6 @@ class ProjectCreatePostParamAudienceData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectCreatePostParamAudienceGeolocationData> $geolocation 从地图添加(地图位置)，district为"BUSINESS_DISTRICT"时填写，最多允许添加1000个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectCreatePostParamAudienceGeolocationData::class)]
     public array $geolocation;
     
     /**

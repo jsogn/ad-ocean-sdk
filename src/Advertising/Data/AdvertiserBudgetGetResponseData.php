@@ -13,7 +13,6 @@ class AdvertiserBudgetGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\AdvertiserBudgetGetResponseListData> $list 
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\AdvertiserBudgetGetResponseListData::class)]
     public array $list;
     
 }

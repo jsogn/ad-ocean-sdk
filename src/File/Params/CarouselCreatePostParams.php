@@ -17,7 +17,6 @@ class CarouselCreatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselCreatePostParamImagesData> $images  图片信息，包含图片id和图片主题
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselCreatePostParamImagesData::class)]
     public array $images;
 
     /**

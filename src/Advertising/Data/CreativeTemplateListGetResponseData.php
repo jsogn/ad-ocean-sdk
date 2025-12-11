@@ -18,7 +18,6 @@ class CreativeTemplateListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeTemplateListGetResponseListsData> $lists 模版列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeTemplateListGetResponseListsData::class)]
     public array $lists;
     
 }

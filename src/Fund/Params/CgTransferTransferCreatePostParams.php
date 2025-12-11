@@ -27,7 +27,6 @@ class CgTransferTransferCreatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferTransferCreatePostParamTargetDetailListData> $target_detail_list 目标账户列表，1:N的N，需要列表内账户类型相同，最多支持100个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferTransferCreatePostParamTargetDetailListData::class)]
     public array $target_detail_list;
     
     /**

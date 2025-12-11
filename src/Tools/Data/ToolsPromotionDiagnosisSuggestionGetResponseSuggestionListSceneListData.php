@@ -18,7 +18,6 @@ class ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListData ex
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListSuggestionsData> $suggestions 建议列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionGetResponseSuggestionListSceneListSuggestionsData::class)]
     public array $suggestions;
     
 }

@@ -18,7 +18,6 @@ class CarouselAdGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselAdGetResponseCarouselsData> $carousels 图文信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselAdGetResponseCarouselsData::class)]
     public array $carousels;
     
 }

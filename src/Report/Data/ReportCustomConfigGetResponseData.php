@@ -13,7 +13,6 @@ class ReportCustomConfigGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListData> $list 数据主题配置列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListData::class)]
     public array $list;
     
 }

@@ -33,7 +33,6 @@ class AdvertiserDeliveryPkgGetResponseDeliveryPkgNecessaryCombineDeliveryRulesDe
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgGetResponseDeliveryPkgNecessaryCombineDeliveryRulesDeliveriesAttachmentsData> $attachments 资质图片附件
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgGetResponseDeliveryPkgNecessaryCombineDeliveryRulesDeliveriesAttachmentsData::class)]
     public array $attachments;
     
     /**

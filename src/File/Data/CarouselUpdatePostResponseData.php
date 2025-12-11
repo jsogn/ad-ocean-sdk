@@ -13,7 +13,6 @@ class CarouselUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselUpdatePostResponseCarouselsData> $carousels 图片信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselUpdatePostResponseCarouselsData::class)]
     public array $carousels;
     
 }

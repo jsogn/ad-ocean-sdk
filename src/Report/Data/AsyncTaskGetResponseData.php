@@ -13,7 +13,6 @@ class AsyncTaskGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Report\Data\AsyncTaskGetResponseListData> $list data中的值，以下为list中每个元素的字段
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\AsyncTaskGetResponseListData::class)]
     public array $list;
     
 }

@@ -37,7 +37,6 @@ class ProjectUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectUpdatePostParamKeywordsData> $keywords 待添加搜索关键词列表，一个项目最多可添加1000
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectUpdatePostParamKeywordsData::class)]
     public array $keywords;
     
     /**
@@ -53,7 +52,6 @@ class ProjectUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectUpdatePostParamDpaProductTargetData> $dpa_product_target 自定义筛选条件（商品投放条件）。用于圈定商品投放范围，结合商品库字段搭配判断条件，圈定商品投放范围。获取商品库元信息-商品广告-商业开放平台
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectUpdatePostParamDpaProductTargetData::class)]
     public array $dpa_product_target;
     
     /**

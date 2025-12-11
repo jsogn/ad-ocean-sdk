@@ -13,7 +13,6 @@ class FundSharedWalletBalanceGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Fund\Data\FundSharedWalletBalanceGetResponseListData> $list 账户列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\FundSharedWalletBalanceGetResponseListData::class)]
     public array $list;
     
 }

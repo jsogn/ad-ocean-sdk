@@ -23,7 +23,6 @@ class AdvertiserDeliveryPkgGetResponseDeliveryPkgNecessaryCombineData extends Da
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgGetResponseDeliveryPkgNecessaryCombineDeliveryRulesData> $delivery_rules 资质规则
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgGetResponseDeliveryPkgNecessaryCombineDeliveryRulesData::class)]
     public array $delivery_rules;
     
 }

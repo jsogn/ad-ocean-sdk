@@ -13,7 +13,6 @@ class DPACategoryGetGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPACategoryGetGetResponseListData> $list json返回值
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPACategoryGetGetResponseListData::class)]
     public array $list;
     
 }

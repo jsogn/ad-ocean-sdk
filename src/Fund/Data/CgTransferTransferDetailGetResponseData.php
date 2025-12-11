@@ -48,7 +48,6 @@ class CgTransferTransferDetailGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferTransferDetailGetResponseTransferTargetRecordListData> $transfer_target_record_list 账户信息列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferTransferDetailGetResponseTransferTargetRecordListData::class)]
     public array $transfer_target_record_list;
     
     /**

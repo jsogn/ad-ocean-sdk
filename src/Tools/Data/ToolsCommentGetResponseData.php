@@ -18,7 +18,6 @@ class ToolsCommentGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsCommentGetResponseCommentListData> $comment_list 评论列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsCommentGetResponseCommentListData::class)]
     public array $comment_list;
     
 }

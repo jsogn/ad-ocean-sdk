@@ -13,7 +13,6 @@ class CgTransferCanTransferTargetListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferCanTransferTargetListGetResponseCanTransferTargetListData> $can_transfer_target_list 可转账户列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferCanTransferTargetListGetResponseCanTransferTargetListData::class)]
     public array $can_transfer_target_list;
     
     /**

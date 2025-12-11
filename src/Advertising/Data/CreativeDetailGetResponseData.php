@@ -28,7 +28,6 @@ class CreativeDetailGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListData> $creative_list 自定义素材信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListData::class)]
     public array $creative_list;
     
     /**

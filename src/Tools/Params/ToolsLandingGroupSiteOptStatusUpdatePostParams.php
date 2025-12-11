@@ -22,7 +22,6 @@ class ToolsLandingGroupSiteOptStatusUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsLandingGroupSiteOptStatusUpdatePostParamData> $data 操作站点
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsLandingGroupSiteOptStatusUpdatePostParamData::class)]
     public array $data;
     
 }

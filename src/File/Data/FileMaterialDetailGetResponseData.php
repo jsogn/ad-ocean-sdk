@@ -13,7 +13,6 @@ class FileMaterialDetailGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\FileMaterialDetailGetResponseMaterialsData> $materials 素材列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileMaterialDetailGetResponseMaterialsData::class)]
     public array $materials;
     
 }

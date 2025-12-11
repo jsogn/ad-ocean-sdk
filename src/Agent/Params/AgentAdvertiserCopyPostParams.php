@@ -22,7 +22,6 @@ class AgentAdvertiserCopyPostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Agent\Data\AgentAdvertiserCopyPostParamItemData> $item 复制账户信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Agent\Data\AgentAdvertiserCopyPostParamItemData::class)]
     public array $item;
     
     /**

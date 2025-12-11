@@ -18,7 +18,6 @@ class ToolsAssetLinkListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsAssetLinkListGetResponseListData> $list 字节小游戏/小程序列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsAssetLinkListGetResponseListData::class)]
     public array $list;
     
 }

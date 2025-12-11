@@ -13,7 +13,6 @@ class ToolsAwemeAuthListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsAwemeAuthListGetResponseListData> $list 数据列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsAwemeAuthListGetResponseListData::class)]
     public array $list;
     
     /**

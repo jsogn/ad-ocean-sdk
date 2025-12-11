@@ -17,7 +17,6 @@ class ProjectStatusUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectStatusUpdatePostParamData> $data 批量更新项目状态，包含项目ID和目标操作，list长度限制1～100
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectStatusUpdatePostParamData::class)]
     public array $data;
     
 }

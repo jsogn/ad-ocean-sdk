@@ -18,7 +18,6 @@ class PromotionCreatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostResponseErrorKeywordsListData> $error_keywords_list 设置失败的搜索广告关键词列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostResponseErrorKeywordsListData::class)]
     public ?array $error_keywords_list = null;
 
 }

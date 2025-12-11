@@ -48,7 +48,6 @@ class EventManagerEventConfigsGetResponseEventConfigsData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\EventManagerEventConfigsGetResponseEventConfigsPropertiesData> $properties 事件的附加属性
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\EventManagerEventConfigsGetResponseEventConfigsPropertiesData::class)]
     public ?array $properties;
 
 }

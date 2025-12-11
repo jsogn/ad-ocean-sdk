@@ -17,7 +17,6 @@ class AdvertiserDeliveryQualificationSubmitPostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryQualificationSubmitPostParamQualificationsData> $qualifications 投放资质信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryQualificationSubmitPostParamQualificationsData::class)]
     public array $qualifications;
     
 }

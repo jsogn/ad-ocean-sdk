@@ -13,7 +13,6 @@ class CustomerCenterAdvertiserListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Majordomo\Data\CustomerCenterAdvertiserListGetResponseListData> $list 账户列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Majordomo\Data\CustomerCenterAdvertiserListGetResponseListData::class)]
     public array $list;
         /**
      * @var \AdOceanSdk\ResponsePageInfoData $page_info 分页信息

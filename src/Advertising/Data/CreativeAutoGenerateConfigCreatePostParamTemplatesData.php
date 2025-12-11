@@ -23,13 +23,11 @@ class CreativeAutoGenerateConfigCreatePostParamTemplatesData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostParamTemplatesTemplateTextSchemaData> $template_text_schema 模板填充的文本内容，不填写则表示使用默认填充值
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostParamTemplatesTemplateTextSchemaData::class)]
     public array $template_text_schema;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostParamTemplatesTemplateImgSchemaData> $template_img_schema 模板填充的图片内容，不填写则表示使用默认填充值
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostParamTemplatesTemplateImgSchemaData::class)]
     public array $template_img_schema;
     
 }

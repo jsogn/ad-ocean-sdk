@@ -18,7 +18,6 @@ class CgTransferTransferBalanceGetResponseTargetAmountDetailListData extends Dat
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferTransferBalanceGetResponseTargetAmountDetailListCapitalDetailListData> $capital_detail_list 可转资金列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferTransferBalanceGetResponseTargetAmountDetailListCapitalDetailListData::class)]
     public array $capital_detail_list;
     
     /**

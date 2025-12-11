@@ -23,7 +23,6 @@ class AdvertiserQualificationSubmitPostParamIndustriesData extends Data
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserQualificationSubmitPostParamIndustriesOthersData> $others 行业补充资质列表，相关字段见下
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserQualificationSubmitPostParamIndustriesOthersData::class)]
     public array $others;
     
 }

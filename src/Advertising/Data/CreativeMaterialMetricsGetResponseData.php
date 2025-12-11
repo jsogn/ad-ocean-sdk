@@ -13,7 +13,6 @@ class CreativeMaterialMetricsGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeMaterialMetricsGetResponseStatsData> $stats 统计数据
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeMaterialMetricsGetResponseStatsData::class)]
     public array $stats;
     
     /**

@@ -13,7 +13,6 @@ class PromotionCostProtectStatusGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCostProtectStatusGetResponseCompensateStatusInfoListData> $compensate_status_info_list 
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCostProtectStatusGetResponseCompensateStatusInfoListData::class)]
     public array $compensate_status_info_list;
     
 }

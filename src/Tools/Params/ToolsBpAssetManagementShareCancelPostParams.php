@@ -34,7 +34,6 @@ class ToolsBpAssetManagementShareCancelPostParams extends RequestParams
      * @var array<\AdOceanSdk\Tools\Data\ToolsBpAssetManagementShareCancelPostParamAccountInfosData> $account_infos 取消指定共享账号信息，一次最多取消共享到100个账号
 当 share_mode 为PART时可用且必填
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsBpAssetManagementShareCancelPostParamAccountInfosData::class)]
     public array $account_infos;
     
     /**
@@ -47,7 +46,6 @@ class ToolsBpAssetManagementShareCancelPostParams extends RequestParams
      * @var array<\AdOceanSdk\Tools\Data\ToolsBpAssetManagementShareCancelPostParamAllAccountsByCompanyData> $all_accounts_by_company 取消主体共享账号信息，一次最多操作1个
 当share_mode为 COMPANY_ALL_ACCOUNTS时可用且必填
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsBpAssetManagementShareCancelPostParamAllAccountsByCompanyData::class)]
     public array $all_accounts_by_company;
     
 }

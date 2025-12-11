@@ -37,7 +37,6 @@ class ToolsEstimateAudienceGetParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsEstimateAudienceGetParamGeolocationData> $geolocation 从地图添加(地图位置)，district为"BUSINESS_DISTRICT"时填写
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsEstimateAudienceGetParamGeolocationData::class)]
     public array $geolocation;
     
     /**

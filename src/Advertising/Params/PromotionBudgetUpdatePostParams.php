@@ -17,7 +17,6 @@ class PromotionBudgetUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionBudgetUpdatePostParamData> $data 批量修改预算，list长度限制1～10
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionBudgetUpdatePostParamData::class)]
     public array $data;
     
 }

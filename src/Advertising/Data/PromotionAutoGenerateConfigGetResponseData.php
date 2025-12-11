@@ -18,7 +18,6 @@ class PromotionAutoGenerateConfigGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseTemplatesData> $templates 模板列表(仅当version=Template时有值)
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseTemplatesData::class)]
     public array $templates;
     
     /**
@@ -34,7 +33,6 @@ class PromotionAutoGenerateConfigGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseStrategyDataData> $strategy_data 策略配置详情列表(仅当version=Strategy时有值)
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseStrategyDataData::class)]
     public array $strategy_data;
     
 }

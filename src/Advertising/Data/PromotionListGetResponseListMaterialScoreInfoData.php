@@ -33,7 +33,6 @@ class PromotionListGetResponseListMaterialScoreInfoData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListMaterialScoreInfoLowQualityMaterialListData> $low_quality_material_list 低质素材信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListMaterialScoreInfoLowQualityMaterialListData::class)]
     public array $low_quality_material_list;
     
 }

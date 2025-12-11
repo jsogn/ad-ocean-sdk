@@ -13,7 +13,6 @@ class ToolsPreAuditSendPostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPreAuditSendPostResponseListData> $list 前置预审送审结果列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPreAuditSendPostResponseListData::class)]
     public array $list;
     
 }

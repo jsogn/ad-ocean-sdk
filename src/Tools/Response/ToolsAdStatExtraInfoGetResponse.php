@@ -16,7 +16,6 @@ class ToolsAdStatExtraInfoGetResponse extends Data implements ResponseInterface
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsAdStatExtraInfoGetResponseData> $data 计划学习期状态列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsAdStatExtraInfoGetResponseData::class)]
     public array $data;
     
     /**

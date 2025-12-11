@@ -38,7 +38,6 @@ class DPADetailGetGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPADetailGetGetResponseListImageUrlsData> $image_urls 扩展商品图，商品图片的补充
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPADetailGetGetResponseListImageUrlsData::class)]
     public ?array $image_urls;
 
     /**
@@ -189,7 +188,6 @@ class DPADetailGetGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPADetailGetGetResponseListVideosData> $videos 视频内容，小说库特有字段
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPADetailGetGetResponseListVideosData::class)]
     public ?array $videos;
 
     /**

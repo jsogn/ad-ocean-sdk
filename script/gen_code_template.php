@@ -152,7 +152,6 @@ function generateFields(string $classNameSpace, string $classPrefix, array $para
     foreach ($params as $key => $param) {
         $varType = generatePhpType($param['type']);
         $docType = $varType;
-        $annot   = '';
 
         if ($key === 'page_info') {
             $code .= <<<CODE
@@ -161,7 +160,7 @@ function generateFields(string $classNameSpace, string $classPrefix, array $para
      * @var \AdOceanSdk\ResponsePageInfoData \${$key} 分页信息
      */
     public \AdOceanSdk\ResponsePageInfoData \${$key};
-    
+
 CODE;
             continue;
         }
@@ -181,7 +180,6 @@ CODE;
             $docType   = $typeClass;
 
             if ($varType === 'array') {
-                $annot   = "#[\ClassTransformer\Attributes\ConvertArray({$typeClass}::class)]";
                 $docType = "array<{$typeClass}>";
             } else {
                 $varType = $typeClass;
@@ -192,26 +190,15 @@ CODE;
                 generateDataClass($classNameSpace, $classPrefix . toCamelCase($key), $param['children'], $param['description']);
             }
         }
-        if ($annot) {
-            $code .= <<<CODE
 
-    /**
-     * @var $docType \${$key} {$param['description']}
-     */
-    $annot
-    public {$varType} \${$key};
-    
-CODE;
-        } else {
-            $code .= <<<CODE
+        $code .= <<<CODE
 
     /**
      * @var $docType \${$key} {$param['description']}
      */
     public {$varType} \${$key};
-    
+
 CODE;
-        }
 
     }
 

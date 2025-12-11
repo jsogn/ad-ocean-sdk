@@ -13,13 +13,11 @@ class CreativeTemplateDetailGetGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeTemplateDetailGetGetResponseTemplateTextSchemaData> $template_text_schema 模板填充的文本内容列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeTemplateDetailGetGetResponseTemplateTextSchemaData::class)]
     public array $template_text_schema;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeTemplateDetailGetGetResponseTemplateImgSchemaData> $template_img_schema 模板填充的图片内容列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeTemplateDetailGetGetResponseTemplateImgSchemaData::class)]
     public array $template_img_schema;
     
     /**

@@ -28,7 +28,6 @@ class SiteTemplateGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\SiteTemplateGetResponseListBricksData> $bricks 组件列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\SiteTemplateGetResponseListBricksData::class)]
     public array $bricks;
     
 }

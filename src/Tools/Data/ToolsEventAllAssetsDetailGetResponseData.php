@@ -13,7 +13,6 @@ class ToolsEventAllAssetsDetailGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsEventAllAssetsDetailGetResponseAssetListData> $asset_list 资产列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsEventAllAssetsDetailGetResponseAssetListData::class)]
     public array $asset_list;
     
 }

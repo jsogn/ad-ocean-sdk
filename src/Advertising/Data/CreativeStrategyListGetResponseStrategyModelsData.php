@@ -33,7 +33,6 @@ class CreativeStrategyListGetResponseStrategyModelsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeStrategyListGetResponseStrategyModelsStateListData> $state_list 策略配置项列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeStrategyListGetResponseStrategyModelsStateListData::class)]
     public array $state_list;
     
 }

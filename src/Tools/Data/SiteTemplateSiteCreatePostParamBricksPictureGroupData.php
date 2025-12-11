@@ -13,7 +13,6 @@ class SiteTemplateSiteCreatePostParamBricksPictureGroupData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\SiteTemplateSiteCreatePostParamBricksPictureGroupContentData> $content 组图内容列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\SiteTemplateSiteCreatePostParamBricksPictureGroupContentData::class)]
     public array $content;
     
 }

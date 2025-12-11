@@ -103,7 +103,6 @@ class CreativeDetailGetResponseAdDataData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseAdDataSupplementsData> $supplements 云游戏素材
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseAdDataSupplementsData::class)]
     public array $supplements;
     
     /**

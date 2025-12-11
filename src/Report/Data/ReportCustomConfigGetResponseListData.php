@@ -18,13 +18,11 @@ class ReportCustomConfigGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListDimensionsData> $dimensions 维度列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListDimensionsData::class)]
     public array $dimensions;
     
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListMetricsData> $metrics 指标列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListMetricsData::class)]
     public array $metrics;
     
 }

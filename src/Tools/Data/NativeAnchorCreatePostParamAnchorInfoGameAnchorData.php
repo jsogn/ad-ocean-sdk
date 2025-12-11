@@ -43,7 +43,6 @@ class NativeAnchorCreatePostParamAnchorInfoGameAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorHeadImageListData> $head_image_list 顶部头图，推荐尺寸为2：1的横图
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorHeadImageListData::class)]
     public array $head_image_list;
     
     /**
@@ -64,7 +63,6 @@ class NativeAnchorCreatePostParamAnchorInfoGameAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorAppImagesData> $app_images 游戏图片，图片个数 3～8
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorAppImagesData::class)]
     public array $app_images;
     
     /**
@@ -100,7 +98,6 @@ class NativeAnchorCreatePostParamAnchorInfoGameAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorIconImagesData> $icon_images 小游戏图片，当前锚点类型且game_type为MICRO_GAME微信小游戏必填，比例为1：1，最多一个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorIconImagesData::class)]
     public array $icon_images;
     
     /**
@@ -111,7 +108,6 @@ class NativeAnchorCreatePostParamAnchorInfoGameAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorGamePackageListData> $game_package_list 游戏礼包列表，当game_bonus为TRUE 时必填，数量限制0-3
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorCreatePostParamAnchorInfoGameAnchorGamePackageListData::class)]
     public array $game_package_list;
     
 }

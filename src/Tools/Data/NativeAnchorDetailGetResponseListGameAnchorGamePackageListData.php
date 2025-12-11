@@ -28,7 +28,6 @@ class NativeAnchorDetailGetResponseListGameAnchorGamePackageListData extends Dat
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorDetailGetResponseListGameAnchorGamePackageListGiftData> $gift 礼包内的礼品配置，数量限制0～8
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorDetailGetResponseListGameAnchorGamePackageListGiftData::class)]
     public array $gift;
     
     /**

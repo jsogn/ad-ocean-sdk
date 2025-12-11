@@ -13,7 +13,6 @@ class ToolsMicroAppListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsMicroAppListGetResponseListData> $list 字节小程序列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsMicroAppListGetResponseListData::class)]
     public array $list;
     
     /**

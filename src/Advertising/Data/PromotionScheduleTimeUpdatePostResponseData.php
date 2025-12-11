@@ -18,7 +18,6 @@ class PromotionScheduleTimeUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionScheduleTimeUpdatePostResponseErrorsData> $errors 更新失败的广告ID列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionScheduleTimeUpdatePostResponseErrorsData::class)]
     public array $errors;
     
 }

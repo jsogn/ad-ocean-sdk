@@ -18,7 +18,6 @@ class CreativeMaterialMetricsGetResponseStatsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeMaterialMetricsGetResponseStatsDerivedMaterialData> $derived_material 派生素材信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeMaterialMetricsGetResponseStatsDerivedMaterialData::class)]
     public array $derived_material;
     
 }

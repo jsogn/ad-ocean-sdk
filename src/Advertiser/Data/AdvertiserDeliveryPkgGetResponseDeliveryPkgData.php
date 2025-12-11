@@ -48,7 +48,6 @@ class AdvertiserDeliveryPkgGetResponseDeliveryPkgData extends Data
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgGetResponseDeliveryPkgUnnecessaryCombinesData> $unnecessary_combines 选填资质模块
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryPkgGetResponseDeliveryPkgUnnecessaryCombinesData::class)]
     public array $unnecessary_combines;
     
     /**

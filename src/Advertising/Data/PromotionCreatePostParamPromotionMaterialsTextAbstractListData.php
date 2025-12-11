@@ -18,7 +18,6 @@ class PromotionCreatePostParamPromotionMaterialsTextAbstractListData extends Dat
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsTextAbstractListBidwordListData> $bidword_list 搜索关键词列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsTextAbstractListBidwordListData::class)]
     public array $bidword_list;
     
     /**

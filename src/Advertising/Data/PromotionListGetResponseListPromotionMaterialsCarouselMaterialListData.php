@@ -33,7 +33,6 @@ class PromotionListGetResponseListPromotionMaterialsCarouselMaterialListData ext
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsCarouselMaterialListImageSubjectData> $image_subject 图片主题
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsCarouselMaterialListImageSubjectData::class)]
     public array $image_subject;
     
 }

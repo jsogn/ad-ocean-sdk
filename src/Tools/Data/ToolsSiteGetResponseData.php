@@ -18,7 +18,6 @@ class ToolsSiteGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsSiteGetResponseListData> $list 建站列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsSiteGetResponseListData::class)]
     public array $list;
     
 }

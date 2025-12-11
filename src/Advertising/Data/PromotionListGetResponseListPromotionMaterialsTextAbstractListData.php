@@ -18,13 +18,11 @@ class PromotionListGetResponseListPromotionMaterialsTextAbstractListData extends
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTextAbstractListBidwordListData> $bidword_list 搜索关键词列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTextAbstractListBidwordListData::class)]
     public array $bidword_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTextAbstractListWordListData> $word_list 动态词包ID，可使用 【查询动态词包接口】 获得，结合文本摘要内容中的词包格式您需要填写相同个数与顺序的词包ID，如果实际ID顺序与文本摘要内容中词包名顺序不一致我们将以词包ID顺序为准。
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTextAbstractListWordListData::class)]
     public array $word_list;
     
 }

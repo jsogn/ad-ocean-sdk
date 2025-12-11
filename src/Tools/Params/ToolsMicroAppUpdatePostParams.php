@@ -27,7 +27,6 @@ class ToolsMicroAppUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsMicroAppUpdatePostParamAppPageData> $app_page 小程序页面
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsMicroAppUpdatePostParamAppPageData::class)]
     public array $app_page;
     
 }

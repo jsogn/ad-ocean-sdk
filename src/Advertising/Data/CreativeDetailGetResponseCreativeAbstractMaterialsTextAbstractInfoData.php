@@ -18,13 +18,11 @@ class CreativeDetailGetResponseCreativeAbstractMaterialsTextAbstractInfoData ext
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeAbstractMaterialsTextAbstractInfoBidwordListData> $bidword_list 搜索关键词列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeAbstractMaterialsTextAbstractInfoBidwordListData::class)]
     public array $bidword_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeAbstractMaterialsTextAbstractInfoWordListData> $word_list 动态词包ID列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeAbstractMaterialsTextAbstractInfoWordListData::class)]
     public array $word_list;
     
 }

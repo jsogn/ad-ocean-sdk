@@ -13,7 +13,6 @@ class EventManagerTrackUrlGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\EventManagerTrackUrlGetResponseTrackUrlGroupsData> $track_url_groups 监测链接组信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\EventManagerTrackUrlGetResponseTrackUrlGroupsData::class)]
     public array $track_url_groups;
     
     /**

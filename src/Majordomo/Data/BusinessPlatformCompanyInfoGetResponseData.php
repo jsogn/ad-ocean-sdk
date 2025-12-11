@@ -13,7 +13,6 @@ class BusinessPlatformCompanyInfoGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Majordomo\Data\BusinessPlatformCompanyInfoGetResponseCompanyInfoData> $company_info 主体信息列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Majordomo\Data\BusinessPlatformCompanyInfoGetResponseCompanyInfoData::class)]
     public array $company_info;
 
     /**

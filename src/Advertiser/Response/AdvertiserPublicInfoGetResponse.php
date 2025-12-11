@@ -16,7 +16,6 @@ class AdvertiserPublicInfoGetResponse extends Data implements ResponseInterface
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserPublicInfoGetResponseData> $data 广告主列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserPublicInfoGetResponseData::class)]
     public array $data;
     
     /**

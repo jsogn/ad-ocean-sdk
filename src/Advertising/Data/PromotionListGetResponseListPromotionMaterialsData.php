@@ -68,19 +68,16 @@ class PromotionListGetResponseListPromotionMaterialsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsVideoMaterialListData> $video_material_list 视频素材信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsVideoMaterialListData::class)]
     public array $video_material_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsImageMaterialListData> $image_material_list 创意图片素材
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsImageMaterialListData::class)]
     public array $image_material_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTitleMaterialListData> $title_material_list 标题素材
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTitleMaterialListData::class)]
     public array $title_material_list;
     
     /**
@@ -96,13 +93,11 @@ class PromotionListGetResponseListPromotionMaterialsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTextAbstractListData> $text_abstract_list 文本摘要信息，单广告可添加1-10个，长度25-45个字
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsTextAbstractListData::class)]
     public array $text_abstract_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsCarouselMaterialListData> $carousel_material_list 创意图文素材
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsCarouselMaterialListData::class)]
     public array $carousel_material_list;
     
     /**
@@ -118,19 +113,16 @@ class PromotionListGetResponseListPromotionMaterialsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsKeywordsData> $keywords 搜索直投关键词列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsKeywordsData::class)]
     public array $keywords;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsComponentMaterialListData> $component_material_list 创意组件信息。
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsComponentMaterialListData::class)]
     public array $component_material_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsAnchorMaterialListData> $anchor_material_list 锚点信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListPromotionMaterialsAnchorMaterialListData::class)]
     public array $anchor_material_list;
     
     /**

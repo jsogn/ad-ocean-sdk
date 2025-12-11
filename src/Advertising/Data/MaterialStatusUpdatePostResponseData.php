@@ -23,7 +23,6 @@ class MaterialStatusUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\MaterialStatusUpdatePostResponseErrorsData> $errors 更新失败的素材列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\MaterialStatusUpdatePostResponseErrorsData::class)]
     public array $errors;
     
 }

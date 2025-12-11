@@ -18,7 +18,6 @@ class CgTransferCanTransferBalanceGetResponseCanTransferDetailListPayeeTransferA
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListPayeeTransferAmountDetailListCapitalDetailListData> $capital_detail_list 转入方可转资金列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListPayeeTransferAmountDetailListCapitalDetailListData::class)]
     public array $capital_detail_list;
     
 }

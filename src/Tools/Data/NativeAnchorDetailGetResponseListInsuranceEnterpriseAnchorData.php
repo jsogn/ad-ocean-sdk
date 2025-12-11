@@ -63,7 +63,6 @@ class NativeAnchorDetailGetResponseListInsuranceEnterpriseAnchorData extends Dat
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorDetailGetResponseListInsuranceEnterpriseAnchorSingleProductInfoData> $single_product_info 单项服务名称，5-10组
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorDetailGetResponseListInsuranceEnterpriseAnchorSingleProductInfoData::class)]
     public array $single_product_info;
     
 }

@@ -18,7 +18,6 @@ class ProjectUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectUpdatePostResponseErrorListData> $error_list 错误list，项目为分块更新，存在部分内容更新失败，部分内容更新成功- 若更新成功，ErrorList为空数组- 若更新失败，ErrorList包含错误的模块和失败原因
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectUpdatePostResponseErrorListData::class)]
     public array $error_list;
     
 }

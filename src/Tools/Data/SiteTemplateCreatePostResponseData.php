@@ -28,7 +28,6 @@ class SiteTemplateCreatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\SiteTemplateCreatePostResponseBricksData> $bricks 组件列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\SiteTemplateCreatePostResponseBricksData::class)]
     public array $bricks;
     
 }

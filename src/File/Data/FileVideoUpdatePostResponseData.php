@@ -13,7 +13,6 @@ class FileVideoUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\FileVideoUpdatePostResponseVideosData> $videos 视频列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileVideoUpdatePostResponseVideosData::class)]
     public array $videos;
     
 }

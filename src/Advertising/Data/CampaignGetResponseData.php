@@ -13,7 +13,6 @@ class CampaignGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CampaignGetResponseListData> $list 广告数组
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CampaignGetResponseListData::class)]
     public array $list;
     
     /**

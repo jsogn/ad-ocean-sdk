@@ -6,7 +6,6 @@ use AdOceanSdk\Kernel\Data\Data;
 use AdOceanSdk\Kernel\Interface\ResponseInterface;
 use AdOceanSdk\Kernel\Trait\ResponseTrait;
 use AdOceanSdk\Oauth\Data\OauthAccessTokenGetData;
-use ClassTransformer\Attributes\ConvertArray;
 
 class OauthAccessTokenGetResponse extends Data implements ResponseInterface
 {

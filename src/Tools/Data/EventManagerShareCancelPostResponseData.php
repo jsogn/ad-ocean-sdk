@@ -13,7 +13,6 @@ class EventManagerShareCancelPostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\EventManagerShareCancelPostResponseErrorListData> $error_list 取消共享失败的账户ID及原因列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\EventManagerShareCancelPostResponseErrorListData::class)]
     public array $error_list;
     
 }

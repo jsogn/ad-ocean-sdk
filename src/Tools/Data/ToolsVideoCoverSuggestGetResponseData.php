@@ -18,7 +18,6 @@ class ToolsVideoCoverSuggestGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsVideoCoverSuggestGetResponseListData> $list 视频封面列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsVideoCoverSuggestGetResponseListData::class)]
     public array $list;
     
 }

@@ -18,7 +18,6 @@ class NativeAnchorDetailGetResponseListShoppingCartAnchorData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\NativeAnchorDetailGetResponseListShoppingCartAnchorProductImagesData> $product_images 必填，商品图片，比例1:1，至少1张
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\NativeAnchorDetailGetResponseListShoppingCartAnchorProductImagesData::class)]
     public array $product_images;
     
     /**

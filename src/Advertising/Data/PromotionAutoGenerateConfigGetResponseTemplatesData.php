@@ -23,13 +23,11 @@ class PromotionAutoGenerateConfigGetResponseTemplatesData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseTemplatesTemplateTextSchemaData> $template_text_schema 模板填充的文本内容
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseTemplatesTemplateTextSchemaData::class)]
     public array $template_text_schema;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseTemplatesTemplateImgSchemaData> $template_img_schema 模板填充的图片内容
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionAutoGenerateConfigGetResponseTemplatesTemplateImgSchemaData::class)]
     public array $template_img_schema;
     
 }

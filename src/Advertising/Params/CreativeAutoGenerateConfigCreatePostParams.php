@@ -27,7 +27,6 @@ class CreativeAutoGenerateConfigCreatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostParamTemplatesData> $templates 模板列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostParamTemplatesData::class)]
     public array $templates;
     
     /**

@@ -28,7 +28,6 @@ class ReportCustomConfigGetResponseListDimensionsFilterConfigData extends Data
     /**
      * @var array<\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListDimensionsFilterConfigRangeValueData> $range_value 筛选字段枚举列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Report\Data\ReportCustomConfigGetResponseListDimensionsFilterConfigRangeValueData::class)]
     public array $range_value;
     
 }

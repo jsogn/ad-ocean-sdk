@@ -13,7 +13,6 @@ class ToolsCountryInfoGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsCountryInfoGetResponseDistrictsData> $districts 行政区域信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsCountryInfoGetResponseDistrictsData::class)]
     public array $districts;
     
 }

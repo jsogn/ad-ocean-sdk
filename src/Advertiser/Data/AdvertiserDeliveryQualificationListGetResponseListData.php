@@ -38,7 +38,6 @@ class AdvertiserDeliveryQualificationListGetResponseListData extends Data
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryQualificationListGetResponseListImagesData> $images 资质图片列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserDeliveryQualificationListGetResponseListImagesData::class)]
     public array $images;
     
 }

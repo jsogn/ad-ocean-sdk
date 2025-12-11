@@ -23,7 +23,6 @@ class CreativeDetailGetResponseCreativeListData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListImageMaterialsData> $image_materials 创意图片素材
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListImageMaterialsData::class)]
     public array $image_materials;
     
     /**
@@ -49,7 +48,6 @@ class CreativeDetailGetResponseCreativeListData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListAbstractMaterialsData> $abstract_materials 摘要素材
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeDetailGetResponseCreativeListAbstractMaterialsData::class)]
     public array $abstract_materials;
     
     /**

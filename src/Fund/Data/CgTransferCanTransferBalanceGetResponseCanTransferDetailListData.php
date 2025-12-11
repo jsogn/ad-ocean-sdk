@@ -18,13 +18,11 @@ class CgTransferCanTransferBalanceGetResponseCanTransferDetailListData extends D
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListPayeeTransferAmountDetailListData> $payee_transfer_amount_detail_list 转入方可转余额信息列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListPayeeTransferAmountDetailListData::class)]
     public array $payee_transfer_amount_detail_list;
     
     /**
      * @var array<\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListCapitalDetailListData> $capital_detail_list 转出方可转资金列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CgTransferCanTransferBalanceGetResponseCanTransferDetailListCapitalDetailListData::class)]
     public array $capital_detail_list;
     
 }

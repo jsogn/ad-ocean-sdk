@@ -18,7 +18,6 @@ class DPAProductDetailGetGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPAProductDetailGetGetResponseListData> $list 商品库商品列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPAProductDetailGetGetResponseListData::class)]
     public array $list;
     
 }

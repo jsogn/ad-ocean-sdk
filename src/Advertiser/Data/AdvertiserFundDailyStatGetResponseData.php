@@ -13,7 +13,6 @@ class AdvertiserFundDailyStatGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserFundDailyStatGetResponseListData> $list 广告主ID
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserFundDailyStatGetResponseListData::class)]
     public array $list;
     
     /**

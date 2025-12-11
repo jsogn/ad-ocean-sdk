@@ -17,7 +17,6 @@ class PromotionDeepBidUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionDeepBidUpdatePostParamData> $data 批量修改，包含计划id和出价（批量修改数量不能超过10个)
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionDeepBidUpdatePostParamData::class)]
     public array $data;
     
 }

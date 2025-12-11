@@ -18,7 +18,6 @@ class ProjectWeekScheduleUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectWeekScheduleUpdatePostResponseErrorsData> $errors 更新失败的项目ID列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectWeekScheduleUpdatePostResponseErrorsData::class)]
     public array $errors;
     
 }

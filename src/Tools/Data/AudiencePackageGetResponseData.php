@@ -13,7 +13,6 @@ class AudiencePackageGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\AudiencePackageGetResponseAudiencePackagesData> $audience_packages 定向包信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\AudiencePackageGetResponseAudiencePackagesData::class)]
     public array $audience_packages;
     
     /**

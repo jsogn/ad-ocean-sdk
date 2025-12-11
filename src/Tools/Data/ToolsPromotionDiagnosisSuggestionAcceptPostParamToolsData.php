@@ -18,7 +18,6 @@ class ToolsPromotionDiagnosisSuggestionAcceptPostParamToolsData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionAcceptPostParamToolsParamsData> $params 工具参数列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionDiagnosisSuggestionAcceptPostParamToolsParamsData::class)]
     public array $params;
     
 }

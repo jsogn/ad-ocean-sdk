@@ -13,7 +13,6 @@ class DPAClueProductListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPAClueProductListGetResponseProductsData> $products 商品信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPAClueProductListGetResponseProductsData::class)]
     public array $products;
     
     /**

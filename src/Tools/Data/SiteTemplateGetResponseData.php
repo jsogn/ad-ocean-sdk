@@ -13,7 +13,6 @@ class SiteTemplateGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Tools\Data\SiteTemplateGetResponseListData> $list 模板列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\SiteTemplateGetResponseListData::class)]
     public array $list;
     
     /**

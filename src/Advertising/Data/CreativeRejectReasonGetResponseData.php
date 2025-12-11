@@ -13,7 +13,6 @@ class CreativeRejectReasonGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeRejectReasonGetResponseListData> $list 审核建议数据
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeRejectReasonGetResponseListData::class)]
     public array $list;
     
 }

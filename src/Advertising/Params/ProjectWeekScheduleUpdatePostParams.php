@@ -17,7 +17,6 @@ class ProjectWeekScheduleUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectWeekScheduleUpdatePostParamData> $data 批量修改投放时段，限制最多批量修改10个项目
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectWeekScheduleUpdatePostParamData::class)]
     public array $data;
     
 }

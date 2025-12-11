@@ -43,7 +43,6 @@ class CarouselCreatePostResponseCarouselImagesData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselCreatePostResponseCarouselImagesImageSubjectData> $image_subject 图片主题
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselCreatePostResponseCarouselImagesImageSubjectData::class)]
     public array $image_subject;
     
 }

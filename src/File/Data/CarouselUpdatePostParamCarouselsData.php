@@ -23,7 +23,6 @@ class CarouselUpdatePostParamCarouselsData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselUpdatePostParamCarouselsImageSubjectsData> $image_subjects 图片主题
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselUpdatePostParamCarouselsImageSubjectsData::class)]
     public array $image_subjects;
     
 }

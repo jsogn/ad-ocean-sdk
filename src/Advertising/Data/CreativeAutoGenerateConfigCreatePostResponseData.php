@@ -18,13 +18,11 @@ class CreativeAutoGenerateConfigCreatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostResponseTemplatesData> $templates 保存成功的模板列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostResponseTemplatesData::class)]
     public array $templates;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostResponseErrorsData> $errors 保存失败的模板列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\CreativeAutoGenerateConfigCreatePostResponseErrorsData::class)]
     public array $errors;
     
 }

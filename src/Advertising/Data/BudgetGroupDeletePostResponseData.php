@@ -18,7 +18,6 @@ class BudgetGroupDeletePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\BudgetGroupDeletePostResponseErrorsData> $errors 删除失败的预算组
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\BudgetGroupDeletePostResponseErrorsData::class)]
     public array $errors;
     
 }

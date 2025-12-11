@@ -13,7 +13,6 @@ class CustomerCenterAdvertiserTransferableListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Fund\Data\CustomerCenterAdvertiserTransferableListGetResponseListData> $list 列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\CustomerCenterAdvertiserTransferableListGetResponseListData::class)]
     public array $list;
     
     /**

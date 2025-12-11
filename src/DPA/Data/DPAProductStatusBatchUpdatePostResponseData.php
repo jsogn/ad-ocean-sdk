@@ -18,7 +18,6 @@ class DPAProductStatusBatchUpdatePostResponseData extends Data
     /**
      * @var array<\AdOceanSdk\DPA\Data\DPAProductStatusBatchUpdatePostResponseErrorListData> $error_list 修改状态失败的商品列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\DPA\Data\DPAProductStatusBatchUpdatePostResponseErrorListData::class)]
     public array $error_list;
     
 }

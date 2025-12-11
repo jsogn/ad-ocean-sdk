@@ -13,7 +13,6 @@ class FileVideoAwemeGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\File\Data\FileVideoAwemeGetResponseListData> $list 抖音视频列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\FileVideoAwemeGetResponseListData::class)]
     public array $list;
     
     /**

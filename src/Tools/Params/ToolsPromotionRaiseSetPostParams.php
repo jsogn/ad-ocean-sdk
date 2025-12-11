@@ -22,7 +22,6 @@ class ToolsPromotionRaiseSetPostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\ToolsPromotionRaiseSetPostParamRaiseInfoData> $raise_info  起量信息，如果需要全部删除请传[]
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\ToolsPromotionRaiseSetPostParamRaiseInfoData::class)]
     public array $raise_info ;
     
 }

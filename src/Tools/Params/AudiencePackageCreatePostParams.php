@@ -187,7 +187,6 @@ class AudiencePackageCreatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\AudiencePackageCreatePostParamGeolocationData> $geolocation 地图位置，district为BUSINESS_DISTRICT才有效
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\AudiencePackageCreatePostParamGeolocationData::class)]
     public array $geolocation;
     
     /**

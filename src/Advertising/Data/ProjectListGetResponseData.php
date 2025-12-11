@@ -13,7 +13,6 @@ class ProjectListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\ProjectListGetResponseListData> $list 项目列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\ProjectListGetResponseListData::class)]
     public array $list;
     
     /**

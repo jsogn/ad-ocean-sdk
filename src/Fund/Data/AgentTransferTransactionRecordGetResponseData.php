@@ -13,7 +13,6 @@ class AgentTransferTransactionRecordGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Fund\Data\AgentTransferTransactionRecordGetResponseRecordsData> $records 转账记录
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Fund\Data\AgentTransferTransactionRecordGetResponseRecordsData::class)]
     public array $records;
     
     /**

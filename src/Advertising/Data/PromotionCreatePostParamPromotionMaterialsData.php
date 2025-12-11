@@ -13,25 +13,21 @@ class PromotionCreatePostParamPromotionMaterialsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsVideoMaterialListData> $video_material_list 视频素材信息，上限10个，video_material_list 与 image_material_list 最少传入一种
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsVideoMaterialListData::class)]
     public array $video_material_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsImageMaterialListData> $image_material_list 创意图片素材，上限10个，video_material_list 与 image_material_list 最少传入一种
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsImageMaterialListData::class)]
     public array $image_material_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsTextAbstractListData> $text_abstract_list 文本摘要信息，最单广告可添加1-10个，长度25-45个字
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsTextAbstractListData::class)]
     public array $text_abstract_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsTitleMaterialListData> $title_material_list 标题素材，上限10个，非直播链路必填
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsTitleMaterialListData::class)]
     public array $title_material_list;
     
     /**
@@ -47,13 +43,11 @@ class PromotionCreatePostParamPromotionMaterialsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsAnchorMaterialListData> $anchor_material_list 原生锚点素材，当 anchor_related_type =SELECT时必填，数量上限为1
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsAnchorMaterialListData::class)]
     public array $anchor_material_list;
     
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsComponentMaterialListData> $component_material_list 创意组件信息。数量上限为1
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsComponentMaterialListData::class)]
     public array $component_material_list;
     
     /**
@@ -94,7 +88,6 @@ class PromotionCreatePostParamPromotionMaterialsData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsCarouselMaterialListData> $carousel_material_list 图文素材信息，当ad_type=ALL时，支持上限10个；当ad_type=SEARCH时，支持上限30个
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionCreatePostParamPromotionMaterialsCarouselMaterialListData::class)]
     public array $carousel_material_list;
     
     /**

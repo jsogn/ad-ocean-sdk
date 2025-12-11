@@ -17,7 +17,6 @@ class CarouselUpdatePostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\File\Data\CarouselUpdatePostParamCarouselsData> $carousels  需要更新的图文信息
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\File\Data\CarouselUpdatePostParamCarouselsData::class)]
     public array $carousels ;
     
 }

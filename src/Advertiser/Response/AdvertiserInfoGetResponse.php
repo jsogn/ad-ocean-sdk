@@ -8,7 +8,6 @@ use AdOceanSdk\Advertiser\Data\AdvertiserInfoGetResponseData;
 use AdOceanSdk\Kernel\Data\Data;
 use AdOceanSdk\Kernel\Interface\ResponseInterface;
 use AdOceanSdk\Kernel\Trait\ResponseTrait;
-use ClassTransformer\Attributes\ConvertArray;
 
 class AdvertiserInfoGetResponse extends Data implements ResponseInterface
 {

@@ -48,7 +48,6 @@ class AdvertiserQualificationGetResponseIndustriesData extends Data
     /**
      * @var array<\AdOceanSdk\Advertiser\Data\AdvertiserQualificationGetResponseIndustriesOthersData> $others 开户资质列表，相关字段见下
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertiser\Data\AdvertiserQualificationGetResponseIndustriesOthersData::class)]
     public array $others;
     
     /**

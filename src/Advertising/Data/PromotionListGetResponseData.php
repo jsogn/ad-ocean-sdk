@@ -13,7 +13,6 @@ class PromotionListGetResponseData extends Data
     /**
      * @var array<\AdOceanSdk\Advertising\Data\PromotionListGetResponseListData> $list 项目列表
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Advertising\Data\PromotionListGetResponseListData::class)]
     public array $list;
     
     /**

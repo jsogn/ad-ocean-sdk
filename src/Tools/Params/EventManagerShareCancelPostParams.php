@@ -27,7 +27,6 @@ class EventManagerShareCancelPostParams extends RequestParams
     /**
      * @var array<\AdOceanSdk\Tools\Data\EventManagerShareCancelPostParamAccountInfosData> $account_infos 取消共享账户信息，一次最多操作10个当share_mode="PART"时必填
      */
-    #[\ClassTransformer\Attributes\ConvertArray(\AdOceanSdk\Tools\Data\EventManagerShareCancelPostParamAccountInfosData::class)]
     public array $account_infos;
     
     /**
