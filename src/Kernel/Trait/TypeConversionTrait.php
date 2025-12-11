@@ -19,14 +19,6 @@ trait TypeConversionTrait
     private static array $docTypeCache = [];
 
     /**
-     * 清除类型缓存（用于调试或强制重新解析）
-     */
-    public static function clearTypeCache(): void
-    {
-        self::$docTypeCache = [];
-    }
-
-    /**
      * 根据属性类型转换值
      */
     protected function convertValue(mixed $value, ReflectionProperty $property): mixed
