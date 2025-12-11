@@ -11,7 +11,9 @@ class OauthAccessTokenGetResponse extends Data implements ResponseInterface
 {
     use ResponseTrait;
 
-    #[ConvertArray(OauthAccessTokenGetData::class)]
+    /**
+     * @var OauthAccessTokenGetData
+     */
     public OauthAccessTokenGetData $data;
 
     public function getData(): OauthAccessTokenGetData

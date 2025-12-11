@@ -14,7 +14,7 @@ trait TypeConversionTrait
 {
     /**
      * 缓存 PHPDoc 解析结果
-     * @var array<string, array<string, string|null>>
+     * @var array<string, string|null>
      */
     private static array $docTypeCache = [];
 
@@ -65,7 +65,7 @@ trait TypeConversionTrait
         }
 
         $elementType = $this->getArrayElementType($property);
-        
+
         if ($elementType === null) {
             return $value;
         }
@@ -103,12 +103,55 @@ trait TypeConversionTrait
                     $elementType = trim($matches[1]);
                     $elementType = ltrim($elementType, '\\');
                 }
+
+                // 解析完整类名（处理相对命名空间）
+                if ($elementType !== null) {
+                    $elementType = $this->resolveClassName($elementType, $property->getDeclaringClass()->getName());
+                }
             }
 
             self::$docTypeCache[$cacheKey] = $elementType;
         }
 
         return self::$docTypeCache[$cacheKey];
+    }
+
+    /**
+     * 解析类名为完全限定名
+     *
+     * @param string $className PHPDoc中的类名
+     * @param string $contextClass 当前类的完全限定名
+     * @return string|null 完全限定类名，如果类不存在返回null
+     */
+    private function resolveClassName(string $className, string $contextClass): ?string
+    {
+        // 如果已经是完全限定名且类存在，直接返回
+        if (class_exists($className)) {
+            return $className;
+        }
+
+        // 尝试在当前类的命名空间中查找
+        $contextNamespace = substr($contextClass, 0, strrpos($contextClass, '\\'));
+        $fullClassName = $contextNamespace . '\\' . $className;
+
+        if (class_exists($fullClassName)) {
+            return $fullClassName;
+        }
+
+        // 尝试逐级向上查找父命名空间
+        $parts = explode('\\', $contextNamespace);
+        while (count($parts) > 0) {
+            array_pop($parts);
+            $parentNamespace = implode('\\', $parts);
+            $fullClassName = $parentNamespace . '\\' . $className;
+
+            if (class_exists($fullClassName)) {
+                return $fullClassName;
+            }
+        }
+
+        // 如果都找不到，返回null
+        return null;
     }
 
     /**

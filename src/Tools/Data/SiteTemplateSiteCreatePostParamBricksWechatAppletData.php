@@ -16,9 +16,9 @@ class SiteTemplateSiteCreatePostParamBricksWechatAppletData extends Data
     public int $instance_id;
     
     /**
-     * @var array[string] $items 标签，个数不超过2，字数不超过5个中文字符
+     * @var array<string> $items 标签，个数不超过2，字数不超过5个中文字符
      */
-    public array[string] $items;
+    public array $items;
     
     /**
      * @var string $introduction 简介，长度不超过40个中文字符

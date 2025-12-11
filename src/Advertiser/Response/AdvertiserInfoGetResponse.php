@@ -17,7 +17,6 @@ class AdvertiserInfoGetResponse extends Data implements ResponseInterface
     /**
      * @var array<AdvertiserInfoGetResponseData> $data json返回值
      */
-    #[ConvertArray(AdvertiserInfoGetResponseData::class)]
     public array $data;
 
 

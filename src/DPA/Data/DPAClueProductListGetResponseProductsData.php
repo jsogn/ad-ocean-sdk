@@ -166,8 +166,8 @@ class DPAClueProductListGetResponseProductsData extends Data
     public array $age;
     
     /**
-     * @var dict[string] $profession 行业特定字段
+     * @var array<string> $profession 行业特定字段
      */
-    public dict[string] $profession;
+    public array $profession;
     
 }

@@ -21,9 +21,9 @@ class SiteTemplateGetResponseListBricksLinkDtoData extends Data
     public string $url;
     
     /**
-     * @var string $ scheme地址，当link_type等于SCHEME时，有值
+     * @var string $scheme scheme地址，当link_type等于SCHEME时，有值
      */
-    public string $;
+    public string $scheme;
     
     /**
      * @var \AdOceanSdk\Tools\Data\SiteTemplateGetResponseListBricksLinkDtoQuickAppData $quick_app 快应用地址，当link_type等于QUICK_APP时，有值
