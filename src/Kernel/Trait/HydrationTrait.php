@@ -75,19 +75,10 @@ trait HydrationTrait
             // 检查属性是否在类中定义
             if (isset($properties[$key])) {
                 $property = $properties[$key];
-
-                try {
-                    // 获取属性类型并转换值
-                    $convertedValue = $this->convertValue($value, $property);
-                    $property->setValue($this, $convertedValue);
-                } catch (\Throwable $e) {
-                    // 转换失败时记录错误，但继续处理其他属性
-                    if (method_exists($this, 'handleConversionError')) {
-                        $this->handleConversionError($key, $value, $e);
-                    }
-                    // 可以选择跳过或使用原始值
-                    $property->setValue($this, $value);
-                }
+                
+                // 获取属性类型并转换值（如果转换失败会抛出异常）
+                $convertedValue = $this->convertValue($value, $property);
+                $property->setValue($this, $convertedValue);
             } else {
                 // 存储到动态属性中
                 if (method_exists($this, 'setDynamicProperty')) {

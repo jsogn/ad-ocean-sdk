@@ -19,15 +19,18 @@ trait TypeConversionTrait
     private static array $docTypeCache = [];
 
     /**
+     * 清除类型缓存（用于调试或强制重新解析）
+     */
+    public static function clearTypeCache(): void
+    {
+        self::$docTypeCache = [];
+    }
+
+    /**
      * 根据属性类型转换值
      */
     protected function convertValue(mixed $value, ReflectionProperty $property): mixed
     {
-        // null直接返回null
-        if ($value === null) {
-            return null;
-        }
-
         $type = $property->getType();
 
         if (!$type instanceof ReflectionNamedType) {
@@ -35,6 +38,33 @@ trait TypeConversionTrait
         }
 
         $typeName = $type->getName();
+
+        // null 值处理
+        if ($value === null) {
+            // 如果类型允许 null，直接返回
+            if ($type->allowsNull()) {
+                return null;
+            }
+
+            // 如果类型不允许 null，根据类型返回默认值或抛出异常
+            if (in_array($typeName, ['int', 'float', 'string', 'bool', 'array'])) {
+                return match ($typeName) {
+                    'int' => 0,
+                    'float' => 0.0,
+                    'string' => '',
+                    'bool' => false,
+                    'array' => [],
+                };
+            }
+
+            // 对象类型不允许 null 时抛出异常
+            throw new \TypeError(sprintf(
+                "Cannot assign null to property %s::\$%s of type %s. Consider adding '?' to make it nullable.",
+                $property->getDeclaringClass()->getName(),
+                $property->getName(),
+                $typeName
+            ));
+        }
 
         // 处理数组类型
         if ($typeName === 'array') {
@@ -125,12 +155,12 @@ trait TypeConversionTrait
     {
         // 规范化类名：移除前导反斜杠用于统一处理
         $normalizedClassName = ltrim($className, '\\');
-        
+
         // 如果是完全限定名（包含命名空间分隔符）且类存在，直接返回
         if (class_exists($normalizedClassName)) {
             return $normalizedClassName;
         }
-        
+
         // 如果原始类名就带反斜杠，说明已经是完全限定名，但类不存在
         if ($className[0] === '\\') {
             return null;
