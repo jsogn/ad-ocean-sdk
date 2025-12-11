@@ -96,12 +96,10 @@ trait TypeConversionTrait
                 // 匹配 @var array<ClassName>
                 if (preg_match('/@var\s+array<([^,>]+)>/', $docComment, $matches)) {
                     $elementType = trim($matches[1]);
-                    $elementType = ltrim($elementType, '\\');
                 }
                 // 匹配 @var ClassName[]
-                elseif (preg_match('/@var\s+\\\\?([^\[\]]+)\[\]/', $docComment, $matches)) {
+                elseif (preg_match('/@var\s+([^\[\]\s]+)\[\]/', $docComment, $matches)) {
                     $elementType = trim($matches[1]);
-                    $elementType = ltrim($elementType, '\\');
                 }
 
                 // 解析完整类名（处理相对命名空间）
@@ -119,20 +117,28 @@ trait TypeConversionTrait
     /**
      * 解析类名为完全限定名
      *
-     * @param string $className PHPDoc中的类名
+     * @param string $className PHPDoc中的类名（可能带或不带前导反斜杠）
      * @param string $contextClass 当前类的完全限定名
      * @return string|null 完全限定类名，如果类不存在返回null
      */
     private function resolveClassName(string $className, string $contextClass): ?string
     {
-        // 如果已经是完全限定名且类存在，直接返回
-        if (class_exists($className)) {
-            return $className;
+        // 规范化类名：移除前导反斜杠用于统一处理
+        $normalizedClassName = ltrim($className, '\\');
+        
+        // 如果是完全限定名（包含命名空间分隔符）且类存在，直接返回
+        if (class_exists($normalizedClassName)) {
+            return $normalizedClassName;
+        }
+        
+        // 如果原始类名就带反斜杠，说明已经是完全限定名，但类不存在
+        if ($className[0] === '\\') {
+            return null;
         }
 
         // 尝试在当前类的命名空间中查找
         $contextNamespace = substr($contextClass, 0, strrpos($contextClass, '\\'));
-        $fullClassName = $contextNamespace . '\\' . $className;
+        $fullClassName = $contextNamespace . '\\' . $normalizedClassName;
 
         if (class_exists($fullClassName)) {
             return $fullClassName;
@@ -143,7 +149,7 @@ trait TypeConversionTrait
         while (count($parts) > 0) {
             array_pop($parts);
             $parentNamespace = implode('\\', $parts);
-            $fullClassName = $parentNamespace . '\\' . $className;
+            $fullClassName = $parentNamespace . '\\' . $normalizedClassName;
 
             if (class_exists($fullClassName)) {
                 return $fullClassName;
