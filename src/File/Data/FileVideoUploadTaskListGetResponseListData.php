@@ -31,7 +31,7 @@ class FileVideoUploadTaskListGetResponseListData extends Data
     public int $task_id;
     
     /**
-     * @var ?\AdOceanSdk\File\Data\FileVideoUploadTaskListGetResponseListVideoInfoData $video_info 视频素材信息
+     * @var \AdOceanSdk\File\Data\FileVideoUploadTaskListGetResponseListVideoInfoData|null $video_info 视频素材信息
      */
     public ?\AdOceanSdk\File\Data\FileVideoUploadTaskListGetResponseListVideoInfoData $video_info;
     
