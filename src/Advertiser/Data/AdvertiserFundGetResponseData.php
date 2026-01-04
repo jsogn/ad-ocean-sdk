@@ -111,18 +111,18 @@ class AdvertiserFundGetResponseData extends Data
     public int $compensation_valid_grant;
     
     /**
-     * @var string $wallet_id 钱包id（广告主账户绑定的共享子钱包id）
+     * @var ?string $wallet_id 钱包id（广告主账户绑定的共享子钱包id）
      */
-    public string $wallet_id;
+    public ?string $wallet_id;
     
     /**
-     * @var string $wallet_name 钱包名称（广告主账户绑定的共享子钱包名称）
+     * @var ?string $wallet_name 钱包名称（广告主账户绑定的共享子钱包名称）
      */
-    public string $wallet_name;
+    public ?string $wallet_name;
     
     /**
-     * @var int $wallet_total_balance_valid 账户绑定的子钱包的可用共享余额（单位元）
+     * @var ?int $wallet_total_balance_valid 账户绑定的子钱包的可用共享余额（单位元）
      */
-    public int $wallet_total_balance_valid;
+    public ?int $wallet_total_balance_valid;
     
 }
