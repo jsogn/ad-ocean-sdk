@@ -107,8 +107,8 @@ title = title_tag.text.strip()
 print(title)
 # 提取请求地址
 address_tag = soup.find(text="请求地址")
-# 获取紧随其后的 a 标签的 href 属性值
-request_url = address_tag.find_next('a')['href']
+# 获取紧随其后的 a 标签的文本内容（即实际的 API URL）
+request_url = address_tag.find_next('a').text.strip()
 
 # 提取请求方式
 request_tag = soup.find(text="请求方法") or soup.find(text="请求方式")

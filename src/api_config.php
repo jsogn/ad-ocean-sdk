@@ -1729,6 +1729,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsQuotaGetResponse::class,
     ],
     /**
+    * @desc 获取字节小程序列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1847487562418308?origin=left_nav
+    **/
+    'openToolsEbpMicroAppletListGetApi' => [
+        'desc' => '获取字节小程序列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1847487562418308?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpMicroAppletListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpMicroAppletListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpMicroAppletListGetResponse::class,
+    ],
+    /**
     * @desc 获取抖音授权关系
     * @doc  https://open.oceanengine.com/labels/7/docs/1729983667746823
     **/
