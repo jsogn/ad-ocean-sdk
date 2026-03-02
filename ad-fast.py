@@ -106,11 +106,14 @@ title = title_tag.text.strip()
 print(title)
 # 提取请求地址
 address_tag = soup.find(id='link-0')
-# 获取紧随其后的 a 标签的文本内容（即实际的 API URL）
-request_url = address_tag.find_next('a').text.strip()
+# 获取紧随其后的 p 标签，提取其直接文本内容（即 API URL，排除 <a> 标签中的文本如"可视化调试"）
+p_tag = address_tag.find_next('p')
+for a_tag in p_tag.find_all('a'):
+    a_tag.extract()
+request_url = p_tag.text.strip()
 
 # 提取请求方式
-request_tag = soup.find(text="请求方法") or soup.find(text="请求方式")
+request_tag = soup.find(string="请求方法") or soup.find(string="请求方式")
 request_method = request_tag.find_next('p').find('strong')
 
 if (request_method is None):
@@ -135,7 +138,7 @@ tags = [
 # 初始化 request_params
 request_params = {}
 for tag in tags:
-    params_table_tag = soup.find(text=tag)
+    params_table_tag = soup.find(string=tag)
     if params_table_tag is not None:
         params_table = params_table_tag.find_next(class_='table-container') and params_table_tag.find_next(class_='table-container').find('table')
         if params_table is not None:
@@ -153,10 +156,10 @@ for tag in tags:
 
 # 提取应答参数
 response_params = {}
-params_table_tag = soup.find(text='应答字段')
+params_table_tag = soup.find(string='应答字段')
 
 if params_table_tag is None:
-    params_table_tag = soup.find(text='应答参数')
+    params_table_tag = soup.find(string='应答参数')
 
 params_table = params_table_tag.find_next(class_='table-container') and params_table_tag.find_next(class_='table-container').find('table')
 if params_table is not None:

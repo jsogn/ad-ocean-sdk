@@ -241,11 +241,16 @@ function generatePhpType(string $type): string
     if (str_ends_with($type, '[]')) {
         return 'array';
     }
+    // 处理含 [ 的类型如 dict[string]、map[string] 等，统一映射为 array
+    if (str_contains($type, '[')) {
+        return 'array';
+    }
     $typeMapping = [
         'list'     => 'array',
         'number'   => 'int',
         'double'   => 'float',
-        'object[]' => 'array',
+        'dict'     => 'array',
+        'map'      => 'array',
     ];
 
     return $typeMapping[$type] ?? $type;
