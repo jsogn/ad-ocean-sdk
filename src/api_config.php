@@ -794,6 +794,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPADetailGetGetResponse::class,
     ],
     /**
+    * @desc 删除通用版商品
+    * @doc  https://open.oceanengine.com/labels/7/docs/1846200772027529?origin=left_nav
+    **/
+    'openDpaEbpProductDeletePostApi' => [
+        'desc' => '删除通用版商品',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1846200772027529?origin=left_nav',
+        'call' => AdOceanSdk\DPA\Api\DpaEbpProductDeletePostApi::class,
+        'params' => AdOceanSdk\DPA\Params\DpaEbpProductDeletePostParams::class,
+        'response' => AdOceanSdk\DPA\Response\DpaEbpProductDeletePostResponse::class,
+    ],
+    /**
     * @desc 获取升级版商品列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1846200582278283?origin=left_nav
     **/
