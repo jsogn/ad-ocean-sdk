@@ -1872,6 +1872,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\EventManagerTrackUrlGetResponse::class,
     ],
     /**
+    * @desc 获取微信小程序列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1847487716271104?origin=left_nav
+    **/
+    'openToolsEbpWechatAppletListGetApi' => [
+        'desc' => '获取微信小程序列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1847487716271104?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpWechatAppletListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpWechatAppletListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpWechatAppletListGetResponse::class,
+    ],
+    /**
     * @desc 创建橙子建站站点
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710617712640
     **/
