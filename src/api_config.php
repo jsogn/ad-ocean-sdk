@@ -1806,6 +1806,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\EventManagerTrackUrlCreatePostResponse::class,
     ],
     /**
+    * @desc 升级版工作台查询素材共享范围
+    * @doc  https://open.oceanengine.com/labels/7/docs/1855451294366919?origin=left_nav
+    **/
+    'openToolsEbpMaterialAuthListGetApi' => [
+        'desc' => '升级版工作台查询素材共享范围',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1855451294366919?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpMaterialAuthListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpMaterialAuthListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpMaterialAuthListGetResponse::class,
+    ],
+    /**
     * @desc 查看微信小游戏/小程序共享范围
     * @doc  https://open.oceanengine.com/labels/7/docs/1773105971421187
     **/
