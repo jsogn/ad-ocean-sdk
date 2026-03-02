@@ -2499,6 +2499,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\EventManagerDeepBidTypeGetResponse::class,
     ],
     /**
+    * @desc 新建微信小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1847487724040192?origin=left_nav
+    **/
+    'openToolsEbpWechatAppletCreatePostApi' => [
+        'desc' => '新建微信小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1847487724040192?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpWechatAppletCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpWechatAppletCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpWechatAppletCreatePostResponse::class,
+    ],
+    /**
     * @desc 创建字节小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1780613896121344
     **/
