@@ -2070,6 +2070,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsWechatAppletCreatePostResponse::class,
     ],
     /**
+    * @desc 升级版工作台更新视频
+    * @doc  https://open.oceanengine.com/labels/7/docs/1855449500037184?origin=left_nav
+    **/
+    'openToolsEbpVideoUpdatePostApi' => [
+        'desc' => '升级版工作台更新视频',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1855449500037184?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpVideoUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpVideoUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpVideoUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点详细信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710620022799
     **/
