@@ -243,6 +243,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Tools\Response\EventManagerShareCancelPostResponse openEventManagerShareCancelPostApi(\AdOceanSdk\Tools\Params\EventManagerShareCancelPostParams|array $params) 事件管理资产取消共享 https://open.oceanengine.com/labels/7/docs/1738862469146628
  * @method \AdOceanSdk\Tools\Response\ToolsPromotionRaiseStopPostResponse openToolsPromotionRaiseStopPostApi(\AdOceanSdk\Tools\Params\ToolsPromotionRaiseStopPostParams|array $params) 关停正在起量的广告 https://open.oceanengine.com/labels/7/docs/1761603666011139
  * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse openToolsLandingGroupSiteOptStatusUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupSiteOptStatusUpdatePostParams|array $params) 更新落地页组站点状态 https://open.oceanengine.com/labels/7/docs/1696710629600256
+ * @method \AdOceanSdk\Tools\Response\ToolsEbpMicroAppletLinkListGetResponse openToolsEbpMicroAppletLinkListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpMicroAppletLinkListGetParams|array $params) 获取字节小程序link详情 https://open.oceanengine.com/labels/7/docs/1847487745198092?origin=left_nav
  * @method \AdOceanSdk\Tools\Response\ToolsActionTextGetResponse openToolsActionTextGetApi(\AdOceanSdk\Tools\Params\ToolsActionTextGetParams|array $params) 行动号召字段内容获取 https://open.oceanengine.com/labels/7/docs/1696710684229644
  */
 class OpenApi

@@ -2598,6 +2598,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse::class,
     ],
     /**
+    * @desc 获取字节小程序link详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1847487745198092?origin=left_nav
+    **/
+    'openToolsEbpMicroAppletLinkListGetApi' => [
+        'desc' => '获取字节小程序link详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1847487745198092?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpMicroAppletLinkListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpMicroAppletLinkListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpMicroAppletLinkListGetResponse::class,
+    ],
+    /**
     * @desc 行动号召字段内容获取
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710684229644
     **/
