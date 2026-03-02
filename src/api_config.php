@@ -2158,6 +2158,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\EventManagerAssetsCreatePostResponse::class,
     ],
     /**
+    * @desc 升级版工作台批量删除视频
+    * @doc  https://open.oceanengine.com/labels/7/docs/1855450454372428?origin=left_nav
+    **/
+    'openToolsEbpVideoDeletePostApi' => [
+        'desc' => '升级版工作台批量删除视频',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1855450454372428?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpVideoDeletePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpVideoDeletePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpVideoDeletePostResponse::class,
+    ],
+    /**
     * @desc 回复评论
     * @doc  https://open.oceanengine.com/labels/7/docs/1754803971592192
     **/

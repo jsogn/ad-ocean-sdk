@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python ./fast.py https://open.oceanengine.com/labels/7/docs/1855449500037184?origin=left_nav Tools/ToolsEbpVideoUpdate
+python ./fast.py https://open.oceanengine.com/labels/7/docs/1855450454372428?origin=left_nav Tools/ToolsEbpVideoDelete
