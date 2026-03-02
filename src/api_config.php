@@ -2488,6 +2488,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsPromotionRaiseStatusCurrentIdsGetResponse::class,
     ],
     /**
+    * @desc 升级版工作台素材共享
+    * @doc  https://open.oceanengine.com/labels/7/docs/1854120947746880?origin=left_nav
+    **/
+    'openToolsEbpMaterialAuthCreatePostApi' => [
+        'desc' => '升级版工作台素材共享',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1854120947746880?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpMaterialAuthCreatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpMaterialAuthCreatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpMaterialAuthCreatePostResponse::class,
+    ],
+    /**
     * @desc 删除原生锚点
     * @doc  https://open.oceanengine.com/labels/7/docs/1780079261760524
     **/
