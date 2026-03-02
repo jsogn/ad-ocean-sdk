@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class ToolsEbpMicroGameLinkListGetApi extends RequestApi
 {
-    protected string $address = 'tools/visual_debug.html?docId=1847487751501836';
+    protected string $address = 'open_api/v3.0/tools/ebp/micro_game/link/list/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::GET;
 
