@@ -2477,6 +2477,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsMicroAppUpdatePostResponse::class,
     ],
     /**
+    * @desc 更新字节小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1847487541689347?origin=left_nav
+    **/
+    'openToolsEbpMicroAppletUpdatePostApi' => [
+        'desc' => '更新字节小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1847487541689347?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpMicroAppletUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpMicroAppletUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpMicroAppletUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取可用深度优化方式（广告投放升级版）
     * @doc  https://open.oceanengine.com/labels/7/docs/1754875889727563
     **/
