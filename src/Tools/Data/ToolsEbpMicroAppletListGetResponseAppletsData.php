@@ -56,9 +56,9 @@ class ToolsEbpMicroAppletListGetResponseAppletsData extends Data
     public bool $category_limit_flag;
 
     /**
-     * @var dict[string] $data 小程序其他字段信息
+     * @var array $data 小程序其他字段信息
      */
-    public dict[string] $data;
+    public array $data;
 
     /**
      * @var bool $is_ebp_asset 是否升级版巨量引擎工作台资产
