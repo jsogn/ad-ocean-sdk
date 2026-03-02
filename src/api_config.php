@@ -2499,6 +2499,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsEbpMicroAppletUpdatePostResponse::class,
     ],
     /**
+    * @desc 更新微信小程序
+    * @doc  https://open.oceanengine.com/labels/7/docs/1847487757321420?origin=left_nav
+    **/
+    'openToolsEbpWechatAppletUpdatePostApi' => [
+        'desc' => '更新微信小程序',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1847487757321420?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpWechatAppletUpdatePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpWechatAppletUpdatePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpWechatAppletUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取可用深度优化方式（广告投放升级版）
     * @doc  https://open.oceanengine.com/labels/7/docs/1754875889727563
     **/
