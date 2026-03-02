@@ -2092,6 +2092,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsEbpVideoUpdatePostResponse::class,
     ],
     /**
+    * @desc 升级版工作台获取视频素材评估标签
+    * @doc  https://open.oceanengine.com/labels/7/docs/1855453250877440?origin=left_nav
+    **/
+    'openToolsEbpVideoAttributesListGetApi' => [
+        'desc' => '升级版工作台获取视频素材评估标签',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1855453250877440?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpVideoAttributesListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpVideoAttributesListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpVideoAttributesListGetResponse::class,
+    ],
+    /**
     * @desc 获取橙子建站站点详细信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710620022799
     **/
