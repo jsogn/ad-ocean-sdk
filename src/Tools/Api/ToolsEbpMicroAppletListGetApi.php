@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class ToolsEbpMicroAppletListGetApi extends RequestApi
 {
-    protected string $address = '可视化调试';
+    protected string $address = 'open_api/v3.0/tools/ebp/micro_applet/list/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::GET;
 
