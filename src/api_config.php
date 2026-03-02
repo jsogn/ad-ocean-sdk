@@ -959,6 +959,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPAProductDeletePostResponse::class,
     ],
     /**
+    * @desc 查询短剧商品原片授权申请状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1846199438930378?origin=left_nav
+    **/
+    'openDpaEbpPlayletAuthGetGetApi' => [
+        'desc' => '查询短剧商品原片授权申请状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1846199438930378?origin=left_nav',
+        'call' => AdOceanSdk\DPA\Api\DpaEbpPlayletAuthGetGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DpaEbpPlayletAuthGetGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DpaEbpPlayletAuthGetGetResponse::class,
+    ],
+    /**
     * @desc 获取商品库DPA分类
     * @doc  https://open.oceanengine.com/labels/7/docs/1846200236566720?origin=left_nav
     **/
