@@ -904,6 +904,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DpaEbpProductStatusBatchUpdatePostResponse::class,
     ],
     /**
+    * @desc 删除升级版商品
+    * @doc  https://open.oceanengine.com/labels/7/docs/1846200682152971?origin=left_nav
+    **/
+    'openDpaEbpClueProductDeletePostApi' => [
+        'desc' => '删除升级版商品',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1846200682152971?origin=left_nav',
+        'call' => AdOceanSdk\DPA\Api\DpaEbpClueProductDeletePostApi::class,
+        'params' => AdOceanSdk\DPA\Params\DpaEbpClueProductDeletePostParams::class,
+        'response' => AdOceanSdk\DPA\Response\DpaEbpClueProductDeletePostResponse::class,
+    ],
+    /**
     * @desc 升级版组织-创建/编辑升级版商品
     * @doc  https://open.oceanengine.com/labels/7/docs/1846200828633995?origin=left_nav
     **/
