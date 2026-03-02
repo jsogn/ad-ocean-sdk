@@ -805,6 +805,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPAClueProductDetailGetResponse::class,
     ],
     /**
+    * @desc 获取通用版商品详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1846200441152906?origin=left_nav
+    **/
+    'openDpaEbpProductDetailGetGetApi' => [
+        'desc' => '获取通用版商品详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1846200441152906?origin=left_nav',
+        'call' => AdOceanSdk\DPA\Api\DpaEbpProductDetailGetGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DpaEbpProductDetailGetGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DpaEbpProductDetailGetGetResponse::class,
+    ],
+    /**
     * @desc 创建DPA商品（已有商品id）/修改DPA商品
     * @doc  https://open.oceanengine.com/labels/7/docs/1726081566816271
     **/
