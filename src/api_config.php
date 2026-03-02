@@ -893,6 +893,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DpaEbpProductStatusBatchUpdatePostResponse::class,
     ],
     /**
+    * @desc 升级版组织-创建/编辑升级版商品
+    * @doc  https://open.oceanengine.com/labels/7/docs/1846200828633995?origin=left_nav
+    **/
+    'openDpaEbpClueProductSavePostApi' => [
+        'desc' => '升级版组织-创建/编辑升级版商品',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1846200828633995?origin=left_nav',
+        'call' => AdOceanSdk\DPA\Api\DpaEbpClueProductSavePostApi::class,
+        'params' => AdOceanSdk\DPA\Params\DpaEbpClueProductSavePostParams::class,
+        'response' => AdOceanSdk\DPA\Response\DpaEbpClueProductSavePostResponse::class,
+    ],
+    /**
     * @desc 创建DPA商品（已有商品id）/修改DPA商品
     * @doc  https://open.oceanengine.com/labels/7/docs/1726081566816271
     **/
