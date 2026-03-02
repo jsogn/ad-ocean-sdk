@@ -2499,6 +2499,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\NativeAnchorCreatePostResponse::class,
     ],
     /**
+    * @desc 升级版工作台取消素材共享
+    * @doc  https://open.oceanengine.com/labels/7/docs/1855452458903624?origin=left_nav
+    **/
+    'openToolsEbpMaterialAuthDeletePostApi' => [
+        'desc' => '升级版工作台取消素材共享',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1855452458903624?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpMaterialAuthDeletePostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpMaterialAuthDeletePostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpMaterialAuthDeletePostResponse::class,
+    ],
+    /**
     * @desc 获取广告起量状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1765406483367948
     **/
