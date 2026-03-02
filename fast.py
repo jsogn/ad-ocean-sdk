@@ -6,9 +6,11 @@ import requests
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 import sys
 import os
@@ -29,7 +31,7 @@ def get_html_content(url):
     try:
         options = Options()
         options.headless = True  # 无头模式，不弹出浏览器窗口
-        driver = webdriver.Chrome(options=options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
         driver.get(url)
         wait = WebDriverWait(driver, 10)
@@ -98,7 +100,10 @@ html = get_html_content(sys.argv[1])
 # 使用BeautifulSoup解析HTML
 soup = BeautifulSoup(html, 'html.parser')
 
-title = soup.find(class_='qz-editor-render-title').text.strip()
+title_tag = soup.find('h1') or soup.find(class_='qz-editor-render-title')
+if title_tag is None:
+    exit('无法找到页面标题，页面结构可能已变化')
+title = title_tag.text.strip()
 print(title)
 # 提取请求地址
 address_tag = soup.find(text="请求地址")

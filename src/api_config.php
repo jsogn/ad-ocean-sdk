@@ -1685,6 +1685,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsCountryInfoGetResponse::class,
     ],
     /**
+    * @desc 获取字节小游戏链接详情
+    * @doc  https://open.oceanengine.com/labels/7/docs/1847487751501836?origin=left_nav
+    **/
+    'openToolsEbpMicroGameLinkListGetApi' => [
+        'desc' => '获取字节小游戏链接详情',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1847487751501836?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpMicroGameLinkListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpMicroGameLinkListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpMicroGameLinkListGetResponse::class,
+    ],
+    /**
     * @desc 获取模版预览链接
     * @doc  https://open.oceanengine.com/labels/7/docs/1722273233146891
     **/
