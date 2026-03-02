@@ -794,6 +794,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DPADetailGetGetResponse::class,
     ],
     /**
+    * @desc 获取商品库列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1846200555058186?origin=left_nav
+    **/
+    'openDpaEbpLibraryListGetApi' => [
+        'desc' => '获取商品库列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1846200555058186?origin=left_nav',
+        'call' => AdOceanSdk\DPA\Api\DpaEbpLibraryListGetApi::class,
+        'params' => AdOceanSdk\DPA\Params\DpaEbpLibraryListGetParams::class,
+        'response' => AdOceanSdk\DPA\Response\DpaEbpLibraryListGetResponse::class,
+    ],
+    /**
     * @desc 获取线索商品详情
     * @doc  https://open.oceanengine.com/labels/7/docs/1779436000953415
     **/
