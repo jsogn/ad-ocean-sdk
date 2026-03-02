@@ -827,6 +827,17 @@ return [
         'response' => AdOceanSdk\DPA\Response\DpaEbpProductCreatePostResponse::class,
     ],
     /**
+    * @desc 升级版组织-编辑通用版商品
+    * @doc  https://open.oceanengine.com/labels/7/docs/1846200800780617?origin=left_nav
+    **/
+    'openDpaEbpProductUpdatePostApi' => [
+        'desc' => '升级版组织-编辑通用版商品',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1846200800780617?origin=left_nav',
+        'call' => AdOceanSdk\DPA\Api\DpaEbpProductUpdatePostApi::class,
+        'params' => AdOceanSdk\DPA\Params\DpaEbpProductUpdatePostParams::class,
+        'response' => AdOceanSdk\DPA\Response\DpaEbpProductUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取商品库列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1846200555058186?origin=left_nav
     **/
