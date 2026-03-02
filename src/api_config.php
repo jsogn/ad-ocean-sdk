@@ -2246,6 +2246,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsCreativeWordSelectGetResponse::class,
     ],
     /**
+    * @desc 升级版工作台上传视频
+    * @doc  https://open.oceanengine.com/labels/7/docs/1855448450527623?origin=left_nav
+    **/
+    'openToolsEbpVideoUploadPostApi' => [
+        'desc' => '升级版工作台上传视频',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1855448450527623?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpVideoUploadPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpVideoUploadPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpVideoUploadPostResponse::class,
+    ],
+    /**
     * @desc 更新落地页组信息
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710630182912
     **/
