@@ -66,9 +66,9 @@ class ToolsEbpWechatAppletListGetResponseAppletsData extends Data
     public \AdOceanSdk\Tools\Data\ToolsEbpWechatAppletListGetResponseAppletsIconData $icon;
 
     /**
-     * @var \AdOceanSdk\Tools\Data\ToolsEbpWechatAppletListGetResponseAppletsHeadData $head 头图
+     * @var \AdOceanSdk\Tools\Data\ToolsEbpWechatAppletListGetResponseAppletsHeadData|null $head 头图
      */
-    public \AdOceanSdk\Tools\Data\ToolsEbpWechatAppletListGetResponseAppletsHeadData $head;
+    public ?\AdOceanSdk\Tools\Data\ToolsEbpWechatAppletListGetResponseAppletsHeadData $head;
 
     /**
      * @var array<string> $label 标签 最多6个
