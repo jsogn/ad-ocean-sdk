@@ -51,14 +51,14 @@ class ToolsEbpMicroAppletLinkListGetResponseLinksData extends Data
     public string $icon;
 
     /**
-     * @var int $create_time 资产创建时间
+     * @var string $create_time 资产创建时间
      */
-    public int $create_time;
+    public string $create_time;
 
     /**
-     * @var int $modify_time 资产最后一次修改时间
+     * @var string $modify_time 资产最后一次修改时间
      */
-    public int $modify_time;
+    public string $modify_time;
 
     /**
      * @var string $thumbnail 
