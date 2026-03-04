@@ -2950,6 +2950,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsActionTextGetResponse::class,
     ],
     /**
+    * @desc 获取升级版巨量引擎工作台下账户列表
+    * @doc  https://open.oceanengine.com/labels/7/docs/1829550825614739?origin=left_nav
+    **/
+    'openEbpAdvertiserListGetApi' => [
+        'desc' => '获取升级版巨量引擎工作台下账户列表',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1829550825614739?origin=left_nav',
+        'call' => AdOceanSdk\EBP\Api\EbpAdvertiserListGetApi::class,
+        'params' => AdOceanSdk\EBP\Params\EbpAdvertiserListGetParams::class,
+        'response' => AdOceanSdk\EBP\Response\EbpAdvertiserListGetResponse::class,
+    ],
+    /**
     * @desc 获取工作台组织关系（升级版）
     * @doc  https://open.oceanengine.com/labels/7/docs/1829551362400384?origin=left_nav
     **/
