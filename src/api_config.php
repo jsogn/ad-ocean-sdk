@@ -2950,6 +2950,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsActionTextGetResponse::class,
     ],
     /**
+    * @desc 下载获取升级版巨量引擎工作台账户任务结果
+    * @doc  https://open.oceanengine.com/labels/7/docs/1829552986209882?origin=left_nav
+    **/
+    'openEbpAdvertiserTaskDownloadGetApi' => [
+        'desc' => '下载获取升级版巨量引擎工作台账户任务结果',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1829552986209882?origin=left_nav',
+        'call' => AdOceanSdk\EBP\Api\EbpAdvertiserTaskDownloadGetApi::class,
+        'params' => AdOceanSdk\EBP\Params\EbpAdvertiserTaskDownloadGetParams::class,
+        'response' => AdOceanSdk\EBP\Response\EbpAdvertiserTaskDownloadGetResponse::class,
+    ],
+    /**
     * @desc 获取升级版巨量引擎工作台下账户列表
     * @doc  https://open.oceanengine.com/labels/7/docs/1829550825614739?origin=left_nav
     **/
