@@ -2400,6 +2400,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\AudiencePackageDeletePostResponse::class,
     ],
     /**
+    * @desc 添加资产共享
+    * @doc  https://open.oceanengine.com/labels/7/docs/1848327327721671?origin=left_nav
+    **/
+    'openToolsEbpAssetAuthPostApi' => [
+        'desc' => '添加资产共享',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1848327327721671?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpAssetAuthPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpAssetAuthPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpAssetAuthPostResponse::class,
+    ],
+    /**
     * @desc 获取活动记录
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710632392704
     **/

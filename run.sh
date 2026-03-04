@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python ./fast.py https://open.oceanengine.com/labels/7/docs/1855452458903624?origin=left_nav Tools/ToolsEbpMaterialAuthDelete
+python ./fast.py https://open.oceanengine.com/labels/7/docs/1848327327721671?origin=left_nav Tools/ToolsEbpAssetAuth
