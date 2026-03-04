@@ -2521,6 +2521,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsEbpMaterialAuthDeletePostResponse::class,
     ],
     /**
+    * @desc 查询资产共享范围
+    * @doc  https://open.oceanengine.com/labels/7/docs/1848326390305163?origin=left_nav
+    **/
+    'openToolsEbpAssetAuthListGetApi' => [
+        'desc' => '查询资产共享范围',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1848326390305163?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpAssetAuthListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpAssetAuthListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpAssetAuthListGetResponse::class,
+    ],
+    /**
     * @desc 获取广告起量状态
     * @doc  https://open.oceanengine.com/labels/7/docs/1765406483367948
     **/
