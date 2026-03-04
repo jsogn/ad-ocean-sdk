@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class EbpLevelGetGetApi extends RequestApi
 {
-    protected string $address = '';
+    protected string $address = 'open_api/2/ebp/level/get/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::GET;
 

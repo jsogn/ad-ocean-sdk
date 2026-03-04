@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class EbpAdvertiserTaskListGetApi extends RequestApi
 {
-    protected string $address = '';
+    protected string $address = 'open_api/2/ebp/advertiser/task/list/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::GET;
 

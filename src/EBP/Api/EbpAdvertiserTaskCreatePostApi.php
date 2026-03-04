@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class EbpAdvertiserTaskCreatePostApi extends RequestApi
 {
-    protected string $address = '';
+    protected string $address = 'open_api/2/ebp/advertiser/task/create/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::POST;
 
