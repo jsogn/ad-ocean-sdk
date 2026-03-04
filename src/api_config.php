@@ -2961,6 +2961,17 @@ return [
         'response' => AdOceanSdk\EBP\Response\EbpAdvertiserListGetResponse::class,
     ],
     /**
+    * @desc 查询获取工作台组织账户任务状态
+    * @doc  https://open.oceanengine.com/labels/7/docs/1829552777525449?origin=left_nav
+    **/
+    'openEbpAdvertiserTaskListGetApi' => [
+        'desc' => '查询获取工作台组织账户任务状态',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1829552777525449?origin=left_nav',
+        'call' => AdOceanSdk\EBP\Api\EbpAdvertiserTaskListGetApi::class,
+        'params' => AdOceanSdk\EBP\Params\EbpAdvertiserTaskListGetParams::class,
+        'response' => AdOceanSdk\EBP\Response\EbpAdvertiserTaskListGetResponse::class,
+    ],
+    /**
     * @desc 获取工作台组织关系（升级版）
     * @doc  https://open.oceanengine.com/labels/7/docs/1829551362400384?origin=left_nav
     **/
