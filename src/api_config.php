@@ -2971,4 +2971,15 @@ return [
         'params' => AdOceanSdk\EBP\Params\EbpLevelGetGetParams::class,
         'response' => AdOceanSdk\EBP\Response\EbpLevelGetGetResponse::class,
     ],
+    /**
+    * @desc 创建获取升级版巨量引擎工作台账户任务
+    * @doc  https://open.oceanengine.com/labels/7/docs/1829552494525707?origin=left_nav
+    **/
+    'openEbpAdvertiserTaskCreatePostApi' => [
+        'desc' => '创建获取升级版巨量引擎工作台账户任务',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1829552494525707?origin=left_nav',
+        'call' => AdOceanSdk\EBP\Api\EbpAdvertiserTaskCreatePostApi::class,
+        'params' => AdOceanSdk\EBP\Params\EbpAdvertiserTaskCreatePostParams::class,
+        'response' => AdOceanSdk\EBP\Response\EbpAdvertiserTaskCreatePostResponse::class,
+    ],
 ];

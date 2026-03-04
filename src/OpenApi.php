@@ -277,6 +277,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Tools\Response\ToolsActionTextGetResponse openToolsActionTextGetApi(\AdOceanSdk\Tools\Params\ToolsActionTextGetParams|array $params) 行动号召字段内容获取 https://open.oceanengine.com/labels/7/docs/1696710684229644
  * @method \AdOceanSdk\EBP\Response\EbpAdvertiserListGetResponse openEbpAdvertiserListGetApi(\AdOceanSdk\EBP\Params\EbpAdvertiserListGetParams|array $params) 获取升级版巨量引擎工作台下账户列表 https://open.oceanengine.com/labels/7/docs/1829550825614739?origin=left_nav
  * @method \AdOceanSdk\EBP\Response\EbpLevelGetGetResponse openEbpLevelGetGetApi(\AdOceanSdk\EBP\Params\EbpLevelGetGetParams|array $params) 获取工作台组织关系（升级版） https://open.oceanengine.com/labels/7/docs/1829551362400384?origin=left_nav
+ * @method \AdOceanSdk\EBP\Response\EbpAdvertiserTaskCreatePostResponse openEbpAdvertiserTaskCreatePostApi(\AdOceanSdk\EBP\Params\EbpAdvertiserTaskCreatePostParams|array $params) 创建获取升级版巨量引擎工作台账户任务 https://open.oceanengine.com/labels/7/docs/1829552494525707?origin=left_nav
  */
 class OpenApi
 {
