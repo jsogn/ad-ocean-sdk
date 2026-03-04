@@ -2796,6 +2796,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsMicroAppCreatePostResponse::class,
     ],
     /**
+    * @desc 取消资产共享
+    * @doc  https://open.oceanengine.com/labels/7/docs/1848328204842138?origin=left_nav
+    **/
+    'openToolsEbpAssetAuthCancelPostApi' => [
+        'desc' => '取消资产共享',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1848328204842138?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpAssetAuthCancelPostApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpAssetAuthCancelPostParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpAssetAuthCancelPostResponse::class,
+    ],
+    /**
     * @desc 新建字节小程序
     * @doc  https://open.oceanengine.com/labels/7/docs/1847487532455299?origin=left_nav
     **/
