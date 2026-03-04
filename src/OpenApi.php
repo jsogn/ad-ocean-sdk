@@ -275,6 +275,7 @@ use AdOceanSdk\Kernel\Interface\RequestClientInterface;
  * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse openToolsLandingGroupSiteOptStatusUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupSiteOptStatusUpdatePostParams|array $params) 更新落地页组站点状态 https://open.oceanengine.com/labels/7/docs/1696710629600256
  * @method \AdOceanSdk\Tools\Response\ToolsEbpMicroAppletLinkListGetResponse openToolsEbpMicroAppletLinkListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpMicroAppletLinkListGetParams|array $params) 获取字节小程序link详情 https://open.oceanengine.com/labels/7/docs/1847487745198092?origin=left_nav
  * @method \AdOceanSdk\Tools\Response\ToolsActionTextGetResponse openToolsActionTextGetApi(\AdOceanSdk\Tools\Params\ToolsActionTextGetParams|array $params) 行动号召字段内容获取 https://open.oceanengine.com/labels/7/docs/1696710684229644
+ * @method \AdOceanSdk\EBP\Response\EbpLevelGetGetResponse openEbpLevelGetGetApi(\AdOceanSdk\EBP\Params\EbpLevelGetGetParams|array $params) 获取工作台组织关系（升级版） https://open.oceanengine.com/labels/7/docs/1829551362400384?origin=left_nav
  */
 class OpenApi
 {

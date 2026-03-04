@@ -2949,4 +2949,15 @@ return [
         'params' => AdOceanSdk\Tools\Params\ToolsActionTextGetParams::class,
         'response' => AdOceanSdk\Tools\Response\ToolsActionTextGetResponse::class,
     ],
+    /**
+    * @desc 获取工作台组织关系（升级版）
+    * @doc  https://open.oceanengine.com/labels/7/docs/1829551362400384?origin=left_nav
+    **/
+    'openEbpLevelGetGetApi' => [
+        'desc' => '获取工作台组织关系（升级版）',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1829551362400384?origin=left_nav',
+        'call' => AdOceanSdk\EBP\Api\EbpLevelGetGetApi::class,
+        'params' => AdOceanSdk\EBP\Params\EbpLevelGetGetParams::class,
+        'response' => AdOceanSdk\EBP\Response\EbpLevelGetGetResponse::class,
+    ],
 ];
