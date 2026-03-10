@@ -1993,6 +1993,17 @@ return [
         'response' => AdOceanSdk\Tools\Response\ToolsEventAssetsGetResponse::class,
     ],
     /**
+    * @desc 获取组织认证及授权主体列表NEW
+    * @doc  https://open.oceanengine.com/labels/7/docs/1855089467521035?origin=left_nav
+    **/
+    'openToolsEbpSubjectListGetApi' => [
+        'desc' => '获取组织认证及授权主体列表NEW',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1855089467521035?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\ToolsEbpSubjectListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\ToolsEbpSubjectListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\ToolsEbpSubjectListGetResponse::class,
+    ],
+    /**
     * @desc 获取模板/站点URL
     * @doc  https://open.oceanengine.com/labels/7/docs/1772995231995911
     **/
