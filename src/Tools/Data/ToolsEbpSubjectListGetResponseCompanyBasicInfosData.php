@@ -36,8 +36,8 @@ class ToolsEbpSubjectListGetResponseCompanyBasicInfosData extends Data
     public \AdOceanSdk\Tools\Data\ToolsEbpSubjectListGetResponseCompanyBasicInfosCompanyBasicInfoData $company_basic_info;
 
     /**
-     * @var \AdOceanSdk\Tools\Data\ToolsEbpSubjectListGetResponseCompanyBasicInfosQualificationInfoData $qualification_info 资质认证及对公信息
+     * @var \AdOceanSdk\Tools\Data\ToolsEbpSubjectListGetResponseCompanyBasicInfosQualificationInfoData|null $qualification_info 资质认证及对公信息
      */
-    public \AdOceanSdk\Tools\Data\ToolsEbpSubjectListGetResponseCompanyBasicInfosQualificationInfoData $qualification_info;
+    public ?\AdOceanSdk\Tools\Data\ToolsEbpSubjectListGetResponseCompanyBasicInfosQualificationInfoData $qualification_info = null;
 
 }
