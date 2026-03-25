@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class ProjectRoigoalUpdatePostApi extends RequestApi
 {
-    protected string $address = '';
+    protected string $address = 'open_api/v3.0/project/roigoal/update/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::POST;
 
