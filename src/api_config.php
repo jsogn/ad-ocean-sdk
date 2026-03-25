@@ -739,6 +739,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\ProjectWeekScheduleUpdatePostResponse::class,
     ],
     /**
+    * @desc 批量更新项目出价NEW
+    * @doc  https://open.oceanengine.com/labels/34/docs/1858174581876745?origin=left_nav
+    **/
+    'openProjectCpaBidUpdatePostApi' => [
+        'desc' => '批量更新项目出价NEW',
+        'doc' => 'https://open.oceanengine.com/labels/34/docs/1858174581876745?origin=left_nav',
+        'call' => AdOceanSdk\Advertising\Api\ProjectCpaBidUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectCpaBidUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectCpaBidUpdatePostResponse::class,
+    ],
+    /**
     * @desc 获取商品详情
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710578614272
     **/
