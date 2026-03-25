@@ -717,6 +717,17 @@ return [
         'response' => AdOceanSdk\Advertising\Response\AdMetricsGetGetResponse::class,
     ],
     /**
+    * @desc 批量修改项目ROI系数
+    * @doc  https://open.oceanengine.com/labels/34/docs/1794208148473859?origin=left_nav
+    **/
+    'openProjectRoigoalUpdatePostApi' => [
+        'desc' => '批量修改项目ROI系数',
+        'doc' => 'https://open.oceanengine.com/labels/34/docs/1794208148473859?origin=left_nav',
+        'call' => AdOceanSdk\Advertising\Api\ProjectRoigoalUpdatePostApi::class,
+        'params' => AdOceanSdk\Advertising\Params\ProjectRoigoalUpdatePostParams::class,
+        'response' => AdOceanSdk\Advertising\Response\ProjectRoigoalUpdatePostResponse::class,
+    ],
+    /**
     * @desc 批量更新项目投放时段
     * @doc  https://open.oceanengine.com/labels/7/docs/1779260654537728
     **/
