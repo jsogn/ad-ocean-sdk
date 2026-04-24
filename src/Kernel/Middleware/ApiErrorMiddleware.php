@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace AdOceanSdk\Kernel\Middleware;
 
+use AdOceanSdk\Kernel\Config\ErrorCodeDefaults;
 use AdOceanSdk\Kernel\Exceptions\ApiResponseException;
 use AdOceanSdk\Kernel\Exceptions\AuthException;
 use AdOceanSdk\Kernel\Exceptions\RateLimitException;
@@ -17,8 +18,8 @@ final class ApiErrorMiddleware implements MiddlewareInterface
      * @param list<int> $rateLimitErrorCodes
      */
     public function __construct(
-        private array $authErrorCodes = [40100, 40103, 40105],
-        private array $rateLimitErrorCodes = [40000, 40110],
+        private array $authErrorCodes = ErrorCodeDefaults::AUTH_ERROR_CODES,
+        private array $rateLimitErrorCodes = ErrorCodeDefaults::RATE_LIMIT_ERROR_CODES,
     ) {
     }
 
