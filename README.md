@@ -1,10 +1,10 @@
-# 巨量广告 PHP SDK
+# 巨量引擎 PHP SDK
 
 [![Latest Version](https://img.shields.io/packagist/v/jiangwang/ad-ocean-sdk.svg)](https://packagist.org/packages/jiangwang/ad-ocean-sdk)
 [![PHP Version](https://img.shields.io/packagist/php-v/jiangwang/ad-ocean-sdk.svg)](https://packagist.org/packages/jiangwang/ad-ocean-sdk)
 [![License](https://img.shields.io/packagist/l/jiangwang/ad-ocean-sdk.svg)](https://packagist.org/packages/jiangwang/ad-ocean-sdk)
 
-一个用于巨量广告（OceanEngine）开放 API 的 PHP SDK。
+一个用于巨量引擎（OceanEngine）开放 API 的 PHP SDK。
 
 ## 功能特性
 
