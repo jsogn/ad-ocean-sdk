@@ -1,9 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AdOceanSdk;
 
+use AdOceanSdk\Kernel\Data\Data;
 use AdOceanSdk\Kernel\Interface\RequestClientInterface;
 use AdOceanSdk\Kernel\Interface\RequestParamInterface;
+use AdOceanSdk\Kernel\Interface\ResponseInterface;
+use GuzzleHttp\Promise\PromiseInterface;
 
 abstract class RequestApi
 {
@@ -23,10 +28,10 @@ abstract class RequestApi
 
     public function __construct()
     {
-        $this->requestClient = RequestClient::make();
+        // 不再在构造时 new client；按需懒加载，避免独立 API 调用浪费 Guzzle 实例
     }
 
-    public static function make(RequestParamInterface|array $params = []): static
+    public static function make(): static
     {
         return new static();
     }
@@ -37,17 +42,12 @@ abstract class RequestApi
             return $this->requestFormat;
         }
 
-        if ($this->method === RequestMethodEnum::GET) {
-            return RequestFormatEnum::QUERY;
-        }
-
-        return RequestFormatEnum::JSON;
+        return $this->method->defaultRequestFormat();
     }
 
-    public function setRequestFormat(?RequestFormatEnum $requestFormat): RequestApi
+    public function setRequestFormat(?RequestFormatEnum $requestFormat): static
     {
         $this->requestFormat = $requestFormat;
-
         return $this;
     }
 
@@ -77,7 +77,6 @@ abstract class RequestApi
             ...$this->headers,
             ...$headers,
         ];
-
         return $this;
     }
 
@@ -89,23 +88,27 @@ abstract class RequestApi
     public function setTimeout(int $timeout): static
     {
         $this->timeout = $timeout;
-
         return $this;
     }
 
     public function setClient(RequestClientInterface $client): static
     {
         $this->requestClient = $client;
-
         return $this;
     }
 
-    /**
-     * @param RequestParamInterface|array $params
-     * @return Kernel\Interface\ResponseInterface
-     */
-    public function call(RequestParamInterface|array $params = [])
+    public function getClient(): RequestClientInterface
     {
-        return $this->requestClient->call($this, $params);
+        return $this->requestClient ??= RequestClient::make();
+    }
+
+    public function call(RequestParamInterface|array $params = []): ResponseInterface&Data
+    {
+        return $this->getClient()->call($this, $params);
+    }
+
+    public function callAsync(RequestParamInterface|array $params = []): PromiseInterface
+    {
+        return $this->getClient()->callAsync($this, $params);
     }
 }

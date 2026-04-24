@@ -1,30 +1,30 @@
 <?php
 
-$configFile = '../src/api_config.php';
-$sourceFile = '../src/OpenApi.php';
-$outputFile = '../src/OpenApi.php';
+declare(strict_types=1);
+
+require_once __DIR__ . '/bootstrap.php';
+
+use AdOceanSdk\Script\Generator\OpenApiAnnotationGenerator;
+
+$options = getopt('', [
+    'config::',
+    'config-file::',
+    'source-file::',
+    'output-file::',
+    'trait-file::',
+]);
+
+$generatorConfigFile = $options['config'] ?? (__DIR__ . '/config/generator.php');
+$generatorConfig = file_exists($generatorConfigFile) ? require $generatorConfigFile : [];
+
+$configFile = $options['config-file'] ?? ($generatorConfig['api_config_output'] ?? (__DIR__ . '/../src/api_config.php'));
+$sourceFile = $options['source-file'] ?? ($generatorConfig['open_api_source'] ?? (__DIR__ . '/../src/OpenApi.php'));
+$outputFile = $options['output-file'] ?? ($generatorConfig['open_api_output'] ?? $sourceFile);
+$traitFile = $options['trait-file'] ?? ($generatorConfig['open_api_trait_output'] ?? (dirname($outputFile) . '/OpenApiMethodsTrait.php'));
 
 $config = include $configFile;
 
-$sourceCode = file_get_contents($sourceFile);
-
-$annotationCode = "";
-
-foreach ($config as $apiName => $apiData) {
-    $desc = $apiData['desc'] ?? '';
-    $doc  = $apiData['doc'] ?? '';
-
-    $annotationCode .= " * @method \\{$apiData['response']} $apiName(\\{$apiData['params']}|array \$params) $desc $doc\n";
-}
-
-$replacement = "/**\n";
-$replacement .= " * class OpenApi\n";
-$replacement .= " * 开放接口调度类\n";
-$replacement .= $annotationCode;
-$replacement .= " */";
-
-$updatedCode = preg_replace('/\/\*\*\n.*?\*\//s', $replacement, $sourceCode);
-
-file_put_contents($outputFile, $updatedCode);
+$generator = new OpenApiAnnotationGenerator();
+$generator->generateFromConfig($config, $sourceFile, $outputFile, $traitFile);
 
 echo 'success';

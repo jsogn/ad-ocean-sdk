@@ -15,17 +15,26 @@ import time
 import sys
 import os
 
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+SCRIPT_DIR = os.path.join(ROOT_DIR, 'script')
+DOC_JSON_PATH = os.path.join(ROOT_DIR, 'doc.json')
+GEN_API_SCRIPT = os.path.join(SCRIPT_DIR, 'dev', 'gen_api.sh')
+
+
 class ParamsProcessor:
     def process(self, param_rows):
         pass
+
 
 class TableContainerProcessor(ParamsProcessor):
     def process(self, param_rows):
         return process_params(param_rows, {'name': 'td'})
 
+
 class ApiTableProcessor(ParamsProcessor):
     def process(self, param_rows):
         return process_params(param_rows, {'class_': 'col'})
+
 
 def get_html_content(url):
     try:
@@ -43,6 +52,7 @@ def get_html_content(url):
         print("出现错误:", e)
     finally:
         driver.quit()
+
 
 def process_params(param_rows, cell_type_dict):
     levelMap = {}
@@ -86,11 +96,12 @@ def process_params(param_rows, cell_type_dict):
             if levelMap.get(level - 1) is not None:
                 levelMap[level - 1]['children'][param_name] = node
         else:
-            levelMap = {0:node}
-            if param_name =='date':
+            levelMap = {0: node}
+            if param_name == 'date':
                 param_name = 'data'
             params[param_name] = node
     return params
+
 
 print('采集地址：', sys.argv[1])
 
@@ -116,7 +127,7 @@ request_url = p_tag.text.strip()
 request_tag = soup.find(string="请求方法") or soup.find(string="请求方式")
 request_method = request_tag.find_next('p').find('strong')
 
-if (request_method is None):
+if request_method is None:
     request_method = request_tag.find_next('p').text.strip()
 else:
     request_method = request_tag.find_next('p').find('strong').text.strip()
@@ -124,7 +135,6 @@ else:
 request_method = request_method.replace('Query-String', '').replace('Request-Body', '').strip()
 
 # 提取请求参数
-# 给定的数组
 tags = [
     '请求参数',
     'DPA素材',
@@ -135,7 +145,6 @@ tags = [
     '搜索流量',
     '广告素材组合'
 ]
-# 初始化 request_params
 request_params = {}
 for tag in tags:
     params_table_tag = soup.find(string=tag)
@@ -192,14 +201,14 @@ data = {
 }
 json_data = json.dumps(data, indent=4, ensure_ascii=False)
 
-with open("doc.json", "w") as file:
+with open(DOC_JSON_PATH, "w") as file:
     file.write(json_data)
 
-if (sys.argv[2] is None):
+if sys.argv[2] is None:
     exit('gen code path not valid')
 
 # 运行命令
-exit_code = os.system('cd ./script && php ./gen_code_template.php ' + sys.argv[2])
+exit_code = os.system('cd "{}" && php ./gen_code_template.php {}'.format(SCRIPT_DIR, sys.argv[2]))
 # 检查命令的退出状态码
 if exit_code == 0:
     # 命令执行成功
@@ -208,4 +217,4 @@ else:
     # 命令执行失败
     print("生成命令执行失败")
 
-exit_code = os.system('sh ./gen_api.sh')
+exit_code = os.system('sh "{}"'.format(GEN_API_SCRIPT))

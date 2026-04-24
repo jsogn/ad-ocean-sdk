@@ -1,257 +1,44 @@
 <?php
-$json           = file_get_contents('../doc.json');
-$docData        = json_decode($json, true);
-$requestParams  = $docData['request_params'];
-$responseParams = $docData['response_params'];
 
-if (isset($argv[1])) {
-    $classInput = $argv[1];
-} else {
+declare(strict_types=1);
+
+require_once __DIR__ . '/bootstrap.php';
+
+use AdOceanSdk\Script\Generator\CodeTemplateGenerator;
+
+$options = getopt('', [
+    'config::',
+    'output-root::',
+    'template-root::',
+    'manifest-path::',
+    'type-mapping-file::',
+    'naming-strategy::',
+    'cleanup-stale::',
+    'write-if-changed-only::',
+], $restIndex);
+
+$configFile = $options['config'] ?? (__DIR__ . '/config/generator.php');
+$config = file_exists($configFile) ? require $configFile : [];
+
+$classInput = $argv[$restIndex] ?? null;
+if ($classInput === null) {
     die("Please provide the class input as a command line argument.\n");
 }
 
-$classInput     = $classInput . ucfirst(strtolower($docData['request_method']));
-$classPaths     = explode('/', $classInput);
-$classPrefix    = array_pop($classPaths);
-$classNameSpace = 'AdOceanSdk\\' . implode('\\', $classPaths);
+$typeMappingFile = $options['type-mapping-file'] ?? ($config['type_mapping_file'] ?? (__DIR__ . '/config/type_mapping.php'));
+$typeMapping = file_exists($typeMappingFile) ? require $typeMappingFile : null;
 
-generateParamClass($classNameSpace, $classPrefix, $requestParams);
-generateResponseClass($classNameSpace, $classPrefix, $responseParams);
-generateApiClass($classNameSpace, $classPrefix, $docData);
-function generateApiClass(string $classNameSpace, string $classPrefix, array $data): void
-{
-    $classPrefix   = trim($classPrefix);
-    $className     = $classPrefix . 'Api';
-    $namespace     = "{$classNameSpace}\\Api";
-    $parentClass   = 'RequestApi';
-    $responseClass = "\\{$classNameSpace}\\Response\\{$classPrefix}Response";
-    $method        = $data['request_method'];
-    $paramsClass   = "\\{$classNameSpace}\\Params\\{$classPrefix}Params";
-    $address       = ltrim(preg_replace('/^https?:\/\/[^\/]+/', '', $data['request_url']), '/');
+$generator = new CodeTemplateGenerator(
+    $options['output-root'] ?? ($config['output_root'] ?? (__DIR__ . '/../src')),
+    $options['template-root'] ?? ($config['template_root'] ?? (__DIR__ . '/templates')),
+    is_array($typeMapping) ? $typeMapping : null,
+    $options['manifest-path'] ?? ($config['manifest_path'] ?? null),
+    $options['naming-strategy'] ?? ($config['naming_strategy'] ?? 'legacy'),
+    filter_var($options['cleanup-stale'] ?? ($config['cleanup_stale'] ?? true), FILTER_VALIDATE_BOOL, FILTER_NULL_ON_FAILURE) ?? true,
+    filter_var($options['write-if-changed-only'] ?? ($config['write_if_changed_only'] ?? true), FILTER_VALIDATE_BOOL, FILTER_NULL_ON_FAILURE) ?? true,
+);
 
-    $code = <<<CODE
-<?php
+$json = file_get_contents(__DIR__ . '/../doc.json');
+$docData = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
 
-namespace $namespace;
-
-use AdOceanSdk\Kernel\Interface\RequestParamInterface;
-use AdOceanSdk\RequestApi;
-use AdOceanSdk\RequestMethodEnum;
-
-/**
- * @desc {$data['request_title']}
- * @doc  {$data['request_doc']}
- */
-class $className extends $parentClass
-{
-    protected string \$address = '$address';
-
-    protected RequestMethodEnum \$method = RequestMethodEnum::$method;
-
-    public function call($paramsClass|RequestParamInterface|array \$params = []): $responseClass
-    {
-        \$response = parent::call(\$params);
-
-        return $responseClass::from(\$response->toArray());
-    }
-}
-CODE;
-
-    generateFile(generatePath("{$classNameSpace}/Api/{$classPrefix}Api.php"), $code);
-}
-
-function generateResponseClass(string $classNameSpace, string $classPrefix, array $params): void
-{
-    $classPrefix  = trim($classPrefix);
-    $data['data'] = $params['data'];
-    $returnType   = "\\{$classNameSpace}\\Data\\{$classPrefix}ResponseData";
-
-    $fields = generateFields($classNameSpace, $classPrefix . 'Response', $data);
-
-    if (in_array($params['data']['type'], ['list', 'object[]', 'json[]'])) {
-        $docType    = $returnType;
-        $returnType = generatePhpType($data['data']['type']);
-        $fields     .= <<<FIELDS
-
-    /**
-     * @return array<{$docType}>
-     */
-FIELDS;
-    }
-    $code = <<<CODE
-<?php
-
-declare(strict_types=1);
-
-namespace {$classNameSpace}\\Response;
-
-use AdOceanSdk\Kernel\Data\Data;
-use AdOceanSdk\Kernel\Interface\ResponseInterface;
-use AdOceanSdk\Kernel\Trait\ResponseTrait;
-
-class {$classPrefix}Response extends Data implements ResponseInterface
-{
-    use ResponseTrait;
-
-{$fields}
-    public function getData(): {$returnType}
-    {
-        return \$this->data;
-    }
-}
-CODE;
-
-    generateFile(generatePath("{$classNameSpace}/Response/{$classPrefix}Response.php"), $code);
-}
-
-function generateParamClass(string $classNameSpace, string $classPrefix, array $params): void
-{
-    $classPrefix = trim($classPrefix);
-    $fields      = generateFields($classNameSpace, $classPrefix . 'Param', $params);
-
-    $code = <<<CODE
-<?php
-
-declare(strict_types=1);
-
-namespace {$classNameSpace}\\Params;
-
-use AdOceanSdk\\RequestParams;
-
-class {$classPrefix}Params extends RequestParams
-{
-{$fields}
-}
-CODE;
-
-    generateFile(generatePath("{$classNameSpace}/Params/{$classPrefix}Params.php"), $code);
-}
-
-function generatePath(string $path): string
-{
-    return str_replace(['AdOceanSdk/', '\\'], ['../src/', '/'], $path);
-}
-
-function generateFile(string $path, string $content): void
-{
-    $path      = str_replace("AdOceanSdk/", '../src/', $path);
-    $directory = dirname($path);
-
-    if (!is_dir($directory)) {
-        mkdir($directory, 0777, true);
-    }
-
-    echo "生成:" . $path . "\n";
-    file_put_contents($path, $content);
-}
-
-function generateFields(string $classNameSpace, string $classPrefix, array $params): string
-{
-    $classPrefix = trim($classPrefix);
-    $code        = "";
-    foreach ($params as $key => $param) {
-        $varType = generatePhpType($param['type']);
-        $docType = $varType;
-
-        if ($key === 'page_info') {
-            $code .= <<<CODE
-
-    /**
-     * @var \AdOceanSdk\ResponsePageInfoData \${$key} 分页信息
-     */
-    public \AdOceanSdk\ResponsePageInfoData \${$key};
-
-CODE;
-            continue;
-        }
-
-        if (in_array($param['type'], ['string[]', 'number[]'])) {
-            $tipType = generatePhpType(rtrim($param['type'], '[]'));
-            $docType = "array<{$tipType}>";
-        }
-
-        if (!empty($param['children'])) {
-            if ((int)$param['level'] === 0 && $key === 'data') {
-                $typeClass = "\\$classNameSpace\\Data\\" . "{$classPrefix}" . toCamelCase($key);
-            } else {
-                $typeClass = "\\$classNameSpace\\Data\\" . "{$classPrefix}" . toCamelCase($key) . 'Data';
-            }
-            $typeClass = trim($typeClass);
-            $docType   = $typeClass;
-
-            if ($varType === 'array') {
-                $docType = "array<{$typeClass}>";
-            } else {
-                $varType = $typeClass;
-            }
-            if ((int)$param['level'] === 0 && $key === 'data') {
-                generateDataClass($classNameSpace, $classPrefix, $param['children'], $param['description']);
-            } else {
-                generateDataClass($classNameSpace, $classPrefix . toCamelCase($key), $param['children'], $param['description']);
-            }
-        }
-
-        $code .= <<<CODE
-
-    /**
-     * @var $docType \${$key} {$param['description']}
-     */
-    public {$varType} \${$key};
-
-CODE;
-
-    }
-
-    return $code;
-}
-
-function generateDataClass(string $classNameSpace, string $classPrefix, array $params, string $desc = ''): void
-{
-    $classPrefix = trim($classPrefix);
-    $fields      = generateFields($classNameSpace, $classPrefix, $params);
-
-    $code = <<<CODE
-<?php
-
-declare(strict_types=1);
-
-namespace {$classNameSpace}\\Data;
-
-use AdOceanSdk\\Kernel\\Data\\Data;
-
-// {$desc}
-class {$classPrefix}Data extends Data
-{
-{$fields}
-}
-CODE;
-
-    $savePath = str_replace('\\', '/', "{$classNameSpace}/Data/{$classPrefix}Data.php");
-
-    generateFile($savePath, $code);
-}
-
-function toCamelCase(string $str): string
-{
-    return str_replace('_', '', ucwords($str, '_'));
-}
-
-function generatePhpType(string $type): string
-{
-    if (str_ends_with($type, '[]')) {
-        return 'array';
-    }
-    // 处理含 [ 的类型如 dict[string]、map[string] 等，统一映射为 array
-    if (str_contains($type, '[')) {
-        return 'array';
-    }
-    $typeMapping = [
-        'list'     => 'array',
-        'number'   => 'int',
-        'double'   => 'float',
-        'dict'     => 'array',
-        'map'      => 'array',
-    ];
-
-    return $typeMapping[$type] ?? $type;
-}
+$generator->generateFromDoc($docData, $classInput);

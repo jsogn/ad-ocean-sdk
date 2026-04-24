@@ -6,3 +6,6 @@ doc.json
 
 composer.lock
 .python-version
+run.sh
+__pycache__/
+*.pyc

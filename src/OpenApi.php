@@ -1,309 +1,77 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AdOceanSdk;
 
+use AdOceanSdk\Kernel\Data\Data;
+use AdOceanSdk\Kernel\Interface\OpenApiInterface;
 use AdOceanSdk\Kernel\Interface\RequestClientInterface;
+use AdOceanSdk\Kernel\Interface\ResponseInterface;
+use RuntimeException;
 
 /**
  * class OpenApi
  * 开放接口调度类
- * @method \AdOceanSdk\Fund\Response\SharedWalletMainWalletGetResponse openSharedWalletMainWalletGetApi(\AdOceanSdk\Fund\Params\SharedWalletMainWalletGetParams|array $params) 资金共享-共享钱包信息查询 https://open.oceanengine.com/labels/7/docs/1798465885126668
- * @method \AdOceanSdk\Fund\Response\CgTransferTransferBalanceGetResponse openCgTransferTransferBalanceGetApi(\AdOceanSdk\Fund\Params\CgTransferTransferBalanceGetParams|array $params) 工作台转账-查询账户转账余额 https://open.oceanengine.com/labels/7/docs/1816052431206464
- * @method \AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCreatePostResponse openCustomerCenterFundTransferSeqCreatePostApi(\AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCreatePostParams|array $params) 创建转账交易号 https://open.oceanengine.com/labels/7/docs/1758606134468620
- * @method \AdOceanSdk\Fund\Response\CgTransferCanTransferBalanceGetResponse openCgTransferCanTransferBalanceGetApi(\AdOceanSdk\Fund\Params\CgTransferCanTransferBalanceGetParams|array $params) 工作台转账-获取最大可转余额 https://open.oceanengine.com/labels/7/docs/1816052561374300
- * @method \AdOceanSdk\Fund\Response\AccountFundGetGetResponse openAccountFundGetGetApi(\AdOceanSdk\Fund\Params\AccountFundGetGetParams|array $params) 批量查询账户余额 https://open.oceanengine.com/labels/7/docs/1799006604968971
- * @method \AdOceanSdk\Fund\Response\AgentTransferSeqCommitPostResponse openAgentTransferSeqCommitPostApi(\AdOceanSdk\Fund\Params\AgentTransferSeqCommitPostParams|array $params) 提交转账交易号（方舟） https://open.oceanengine.com/labels/7/docs/1766755371753487
- * @method \AdOceanSdk\Fund\Response\CgTransferCanTransferTargetListGetResponse openCgTransferCanTransferTargetListGetApi(\AdOceanSdk\Fund\Params\CgTransferCanTransferTargetListGetParams|array $params) 工作台转账-获取可转列表 https://open.oceanengine.com/labels/7/docs/1816052658391124
- * @method \AdOceanSdk\Fund\Response\AgentTransferTransactionRecordGetResponse openAgentTransferTransactionRecordGetApi(\AdOceanSdk\Fund\Params\AgentTransferTransactionRecordGetParams|array $params) 查询代理商转账记录 https://open.oceanengine.com/labels/7/docs/1795124749017235
- * @method \AdOceanSdk\Fund\Response\AgentRefundTransferSeqCommitPostResponse openAgentRefundTransferSeqCommitPostApi(\AdOceanSdk\Fund\Params\AgentRefundTransferSeqCommitPostParams|array $params) 提交退款交易号（方舟） https://open.oceanengine.com/labels/7/docs/1766755445237824
- * @method \AdOceanSdk\Fund\Response\CustomerCenterAdvertiserTransferableListGetResponse openCustomerCenterAdvertiserTransferableListGetApi(\AdOceanSdk\Fund\Params\CustomerCenterAdvertiserTransferableListGetParams|array $params) 获取可转账户列表（客户中心&广告主） https://open.oceanengine.com/labels/7/docs/1758605359659008
- * @method \AdOceanSdk\Fund\Response\CgTransferTransferDetailGetResponse openCgTransferTransferDetailGetApi(\AdOceanSdk\Fund\Params\CgTransferTransferDetailGetParams|array $params) 工作台转账-查询转账单信息 https://open.oceanengine.com/labels/7/docs/1816052335753539
- * @method \AdOceanSdk\Fund\Response\CustomerCenterFundTransferSeqCommitPostResponse openCustomerCenterFundTransferSeqCommitPostApi(\AdOceanSdk\Fund\Params\CustomerCenterFundTransferSeqCommitPostParams|array $params) 提交转账交易号 https://open.oceanengine.com/labels/7/docs/1758606542833678
- * @method \AdOceanSdk\Fund\Response\CgTransferTransferCreatePostResponse openCgTransferTransferCreatePostApi(\AdOceanSdk\Fund\Params\CgTransferTransferCreatePostParams|array $params) 工作台转账-发起转账 https://open.oceanengine.com/labels/7/docs/1816052723776516
- * @method \AdOceanSdk\Fund\Response\FundSharedWalletBalanceGetResponse openFundSharedWalletBalanceGetApi(\AdOceanSdk\Fund\Params\FundSharedWalletBalanceGetParams|array $params) 获取返货共享钱包余额 https://open.oceanengine.com/labels/7/docs/1703323812831239
- * @method \AdOceanSdk\Fund\Response\AgentRefundTransferSeqCreatePostResponse openAgentRefundTransferSeqCreatePostApi(\AdOceanSdk\Fund\Params\AgentRefundTransferSeqCreatePostParams|array $params) 创建退款交易号（方舟） https://open.oceanengine.com/labels/7/docs/1766755414170636
- * @method \AdOceanSdk\Fund\Response\AgentTransferSeqCreatePostResponse openAgentTransferSeqCreatePostApi(\AdOceanSdk\Fund\Params\AgentTransferSeqCreatePostParams|array $params) 创建转账交易号（方舟） https://open.oceanengine.com/labels/7/docs/1766755293435980
- * @method \AdOceanSdk\Report\Response\AsyncTaskDownloadGetResponse openAsyncTaskDownloadGetApi(\AdOceanSdk\Report\Params\AsyncTaskDownloadGetParams|array $params) 下载任务结果 https://open.oceanengine.com/labels/7/docs/1696710563878927
- * @method \AdOceanSdk\Report\Response\ReportAdvertiserGetResponse openReportAdvertiserGetApi(\AdOceanSdk\Report\Params\ReportAdvertiserGetParams|array $params) 广告主数据 https://open.oceanengine.com/labels/7/docs/1696710550620160
- * @method \AdOceanSdk\Report\Response\AsyncTaskCreatePostResponse openAsyncTaskCreatePostApi(\AdOceanSdk\Report\Params\AsyncTaskCreatePostParams|array $params) 创建异步任务 https://open.oceanengine.com/labels/7/docs/1696710562799616
- * @method \AdOceanSdk\Report\Response\ReportIntergratedGetResponse openReportIntergratedGetApi(\AdOceanSdk\Report\Params\ReportIntergratedGetParams|array $params) 多合一数据报表接口 https://open.oceanengine.com/labels/7/docs/1696710554400780
- * @method \AdOceanSdk\Report\Response\ReportSitePageGetResponse openReportSitePageGetApi(\AdOceanSdk\Report\Params\ReportSitePageGetParams|array $params) 橙子建站落地页数据 https://open.oceanengine.com/labels/7/docs/1696710565390348
- * @method \AdOceanSdk\Report\Response\ReportCreativeGetResponse openReportCreativeGetApi(\AdOceanSdk\Report\Params\ReportCreativeGetParams|array $params) 广告创意数据 https://open.oceanengine.com/labels/7/docs/1696710552261644
- * @method \AdOceanSdk\Report\Response\ReportCustomGetResponse openReportCustomGetApi(\AdOceanSdk\Report\Params\ReportCustomGetParams|array $params) 自定义报表 https://open.oceanengine.com/labels/7/docs/1741387668314126
- * @method \AdOceanSdk\Report\Response\ReportCustomConfigGetResponse openReportCustomConfigGetApi(\AdOceanSdk\Report\Params\ReportCustomConfigGetParams|array $params) 获取自定义报表可用指标和维度 https://open.oceanengine.com/labels/7/docs/1755261744248832
- * @method \AdOceanSdk\Report\Response\ReportCampaignGetResponse openReportCampaignGetApi(\AdOceanSdk\Report\Params\ReportCampaignGetParams|array $params) 广告组数据 https://open.oceanengine.com/labels/7/docs/1696710551161856
- * @method \AdOceanSdk\Report\Response\AsyncTaskGetResponse openAsyncTaskGetApi(\AdOceanSdk\Report\Params\AsyncTaskGetParams|array $params) 获取任务列表 https://open.oceanengine.com/labels/7/docs/1696710563323916
- * @method \AdOceanSdk\Advertising\Response\PromotionStatusUpdatePostResponse openPromotionStatusUpdatePostApi(\AdOceanSdk\Advertising\Params\PromotionStatusUpdatePostParams|array $params) 批量更新广告启用状态 https://open.oceanengine.com/labels/7/docs/1741031308559364
- * @method \AdOceanSdk\Advertising\Response\CreativeDetailGetResponse openCreativeDetailGetApi(\AdOceanSdk\Advertising\Params\CreativeDetailGetParams|array $params) 创意详细信息（新） https://open.oceanengine.com/labels/7/docs/1742668551117827
- * @method \AdOceanSdk\Advertising\Response\PromotionAutoGenerateConfigCreatePostResponse openPromotionAutoGenerateConfigCreatePostApi(\AdOceanSdk\Advertising\Params\PromotionAutoGenerateConfigCreatePostParams|array $params) 新建/修改白盒配置（广告升级版） https://open.oceanengine.com/labels/7/docs/1760943644787716
- * @method \AdOceanSdk\Advertising\Response\CampaignGetResponse openCampaignGetApi(\AdOceanSdk\Advertising\Params\CampaignGetParams|array $params) 获取广告组 https://open.oceanengine.com/labels/7/docs/1696710532657164
- * @method \AdOceanSdk\Advertising\Response\PromotionScheduleTimeUpdatePostResponse openPromotionScheduleTimeUpdatePostApi(\AdOceanSdk\Advertising\Params\PromotionScheduleTimeUpdatePostParams|array $params) 批量更新广告投放时段 https://open.oceanengine.com/labels/7/docs/1769912402184199
- * @method \AdOceanSdk\Advertising\Response\CDPBrandGetResponse openCDPBrandGetApi(\AdOceanSdk\Advertising\Params\CDPBrandGetParams|array $params) 获取关联云图的广告主账户信息 https://open.oceanengine.com/labels/7/docs/1768100113310735
- * @method \AdOceanSdk\Advertising\Response\AdvertiserBudgetGetResponse openAdvertiserBudgetGetApi(\AdOceanSdk\Advertising\Params\AdvertiserBudgetGetParams|array $params) 获取账户日预算 https://open.oceanengine.com/labels/7/docs/1696710531128335
- * @method \AdOceanSdk\Advertising\Response\CreativeAutoGenerateConfigCreatePostResponse openCreativeAutoGenerateConfigCreatePostApi(\AdOceanSdk\Advertising\Params\CreativeAutoGenerateConfigCreatePostParams|array $params) 新建或修改配置，并保存到计划 https://open.oceanengine.com/labels/7/docs/1736244450483215
- * @method \AdOceanSdk\Advertising\Response\PromotionBidUpdatePostResponse openPromotionBidUpdatePostApi(\AdOceanSdk\Advertising\Params\PromotionBidUpdatePostParams|array $params) 批量更新广告出价 https://open.oceanengine.com/labels/7/docs/1741031138305028
- * @method \AdOceanSdk\Advertising\Response\CreativeUpdateStatusPostResponse openCreativeUpdateStatusPostApi(\AdOceanSdk\Advertising\Params\CreativeUpdateStatusPostParams|array $params) 更改创意状态 https://open.oceanengine.com/labels/7/docs/1696710543049740
- * @method \AdOceanSdk\Advertising\Response\CreativeTemplateListGetResponse openCreativeTemplateListGetApi(\AdOceanSdk\Advertising\Params\CreativeTemplateListGetParams|array $params) 获取模板列表 https://open.oceanengine.com/labels/7/docs/1736241054353421
- * @method \AdOceanSdk\Advertising\Response\BudgetGroupListGetResponse openBudgetGroupListGetApi(\AdOceanSdk\Advertising\Params\BudgetGroupListGetParams|array $params) 获取预算组列表 https://open.oceanengine.com/labels/7/docs/1780644067911818
- * @method \AdOceanSdk\Advertising\Response\CreativeTemplateDetailGetGetResponse openCreativeTemplateDetailGetGetApi(\AdOceanSdk\Advertising\Params\CreativeTemplateDetailGetGetParams|array $params) 获取模板详情 https://open.oceanengine.com/labels/7/docs/1736243716320256
- * @method \AdOceanSdk\Advertising\Response\ProjectStatusUpdatePostResponse openProjectStatusUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectStatusUpdatePostParams|array $params) 批量更新项目状态 https://open.oceanengine.com/labels/7/docs/1740941413906432
- * @method \AdOceanSdk\Advertising\Response\PromotionUpdatePostResponse openPromotionUpdatePostApi(\AdOceanSdk\Advertising\Params\PromotionUpdatePostParams|array $params) 修改广告 https://open.oceanengine.com/labels/7/docs/1740952287987719
- * @method \AdOceanSdk\Advertising\Response\ProjectScheduleTimeUpdatePostResponse openProjectScheduleTimeUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectScheduleTimeUpdatePostParams|array $params) 批量更新项目投放时间 https://open.oceanengine.com/labels/7/docs/1779258970970184
- * @method \AdOceanSdk\Advertising\Response\CreativeGetResponse openCreativeGetApi(\AdOceanSdk\Advertising\Params\CreativeGetParams|array $params) 获取创意列表 https://open.oceanengine.com/labels/7/docs/1696710540735500
- * @method \AdOceanSdk\Advertising\Response\PromotionCreatePostResponse openPromotionCreatePostApi(\AdOceanSdk\Advertising\Params\PromotionCreatePostParams|array $params) 创建广告 https://open.oceanengine.com/labels/7/docs/1740946299496459
- * @method \AdOceanSdk\Advertising\Response\PromotionDeletePostResponse openPromotionDeletePostApi(\AdOceanSdk\Advertising\Params\PromotionDeletePostParams|array $params) 批量删除广告 https://open.oceanengine.com/labels/7/docs/1741031376580675
- * @method \AdOceanSdk\Advertising\Response\AdvertiserBudgetUpdatePostResponse openAdvertiserBudgetUpdatePostApi(\AdOceanSdk\Advertising\Params\AdvertiserBudgetUpdatePostParams|array $params) 更新账户日预算 https://open.oceanengine.com/labels/7/docs/1696710531631116
- * @method \AdOceanSdk\Advertising\Response\CreativeRejectReasonGetResponse openCreativeRejectReasonGetApi(\AdOceanSdk\Advertising\Params\CreativeRejectReasonGetParams|array $params) 获取创意审核建议 https://open.oceanengine.com/labels/7/docs/1696710544068620
- * @method \AdOceanSdk\Advertising\Response\CreativeStrategyListGetResponse openCreativeStrategyListGetApi(\AdOceanSdk\Advertising\Params\CreativeStrategyListGetParams|array $params) 获取模板（白盒策略）列表 https://open.oceanengine.com/labels/7/docs/1758356001909828
- * @method \AdOceanSdk\Advertising\Response\CreativeTemplateTagsGetResponse openCreativeTemplateTagsGetApi(\AdOceanSdk\Advertising\Params\CreativeTemplateTagsGetParams|array $params) 获取模板标签列表 https://open.oceanengine.com/labels/7/docs/1736241004382219
- * @method \AdOceanSdk\Advertising\Response\MaterialStatusUpdatePostResponse openMaterialStatusUpdatePostApi(\AdOceanSdk\Advertising\Params\MaterialStatusUpdatePostParams|array $params) 批量更新广告素材启用状态 https://open.oceanengine.com/labels/7/docs/1755355780973568
- * @method \AdOceanSdk\Advertising\Response\ProjectUpdatePostResponse openProjectUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectUpdatePostParams|array $params) 更新项目 https://open.oceanengine.com/labels/7/docs/1740936504522831
- * @method \AdOceanSdk\Advertising\Response\PromotionBudgetUpdatePostResponse openPromotionBudgetUpdatePostApi(\AdOceanSdk\Advertising\Params\PromotionBudgetUpdatePostParams|array $params) 批量更新广告预算 https://open.oceanengine.com/labels/7/docs/1741030872454148
- * @method \AdOceanSdk\Advertising\Response\ProjectCreatePostResponse openProjectCreatePostApi(\AdOceanSdk\Advertising\Params\ProjectCreatePostParams|array $params) 创建项目 https://open.oceanengine.com/labels/7/docs/1740868093375503
- * @method \AdOceanSdk\Advertising\Response\PromotionRejectReasonGetResponse openPromotionRejectReasonGetApi(\AdOceanSdk\Advertising\Params\PromotionRejectReasonGetParams|array $params) 批量获取广告审核建议 https://open.oceanengine.com/labels/7/docs/1741031528693771
- * @method \AdOceanSdk\Advertising\Response\ProjectDeletePostResponse openProjectDeletePostApi(\AdOceanSdk\Advertising\Params\ProjectDeletePostParams|array $params) 批量删除项目 https://open.oceanengine.com/labels/7/docs/1740944781036608
- * @method \AdOceanSdk\Advertising\Response\PromotionAutoGenerateConfigGetResponse openPromotionAutoGenerateConfigGetApi(\AdOceanSdk\Advertising\Params\PromotionAutoGenerateConfigGetParams|array $params) 查询配置详情（广告升级版） https://open.oceanengine.com/labels/7/docs/1760943993851915
- * @method \AdOceanSdk\Advertising\Response\PromotionListGetResponse openPromotionListGetApi(\AdOceanSdk\Advertising\Params\PromotionListGetParams|array $params) 获取广告列表 https://open.oceanengine.com/labels/7/docs/1741028841006095
- * @method \AdOceanSdk\Advertising\Response\CreativeMaterialMetricsGetResponse openCreativeMaterialMetricsGetApi(\AdOceanSdk\Advertising\Params\CreativeMaterialMetricsGetParams|array $params) 获取素材派生数据（素材维度） https://open.oceanengine.com/labels/7/docs/1755177023094787
- * @method \AdOceanSdk\Advertising\Response\PromotionCostProtectStatusGetResponse openPromotionCostProtectStatusGetApi(\AdOceanSdk\Advertising\Params\PromotionCostProtectStatusGetParams|array $params) 批量获取广告成本保障状态 https://open.oceanengine.com/labels/7/docs/1755355980850191
- * @method \AdOceanSdk\Advertising\Response\PromotionDeepBidUpdatePostResponse openPromotionDeepBidUpdatePostApi(\AdOceanSdk\Advertising\Params\PromotionDeepBidUpdatePostParams|array $params) 批量修改深度出价 https://open.oceanengine.com/labels/7/docs/1755355890182159
- * @method \AdOceanSdk\Advertising\Response\BudgetGroupDeletePostResponse openBudgetGroupDeletePostApi(\AdOceanSdk\Advertising\Params\BudgetGroupDeletePostParams|array $params) 批量删除预算组 https://open.oceanengine.com/labels/7/docs/1780643886635008
- * @method \AdOceanSdk\Advertising\Response\ProjectListGetResponse openProjectListGetApi(\AdOceanSdk\Advertising\Params\ProjectListGetParams|array $params) 获取项目列表 https://open.oceanengine.com/labels/7/docs/1740937147595776
- * @method \AdOceanSdk\Advertising\Response\BudgetGroupCreatePostResponse openBudgetGroupCreatePostApi(\AdOceanSdk\Advertising\Params\BudgetGroupCreatePostParams|array $params) 创建预算组 https://open.oceanengine.com/labels/7/docs/1780159359081540
- * @method \AdOceanSdk\Advertising\Response\ProjectBudgetUpdatePostResponse openProjectBudgetUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectBudgetUpdatePostParams|array $params) 批量更新项目预算 https://open.oceanengine.com/labels/7/docs/1755353873798155
- * @method \AdOceanSdk\Advertising\Response\AdMetricsGetGetResponse openAdMetricsGetGetApi(\AdOceanSdk\Advertising\Params\AdMetricsGetGetParams|array $params) 获取素材派生数据（计划维度） https://open.oceanengine.com/labels/7/docs/1755177028152324
- * @method \AdOceanSdk\Advertising\Response\ProjectRoigoalUpdatePostResponse openProjectRoigoalUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectRoigoalUpdatePostParams|array $params) 批量修改项目ROI系数 https://open.oceanengine.com/labels/34/docs/1794208148473859?origin=left_nav
- * @method \AdOceanSdk\Advertising\Response\ProjectWeekScheduleUpdatePostResponse openProjectWeekScheduleUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectWeekScheduleUpdatePostParams|array $params) 批量更新项目投放时段 https://open.oceanengine.com/labels/7/docs/1779260654537728
- * @method \AdOceanSdk\Advertising\Response\ProjectDeepCpaBidUpdatePostResponse openProjectDeepCpaBidUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectDeepCpaBidUpdatePostParams|array $params) 批量更新深层项目出价NEW https://open.oceanengine.com/labels/34/docs/1858175093068809?origin=left_nav
- * @method \AdOceanSdk\Advertising\Response\ProjectCpaBidUpdatePostResponse openProjectCpaBidUpdatePostApi(\AdOceanSdk\Advertising\Params\ProjectCpaBidUpdatePostParams|array $params) 批量更新项目出价NEW https://open.oceanengine.com/labels/34/docs/1858174581876745?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DPAProductDetailGetGetResponse openDPAProductDetailGetGetApi(\AdOceanSdk\DPA\Params\DPAProductDetailGetGetParams|array $params) 获取商品详情 https://open.oceanengine.com/labels/7/docs/1696710578614272
- * @method \AdOceanSdk\DPA\Response\DpaEbpProductListGetResponse openDpaEbpProductListGetApi(\AdOceanSdk\DPA\Params\DpaEbpProductListGetParams|array $params) 获取通用版商品列表 https://open.oceanengine.com/labels/7/docs/1846200485909513?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DPAProductAvailablesGetResponse openDPAProductAvailablesGetApi(\AdOceanSdk\DPA\Params\DPAProductAvailablesGetParams|array $params) 获取商品库信息 https://open.oceanengine.com/labels/7/docs/1696710577036288
- * @method \AdOceanSdk\DPA\Response\DPAProductStatusBatchUpdatePostResponse openDPAProductStatusBatchUpdatePostApi(\AdOceanSdk\DPA\Params\DPAProductStatusBatchUpdatePostParams|array $params) 批量修改DPA商品状态 https://open.oceanengine.com/labels/7/docs/1726637930114048
- * @method \AdOceanSdk\DPA\Response\DPAMetaGetGetResponse openDPAMetaGetGetApi(\AdOceanSdk\DPA\Params\DPAMetaGetGetParams|array $params) 获取商品库元信息 https://open.oceanengine.com/labels/7/docs/1696710577566735
- * @method \AdOceanSdk\DPA\Response\DPADetailGetGetResponse openDPADetailGetGetApi(\AdOceanSdk\DPA\Params\DPADetailGetGetParams|array $params) 获取商品列表 https://open.oceanengine.com/labels/7/docs/1696710578078732
- * @method \AdOceanSdk\DPA\Response\DpaEbpProductDeletePostResponse openDpaEbpProductDeletePostApi(\AdOceanSdk\DPA\Params\DpaEbpProductDeletePostParams|array $params) 删除通用版商品 https://open.oceanengine.com/labels/7/docs/1846200772027529?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpClueProductListGetResponse openDpaEbpClueProductListGetApi(\AdOceanSdk\DPA\Params\DpaEbpClueProductListGetParams|array $params) 获取升级版商品列表 https://open.oceanengine.com/labels/7/docs/1846200582278283?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpProductCreatePostResponse openDpaEbpProductCreatePostApi(\AdOceanSdk\DPA\Params\DpaEbpProductCreatePostParams|array $params) 升级版组织-新建通用版商品 https://open.oceanengine.com/labels/7/docs/1846200859217482?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpProductUpdatePostResponse openDpaEbpProductUpdatePostApi(\AdOceanSdk\DPA\Params\DpaEbpProductUpdatePostParams|array $params) 升级版组织-编辑通用版商品 https://open.oceanengine.com/labels/7/docs/1846200800780617?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpDictGetGetResponse openDpaEbpDictGetGetApi(\AdOceanSdk\DPA\Params\DpaEbpDictGetGetParams|array $params) 获取商品库DPA词包 https://open.oceanengine.com/labels/7/docs/1846199586366875?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpLibraryListGetResponse openDpaEbpLibraryListGetApi(\AdOceanSdk\DPA\Params\DpaEbpLibraryListGetParams|array $params) 获取商品库列表 https://open.oceanengine.com/labels/7/docs/1846200555058186?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DPAClueProductDetailGetResponse openDPAClueProductDetailGetApi(\AdOceanSdk\DPA\Params\DPAClueProductDetailGetParams|array $params) 获取线索商品详情 https://open.oceanengine.com/labels/7/docs/1779436000953415
- * @method \AdOceanSdk\DPA\Response\DpaEbpClueProductGetGetResponse openDpaEbpClueProductGetGetApi(\AdOceanSdk\DPA\Params\DpaEbpClueProductGetGetParams|array $params) 获取升级版商品详情 https://open.oceanengine.com/labels/7/docs/1846200329551114?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpProductDetailGetGetResponse openDpaEbpProductDetailGetGetApi(\AdOceanSdk\DPA\Params\DpaEbpProductDetailGetGetParams|array $params) 获取通用版商品详情 https://open.oceanengine.com/labels/7/docs/1846200441152906?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpProductStatusBatchUpdatePostResponse openDpaEbpProductStatusBatchUpdatePostApi(\AdOceanSdk\DPA\Params\DpaEbpProductStatusBatchUpdatePostParams|array $params) 批量修改DPA商品状态 https://open.oceanengine.com/labels/7/docs/1846200705851659?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpClueProductDeletePostResponse openDpaEbpClueProductDeletePostApi(\AdOceanSdk\DPA\Params\DpaEbpClueProductDeletePostParams|array $params) 删除升级版商品 https://open.oceanengine.com/labels/7/docs/1846200682152971?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpClueProductSavePostResponse openDpaEbpClueProductSavePostApi(\AdOceanSdk\DPA\Params\DpaEbpClueProductSavePostParams|array $params) 升级版组织-创建/编辑升级版商品 https://open.oceanengine.com/labels/7/docs/1846200828633995?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DPAProductUpdatePostResponse openDPAProductUpdatePostApi(\AdOceanSdk\DPA\Params\DPAProductUpdatePostParams|array $params) 创建DPA商品（已有商品id）/修改DPA商品 https://open.oceanengine.com/labels/7/docs/1726081566816271
- * @method \AdOceanSdk\DPA\Response\DPAProductCreatePostResponse openDPAProductCreatePostApi(\AdOceanSdk\DPA\Params\DPAProductCreatePostParams|array $params) 创建DPA商品（无商品id） https://open.oceanengine.com/labels/7/docs/1726081113859075
- * @method \AdOceanSdk\DPA\Response\DPAProductDeletePostResponse openDPAProductDeletePostApi(\AdOceanSdk\DPA\Params\DPAProductDeletePostParams|array $params) 删除DPA商品 https://open.oceanengine.com/labels/7/docs/1726629070419968
- * @method \AdOceanSdk\DPA\Response\DpaEbpPlayletAuthGetGetResponse openDpaEbpPlayletAuthGetGetApi(\AdOceanSdk\DPA\Params\DpaEbpPlayletAuthGetGetParams|array $params) 查询短剧商品原片授权申请状态 https://open.oceanengine.com/labels/7/docs/1846199438930378?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DpaEbpCategoryGetGetResponse openDpaEbpCategoryGetGetApi(\AdOceanSdk\DPA\Params\DpaEbpCategoryGetGetParams|array $params) 获取商品库DPA分类 https://open.oceanengine.com/labels/7/docs/1846200236566720?origin=left_nav
- * @method \AdOceanSdk\DPA\Response\DPAClueProductListGetResponse openDPAClueProductListGetApi(\AdOceanSdk\DPA\Params\DPAClueProductListGetParams|array $params) 获取线索商品列表 https://open.oceanengine.com/labels/7/docs/1779430442685440
- * @method \AdOceanSdk\DPA\Response\DPACategoryGetGetResponse openDPACategoryGetGetApi(\AdOceanSdk\DPA\Params\DPACategoryGetGetParams|array $params) 获取DPA分类 https://open.oceanengine.com/labels/7/docs/1696710580168716
- * @method \AdOceanSdk\DPA\Response\DPAVideoGetGetResponse openDPAVideoGetGetApi(\AdOceanSdk\DPA\Params\DPAVideoGetGetParams|array $params) 获取 DPA 商品库视频模板 https://open.oceanengine.com/labels/7/docs/1696710582303744
- * @method \AdOceanSdk\Agent\Response\AgentChildAgentSelectGetResponse openAgentChildAgentSelectGetApi(\AdOceanSdk\Agent\Params\AgentChildAgentSelectGetParams|array $params) 二级代理商列表 https://open.oceanengine.com/labels/7/docs/1696710517693452
- * @method \AdOceanSdk\Agent\Response\AgentAdvertiserCopyPostResponse openAgentAdvertiserCopyPostApi(\AdOceanSdk\Agent\Params\AgentAdvertiserCopyPostParams|array $params) 广告主账户复制 https://open.oceanengine.com/labels/7/docs/1775097300794371
- * @method \AdOceanSdk\Agent\Response\AgentInfoGetResponse openAgentInfoGetApi(\AdOceanSdk\Agent\Params\AgentInfoGetParams|array $params) 获取代理商信息 https://open.oceanengine.com/labels/7/docs/1696710518158351
- * @method \AdOceanSdk\Agent\Response\AgentAdvertiserSelectGetResponse openAgentAdvertiserSelectGetApi(\AdOceanSdk\Agent\Params\AgentAdvertiserSelectGetParams|array $params) 代理商管理账户列表 https://open.oceanengine.com/labels/7/docs/1696710516003852
- * @method \AdOceanSdk\Majordomo\Response\BusinessPlatformCompanyAccountGetResponse openBusinessPlatformCompanyAccountGetApi(\AdOceanSdk\Majordomo\Params\BusinessPlatformCompanyAccountGetParams|array $params) 获取主体下的账户列表 https://open.oceanengine.com/labels/7/docs/1741479196149775
- * @method \AdOceanSdk\Majordomo\Response\MajordomoAdvertiserSelectGetResponse openMajordomoAdvertiserSelectGetApi(\AdOceanSdk\Majordomo\Params\MajordomoAdvertiserSelectGetParams|array $params) 获取纵横组织下资产账户列表 https://open.oceanengine.com/labels/7/docs/1696710519607296
- * @method \AdOceanSdk\Majordomo\Response\CustomerCenterAdvertiserListGetResponse openCustomerCenterAdvertiserListGetApi(\AdOceanSdk\Majordomo\Params\CustomerCenterAdvertiserListGetParams|array $params) 获取纵横组织下资产账户列表（分页） https://open.oceanengine.com/labels/7/docs/1696710520884224
- * @method \AdOceanSdk\Majordomo\Response\BusinessPlatformCompanyInfoGetResponse openBusinessPlatformCompanyInfoGetApi(\AdOceanSdk\Majordomo\Params\BusinessPlatformCompanyInfoGetParams|array $params) 获取纵横组织下所有主体信息 https://open.oceanengine.com/labels/7/docs/1741478619724813
- * @method \AdOceanSdk\Majordomo\Response\BusinessPlatformPartnerOrganizationListGetResponse openBusinessPlatformPartnerOrganizationListGetApi(\AdOceanSdk\Majordomo\Params\BusinessPlatformPartnerOrganizationListGetParams|array $params) 查询合作组织 https://open.oceanengine.com/labels/7/docs/1710414874245133
- * @method \AdOceanSdk\DMP\Response\DMPCustomAudienceDeletePostResponse openDMPCustomAudienceDeletePostApi(\AdOceanSdk\DMP\Params\DMPCustomAudienceDeletePostParams|array $params) 删除人群包 https://open.oceanengine.com/labels/7/docs/1696710572836879
- * @method \AdOceanSdk\DMP\Response\DMPCustomAudiencePushV2PostResponse openDMPCustomAudiencePushV2PostApi(\AdOceanSdk\DMP\Params\DMPCustomAudiencePushV2PostParams|array $params) 推送人群包 https://open.oceanengine.com/labels/7/docs/1696710572311552
- * @method \AdOceanSdk\DMP\Response\DMPCustomAudiencePublishPostResponse openDMPCustomAudiencePublishPostApi(\AdOceanSdk\DMP\Params\DMPCustomAudiencePublishPostParams|array $params) 发布人群包 https://open.oceanengine.com/labels/7/docs/1696710571768844
- * @method \AdOceanSdk\DMP\Response\CustomAudienceSelectGetResponse openCustomAudienceSelectGetApi(\AdOceanSdk\DMP\Params\CustomAudienceSelectGetParams|array $params) 人群包列表 https://open.oceanengine.com/labels/7/docs/1696710570721295
- * @method \AdOceanSdk\DMP\Response\DMPDataSourceFileUploadPostResponse openDMPDataSourceFileUploadPostApi(\AdOceanSdk\DMP\Params\DMPDataSourceFileUploadPostParams|array $params) 数据源文件上传 https://open.oceanengine.com/labels/7/docs/1696710568556544
- * @method \AdOceanSdk\DMP\Response\DMPCustomAudienceReadGetResponse openDMPCustomAudienceReadGetApi(\AdOceanSdk\DMP\Params\DMPCustomAudienceReadGetParams|array $params) 人群包详细信息 https://open.oceanengine.com/labels/7/docs/1696710571259916
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserAvatarSubmitPostResponse openAdvertiserAvatarSubmitPostApi(\AdOceanSdk\Advertiser\Params\AdvertiserAvatarSubmitPostParams|array $params) 更新广告主账户头像 https://open.oceanengine.com/labels/7/docs/1696710512435215
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserQualificationGetResponse openAdvertiserQualificationGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserQualificationGetParams|array $params) 获取主体资质（新版） https://open.oceanengine.com/labels/7/docs/1743294338713611
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgSubmitPostResponse openAdvertiserDeliveryPkgSubmitPostApi(\AdOceanSdk\Advertiser\Params\AdvertiserDeliveryPkgSubmitPostParams|array $params) 提交/编辑推广产品资质 https://open.oceanengine.com/labels/7/docs/1776711210685572
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserPublicInfoGetResponse openAdvertiserPublicInfoGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserPublicInfoGetParams|array $params) 获取广告主公开信息 https://open.oceanengine.com/labels/7/docs/1696710511950860
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserUpdatePostResponse openAdvertiserUpdatePostApi(\AdOceanSdk\Advertiser\Params\AdvertiserUpdatePostParams|array $params) 修改广告主信息 https://open.oceanengine.com/labels/7/docs/1696710517205007
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserQualificationSubmitPostResponse openAdvertiserQualificationSubmitPostApi(\AdOceanSdk\Advertiser\Params\AdvertiserQualificationSubmitPostParams|array $params) 提交主体资质（新版） https://open.oceanengine.com/labels/7/docs/1743294661429259
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationListGetResponse openAdvertiserDeliveryQualificationListGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserDeliveryQualificationListGetParams|array $params) 查询投放资质（新版） https://open.oceanengine.com/labels/7/docs/1761500990156815
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserAvatarGetResponse openAdvertiserAvatarGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserAvatarGetParams|array $params) 获取广告主账户头像 https://open.oceanengine.com/labels/7/docs/1696710512904192
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserFundGetResponse openAdvertiserFundGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserFundGetParams|array $params) 查询账号余额 https://open.oceanengine.com/labels/7/docs/1696710526192652
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserInfoGetResponse openAdvertiserInfoGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserInfoGetParams|array $params) 获取广告主信息 https://open.oceanengine.com/labels/7/docs/1696710508983311
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgGetResponse openAdvertiserDeliveryPkgGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserDeliveryPkgGetParams|array $params) 查询推广产品资质 https://open.oceanengine.com/labels/7/docs/1776711148266572
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserDeliveryQualificationSubmitPostResponse openAdvertiserDeliveryQualificationSubmitPostApi(\AdOceanSdk\Advertiser\Params\AdvertiserDeliveryQualificationSubmitPostParams|array $params) 提交投放资质（新版） https://open.oceanengine.com/labels/7/docs/1761501324513352
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserFundDailyStatGetResponse openAdvertiserFundDailyStatGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserFundDailyStatGetParams|array $params) 查询账户日流水 https://open.oceanengine.com/labels/7/docs/1696710526682112
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserTransferableFundGetResponse openAdvertiserTransferableFundGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserTransferableFundGetParams|array $params) 查询账户可转余额 https://open.oceanengine.com/labels/7/docs/1725634464247879
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserFundTransactionGetResponse openAdvertiserFundTransactionGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserFundTransactionGetParams|array $params) 查询账号流水明细 https://open.oceanengine.com/labels/7/docs/1696710527205388
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserDeliveryPkgConfigGetResponse openAdvertiserDeliveryPkgConfigGetApi(\AdOceanSdk\Advertiser\Params\AdvertiserDeliveryPkgConfigGetParams|array $params) 查询推广产品资质规则配置 https://open.oceanengine.com/labels/7/docs/1776710970860551
- * @method \AdOceanSdk\Advertiser\Response\AdvertiserAvatarUploadPostResponse openAdvertiserAvatarUploadPostApi(\AdOceanSdk\Advertiser\Params\AdvertiserAvatarUploadPostParams|array $params) 获取广告主账户头像ID https://open.oceanengine.com/labels/7/docs/1794039016601604
- * @method \AdOceanSdk\File\Response\FileVideoDeletePostResponse openFileVideoDeletePostApi(\AdOceanSdk\File\Params\FileVideoDeletePostParams|array $params) 批量删除视频素材 https://open.oceanengine.com/labels/7/docs/1696710605373455
- * @method \AdOceanSdk\File\Response\FileImageDeletePostResponse openFileImageDeletePostApi(\AdOceanSdk\File\Params\FileImageDeletePostParams|array $params) 批量删除图片素材 https://open.oceanengine.com/labels/7/docs/1761577471849479
- * @method \AdOceanSdk\File\Response\FileVideoPausePostResponse openFileVideoPausePostApi(\AdOceanSdk\File\Params\FileVideoPausePostParams|array $params) 批量暂停素材 https://open.oceanengine.com/labels/7/docs/1779985717273613
- * @method \AdOceanSdk\File\Response\FileUploadTaskCreatePostResponse openFileUploadTaskCreatePostApi(\AdOceanSdk\File\Params\FileUploadTaskCreatePostParams|array $params) 异步上传视频文件 https://open.oceanengine.com/labels/7/docs/1801533703648324?origin=left_nav
- * @method \AdOceanSdk\File\Response\FileRebateMaterialSearchGetResponse openFileRebateMaterialSearchGetApi(\AdOceanSdk\File\Params\FileRebateMaterialSearchGetParams|array $params) 【代理商】明点无效素材查询 https://open.oceanengine.com/labels/7/docs/1779971491239040
- * @method \AdOceanSdk\File\Response\FileVideoAdGetResponse openFileVideoAdGetApi(\AdOceanSdk\File\Params\FileVideoAdGetParams|array $params) 获取同主体下广告主视频素材 https://open.oceanengine.com/labels/7/docs/1696710603509772
- * @method \AdOceanSdk\File\Response\FileVideoUpdatePostResponse openFileVideoUpdatePostApi(\AdOceanSdk\File\Params\FileVideoUpdatePostParams|array $params) 更新视频 https://open.oceanengine.com/labels/7/docs/1696710605909004
- * @method \AdOceanSdk\File\Response\FileImageGetResponse openFileImageGetApi(\AdOceanSdk\File\Params\FileImageGetParams|array $params) 获取图片素材 https://open.oceanengine.com/labels/7/docs/1696710601254912
- * @method \AdOceanSdk\File\Response\FileVideoMaterialClearTaskResultGetResponse openFileVideoMaterialClearTaskResultGetApi(\AdOceanSdk\File\Params\FileVideoMaterialClearTaskResultGetParams|array $params) 下载清理任务结果 https://open.oceanengine.com/labels/7/docs/1764216974179400
- * @method \AdOceanSdk\File\Response\FileMaterialBindPostResponse openFileMaterialBindPostApi(\AdOceanSdk\File\Params\FileMaterialBindPostParams|array $params) 素材推送 https://open.oceanengine.com/labels/7/docs/1696710604852236
- * @method \AdOceanSdk\File\Response\FIleImageAdvertiserPostResponse openFIleImageAdvertiserPostApi(\AdOceanSdk\File\Params\FIleImageAdvertiserPostParams|array $params) 上传资质图片 https://open.oceanengine.com/labels/7/docs/1696710599659532
- * @method \AdOceanSdk\File\Response\CarouselListGetResponse openCarouselListGetApi(\AdOceanSdk\File\Params\CarouselListGetParams|array $params) 获取图文素材 https://open.oceanengine.com/labels/7/docs/1773554026740736
- * @method \AdOceanSdk\File\Response\CarouselAdGetResponse openCarouselAdGetApi(\AdOceanSdk\File\Params\CarouselAdGetParams|array $params) 获取同主体下广告主图文素材 https://open.oceanengine.com/labels/7/docs/1773560989475840
- * @method \AdOceanSdk\File\Response\FileVideoUploadTaskListGetResponse openFileVideoUploadTaskListGetApi(\AdOceanSdk\File\Params\FileVideoUploadTaskListGetParams|array $params) 获取异步上传视频文件结果 https://open.oceanengine.com/labels/7/docs/1801544428603604?origin=left_nav
- * @method \AdOceanSdk\File\Response\FileImageAdPostResponse openFileImageAdPostApi(\AdOceanSdk\File\Params\FileImageAdPostParams|array $params) 上传广告图片 https://open.oceanengine.com/labels/7/docs/1696710600176640
- * @method \AdOceanSdk\File\Response\FileMaterialAttributesListGetResponse openFileMaterialAttributesListGetApi(\AdOceanSdk\File\Params\FileMaterialAttributesListGetParams|array $params) 获取视频素材评估标签（新版） https://open.oceanengine.com/labels/7/docs/1789500809829388
- * @method \AdOceanSdk\File\Response\CarouselUpdatePostResponse openCarouselUpdatePostApi(\AdOceanSdk\File\Params\CarouselUpdatePostParams|array $params) 更新图文信息 https://open.oceanengine.com/labels/7/docs/1773554529716228
- * @method \AdOceanSdk\File\Response\FileMaterialDetailGetResponse openFileMaterialDetailGetApi(\AdOceanSdk\File\Params\FileMaterialDetailGetParams|array $params) 查询素材标签信息 https://open.oceanengine.com/labels/7/docs/1763768835703812
- * @method \AdOceanSdk\File\Response\FileVideoEfficiencyGetResponse openFileVideoEfficiencyGetApi(\AdOceanSdk\File\Params\FileVideoEfficiencyGetParams|array $params) 获取低效素材 https://open.oceanengine.com/labels/7/docs/1733880964883467
- * @method \AdOceanSdk\File\Response\FileAudioAdPostResponse openFileAudioAdPostApi(\AdOceanSdk\File\Params\FileAudioAdPostParams|array $params) 上传图文内的音频素材 https://open.oceanengine.com/labels/7/docs/1780005237921792
- * @method \AdOceanSdk\File\Response\FileImageAdGetResponse openFileImageAdGetApi(\AdOceanSdk\File\Params\FileImageAdGetParams|array $params) 获取同主体下广告主图片素材 https://open.oceanengine.com/labels/7/docs/1696710602952719
- * @method \AdOceanSdk\File\Response\FileVideoMaterialClearTaskCreatePostResponse openFileVideoMaterialClearTaskCreatePostApi(\AdOceanSdk\File\Params\FileVideoMaterialClearTaskCreatePostParams|array $params) 创建素材清理任务 https://open.oceanengine.com/labels/7/docs/1764209655140366
- * @method \AdOceanSdk\File\Response\FileVideoAdPostResponse openFileVideoAdPostApi(\AdOceanSdk\File\Params\FileVideoAdPostParams|array $params) 上传视频 https://open.oceanengine.com/labels/7/docs/1696710600730639
- * @method \AdOceanSdk\File\Response\CarouselCreatePostResponse openCarouselCreatePostApi(\AdOceanSdk\File\Params\CarouselCreatePostParams|array $params) 上传图文 https://open.oceanengine.com/labels/7/docs/1773552433235140
- * @method \AdOceanSdk\File\Response\CarouselDeletePostResponse openCarouselDeletePostApi(\AdOceanSdk\File\Params\CarouselDeletePostParams|array $params) 批量删除图文 https://open.oceanengine.com/labels/7/docs/1773561744826380
- * @method \AdOceanSdk\File\Response\FileMaterialListGetResponse openFileMaterialListGetApi(\AdOceanSdk\File\Params\FileMaterialListGetParams|array $params) 获取素材标签列表 https://open.oceanengine.com/labels/7/docs/1761499216182279
- * @method \AdOceanSdk\File\Response\FileVideoGetResponse openFileVideoGetApi(\AdOceanSdk\File\Params\FileVideoGetParams|array $params) 获取视频素材 https://open.oceanengine.com/labels/7/docs/1696710601820172
- * @method \AdOceanSdk\File\Response\FileVideoAwemeGetResponse openFileVideoAwemeGetApi(\AdOceanSdk\File\Params\FileVideoAwemeGetParams|array $params) 获取抖音主页视频 https://open.oceanengine.com/labels/7/docs/1729982871844879
- * @method \AdOceanSdk\File\Response\FileVideoMaterialClearTaskGetResponse openFileVideoMaterialClearTaskGetApi(\AdOceanSdk\File\Params\FileVideoMaterialClearTaskGetParams|array $params) 获取清理任务列表 https://open.oceanengine.com/labels/7/docs/1764210394714119
- * @method \AdOceanSdk\Oauth\Response\OauthUserInfoGetResponse openOauthUserInfoGetApi(\AdOceanSdk\Oauth\Params\OauthUserInfoGetParams|array $params) 获取授权User信息 https://open.oceanengine.com/labels/7/docs/1696710507039756
- * @method \AdOceanSdk\Oauth\Response\OauthAppAccessTokenPostResponse openOauthAppAccessTokenPostApi(\AdOceanSdk\Oauth\Params\OauthAppAccessTokenPostParams|array $params) 获取APP Access Token https://open.oceanengine.com/labels/7/docs/1713655428885516
- * @method \AdOceanSdk\Oauth\Response\OauthAdvertiserGetResponse openOauthAdvertiserGetApi(\AdOceanSdk\Oauth\Params\OauthAdvertiserGetParams|array $params) 获取已授权账户 https://open.oceanengine.com/labels/7/docs/1696710506574848
- * @method \AdOceanSdk\Oauth\Response\OauthRefreshTokenPostResponse openOauthRefreshTokenPostApi(\AdOceanSdk\Oauth\Params\OauthRefreshTokenPostParams|array $params) 刷新Refresh Token https://open.oceanengine.com/labels/7/docs/1696710506097679
- * @method \AdOceanSdk\Oauth\Response\OauthAccessTokenGetResponse openOauthAccessTokenGetApi(\AdOceanSdk\Oauth\Params\OauthAccessTokenGetParams|array $params) 获取Access Token https://open.oceanengine.com/labels/7/docs/1696710505596940
- * @method \AdOceanSdk\Tools\Response\ToolsBpAssetManagementShareCancelPostResponse openToolsBpAssetManagementShareCancelPostApi(\AdOceanSdk\Tools\Params\ToolsBpAssetManagementShareCancelPostParams|array $params) 取消微信小游戏/小程序共享关系 https://open.oceanengine.com/labels/7/docs/1773102677218368
- * @method \AdOceanSdk\Tools\Response\ToolsSiteUpdatePostResponse openToolsSiteUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsSiteUpdatePostParams|array $params) 修改橙子建站站点 https://open.oceanengine.com/labels/7/docs/1696710618300431
- * @method \AdOceanSdk\Tools\Response\EventManagerAvailableEventsGetResponse openEventManagerAvailableEventsGetApi(\AdOceanSdk\Tools\Params\EventManagerAvailableEventsGetParams|array $params) 获取可创建事件列表 https://open.oceanengine.com/labels/7/docs/1709793059412996
- * @method \AdOceanSdk\Tools\Response\ToolsEstimateAudienceGetResponse openToolsEstimateAudienceGetApi(\AdOceanSdk\Tools\Params\ToolsEstimateAudienceGetParams|array $params) 查询受众预估结果 https://open.oceanengine.com/labels/7/docs/1696710675422208
- * @method \AdOceanSdk\Tools\Response\ToolsPreAuditGetResponse openToolsPreAuditGetApi(\AdOceanSdk\Tools\Params\ToolsPreAuditGetParams|array $params) 素材前置预审结果获取 https://open.oceanengine.com/labels/7/docs/1722273278471172
- * @method \AdOceanSdk\Tools\Response\EventManagerTrackUrlCreatePostResponse openEventManagerTrackUrlCreatePostApi(\AdOceanSdk\Tools\Params\EventManagerTrackUrlCreatePostParams|array $params) 事件资产下创建监测链接组 https://open.oceanengine.com/labels/7/docs/1727898582816775
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMaterialAuthListGetResponse openToolsEbpMaterialAuthListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpMaterialAuthListGetParams|array $params) 升级版工作台查询素材共享范围 https://open.oceanengine.com/labels/7/docs/1855451294366919?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsBpAssetManagementShareGetResponse openToolsBpAssetManagementShareGetApi(\AdOceanSdk\Tools\Params\ToolsBpAssetManagementShareGetParams|array $params) 查看微信小游戏/小程序共享范围 https://open.oceanengine.com/labels/7/docs/1773105971421187
- * @method \AdOceanSdk\Tools\Response\ToolsSuggestBudgetGetResponse openToolsSuggestBudgetGetApi(\AdOceanSdk\Tools\Params\ToolsSuggestBudgetGetParams|array $params) 获取广告建议起量预算 https://open.oceanengine.com/labels/7/docs/1761603631358979
- * @method \AdOceanSdk\Tools\Response\ToolsCountryInfoGetResponse openToolsCountryInfoGetApi(\AdOceanSdk\Tools\Params\ToolsCountryInfoGetParams|array $params) 查询国家/区域信息 https://open.oceanengine.com/labels/7/docs/1709606374050823
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMicroGameLinkListGetResponse openToolsEbpMicroGameLinkListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpMicroGameLinkListGetParams|array $params) 获取字节小游戏链接详情 https://open.oceanengine.com/labels/7/docs/1847487751501836?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\SiteTemplatePreviewGetResponse openSiteTemplatePreviewGetApi(\AdOceanSdk\Tools\Params\SiteTemplatePreviewGetParams|array $params) 获取模版预览链接 https://open.oceanengine.com/labels/7/docs/1722273233146891
- * @method \AdOceanSdk\Tools\Response\AudiencePackageGetResponse openAudiencePackageGetApi(\AdOceanSdk\Tools\Params\AudiencePackageGetParams|array $params) 获取定向包 https://open.oceanengine.com/labels/7/docs/1696710731761676
- * @method \AdOceanSdk\Tools\Response\ToolsQuotaGetResponse openToolsQuotaGetApi(\AdOceanSdk\Tools\Params\ToolsQuotaGetParams|array $params) 查询在投计划配额 https://open.oceanengine.com/labels/7/docs/1731070251873293
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMicroAppletListGetResponse openToolsEbpMicroAppletListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpMicroAppletListGetParams|array $params) 获取字节小程序列表 https://open.oceanengine.com/labels/7/docs/1847487562418308?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsAwemeAuthListGetResponse openToolsAwemeAuthListGetApi(\AdOceanSdk\Tools\Params\ToolsAwemeAuthListGetParams|array $params) 获取抖音授权关系 https://open.oceanengine.com/labels/7/docs/1729983667746823
- * @method \AdOceanSdk\Tools\Response\ToolsAdStatExtraInfoGetResponse openToolsAdStatExtraInfoGetApi(\AdOceanSdk\Tools\Params\ToolsAdStatExtraInfoGetParams|array $params) 查询广告计划学习期状态 https://open.oceanengine.com/labels/7/docs/1696710684841984
- * @method \AdOceanSdk\Tools\Response\EventManagerTrackUrlUpdatePostResponse openEventManagerTrackUrlUpdatePostApi(\AdOceanSdk\Tools\Params\EventManagerTrackUrlUpdatePostParams|array $params) 事件资产下更新监测链接组 https://open.oceanengine.com/labels/7/docs/1727899035395079
- * @method \AdOceanSdk\Tools\Response\ToolsSiteUpdateStatusPostResponse openToolsSiteUpdateStatusPostApi(\AdOceanSdk\Tools\Params\ToolsSiteUpdateStatusPostParams|array $params) 更改橙子建站站点状态 https://open.oceanengine.com/labels/7/docs/1696710618884096
- * @method \AdOceanSdk\Tools\Response\ToolsAdPreviewQrcodeGetResponse openToolsAdPreviewQrcodeGetApi(\AdOceanSdk\Tools\Params\ToolsAdPreviewQrcodeGetParams|array $params) 获取广告预览二维码（升级版） https://open.oceanengine.com/labels/7/docs/1763117461145604
- * @method \AdOceanSdk\Tools\Response\EventManagerOptimizedGoalV2GetResponse openEventManagerOptimizedGoalV2GetApi(\AdOceanSdk\Tools\Params\EventManagerOptimizedGoalV2GetParams|array $params) 获取可用优化目标（巨量广告升级版） https://open.oceanengine.com/labels/7/docs/1740944984250381
- * @method \AdOceanSdk\Tools\Response\ToolsSiteHandselPostResponse openToolsSiteHandselPostApi(\AdOceanSdk\Tools\Params\ToolsSiteHandselPostParams|array $params) 建站工具-建站转赠 https://open.oceanengine.com/labels/7/docs/1696710623352844
- * @method \AdOceanSdk\Tools\Response\ToolsEventAssetsGetResponse openToolsEventAssetsGetApi(\AdOceanSdk\Tools\Params\ToolsEventAssetsGetParams|array $params) 获取已创建资产列表 https://open.oceanengine.com/labels/7/docs/1705976384784395
- * @method \AdOceanSdk\Tools\Response\ToolsEbpSubjectListGetResponse openToolsEbpSubjectListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpSubjectListGetParams|array $params) 获取组织认证及授权主体列表NEW https://open.oceanengine.com/labels/7/docs/1855089467521035?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\SiteTemplatePicUrlGetResponse openSiteTemplatePicUrlGetApi(\AdOceanSdk\Tools\Params\SiteTemplatePicUrlGetParams|array $params) 获取模板/站点URL https://open.oceanengine.com/labels/7/docs/1772995231995911
- * @method \AdOceanSdk\Tools\Response\NativeAnchorDetailGetResponse openNativeAnchorDetailGetApi(\AdOceanSdk\Tools\Params\NativeAnchorDetailGetParams|array $params) 获取原生锚点详情 https://open.oceanengine.com/labels/7/docs/1786407342576640
- * @method \AdOceanSdk\Tools\Response\ToolsSearchBidRatioGetResponse openToolsSearchBidRatioGetApi(\AdOceanSdk\Tools\Params\ToolsSearchBidRatioGetParams|array $params) 获取快投推荐出价系数 https://open.oceanengine.com/labels/7/docs/1740289237468175
- * @method \AdOceanSdk\Tools\Response\EventManagerTrackUrlGetResponse openEventManagerTrackUrlGetApi(\AdOceanSdk\Tools\Params\EventManagerTrackUrlGetParams|array $params) 获取事件资产下的监测链接组 https://open.oceanengine.com/labels/7/docs/1727901957092365
- * @method \AdOceanSdk\Tools\Response\ToolsEbpWechatAppletListGetResponse openToolsEbpWechatAppletListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpWechatAppletListGetParams|array $params) 获取微信小程序列表 https://open.oceanengine.com/labels/7/docs/1847487716271104?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsSiteCreatePostResponse openToolsSiteCreatePostApi(\AdOceanSdk\Tools\Params\ToolsSiteCreatePostParams|array $params) 创建橙子建站站点 https://open.oceanengine.com/labels/7/docs/1696710617712640
- * @method \AdOceanSdk\Tools\Response\ToolsCreativeWordUpdatePostResponse openToolsCreativeWordUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsCreativeWordUpdatePostParams|array $params) 更新动态创意词包 https://open.oceanengine.com/labels/7/docs/1696710718730240
- * @method \AdOceanSdk\Tools\Response\ToolsWechatAppletCreatePostResponse openToolsWechatAppletCreatePostApi(\AdOceanSdk\Tools\Params\ToolsWechatAppletCreatePostParams|array $params) 创建微信小程序 https://open.oceanengine.com/labels/7/docs/1771744149686286
- * @method \AdOceanSdk\Tools\Response\ToolsEbpVideoUpdatePostResponse openToolsEbpVideoUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsEbpVideoUpdatePostParams|array $params) 升级版工作台更新视频 https://open.oceanengine.com/labels/7/docs/1855449500037184?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsEbpVideoAttributesListGetResponse openToolsEbpVideoAttributesListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpVideoAttributesListGetParams|array $params) 升级版工作台获取视频素材评估标签 https://open.oceanengine.com/labels/7/docs/1855453250877440?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsSiteReadGetResponse openToolsSiteReadGetApi(\AdOceanSdk\Tools\Params\ToolsSiteReadGetParams|array $params) 获取橙子建站站点详细信息 https://open.oceanengine.com/labels/7/docs/1696710620022799
- * @method \AdOceanSdk\Tools\Response\ToolsWechatAppletListGetResponse openToolsWechatAppletListGetApi(\AdOceanSdk\Tools\Params\ToolsWechatAppletListGetParams|array $params) 获取微信小程序列表 https://open.oceanengine.com/labels/7/docs/1771203622020111
- * @method \AdOceanSdk\Tools\Response\ToolsBpAssetManagementSharePostResponse openToolsBpAssetManagementSharePostApi(\AdOceanSdk\Tools\Params\ToolsBpAssetManagementSharePostParams|array $params) 设置微信小游戏/小程序共享 https://open.oceanengine.com/labels/7/docs/1773089427219584
- * @method \AdOceanSdk\Tools\Response\ToolsVideoCoverSuggestGetResponse openToolsVideoCoverSuggestGetApi(\AdOceanSdk\Tools\Params\ToolsVideoCoverSuggestGetParams|array $params) 获取视频智能封面 https://open.oceanengine.com/labels/7/docs/1696710602404864
- * @method \AdOceanSdk\Tools\Response\ToolsRegionGetResponse openToolsRegionGetApi(\AdOceanSdk\Tools\Params\ToolsRegionGetParams|array $params) 获取地域列表 https://open.oceanengine.com/labels/7/docs/1696710678458380
- * @method \AdOceanSdk\Tools\Response\ToolsLogSearchGetResponse openToolsLogSearchGetApi(\AdOceanSdk\Tools\Params\ToolsLogSearchGetParams|array $params) 日志查询 https://open.oceanengine.com/labels/7/docs/1696710682956815
- * @method \AdOceanSdk\Tools\Response\EventManagerAssetsCreatePostResponse openEventManagerAssetsCreatePostApi(\AdOceanSdk\Tools\Params\EventManagerAssetsCreatePostParams|array $params) 创建事件资产 https://open.oceanengine.com/labels/7/docs/1709792943937547
- * @method \AdOceanSdk\Tools\Response\ToolsEbpVideoDeletePostResponse openToolsEbpVideoDeletePostApi(\AdOceanSdk\Tools\Params\ToolsEbpVideoDeletePostParams|array $params) 升级版工作台批量删除视频 https://open.oceanengine.com/labels/7/docs/1855450454372428?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsCommentReplyPostResponse openToolsCommentReplyPostApi(\AdOceanSdk\Tools\Params\ToolsCommentReplyPostParams|array $params) 回复评论 https://open.oceanengine.com/labels/7/docs/1754803971592192
- * @method \AdOceanSdk\Tools\Response\ToolsBidSuggestGetResponse openToolsBidSuggestGetApi(\AdOceanSdk\Tools\Params\ToolsBidSuggestGetParams|array $params) 建议日预算及预期成本 https://open.oceanengine.com/labels/7/docs/1696710676657164
- * @method \AdOceanSdk\Tools\Response\ToolsPromotionRaiseSetPostResponse openToolsPromotionRaiseSetPostApi(\AdOceanSdk\Tools\Params\ToolsPromotionRaiseSetPostParams|array $params) 开启/更新一键起量 https://open.oceanengine.com/labels/7/docs/1761603589597259
- * @method \AdOceanSdk\Tools\Response\ToolsCreativeWordDeletePostResponse openToolsCreativeWordDeletePostApi(\AdOceanSdk\Tools\Params\ToolsCreativeWordDeletePostParams|array $params) 删除动态创意词包 https://open.oceanengine.com/labels/7/docs/1696710719368207
- * @method \AdOceanSdk\Tools\Response\ToolsCreativeWordCreatePostResponse openToolsCreativeWordCreatePostApi(\AdOceanSdk\Tools\Params\ToolsCreativeWordCreatePostParams|array $params) 创建动态创意词包 https://open.oceanengine.com/labels/7/docs/1696710717478927
- * @method \AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse openToolsWechatAppletUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsWechatAppletUpdatePostParams|array $params) 更新微信小程序 https://open.oceanengine.com/labels/7/docs/1771744756803659
- * @method \AdOceanSdk\Tools\Response\EventManagerShareGetResponse openEventManagerShareGetApi(\AdOceanSdk\Tools\Params\EventManagerShareGetParams|array $params) 事件管理资产查看共享范围 https://open.oceanengine.com/labels/7/docs/1738862504734731
- * @method \AdOceanSdk\Tools\Response\EventManagerEventsCreatePostResponse openEventManagerEventsCreatePostApi(\AdOceanSdk\Tools\Params\EventManagerEventsCreatePostParams|array $params) 资产下创建事件 https://open.oceanengine.com/labels/7/docs/1709792900524035
- * @method \AdOceanSdk\Tools\Response\ToolsCreativeWordSelectGetResponse openToolsCreativeWordSelectGetApi(\AdOceanSdk\Tools\Params\ToolsCreativeWordSelectGetParams|array $params) 查询动态创意词包 https://open.oceanengine.com/labels/7/docs/1696710718137356
- * @method \AdOceanSdk\Tools\Response\ToolsEbpVideoUploadPostResponse openToolsEbpVideoUploadPostApi(\AdOceanSdk\Tools\Params\ToolsEbpVideoUploadPostParams|array $params) 升级版工作台上传视频 https://open.oceanengine.com/labels/7/docs/1855448450527623?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupUpdatePostResponse openToolsLandingGroupUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupUpdatePostParams|array $params) 更新落地页组信息 https://open.oceanengine.com/labels/7/docs/1696710630182912
- * @method \AdOceanSdk\Tools\Response\SiteTemplateGetResponse openSiteTemplateGetApi(\AdOceanSdk\Tools\Params\SiteTemplateGetParams|array $params) 获取站点模版列表 https://open.oceanengine.com/labels/7/docs/1722273219292292
- * @method \AdOceanSdk\Tools\Response\ToolsSiteGetResponse openToolsSiteGetApi(\AdOceanSdk\Tools\Params\ToolsSiteGetParams|array $params) 获取橙子建站站点列表 https://open.oceanengine.com/labels/7/docs/1696710620579852
- * @method \AdOceanSdk\Tools\Response\ToolsCommentHidePostResponse openToolsCommentHidePostApi(\AdOceanSdk\Tools\Params\ToolsCommentHidePostParams|array $params) 隐藏评论 https://open.oceanengine.com/labels/7/docs/1754804147204108
- * @method \AdOceanSdk\Tools\Response\AudiencePackageCreatePostResponse openAudiencePackageCreatePostApi(\AdOceanSdk\Tools\Params\AudiencePackageCreatePostParams|array $params) 创建定向包 https://open.oceanengine.com/labels/7/docs/1696710735901711
- * @method \AdOceanSdk\Tools\Response\ToolsBidsSuggestGetResponse openToolsBidsSuggestGetApi(\AdOceanSdk\Tools\Params\ToolsBidsSuggestGetParams|array $params) 查询建议出价（巨量广告升级版） https://open.oceanengine.com/labels/7/docs/1771363823169544
- * @method \AdOceanSdk\Tools\Response\WechatAppletListGetResponse openWechatAppletListGetApi(\AdOceanSdk\Tools\Params\WechatAppletListGetParams|array $params) 获取微信小程序列表 https://open.oceanengine.com/labels/7/docs/1771203622020111
- * @method \AdOceanSdk\Tools\Response\NativeAnchorGetResponse openNativeAnchorGetApi(\AdOceanSdk\Tools\Params\NativeAnchorGetParams|array $params) 获取账户下原生锚点 https://open.oceanengine.com/labels/7/docs/1757715831323652
- * @method \AdOceanSdk\Tools\Response\AudiencePackageDeletePostResponse openAudiencePackageDeletePostApi(\AdOceanSdk\Tools\Params\AudiencePackageDeletePostParams|array $params) 删除定向包 https://open.oceanengine.com/labels/7/docs/1696710732991488
- * @method \AdOceanSdk\Tools\Response\ToolsEbpAssetAuthPostResponse openToolsEbpAssetAuthPostApi(\AdOceanSdk\Tools\Params\ToolsEbpAssetAuthPostParams|array $params) 添加资产共享 https://open.oceanengine.com/labels/7/docs/1848327327721671?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsKeyActionGetResponse openToolsKeyActionGetApi(\AdOceanSdk\Tools\Params\ToolsKeyActionGetParams|array $params) 获取活动记录 https://open.oceanengine.com/labels/7/docs/1696710632392704
- * @method \AdOceanSdk\Tools\Response\ToolsPromotionDiagnosisSuggestionGetResponse openToolsPromotionDiagnosisSuggestionGetApi(\AdOceanSdk\Tools\Params\ToolsPromotionDiagnosisSuggestionGetParams|array $params) 获取广告诊断建议 https://open.oceanengine.com/labels/7/docs/1754715780584459
- * @method \AdOceanSdk\Tools\Response\EventManagerSharePostResponse openEventManagerSharePostApi(\AdOceanSdk\Tools\Params\EventManagerSharePostParams|array $params) 事件管理资产共享 https://open.oceanengine.com/labels/7/docs/1738862409262084
- * @method \AdOceanSdk\Tools\Response\NativeAnchorUpdatePostResponse openNativeAnchorUpdatePostApi(\AdOceanSdk\Tools\Params\NativeAnchorUpdatePostParams|array $params) 更新原生锚点 https://open.oceanengine.com/labels/7/docs/1780079786680328
- * @method \AdOceanSdk\Tools\Response\EventManagerEventConfigsGetResponse openEventManagerEventConfigsGetApi(\AdOceanSdk\Tools\Params\EventManagerEventConfigsGetParams|array $params) 获取资产下已创建事件列表 https://open.oceanengine.com/labels/7/docs/1709793086075972
- * @method \AdOceanSdk\Tools\Response\ToolsAssetLinkListGetResponse openToolsAssetLinkListGetApi(\AdOceanSdk\Tools\Params\ToolsAssetLinkListGetParams|array $params) 获取字节小程序/小游戏详情内容 https://open.oceanengine.com/labels/7/docs/1778265753535620
- * @method \AdOceanSdk\Tools\Response\ToolsOrangeSiteGetResponse openToolsOrangeSiteGetApi(\AdOceanSdk\Tools\Params\ToolsOrangeSiteGetParams|array $params) 通过优化目标获取橙子落地页站点信息 https://open.oceanengine.com/labels/7/docs/1755162848410635
- * @method \AdOceanSdk\Tools\Response\ToolsClueGetResponse openToolsClueGetApi(\AdOceanSdk\Tools\Params\ToolsClueGetParams|array $params) 获取线索列表 https://open.oceanengine.com/labels/7/docs/1696710631271436
- * @method \AdOceanSdk\Tools\Response\NativeAnchorCreatePostResponse openNativeAnchorCreatePostApi(\AdOceanSdk\Tools\Params\NativeAnchorCreatePostParams|array $params) 创建原生锚点 https://open.oceanengine.com/labels/7/docs/1757798123491403
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMaterialAuthDeletePostResponse openToolsEbpMaterialAuthDeletePostApi(\AdOceanSdk\Tools\Params\ToolsEbpMaterialAuthDeletePostParams|array $params) 升级版工作台取消素材共享 https://open.oceanengine.com/labels/7/docs/1855452458903624?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsEbpAssetAuthListGetResponse openToolsEbpAssetAuthListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpAssetAuthListGetParams|array $params) 查询资产共享范围 https://open.oceanengine.com/labels/7/docs/1848326390305163?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsPromotionRaiseStatusCurrentIdsGetResponse openToolsPromotionRaiseStatusCurrentIdsGetApi(\AdOceanSdk\Tools\Params\ToolsPromotionRaiseStatusCurrentIdsGetParams|array $params) 获取广告起量状态 https://open.oceanengine.com/labels/7/docs/1765406483367948
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMaterialAuthCreatePostResponse openToolsEbpMaterialAuthCreatePostApi(\AdOceanSdk\Tools\Params\ToolsEbpMaterialAuthCreatePostParams|array $params) 升级版工作台素材共享 https://open.oceanengine.com/labels/7/docs/1854120947746880?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\NativeAnchorDeletePostResponse openNativeAnchorDeletePostApi(\AdOceanSdk\Tools\Params\NativeAnchorDeletePostParams|array $params) 删除原生锚点 https://open.oceanengine.com/labels/7/docs/1780079261760524
- * @method \AdOceanSdk\Tools\Response\ToolsEventAllAssetsDetailGetResponse openToolsEventAllAssetsDetailGetApi(\AdOceanSdk\Tools\Params\ToolsEventAllAssetsDetailGetParams|array $params) 获取已创建资产详情（新） https://open.oceanengine.com/labels/7/docs/1800988620664954
- * @method \AdOceanSdk\Tools\Response\ToolsMicroAppListGetResponse openToolsMicroAppListGetApi(\AdOceanSdk\Tools\Params\ToolsMicroAppListGetParams|array $params) 获取字节小程序 https://open.oceanengine.com/labels/7/docs/1778249831680135
- * @method \AdOceanSdk\Tools\Response\ToolsAdminInfoGetResponse openToolsAdminInfoGetApi(\AdOceanSdk\Tools\Params\ToolsAdminInfoGetParams|array $params) 获取行政信息 https://open.oceanengine.com/labels/7/docs/1709606596424718
- * @method \AdOceanSdk\Tools\Response\ToolsCommentMetricsGetResponse openToolsCommentMetricsGetApi(\AdOceanSdk\Tools\Params\ToolsCommentMetricsGetParams|array $params) 获取评论统计指标 https://open.oceanengine.com/labels/7/docs/1779551814119427
- * @method \AdOceanSdk\Tools\Response\SiteTemplateCreatePostResponse openSiteTemplateCreatePostApi(\AdOceanSdk\Tools\Params\SiteTemplateCreatePostParams|array $params) 基于站点创建模板 https://open.oceanengine.com/labels/7/docs/1722273160450059
- * @method \AdOceanSdk\Tools\Response\ToolsPreAuditSendPostResponse openToolsPreAuditSendPostApi(\AdOceanSdk\Tools\Params\ToolsPreAuditSendPostParams|array $params) 素材前置预审送审 https://open.oceanengine.com/labels/7/docs/1722273263150083
- * @method \AdOceanSdk\Tools\Response\ToolsPromotionDiagnosisSuggestionAcceptPostResponse openToolsPromotionDiagnosisSuggestionAcceptPostApi(\AdOceanSdk\Tools\Params\ToolsPromotionDiagnosisSuggestionAcceptPostParams|array $params) 采纳广告诊断建议 https://open.oceanengine.com/labels/7/docs/1754716131916803
- * @method \AdOceanSdk\Tools\Response\AdvConvertOleConvertPostResponse openAdvConvertOleConvertPostApi(\AdOceanSdk\Tools\Params\AdvConvertOleConvertPostParams|array $params) 引流下单转化信息获取 https://open.oceanengine.com/labels/7/docs/1774836168252548
- * @method \AdOceanSdk\Tools\Response\AudiencePackageUpdatePostResponse openAudiencePackageUpdatePostApi(\AdOceanSdk\Tools\Params\AudiencePackageUpdatePostParams|array $params) 更新定向包 https://open.oceanengine.com/labels/7/docs/1696710732349455
- * @method \AdOceanSdk\Tools\Response\ToolsSitePreviewGetResponse openToolsSitePreviewGetApi(\AdOceanSdk\Tools\Params\ToolsSitePreviewGetParams|array $params) 获取橙子建站站点预览地址 https://open.oceanengine.com/labels/7/docs/1696710619437056
- * @method \AdOceanSdk\Tools\Response\ToolsEstimatedPriceGetResponse openToolsEstimatedPriceGetApi(\AdOceanSdk\Tools\Params\ToolsEstimatedPriceGetParams|array $params) 获取预估点击成本 https://open.oceanengine.com/labels/7/docs/1717213696709710
- * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupGetResponse openToolsLandingGroupGetApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupGetParams|array $params) 获取落地页组 https://open.oceanengine.com/labels/7/docs/1696710629043212
- * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupCreatePostResponse openToolsLandingGroupCreatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupCreatePostParams|array $params) 创建落地页组 https://open.oceanengine.com/labels/7/docs/1696710628472844
- * @method \AdOceanSdk\Tools\Response\ToolsPromotionRaiseStatusGetResponse openToolsPromotionRaiseStatusGetApi(\AdOceanSdk\Tools\Params\ToolsPromotionRaiseStatusGetParams|array $params) 获取一键起量方案列表 https://open.oceanengine.com/labels/7/docs/1761603513577476
- * @method \AdOceanSdk\Tools\Response\ToolsCommentMid2itemIdGetResponse openToolsCommentMid2itemIdGetApi(\AdOceanSdk\Tools\Params\ToolsCommentMid2itemIdGetParams|array $params) 获取评论视频ID列表 https://open.oceanengine.com/labels/7/docs/1773084580896776
- * @method \AdOceanSdk\Tools\Response\ToolsMicroAppUpdatePostResponse openToolsMicroAppUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsMicroAppUpdatePostParams|array $params) 更新字节小程序 https://open.oceanengine.com/labels/7/docs/1780614097935372
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMicroAppletUpdatePostResponse openToolsEbpMicroAppletUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsEbpMicroAppletUpdatePostParams|array $params) 更新字节小程序 https://open.oceanengine.com/labels/7/docs/1847487541689347?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsEbpWechatAppletUpdatePostResponse openToolsEbpWechatAppletUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsEbpWechatAppletUpdatePostParams|array $params) 更新微信小程序 https://open.oceanengine.com/labels/7/docs/1847487757321420?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\EventManagerDeepBidTypeGetResponse openEventManagerDeepBidTypeGetApi(\AdOceanSdk\Tools\Params\EventManagerDeepBidTypeGetParams|array $params) 获取可用深度优化方式（广告投放升级版） https://open.oceanengine.com/labels/7/docs/1754875889727563
- * @method \AdOceanSdk\Tools\Response\ToolsEbpWechatAppletCreatePostResponse openToolsEbpWechatAppletCreatePostApi(\AdOceanSdk\Tools\Params\ToolsEbpWechatAppletCreatePostParams|array $params) 新建微信小程序 https://open.oceanengine.com/labels/7/docs/1847487724040192?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsMicroAppCreatePostResponse openToolsMicroAppCreatePostApi(\AdOceanSdk\Tools\Params\ToolsMicroAppCreatePostParams|array $params) 创建字节小程序 https://open.oceanengine.com/labels/7/docs/1780613896121344
- * @method \AdOceanSdk\Tools\Response\ToolsEbpAssetAuthCancelPostResponse openToolsEbpAssetAuthCancelPostApi(\AdOceanSdk\Tools\Params\ToolsEbpAssetAuthCancelPostParams|array $params) 取消资产共享 https://open.oceanengine.com/labels/7/docs/1848328204842138?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMicroAppletCreatePostResponse openToolsEbpMicroAppletCreatePostApi(\AdOceanSdk\Tools\Params\ToolsEbpMicroAppletCreatePostParams|array $params) 新建字节小程序 https://open.oceanengine.com/labels/7/docs/1847487532455299?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsSiteCopyPostResponse openToolsSiteCopyPostApi(\AdOceanSdk\Tools\Params\ToolsSiteCopyPostParams|array $params) 建站工具-建站复制 https://open.oceanengine.com/labels/7/docs/1696710623908864
- * @method \AdOceanSdk\Tools\Response\ToolsCommentGetResponse openToolsCommentGetApi(\AdOceanSdk\Tools\Params\ToolsCommentGetParams|array $params) 获取评论列表 https://open.oceanengine.com/labels/7/docs/1754803808580608
- * @method \AdOceanSdk\Tools\Response\ToolsAdQualityGetResponse openToolsAdQualityGetApi(\AdOceanSdk\Tools\Params\ToolsAdQualityGetParams|array $params) 查询广告质量度 https://open.oceanengine.com/labels/7/docs/1696710677262351
- * @method \AdOceanSdk\Tools\Response\ToolsEventAllAssetsListGetResponse openToolsEventAllAssetsListGetApi(\AdOceanSdk\Tools\Params\ToolsEventAllAssetsListGetParams|array $params) 获取账户下资产列表（新） https://open.oceanengine.com/labels/7/docs/1800985709803914
- * @method \AdOceanSdk\Tools\Response\SiteTemplateSiteCreatePostResponse openSiteTemplateSiteCreatePostApi(\AdOceanSdk\Tools\Params\SiteTemplateSiteCreatePostParams|array $params) 基于模板创建站点 https://open.oceanengine.com/labels/7/docs/1722273197263875
- * @method \AdOceanSdk\Tools\Response\ToolsPromotionRaiseVersionGetResponse openToolsPromotionRaiseVersionGetApi(\AdOceanSdk\Tools\Params\ToolsPromotionRaiseVersionGetParams|array $params) 获取起量版本信息 https://open.oceanengine.com/labels/7/docs/1761603462670403
- * @method \AdOceanSdk\Tools\Response\ToolsClueCallbackPostResponse openToolsClueCallbackPostApi(\AdOceanSdk\Tools\Params\ToolsClueCallbackPostParams|array $params) 回传有效线索 https://open.oceanengine.com/labels/7/docs/1696710631812096
- * @method \AdOceanSdk\Tools\Response\EventManagerShareCancelPostResponse openEventManagerShareCancelPostApi(\AdOceanSdk\Tools\Params\EventManagerShareCancelPostParams|array $params) 事件管理资产取消共享 https://open.oceanengine.com/labels/7/docs/1738862469146628
- * @method \AdOceanSdk\Tools\Response\ToolsPromotionRaiseStopPostResponse openToolsPromotionRaiseStopPostApi(\AdOceanSdk\Tools\Params\ToolsPromotionRaiseStopPostParams|array $params) 关停正在起量的广告 https://open.oceanengine.com/labels/7/docs/1761603666011139
- * @method \AdOceanSdk\Tools\Response\ToolsLandingGroupSiteOptStatusUpdatePostResponse openToolsLandingGroupSiteOptStatusUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsLandingGroupSiteOptStatusUpdatePostParams|array $params) 更新落地页组站点状态 https://open.oceanengine.com/labels/7/docs/1696710629600256
- * @method \AdOceanSdk\Tools\Response\ToolsEbpMicroAppletLinkListGetResponse openToolsEbpMicroAppletLinkListGetApi(\AdOceanSdk\Tools\Params\ToolsEbpMicroAppletLinkListGetParams|array $params) 获取字节小程序link详情 https://open.oceanengine.com/labels/7/docs/1847487745198092?origin=left_nav
- * @method \AdOceanSdk\Tools\Response\ToolsActionTextGetResponse openToolsActionTextGetApi(\AdOceanSdk\Tools\Params\ToolsActionTextGetParams|array $params) 行动号召字段内容获取 https://open.oceanengine.com/labels/7/docs/1696710684229644
- * @method \AdOceanSdk\EBP\Response\EbpAdvertiserTaskDownloadGetResponse openEbpAdvertiserTaskDownloadGetApi(\AdOceanSdk\EBP\Params\EbpAdvertiserTaskDownloadGetParams|array $params) 下载获取升级版巨量引擎工作台账户任务结果 https://open.oceanengine.com/labels/7/docs/1829552986209882?origin=left_nav
- * @method \AdOceanSdk\EBP\Response\EbpAdvertiserListGetResponse openEbpAdvertiserListGetApi(\AdOceanSdk\EBP\Params\EbpAdvertiserListGetParams|array $params) 获取升级版巨量引擎工作台下账户列表 https://open.oceanengine.com/labels/7/docs/1829550825614739?origin=left_nav
- * @method \AdOceanSdk\EBP\Response\EbpAdvertiserTaskListGetResponse openEbpAdvertiserTaskListGetApi(\AdOceanSdk\EBP\Params\EbpAdvertiserTaskListGetParams|array $params) 查询获取工作台组织账户任务状态 https://open.oceanengine.com/labels/7/docs/1829552777525449?origin=left_nav
- * @method \AdOceanSdk\EBP\Response\EbpLevelGetGetResponse openEbpLevelGetGetApi(\AdOceanSdk\EBP\Params\EbpLevelGetGetParams|array $params) 获取工作台组织关系（升级版） https://open.oceanengine.com/labels/7/docs/1829551362400384?origin=left_nav
- * @method \AdOceanSdk\EBP\Response\EbpAdvertiserTaskCreatePostResponse openEbpAdvertiserTaskCreatePostApi(\AdOceanSdk\EBP\Params\EbpAdvertiserTaskCreatePostParams|array $params) 创建获取升级版巨量引擎工作台账户任务 https://open.oceanengine.com/labels/7/docs/1829552494525707?origin=left_nav
+ * @see OpenApiMethodsTrait
  */
-class OpenApi
+class OpenApi implements OpenApiInterface
 {
+    use OpenApiMethodsTrait;
+
     private RequestClientInterface $client;
 
+    /** @var array<string, array{call: class-string<RequestApi>}|class-string<RequestApi>> */
     private array $apiMap;
 
-    public function __construct(RequestClientInterface $client)
+    /**
+     * @param array<string, class-string<RequestApi>> $extraApiMap 用户额外注册的 API 名 => RequestApi 子类
+     */
+    public function __construct(RequestClientInterface $client, array $extraApiMap = [])
     {
         $this->client = $client;
-        $this->apiMap = include 'api_config.php';
+        $this->apiMap = include __DIR__ . '/api_config.php';
+
+        foreach ($extraApiMap as $name => $apiClass) {
+            $this->register($name, $apiClass);
+        }
     }
 
-    public function __call(string $name, array $args)
+    /**
+     * 运行时注册自定义 API。
+     *
+     * @param class-string<RequestApi> $apiClass
+     */
+    public function register(string $name, string $apiClass): self
     {
-        $apiConfig = $this->apiMap[$name];
-        $params    = $args[0] ?? [];
+        $this->apiMap[$name] = ['call' => $apiClass];
+        return $this;
+    }
+
+    /**
+     * 允许运行时注册的 API 通过 `$openApi->customApi($params)` 形式调用。
+     *
+     * 生成的方法仍然走 trait；这里只兜底动态注册项。
+     */
+    public function __call(string $name, array $arguments): ResponseInterface&Data
+    {
+        return $this->callApi($name, $arguments[0] ?? []);
+    }
+
+    /**
+     * 由生成的 trait 方法转发到此，集中调度具体 RequestApi。
+     */
+    protected function callApi(string $name, mixed $params = []): ResponseInterface&Data
+    {
+        if (!isset($this->apiMap[$name])) {
+            throw new RuntimeException("Unknown OpenApi method: {$name}");
+        }
+
+        $entry = $this->apiMap[$name];
+        $apiClass = is_array($entry) ? $entry['call'] : $entry;
 
         /** @var RequestApi $requestApi */
-        $requestApi = $apiConfig['call']::make();
+        $requestApi = $apiClass::make();
 
         return $requestApi->setClient($this->client)->call($params);
     }

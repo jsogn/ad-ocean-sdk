@@ -1,125 +1,26 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
 
-function scanClasses($directory)
-{
-    $classes = [];
+declare(strict_types=1);
 
-    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
-    foreach ($iterator as $file) {
-        if ($file->isDir()) {
-            continue;
-        }
+require_once __DIR__ . '/bootstrap.php';
 
-        $filename  = $file->getFilename();
-        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+use AdOceanSdk\Script\Generator\ApiConfigGenerator;
 
-        if ($extension === 'php') {
-            $class = getClassFromFile($file->getPathname());
-            if ($class) {
-                $meta = getClassMeta($file->getPathname());
-                if ($meta) {
-                    $classes[$class] = $meta;
-                }
-            }
-        }
-    }
+$options = getopt('', [
+    'config::',
+    'src-root::',
+    'manifest-path::',
+    'output-file::',
+]);
 
-    return $classes;
-}
+$configFile = $options['config'] ?? (__DIR__ . '/config/generator.php');
+$config = file_exists($configFile) ? require $configFile : [];
 
-function getClassFromFile($file)
-{
-    $fp    = fopen($file, 'r');
-    $class = '';
+$srcRoot = $options['src-root'] ?? ($config['output_root'] ?? (__DIR__ . '/../src'));
+$manifestPath = $options['manifest-path'] ?? ($config['manifest_path'] ?? null);
+$outputFile = $options['output-file'] ?? (rtrim($srcRoot, '/') . '/api_config.php');
 
-    while (($line = fgets($fp)) !== false) {
-        if (preg_match('/^namespace\s+(.+);/', $line, $matches)) {
-            $namespace = $matches[1];
-        }
-        if (preg_match('/^class\s+(\w+)/', $line, $matches)) {
-            $class = $namespace . '\\' . $matches[1];
-            break;
-        }
-    }
-
-    fclose($fp);
-
-    return $class;
-}
-
-function getClassMeta($file)
-{
-    $fp   = fopen($file, 'r');
-    $meta = [];
-
-    while (($line = fgets($fp)) !== false) {
-        if (preg_match('/\* @desc\s+(.+)/', $line, $matches)) {
-            $meta['desc'] = $matches[1];
-        } elseif (preg_match('/\* @doc\s+(.+)/', $line, $matches)) {
-            $meta['doc'] = $matches[1];
-        }
-    }
-
-    fclose($fp);
-
-    return $meta;
-}
-
-function getDirectories($path, $excludedDirectories)
-{
-    $directories = glob($path . '/*', GLOB_ONLYDIR);
-    return array_filter($directories, function ($directory) use ($excludedDirectories) {
-        $directoryName = basename($directory);
-        return !in_array($directoryName, $excludedDirectories);
-    });
-}
-
-$directory = '../src';
-$dirs      = getDirectories($directory, ['Kernel']);
-$classes   = [];
-
-foreach ($dirs as $dire) {
-    $classes = [...$classes, ...scanClasses($directory)];
-}
-
-$result  = "<?php\n\nreturn [\n";
-$classes = array_reverse($classes);
-foreach ($classes as $class => $meta) {
-    if (!class_exists($class)) {
-        continue;
-    }
-
-    $className = basename($class, '.php');
-    $className = substr($className, strrpos($className, '\\') + 1);
-
-    $result      .= "    /**
-    * @desc {$meta['desc']}
-    * @doc  {$meta['doc']}
-    **/\n";
-    $result      .= "    'open{$className}' => [\n";
-    $result      .= "        'desc' => '{$meta['desc']}',\n";
-    $result      .= "        'doc' => '{$meta['doc']}',\n";
-    $result      .= "        'call' => {$class}::class,\n";
-    $paramsClass = str_replace('Api', 'Params', $class);
-    if (class_exists($paramsClass)) {
-        $result .= "        'params' => {$paramsClass}::class,\n";
-    } else {
-        $result .= "        'params' => AdOceanSdk\RequestParams::class,\n";
-    }
-
-    $responseClass = str_replace('Api', 'Response', $class);
-    if (class_exists($responseClass)) {
-        $result .= "        'response' => {$responseClass}::class,\n";
-    } else {
-        $result .= "        'response' => AdOceanSdk\RequestResponse::class,\n";
-    }
-
-    $result .= "    ],\n";
-}
-
-$result .= "];";
-
-file_put_contents('../src/api_config.php', $result);
+$generator = new ApiConfigGenerator($srcRoot, $manifestPath);
+$generator->generate($outputFile);
 
 echo 'success';
