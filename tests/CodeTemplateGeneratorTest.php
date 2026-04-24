@@ -142,7 +142,7 @@ final class CodeTemplateGeneratorTest extends TestCase
     private function loadDocData(): array
     {
         return json_decode(
-            file_get_contents(__DIR__ . '/../doc.json'),
+            file_get_contents(__DIR__ . '/fixtures/project_deep_cpa_bid_update_doc.json'),
             true,
             512,
             JSON_THROW_ON_ERROR

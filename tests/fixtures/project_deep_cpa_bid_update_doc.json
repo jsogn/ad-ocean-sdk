@@ -1,0 +1,79 @@
+{
+  "request_title": "批量更新深层项目出价NEW",
+  "request_doc": "https://open.oceanengine.com/labels/34/docs/1858175093068809?origin=left_nav",
+  "request_url": "https://api.oceanengine.com/open_api/v3.0/project/deep_cpa_bid/update/",
+  "request_method": "POST",
+  "request_params": {
+    "advertiser_id": {
+      "type": "number",
+      "description": "投放账户ID",
+      "level": 0,
+      "children": {}
+    },
+    "data": {
+      "type": "object[]",
+      "description": "批量修改深度出价，list长度限制1～10",
+      "level": 0,
+      "children": {
+        "project_id": {
+          "type": "number",
+          "description": "项目ID",
+          "level": 1,
+          "children": {}
+        },
+        "deepbid": {
+          "type": "float",
+          "description": "深度出价，单位“元”，精度：两位小数。",
+          "level": 1,
+          "children": {}
+        }
+      }
+    }
+  },
+  "response_params": {
+    "code": {
+      "type": "number",
+      "description": "返回码,详见 【附录-返回码】",
+      "level": 0,
+      "children": {}
+    },
+    "message": {
+      "type": "string",
+      "description": "返回信息,详见 【附录-返回码】",
+      "level": 0,
+      "children": {}
+    },
+    "data": {
+      "type": "json",
+      "description": "json返回值",
+      "level": 0,
+      "children": {
+        "errors": {
+          "type": "object[]",
+          "description": "更新失败的项目列表",
+          "level": 1,
+          "children": {
+            "project_id": {
+              "type": "number",
+              "description": "项目ID",
+              "level": 2,
+              "children": {}
+            },
+            "error_message": {
+              "type": "string",
+              "description": "错误信息",
+              "level": 2,
+              "children": {}
+            }
+          }
+        }
+      }
+    },
+    "request_id": {
+      "type": "string",
+      "description": "请求日志id",
+      "level": 0,
+      "children": {}
+    }
+  }
+}
