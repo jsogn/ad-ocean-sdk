@@ -1,6 +1,6 @@
 {
   "name": "jiangwang/ad-ocean-sdk",
-  "description": "巨量广告 PHP SDK",
+  "description": "巨量引擎开发接口 PHP SDK",
   "type": "library",
   "license": "MIT",
   "autoload": {
