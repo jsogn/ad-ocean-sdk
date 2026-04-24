@@ -12,6 +12,7 @@
 - 🎯 类型安全，支持数组与参数对象两种调用方式
 - 🔧 可插拔 RequestClient，支持注入自定义 Guzzle Client、HandlerStack、代理、证书等能力
 - 🧩 Promise 化 middleware pipeline，`call()` 与 `callAsync()` 共用同一套中间件链
+- ⚙️ 支持 domain、timeout、headers、logger、重试、OAuth 刷新、Guzzle 选项等完整配置面
 - 🌐 提供正式 direct HTTP 入口：`request()` / `get()` / `post()` / `put()` / `patch()` / `delete()`
 - ⚡ 支持批量并发调用 `callBatch()`，并限制并发上限
 - ⭐ 动态属性支持，API 返回中的额外字段无需修改 Data 类也可访问
@@ -48,9 +49,7 @@ $app = Application::init();
 $app->client()->setAccessToken('your-access-token');
 
 // 调用 API - 获取广告主信息
-$response = $app->apis()->openAdvertiserInfoGetApi(
-    AdvertiserInfoGetParams::from(['advertiser_id' => 123456])
-);
+$response = $app->apis()->openAdvertiserInfoGetApi(['advertiser_id' => 123456]);
 
 // 获取响应数据
 $advertiserInfo = $response->getData();
@@ -61,6 +60,29 @@ if (isset($advertiserInfo->extra_field)) {
     echo $advertiserInfo->extra_field;
 }
 ```
+
+#### 使用对象参数调用 API
+
+除了数组参数外，也可以使用参数对象调用 API，这样可以获得更好的类型安全和 IDE 自动补全：
+
+```php
+use AdOceanSdk\Advertiser\Params\AdvertiserInfoGetParams;
+
+// 使用参数对象方式调用
+$params = AdvertiserInfoGetParams::from(['advertiser_id' => 123456]);
+$response = $app->apis()->openAdvertiserInfoGetApi($params);
+
+// 或者链式构造（如果参数对象支持）
+$params = AdvertiserInfoGetParams::from([]);
+$params->advertiser_id = 123456;
+$response = $app->apis()->openAdvertiserInfoGetApi($params);
+```
+
+说明：
+
+- 参数对象继承自 `RequestParams`，支持通过 `from()` 工厂方法传入数组初始化。
+- 参数对象提供类型安全和 IDE 智能提示，相比数组参数更容易发现错误。
+- 数组参数和对象参数可以混用，根据具体场景选择。
 
 ### 配置化初始化
 
@@ -76,6 +98,58 @@ $config = SdkConfig::make()
 
 $app = Application::init(config: $config);
 ```
+
+### 可配置能力总览
+
+`SdkConfig` 用来在初始化阶段装配默认 `RequestClient`；初始化完成后，你仍然可以通过 `$app->client()` 在运行时继续调整大多数配置。
+
+| 类别         | 入口                                                | 作用                                            |
+| ------------ | --------------------------------------------------- | ----------------------------------------------- |
+| 基础网络     | `setDomain()` / `setTimeout()`                      | 设置默认域名与默认超时                          |
+| 鉴权与请求头 | `setAccessToken()` / `setHeaders()` / `addHeader()` | 设置全局 Access-Token 与公共 header             |
+| Guzzle 接管  | `setHttpClient()` / `setHttpClientOptions()`        | 注入现成 Client，或透传底层构造选项             |
+| 错误处理     | `setThrowOnApiError()`                              | 将业务返回码转成异常，并区分鉴权/限流异常       |
+| 重试策略     | `setRetryPolicy()`                                  | 对网络异常与限流异常做指数退避重试              |
+| OAuth 刷新   | `setOAuthTokenProvider()`                           | 鉴权失败后自动刷新 token 并重试一次             |
+| 中间件扩展   | `addMiddleware()`                                   | 在初始化时把自定义 middleware 挂入默认 pipeline |
+| 日志         | `setLogger()`                                       | 注入 PSR-3 logger，记录请求发送/完成/失败日志   |
+
+### 一份完整配置示例
+
+```php
+use AdOceanSdk\Application;
+use AdOceanSdk\SdkConfig;
+use Psr\Log\NullLogger;
+
+$config = SdkConfig::make()
+    ->setDomain('https://api.oceanengine.com/')
+    ->setTimeout(20)
+    ->setAccessToken('your-access-token')
+    ->addHeader('X-Trace-Id', 'trace-demo')
+    ->setHttpClientOptions([
+        'connect_timeout' => 5,
+        'proxy' => 'http://127.0.0.1:7890',
+        'verify' => true,
+    ])
+    ->setLogger(new NullLogger())
+    ->setThrowOnApiError(
+        enabled: true,
+        authErrorCodes: [40100, 40103, 40105],
+        rateLimitErrorCodes: [40000, 40110],
+    )
+    ->setRetryPolicy(maxAttempts: 3, baseDelayMs: 200, maxDelayMs: 5000)
+    ->setOAuthTokenProvider(
+        tokenGetter: fn (): ?string => 'current-token',
+        tokenRefresher: fn (): string => 'new-token',
+    );
+
+$app = Application::init(config: $config);
+```
+
+说明：
+
+- `Application::init(config: $config)` 会把这些配置应用到默认 `RequestClient`。
+- 如果你传入的是自定义 `RequestClientInterface` 实现，那么内部是否支持这些能力取决于你的实现，而不是 `SdkConfig`。
 
 ### 注入自定义 RequestClient
 
@@ -122,16 +196,34 @@ $app = Application::init(config: $config);
 说明：
 
 - `setHttpClient()` 适合接入你已经组装好的 `HandlerStack`、代理、证书、cookies、debug 等能力。
-- `setHeaders()` / `addHeader()` / `setAccessToken()` 不会重建底层 Guzzle Client，因此不会破坏连接池。
+- `setHttpClientOptions()` 适合只覆盖一部分底层选项，由 SDK 自己创建默认 `Client`。
+- `setDomain()` / `setTimeout()` / `setHttpClientOptions()` 会重建内部 Guzzle Client。
+- `setHeaders()` / `addHeader()` / `setAccessToken()` 只会在请求级别合并 header，不会重建底层 Guzzle Client，因此不会破坏连接池。
 
-### 使用数组参数
+例如，仅透传 Guzzle 构造参数而不自己 new `Client`：
 
 ```php
-// 也可以直接传入数组
-$response = $app->apis()->openAdvertiserInfoGetApi([
-    'advertiser_id' => 123456
-]);
+$config = SdkConfig::make()
+    ->setHttpClientOptions([
+        'connect_timeout' => 5,
+        'proxy' => 'http://127.0.0.1:7890',
+        'verify' => '/path/to/cacert.pem',
+    ]);
 ```
+
+### 运行时调整 RequestClient
+
+初始化完成后，可以直接操作 `$app->client()`：
+
+```php
+$client = $app->client();
+
+$client->setAccessToken('another-access-token');
+$client->addHeader('X-Debug', '1');
+$client->setTimeout(10);
+```
+
+如果你在常驻进程或多租户环境中运行，推荐把 token 注入逻辑放进 middleware，而不是在共享 client 上频繁切换全局 token。
 
 ### Middleware 中间件
 
@@ -160,6 +252,27 @@ $client->addMiddleware(new TraceMiddleware());
 - 中间件接口为 `MiddlewareInterface::process(RequestContext $context, callable $next): PromiseInterface`
 - 可在调用前修改 `context`，也可在 `then()` / `otherwise()` 中处理响应、重试、鉴权刷新等逻辑
 - `call()` / `callAsync()` / `request()` / `requestAsync()` 共用同一条 middleware pipeline
+- 默认 pipeline 顺序为：`LoggingMiddleware -> RetryMiddleware -> OAuthRefreshMiddleware -> 通过 SdkConfig 注册的自定义 middleware -> ApiErrorMiddleware -> dispatch`
+- 这个顺序的意义是：`ApiErrorMiddleware` 会先把业务错误码转成异常，外层的 Retry/OAuth middleware 才能根据异常继续重试或刷新 token
+
+如果你需要精确控制插入位置，可以直接操作 pipeline：
+
+```php
+use AdOceanSdk\Kernel\Middleware\ApiErrorMiddleware;
+
+$client = Application::init()->client();
+
+$client->pipeline()->insertBefore(
+    ApiErrorMiddleware::class,
+    new TraceMiddleware(),
+);
+```
+
+说明：
+
+- `$client->addMiddleware()` 是“追加到当前 pipeline 尾部”。
+- `$client->prependMiddleware()` 是“插到 pipeline 最前面”。
+- 需要与内置 middleware 精确编排时，优先使用 `pipeline()->insertBefore()` / `insertAfter()` / `remove()`。
 
 ### 多账号场景：按参数动态注入 Token
 
@@ -206,7 +319,7 @@ $app = \AdOceanSdk\Application::init(config: $config);
 
 ### 内置中间件能力
 
-`SdkConfig` 提供了几种常用中间件装配入口：
+`SdkConfig` 提供了几种常用的内置 middleware 装配入口：
 
 ```php
 $config = SdkConfig::make()
@@ -219,11 +332,75 @@ $config = SdkConfig::make()
     );
 ```
 
-包含：
-
 - `setThrowOnApiError()`：业务返回码非成功时抛异常
 - `setRetryPolicy()`：网络异常或限流异常时自动重试
 - `setOAuthTokenProvider()`：鉴权失败时自动刷新 token 并重试一次
+
+#### 1. 业务错误抛出：`setThrowOnApiError()`
+
+```php
+$config = SdkConfig::make()->setThrowOnApiError(
+    enabled: true,
+    authErrorCodes: [40100, 40103, 40105],
+    rateLimitErrorCodes: [40000, 40110],
+);
+```
+
+说明：
+
+- 成功业务码默认是 `code = 0`。
+- 其他业务码会抛出 `ApiResponseException`。
+- 命中 `authErrorCodes` 时抛出 `AuthException`。
+- 命中 `rateLimitErrorCodes` 时抛出 `RateLimitException`。
+
+#### 2. 重试策略：`setRetryPolicy()`
+
+```php
+$config = SdkConfig::make()
+    ->setThrowOnApiError(rateLimitErrorCodes: [40000, 40110])
+    ->setRetryPolicy(maxAttempts: 4, baseDelayMs: 200, maxDelayMs: 3000);
+```
+
+说明：
+
+- 当前默认只对 `NetworkException` 和 `RateLimitException` 重试。
+- 退避策略为指数退避，并带有少量随机抖动，避免并发请求同一时刻再次打满。
+- `maxAttempts` 表示总尝试次数，包含第一次请求。
+- 如果你希望“业务限流码”也参与重试，通常需要同时启用 `setThrowOnApiError()`，让限流业务码先被转换成 `RateLimitException`。
+- 重试内部使用阻塞式 sleep；如果你在 `callBatch()` 下做大量并发且对延迟敏感，建议适当降低 `maxAttempts` 或缩短退避时间。
+
+#### 3. OAuth 自动刷新：`setOAuthTokenProvider()`
+
+```php
+$config = SdkConfig::make()
+    ->setThrowOnApiError(authErrorCodes: [40100, 40103, 40105])
+    ->setOAuthTokenProvider(
+        tokenGetter: fn (): ?string => 'current-token',
+        tokenRefresher: fn (): string => 'new-token',
+    );
+```
+
+说明：
+
+- 每次请求发送前，middleware 会先调用 `tokenGetter()` 把当前 token 注入到 `Access-Token` header。
+- 当下游抛出 `AuthException` 时，会调用 `tokenRefresher()` 获取新 token 并自动重试一次。
+- 同一个请求上下文最多只会刷新一次，避免无限循环。
+- 如果鉴权失败是通过“业务返回码”表达的，通常需要同时启用 `setThrowOnApiError()`，让这些错误码先转换成 `AuthException`。
+
+#### 4. 日志：`setLogger()`
+
+```php
+use Psr\Log\NullLogger;
+
+$config = SdkConfig::make()->setLogger(new NullLogger());
+```
+
+说明：
+
+- SDK 使用 PSR-3 logger。
+- 默认会记录请求发送和请求完成的 `debug` 日志。
+- 网络异常会记录为 `error` 日志。
+- 这适合接入你的统一日志系统、trace 系统或调试输出。
 
 ### 异步与批量调用
 
