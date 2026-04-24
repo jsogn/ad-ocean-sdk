@@ -23,7 +23,7 @@ final class ErrorCodeDefaults
      * 
      * @var list<int>
      */
-    public const RATE_LIMIT_ERROR_CODES = [40000, 40004, 40110, 40000, 50000, 50001];
+    public const RATE_LIMIT_ERROR_CODES = [40000, 40004, 40110, 40000, 50001];
 
     private function __construct()
     {
