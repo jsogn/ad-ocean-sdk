@@ -115,6 +115,26 @@ return array (
     ),
     'naming_strategy' => 'legacy',
   ),
+  'openUniProjectMonetizationModePostApi' => 
+  array (
+    'desc' => '批量更新项目变现模式',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1858725855069700',
+    'call' => 'AdOceanSdk\\UNI\\Api\\UniProjectMonetizationModePostApi',
+    'params' => 'AdOceanSdk\\UNI\\Params\\UniProjectMonetizationModePostParams',
+    'response' => 'AdOceanSdk\\UNI\\Response\\UniProjectMonetizationModePostResponse',
+    'request_method' => 'POST',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/uni_project/monetization_mode/update/',
+    'generated_files' => 
+    array (
+      0 => 'UNI/Data/UniProjectMonetizationModePostParamProjectListData.php',
+      1 => 'UNI/Params/UniProjectMonetizationModePostParams.php',
+      2 => 'UNI/Data/UniProjectMonetizationModePostResponseErrorsData.php',
+      3 => 'UNI/Data/UniProjectMonetizationModePostResponseData.php',
+      4 => 'UNI/Response/UniProjectMonetizationModePostResponse.php',
+      5 => 'UNI/Api/UniProjectMonetizationModePostApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
   'openUniProjectUpdatePostApi' => 
   array (
     'desc' => '编辑全域投放项目',

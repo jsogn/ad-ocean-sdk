@@ -1696,6 +1696,12 @@ interface OpenApiInterface
     public function openUniProjectListGetGetApi(\AdOceanSdk\UNI\Params\UniProjectListGetGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectListGetGetResponse;
 
     /**
+     * 批量更新项目变现模式
+     * https://open.oceanengine.com/labels/7/docs/1858725855069700
+     */
+    public function openUniProjectMonetizationModePostApi(\AdOceanSdk\UNI\Params\UniProjectMonetizationModePostParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectMonetizationModePostResponse;
+
+    /**
      * 编辑全域投放项目
      * https://open.oceanengine.com/labels/7/docs/1854910852321354
      */

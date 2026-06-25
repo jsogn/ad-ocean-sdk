@@ -3093,6 +3093,17 @@ return [
         'response' => AdOceanSdk\UNI\Response\UniProjectListGetGetResponse::class,
     ],
     /**
+    * @desc 批量更新项目变现模式
+    * @doc  https://open.oceanengine.com/labels/7/docs/1858725855069700
+    **/
+    'openUniProjectMonetizationModePostApi' => [
+        'desc' => '批量更新项目变现模式',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1858725855069700',
+        'call' => AdOceanSdk\UNI\Api\UniProjectMonetizationModePostApi::class,
+        'params' => AdOceanSdk\UNI\Params\UniProjectMonetizationModePostParams::class,
+        'response' => AdOceanSdk\UNI\Response\UniProjectMonetizationModePostResponse::class,
+    ],
+    /**
     * @desc 编辑全域投放项目
     * @doc  https://open.oceanengine.com/labels/7/docs/1854910852321354
     **/
