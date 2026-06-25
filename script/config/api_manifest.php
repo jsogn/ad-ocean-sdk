@@ -1,6 +1,56 @@
 <?php
 
 return array (
+  'openOcProjectMaterialCreatePostApi' => 
+  array (
+    'desc' => '批量添加投放项目下素材',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1854929666566346',
+    'call' => 'AdOceanSdk\\UNI\\Api\\OcProjectMaterialCreatePostApi',
+    'params' => 'AdOceanSdk\\UNI\\Params\\OcProjectMaterialCreatePostParams',
+    'response' => 'AdOceanSdk\\UNI\\Response\\OcProjectMaterialCreatePostResponse',
+    'request_method' => 'POST',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/oc_project/material/create/',
+    'generated_files' => 
+    array (
+      0 => 'UNI/Data/OcProjectMaterialCreatePostParamVideoMaterialListData.php',
+      1 => 'UNI/Data/OcProjectMaterialCreatePostParamImageMaterialListData.php',
+      2 => 'UNI/Data/OcProjectMaterialCreatePostParamCarouselMaterialListData.php',
+      3 => 'UNI/Data/OcProjectMaterialCreatePostParamTrialPlayMaterialListData.php',
+      4 => 'UNI/Data/OcProjectMaterialCreatePostParamTitleMaterialListData.php',
+      5 => 'UNI/Params/OcProjectMaterialCreatePostParams.php',
+      6 => 'UNI/Response/OcProjectMaterialCreatePostResponse.php',
+      7 => 'UNI/Api/OcProjectMaterialCreatePostApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
+  'openOcProjectMaterialGetApi' => 
+  array (
+    'desc' => '获取投放项目下素材',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1854927239666825',
+    'call' => 'AdOceanSdk\\UNI\\Api\\OcProjectMaterialGetApi',
+    'params' => 'AdOceanSdk\\UNI\\Params\\OcProjectMaterialGetParams',
+    'response' => 'AdOceanSdk\\UNI\\Response\\OcProjectMaterialGetResponse',
+    'request_method' => 'GET',
+    'request_url' => '',
+    'generated_files' => 
+    array (
+      0 => 'UNI/Data/OcProjectMaterialGetParamFilteringData.php',
+      1 => 'UNI/Params/OcProjectMaterialGetParams.php',
+      2 => 'UNI/Data/OcProjectMaterialGetResponseVideoMaterialListData.php',
+      3 => 'UNI/Data/OcProjectMaterialGetResponseImageMaterialListData.php',
+      4 => 'UNI/Data/OcProjectMaterialGetResponseCarouselMaterialListData.php',
+      5 => 'UNI/Data/OcProjectMaterialGetResponseTrialPlayMaterialListData.php',
+      6 => 'UNI/Data/OcProjectMaterialGetResponseTitleMaterialListData.php',
+      7 => 'UNI/Data/OcProjectMaterialGetResponseProductInfoData.php',
+      8 => 'UNI/Data/OcProjectMaterialGetResponsePlayletSeriesUrlInfoData.php',
+      9 => 'UNI/Data/OcProjectMaterialGetResponseComponentMaterialListData.php',
+      10 => 'UNI/Data/OcProjectMaterialGetResponseAnchorMaterialListData.php',
+      11 => 'UNI/Data/OcProjectMaterialGetResponseData.php',
+      12 => 'UNI/Response/OcProjectMaterialGetResponse.php',
+      13 => 'UNI/Api/OcProjectMaterialGetApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
   'openProjectRejectReasonGetApi' => 
   array (
     'desc' => '获取投放项目审核建议',
@@ -112,6 +162,23 @@ return array (
       7 => 'UNI/Data/UniProjectListGetGetResponseData.php',
       8 => 'UNI/Response/UniProjectListGetGetResponse.php',
       9 => 'UNI/Api/UniProjectListGetGetApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
+  'openUniProjectMaterialDeletePostApi' => 
+  array (
+    'desc' => '删除投放项目下素材',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1854929995241483',
+    'call' => 'AdOceanSdk\\UNI\\Api\\UniProjectMaterialDeletePostApi',
+    'params' => 'AdOceanSdk\\UNI\\Params\\UniProjectMaterialDeletePostParams',
+    'response' => 'AdOceanSdk\\UNI\\Response\\UniProjectMaterialDeletePostResponse',
+    'request_method' => 'POST',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/uni_project/material/delete/',
+    'generated_files' => 
+    array (
+      0 => 'UNI/Params/UniProjectMaterialDeletePostParams.php',
+      1 => 'UNI/Response/UniProjectMaterialDeletePostResponse.php',
+      2 => 'UNI/Api/UniProjectMaterialDeletePostApi.php',
     ),
     'naming_strategy' => 'legacy',
   ),

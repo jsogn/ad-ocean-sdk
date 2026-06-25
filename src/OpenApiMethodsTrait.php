@@ -1881,6 +1881,30 @@ trait OpenApiMethodsTrait
     }
 
     /**
+     * 批量添加投放项目下素材
+     * https://open.oceanengine.com/labels/7/docs/1854929666566346
+     */
+    public function openOcProjectMaterialCreatePostApi(\AdOceanSdk\UNI\Params\OcProjectMaterialCreatePostParams|array $params = []): \AdOceanSdk\UNI\Response\OcProjectMaterialCreatePostResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\OcProjectMaterialCreatePostResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 获取投放项目下素材
+     * https://open.oceanengine.com/labels/7/docs/1854927239666825
+     */
+    public function openOcProjectMaterialGetApi(\AdOceanSdk\UNI\Params\OcProjectMaterialGetParams|array $params = []): \AdOceanSdk\UNI\Response\OcProjectMaterialGetResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\OcProjectMaterialGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
      * 批量更新项目预算
      * https://open.oceanengine.com/labels/7/docs/1755353873798155
      */
@@ -3375,6 +3399,18 @@ trait OpenApiMethodsTrait
     public function openUniProjectListGetGetApi(\AdOceanSdk\UNI\Params\UniProjectListGetGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectListGetGetResponse
     {
         /** @var \AdOceanSdk\UNI\Response\UniProjectListGetGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 删除投放项目下素材
+     * https://open.oceanengine.com/labels/7/docs/1854929995241483
+     */
+    public function openUniProjectMaterialDeletePostApi(\AdOceanSdk\UNI\Params\UniProjectMaterialDeletePostParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectMaterialDeletePostResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\UniProjectMaterialDeletePostResponse $response */
         $response = $this->callApi(__FUNCTION__, $params);
 
         return $response;

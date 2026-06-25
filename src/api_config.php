@@ -1718,6 +1718,28 @@ return [
         'response' => AdOceanSdk\Oauth\Response\OauthUserInfoGetResponse::class,
     ],
     /**
+    * @desc 批量添加投放项目下素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1854929666566346
+    **/
+    'openOcProjectMaterialCreatePostApi' => [
+        'desc' => '批量添加投放项目下素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1854929666566346',
+        'call' => AdOceanSdk\UNI\Api\OcProjectMaterialCreatePostApi::class,
+        'params' => AdOceanSdk\UNI\Params\OcProjectMaterialCreatePostParams::class,
+        'response' => AdOceanSdk\UNI\Response\OcProjectMaterialCreatePostResponse::class,
+    ],
+    /**
+    * @desc 获取投放项目下素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1854927239666825
+    **/
+    'openOcProjectMaterialGetApi' => [
+        'desc' => '获取投放项目下素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1854927239666825',
+        'call' => AdOceanSdk\UNI\Api\OcProjectMaterialGetApi::class,
+        'params' => AdOceanSdk\UNI\Params\OcProjectMaterialGetParams::class,
+        'response' => AdOceanSdk\UNI\Response\OcProjectMaterialGetResponse::class,
+    ],
+    /**
     * @desc 批量更新项目预算
     * @doc  https://open.oceanengine.com/labels/7/docs/1755353873798155
     **/
@@ -3091,6 +3113,17 @@ return [
         'call' => AdOceanSdk\UNI\Api\UniProjectListGetGetApi::class,
         'params' => AdOceanSdk\UNI\Params\UniProjectListGetGetParams::class,
         'response' => AdOceanSdk\UNI\Response\UniProjectListGetGetResponse::class,
+    ],
+    /**
+    * @desc 删除投放项目下素材
+    * @doc  https://open.oceanengine.com/labels/7/docs/1854929995241483
+    **/
+    'openUniProjectMaterialDeletePostApi' => [
+        'desc' => '删除投放项目下素材',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1854929995241483',
+        'call' => AdOceanSdk\UNI\Api\UniProjectMaterialDeletePostApi::class,
+        'params' => AdOceanSdk\UNI\Params\UniProjectMaterialDeletePostParams::class,
+        'response' => AdOceanSdk\UNI\Response\UniProjectMaterialDeletePostResponse::class,
     ],
     /**
     * @desc 批量更新项目变现模式
