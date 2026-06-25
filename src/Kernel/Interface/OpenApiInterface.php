@@ -982,6 +982,12 @@ interface OpenApiInterface
     public function openProjectListGetApi(\AdOceanSdk\Advertising\Params\ProjectListGetParams|array $params = []): \AdOceanSdk\Advertising\Response\ProjectListGetResponse;
 
     /**
+     * 获取投放项目审核建议
+     * https://open.oceanengine.com/labels/7/docs/1854930234989579
+     */
+    public function openProjectRejectReasonGetApi(\AdOceanSdk\OcProject\Params\ProjectRejectReasonGetParams|array $params = []): \AdOceanSdk\OcProject\Response\ProjectRejectReasonGetResponse;
+
+    /**
      * 批量修改项目ROI系数
      * https://open.oceanengine.com/labels/34/docs/1794208148473859?origin=left_nav
      */
@@ -1664,6 +1670,36 @@ interface OpenApiInterface
      * https://open.oceanengine.com/labels/7/docs/1771744756803659
      */
     public function openToolsWechatAppletUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsWechatAppletUpdatePostParams|array $params = []): \AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse;
+
+    /**
+     * 获取全域创编可用抖音号
+     * https://open.oceanengine.com/labels/7/docs/1854930373174281
+     */
+    public function openUniProjectAwemeAuthorizedGetApi(\AdOceanSdk\UNI\Params\UniProjectAwemeAuthorizedGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectAwemeAuthorizedGetResponse;
+
+    /**
+     * 新建全域投放项目
+     * https://open.oceanengine.com/labels/7/docs/1854206019149016
+     */
+    public function openUniProjectCreatePostApi(\AdOceanSdk\UNI\Params\UniProjectCreatePostParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectCreatePostResponse;
+
+    /**
+     * 获取全域投放项目列表
+     * https://open.oceanengine.com/labels/7/docs/1854926110406984
+     */
+    public function openUniProjectListGetApi(\AdOceanSdk\UNI\Params\UniProjectListGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectListGetResponse;
+
+    /**
+     * 获取全域投放项目列表
+     * https://open.oceanengine.com/labels/7/docs/1854926110406984
+     */
+    public function openUniProjectListGetGetApi(\AdOceanSdk\UNI\Params\UniProjectListGetGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectListGetGetResponse;
+
+    /**
+     * 编辑全域投放项目
+     * https://open.oceanengine.com/labels/7/docs/1854910852321354
+     */
+    public function openUniProjectUpdatePostApi(\AdOceanSdk\UNI\Params\UniProjectUpdatePostParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectUpdatePostResponse;
 
     /**
      * 获取微信小程序列表

@@ -37,6 +37,7 @@ class ApiTableProcessor(ParamsProcessor):
 
 
 def get_html_content(url):
+    driver = None
     try:
         options = Options()
         options.headless = True  # 无头模式，不弹出浏览器窗口
@@ -50,14 +51,20 @@ def get_html_content(url):
         return driver.page_source
     except Exception as e:
         print("出现错误:", e)
+        sys.exit(1)
     finally:
-        driver.quit()
+        if driver is not None:
+            driver.quit()
 
 
 def process_params(param_rows, cell_type_dict):
     levelMap = {}
     params = {}
     for row in param_rows[1:]:
+        # 跳过页面 CSS 隐藏的行（如仅特定账户类型可见的字段）
+        if 'display: none' in (row.get('style') or ''):
+            continue
+
         cells = row.find_all(**cell_type_dict)
 
         if not cells:
@@ -65,11 +72,7 @@ def process_params(param_rows, cell_type_dict):
 
         param_name = cells[0].find('p').text.strip().replace(' ', '').replace('必填', '').replace('条件', '')
         param_type = cells[1].find('p').text.strip()
-
-        if cells[2].find('p') is None:
-            param_desc = cells[2].text.strip().replace(' ', '')
-        else:
-            param_desc = cells[2].find('p').text.strip().replace(' ', '')
+        param_desc = cells[2].text.strip().replace(' ', '')
 
         if '废弃' in param_name:
             continue
@@ -106,6 +109,8 @@ def process_params(param_rows, cell_type_dict):
 print('采集地址：', sys.argv[1])
 
 html = get_html_content(sys.argv[1])
+if html is None:
+    exit('无法获取页面内容')
 
 # 使用BeautifulSoup解析HTML
 soup = BeautifulSoup(html, 'html.parser')
@@ -117,6 +122,8 @@ title = title_tag.text.strip()
 print(title)
 # 提取请求地址
 address_tag = soup.find(string="请求地址")
+if address_tag is None:
+    exit('无法找到请求地址，页面结构可能已变化')
 # 获取紧随其后的 p 标签，提取其直接文本内容（即 API URL，排除 <a> 标签中的文本如"可视化调试"）
 p_tag = address_tag.find_next('p')
 for a_tag in p_tag.find_all('a'):
@@ -125,6 +132,8 @@ request_url = p_tag.text.strip()
 
 # 提取请求方式
 request_tag = soup.find(string="请求方法") or soup.find(string="请求方式")
+if request_tag is None:
+    exit('无法找到请求方法，页面结构可能已变化')
 request_method = request_tag.find_next('p').find('strong')
 
 if request_method is None:
@@ -135,6 +144,7 @@ else:
 request_method = request_method.replace('Query-String', '').replace('Request-Query', '').replace('Request-Body', '').strip()
 
 # 提取请求参数
+request_params = {}
 params_table_tag = soup.find(string='请求参数')
 if params_table_tag is not None:
     params_table = params_table_tag.find_next(class_='table-container') and params_table_tag.find_next(class_='table-container').find('table')
@@ -191,7 +201,7 @@ json_data = json.dumps(data, indent=4, ensure_ascii=False)
 with open(DOC_JSON_PATH, "w") as file:
     file.write(json_data)
 
-if sys.argv[2] is None:
+if len(sys.argv) < 3 or not sys.argv[2]:
     exit('gen code path not valid')
 
 # 运行命令

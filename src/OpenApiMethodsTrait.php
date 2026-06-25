@@ -1953,6 +1953,18 @@ trait OpenApiMethodsTrait
     }
 
     /**
+     * 获取投放项目审核建议
+     * https://open.oceanengine.com/labels/7/docs/1854930234989579
+     */
+    public function openProjectRejectReasonGetApi(\AdOceanSdk\OcProject\Params\ProjectRejectReasonGetParams|array $params = []): \AdOceanSdk\OcProject\Response\ProjectRejectReasonGetResponse
+    {
+        /** @var \AdOceanSdk\OcProject\Response\ProjectRejectReasonGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
      * 批量修改项目ROI系数
      * https://open.oceanengine.com/labels/34/docs/1794208148473859?origin=left_nav
      */
@@ -3315,6 +3327,66 @@ trait OpenApiMethodsTrait
     public function openToolsWechatAppletUpdatePostApi(\AdOceanSdk\Tools\Params\ToolsWechatAppletUpdatePostParams|array $params = []): \AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse
     {
         /** @var \AdOceanSdk\Tools\Response\ToolsWechatAppletUpdatePostResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 获取全域创编可用抖音号
+     * https://open.oceanengine.com/labels/7/docs/1854930373174281
+     */
+    public function openUniProjectAwemeAuthorizedGetApi(\AdOceanSdk\UNI\Params\UniProjectAwemeAuthorizedGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectAwemeAuthorizedGetResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\UniProjectAwemeAuthorizedGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 新建全域投放项目
+     * https://open.oceanengine.com/labels/7/docs/1854206019149016
+     */
+    public function openUniProjectCreatePostApi(\AdOceanSdk\UNI\Params\UniProjectCreatePostParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectCreatePostResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\UniProjectCreatePostResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 获取全域投放项目列表
+     * https://open.oceanengine.com/labels/7/docs/1854926110406984
+     */
+    public function openUniProjectListGetApi(\AdOceanSdk\UNI\Params\UniProjectListGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectListGetResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\UniProjectListGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 获取全域投放项目列表
+     * https://open.oceanengine.com/labels/7/docs/1854926110406984
+     */
+    public function openUniProjectListGetGetApi(\AdOceanSdk\UNI\Params\UniProjectListGetGetParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectListGetGetResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\UniProjectListGetGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 编辑全域投放项目
+     * https://open.oceanengine.com/labels/7/docs/1854910852321354
+     */
+    public function openUniProjectUpdatePostApi(\AdOceanSdk\UNI\Params\UniProjectUpdatePostParams|array $params = []): \AdOceanSdk\UNI\Response\UniProjectUpdatePostResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\UniProjectUpdatePostResponse $response */
         $response = $this->callApi(__FUNCTION__, $params);
 
         return $response;
