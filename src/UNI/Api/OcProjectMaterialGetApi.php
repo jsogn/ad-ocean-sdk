@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class OcProjectMaterialGetApi extends RequestApi
 {
-    protected string $address = '';
+    protected string $address = 'open_api/v3.0/oc_project/material/get/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::GET;
 
