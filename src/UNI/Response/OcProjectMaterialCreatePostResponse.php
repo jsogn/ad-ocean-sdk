@@ -14,11 +14,14 @@ class OcProjectMaterialCreatePostResponse extends Data implements ResponseInterf
 
 
     /**
-     * @var json $data json返回值
+     * @var mixed $data json返回值
      */
-    public json $data;
+    public mixed $data;
 
-    public function getData(): \AdOceanSdk\UNI\Data\OcProjectMaterialCreatePostResponseData
+    /**
+     * @return mixed
+     */
+    public function getData(): mixed
     {
         return $this->data;
     }

@@ -14,11 +14,14 @@ class UniProjectMaterialDeletePostResponse extends Data implements ResponseInter
 
 
     /**
-     * @var json $data json返回值
+     * @var mixed $data json返回值
      */
-    public json $data;
+    public mixed $data;
 
-    public function getData(): \AdOceanSdk\UNI\Data\UniProjectMaterialDeletePostResponseData
+    /**
+     * @return mixed
+     */
+    public function getData(): mixed
     {
         return $this->data;
     }

@@ -6,4 +6,5 @@ return [
     'double' => 'float',
     'dict' => 'array',
     'map' => 'array',
+    'json' => 'mixed',
 ];

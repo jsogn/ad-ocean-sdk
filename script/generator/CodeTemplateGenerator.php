@@ -83,11 +83,21 @@ final class CodeTemplateGenerator
     {
         $classPrefix = trim($classPrefix);
         $data = ['data' => $params['data'] ?? []];
+        $dataChildren = $params['data']['children'] ?? [];
         $returnType = "\\{$classNameSpace}\\Data\\{$classPrefix}ResponseData";
         $fields = $this->generateFields($classNameSpace, $classPrefix . 'Response', $data, []);
         $returnDocBlock = '';
 
-        if (in_array($params['data']['type'] ?? null, ['list', 'object[]', 'json[]'], true)) {
+        if (empty($dataChildren)) {
+            // 响应 data 无子字段，无 Data 类生成，使用 mixed 类型
+            $returnType = 'mixed';
+            $returnDocBlock = <<<DOC
+    /**
+     * @return mixed
+     */
+DOC;
+            $returnDocBlock .= "\n";
+        } elseif (in_array($params['data']['type'] ?? null, ['list', 'object[]', 'json[]'], true)) {
             $docType = $returnType;
             $returnType = $this->generatePhpType($data['data']['type']);
             $returnDocBlock = <<<DOC

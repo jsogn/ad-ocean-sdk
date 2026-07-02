@@ -14,11 +14,14 @@ class EbpAdvertiserTaskDownloadGetResponse extends Data implements ResponseInter
 
 
     /**
-     * @var json $data json返回值
+     * @var mixed $data json返回值
      */
-    public json $data;
+    public mixed $data;
 
-    public function getData(): \AdOceanSdk\EBP\Data\EbpAdvertiserTaskDownloadGetResponseData
+    /**
+     * @return mixed
+     */
+    public function getData(): mixed
     {
         return $this->data;
     }
