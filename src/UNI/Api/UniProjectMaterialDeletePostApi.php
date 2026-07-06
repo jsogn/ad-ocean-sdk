@@ -12,7 +12,7 @@ use AdOceanSdk\RequestMethodEnum;
  */
 class UniProjectMaterialDeletePostApi extends RequestApi
 {
-    protected string $address = 'open_api/v3.0/uni_project/material/delete/';
+    protected string $address = 'open_api/v3.0/oc_project/material/delete/';
 
     protected RequestMethodEnum $method = RequestMethodEnum::POST;
 

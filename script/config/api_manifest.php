@@ -193,7 +193,7 @@ return array (
     'params' => 'AdOceanSdk\\UNI\\Params\\UniProjectMaterialDeletePostParams',
     'response' => 'AdOceanSdk\\UNI\\Response\\UniProjectMaterialDeletePostResponse',
     'request_method' => 'POST',
-    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/uni_project/material/delete/',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/oc_project/material/delete/',
     'generated_files' => 
     array (
       0 => 'UNI/Params/UniProjectMaterialDeletePostParams.php',

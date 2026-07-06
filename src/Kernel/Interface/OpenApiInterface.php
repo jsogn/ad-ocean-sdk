@@ -958,6 +958,12 @@ interface OpenApiInterface
     public function openOcProjectMaterialGetApi(\AdOceanSdk\UNI\Params\OcProjectMaterialGetParams|array $params = []): \AdOceanSdk\UNI\Response\OcProjectMaterialGetResponse;
 
     /**
+     * 批量修改投放项目下素材状态
+     * https://open.oceanengine.com/labels/7/docs/1854930119140363
+     */
+    public function openOcProjectMaterialStatusUpdatePostApi(\AdOceanSdk\UNI\Params\OcProjectMaterialStatusUpdatePostParams|array $params = []): \AdOceanSdk\UNI\Response\OcProjectMaterialStatusUpdatePostResponse;
+
+    /**
      * 批量更新项目预算
      * https://open.oceanengine.com/labels/7/docs/1755353873798155
      */
