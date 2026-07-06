@@ -1905,6 +1905,18 @@ trait OpenApiMethodsTrait
     }
 
     /**
+     * 批量修改投放项目下素材状态
+     * https://open.oceanengine.com/labels/7/docs/1854930119140363
+     */
+    public function openOcProjectMaterialStatusUpdatePostApi(\AdOceanSdk\UNI\Params\OcProjectMaterialStatusUpdatePostParams|array $params = []): \AdOceanSdk\UNI\Response\OcProjectMaterialStatusUpdatePostResponse
+    {
+        /** @var \AdOceanSdk\UNI\Response\OcProjectMaterialStatusUpdatePostResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
      * 批量更新项目预算
      * https://open.oceanengine.com/labels/7/docs/1755353873798155
      */
