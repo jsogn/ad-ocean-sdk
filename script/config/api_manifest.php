@@ -51,6 +51,26 @@ return array (
     ),
     'naming_strategy' => 'legacy',
   ),
+  'openOcProjectMaterialStatusUpdatePostApi' => 
+  array (
+    'desc' => '批量修改投放项目下素材状态',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1854930119140363',
+    'call' => 'AdOceanSdk\\UNI\\Api\\OcProjectMaterialStatusUpdatePostApi',
+    'params' => 'AdOceanSdk\\UNI\\Params\\OcProjectMaterialStatusUpdatePostParams',
+    'response' => 'AdOceanSdk\\UNI\\Response\\OcProjectMaterialStatusUpdatePostResponse',
+    'request_method' => 'POST',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/oc_project/material/status/update/',
+    'generated_files' => 
+    array (
+      0 => 'UNI/Data/OcProjectMaterialStatusUpdatePostParamData.php',
+      1 => 'UNI/Params/OcProjectMaterialStatusUpdatePostParams.php',
+      2 => 'UNI/Data/OcProjectMaterialStatusUpdatePostResponseErrorsData.php',
+      3 => 'UNI/Data/OcProjectMaterialStatusUpdatePostResponseData.php',
+      4 => 'UNI/Response/OcProjectMaterialStatusUpdatePostResponse.php',
+      5 => 'UNI/Api/OcProjectMaterialStatusUpdatePostApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
   'openProjectRejectReasonGetApi' => 
   array (
     'desc' => '获取投放项目审核建议',
