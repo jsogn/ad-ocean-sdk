@@ -40,13 +40,24 @@ def get_html_content(url):
     driver = None
     try:
         options = Options()
-        options.headless = True  # 无头模式，不弹出浏览器窗口
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        options.headless = True
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-gpu')
+
+        # webdriver_manager 自动匹配 Chrome 版本，如果下载失败则回退到系统 chromedriver
+        try:
+            service = Service(ChromeDriverManager().install())
+        except Exception:
+            service = Service('/opt/homebrew/bin/chromedriver')
+
+        driver = webdriver.Chrome(service=service, options=options)
+        driver.set_page_load_timeout(30)
 
         driver.get(url)
         wait = WebDriverWait(driver, 10)
-        wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))  # 等待页面加载完成
-        time.sleep(5)  # 等待5秒钟，可以根据需要进行调整
+        wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
+        time.sleep(5)
 
         return driver.page_source
     except Exception as e:
@@ -126,9 +137,17 @@ if address_tag is None:
     exit('无法找到请求地址，页面结构可能已变化')
 # 获取紧随其后的 p 标签，提取其直接文本内容（即 API URL，排除 <a> 标签中的文本如"可视化调试"）
 p_tag = address_tag.find_next('p')
-for a_tag in p_tag.find_all('a'):
-    a_tag.extract()
-request_url = p_tag.text.strip()
+# 先尝试从第一个 <a> 标签中获取 URL（某些页面 URL 仅存在于 <a> 中）
+first_a = p_tag.find('a')
+if first_a and first_a.get('href'):
+    request_url = first_a['href'].strip()
+else:
+    for a_tag in p_tag.find_all('a'):
+        a_tag.extract()
+    request_url = p_tag.text.strip()
+
+if not request_url:
+    exit('无法提取请求地址，页面结构可能已变化')
 
 # 提取请求方式
 request_tag = soup.find(string="请求方法") or soup.find(string="请求方式")

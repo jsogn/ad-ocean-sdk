@@ -2373,6 +2373,42 @@ trait OpenApiMethodsTrait
     }
 
     /**
+     * 新增 Adv 订阅
+     * https://open.oceanengine.com/labels/7/docs/1818567687958707
+     */
+    public function openSubscribeAccountsAddPostApi(\AdOceanSdk\Subscribe\Params\SubscribeAccountsAddPostParams|array $params = []): \AdOceanSdk\Subscribe\Response\SubscribeAccountsAddPostResponse
+    {
+        /** @var \AdOceanSdk\Subscribe\Response\SubscribeAccountsAddPostResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 查询订阅 Adv
+     * https://open.oceanengine.com/labels/7/docs/1818567348129040
+     */
+    public function openSubscribeAccountsListGetApi(\AdOceanSdk\Subscribe\Params\SubscribeAccountsListGetParams|array $params = []): \AdOceanSdk\Subscribe\Response\SubscribeAccountsListGetResponse
+    {
+        /** @var \AdOceanSdk\Subscribe\Response\SubscribeAccountsListGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
+     * 取消 Adv 订阅
+     * https://open.oceanengine.com/labels/7/docs/1818566670161920
+     */
+    public function openSubscribeAccountsRemovePostApi(\AdOceanSdk\Subscribe\Params\SubscribeAccountsRemovePostParams|array $params = []): \AdOceanSdk\Subscribe\Response\SubscribeAccountsRemovePostResponse
+    {
+        /** @var \AdOceanSdk\Subscribe\Response\SubscribeAccountsRemovePostResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
      * 行动号召字段内容获取
      * https://open.oceanengine.com/labels/7/docs/1696710684229644
      */

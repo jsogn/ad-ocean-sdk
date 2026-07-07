@@ -92,6 +92,60 @@ return array (
     ),
     'naming_strategy' => 'legacy',
   ),
+  'openSubscribeAccountsAddPostApi' => 
+  array (
+    'desc' => '新增 Adv 订阅',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1818567687958707',
+    'call' => 'AdOceanSdk\\Subscribe\\Api\\SubscribeAccountsAddPostApi',
+    'params' => 'AdOceanSdk\\Subscribe\\Params\\SubscribeAccountsAddPostParams',
+    'response' => 'AdOceanSdk\\Subscribe\\Response\\SubscribeAccountsAddPostResponse',
+    'request_method' => 'POST',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/subscribe/accounts/add/',
+    'generated_files' => 
+    array (
+      0 => 'Subscribe/Params/SubscribeAccountsAddPostParams.php',
+      1 => 'Subscribe/Data/SubscribeAccountsAddPostResponseData.php',
+      2 => 'Subscribe/Response/SubscribeAccountsAddPostResponse.php',
+      3 => 'Subscribe/Api/SubscribeAccountsAddPostApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
+  'openSubscribeAccountsListGetApi' => 
+  array (
+    'desc' => '查询订阅 Adv',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1818567348129040',
+    'call' => 'AdOceanSdk\\Subscribe\\Api\\SubscribeAccountsListGetApi',
+    'params' => 'AdOceanSdk\\Subscribe\\Params\\SubscribeAccountsListGetParams',
+    'response' => 'AdOceanSdk\\Subscribe\\Response\\SubscribeAccountsListGetResponse',
+    'request_method' => 'GET',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/subscribe/accounts/list/',
+    'generated_files' => 
+    array (
+      0 => 'Subscribe/Params/SubscribeAccountsListGetParams.php',
+      1 => 'Subscribe/Data/SubscribeAccountsListGetResponseAdvertisersData.php',
+      2 => 'Subscribe/Data/SubscribeAccountsListGetResponseData.php',
+      3 => 'Subscribe/Response/SubscribeAccountsListGetResponse.php',
+      4 => 'Subscribe/Api/SubscribeAccountsListGetApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
+  'openSubscribeAccountsRemovePostApi' => 
+  array (
+    'desc' => '取消 Adv 订阅',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1818566670161920',
+    'call' => 'AdOceanSdk\\Subscribe\\Api\\SubscribeAccountsRemovePostApi',
+    'params' => 'AdOceanSdk\\Subscribe\\Params\\SubscribeAccountsRemovePostParams',
+    'response' => 'AdOceanSdk\\Subscribe\\Response\\SubscribeAccountsRemovePostResponse',
+    'request_method' => 'POST',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/subscribe/accounts/remove/',
+    'generated_files' => 
+    array (
+      0 => 'Subscribe/Params/SubscribeAccountsRemovePostParams.php',
+      1 => 'Subscribe/Response/SubscribeAccountsRemovePostResponse.php',
+      2 => 'Subscribe/Api/SubscribeAccountsRemovePostApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
   'openUniProjectAwemeAuthorizedGetApi' => 
   array (
     'desc' => '获取全域创编可用抖音号',

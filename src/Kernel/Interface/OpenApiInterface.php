@@ -1192,6 +1192,24 @@ interface OpenApiInterface
     public function openSiteTemplateSiteCreatePostApi(\AdOceanSdk\Tools\Params\SiteTemplateSiteCreatePostParams|array $params = []): \AdOceanSdk\Tools\Response\SiteTemplateSiteCreatePostResponse;
 
     /**
+     * 新增 Adv 订阅
+     * https://open.oceanengine.com/labels/7/docs/1818567687958707
+     */
+    public function openSubscribeAccountsAddPostApi(\AdOceanSdk\Subscribe\Params\SubscribeAccountsAddPostParams|array $params = []): \AdOceanSdk\Subscribe\Response\SubscribeAccountsAddPostResponse;
+
+    /**
+     * 查询订阅 Adv
+     * https://open.oceanengine.com/labels/7/docs/1818567348129040
+     */
+    public function openSubscribeAccountsListGetApi(\AdOceanSdk\Subscribe\Params\SubscribeAccountsListGetParams|array $params = []): \AdOceanSdk\Subscribe\Response\SubscribeAccountsListGetResponse;
+
+    /**
+     * 取消 Adv 订阅
+     * https://open.oceanengine.com/labels/7/docs/1818566670161920
+     */
+    public function openSubscribeAccountsRemovePostApi(\AdOceanSdk\Subscribe\Params\SubscribeAccountsRemovePostParams|array $params = []): \AdOceanSdk\Subscribe\Response\SubscribeAccountsRemovePostResponse;
+
+    /**
      * 行动号召字段内容获取
      * https://open.oceanengine.com/labels/7/docs/1696710684229644
      */

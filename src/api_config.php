@@ -2169,6 +2169,39 @@ return [
         'response' => AdOceanSdk\Tools\Response\SiteTemplateSiteCreatePostResponse::class,
     ],
     /**
+    * @desc 新增 Adv 订阅
+    * @doc  https://open.oceanengine.com/labels/7/docs/1818567687958707
+    **/
+    'openSubscribeAccountsAddPostApi' => [
+        'desc' => '新增 Adv 订阅',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1818567687958707',
+        'call' => AdOceanSdk\Subscribe\Api\SubscribeAccountsAddPostApi::class,
+        'params' => AdOceanSdk\Subscribe\Params\SubscribeAccountsAddPostParams::class,
+        'response' => AdOceanSdk\Subscribe\Response\SubscribeAccountsAddPostResponse::class,
+    ],
+    /**
+    * @desc 查询订阅 Adv
+    * @doc  https://open.oceanengine.com/labels/7/docs/1818567348129040
+    **/
+    'openSubscribeAccountsListGetApi' => [
+        'desc' => '查询订阅 Adv',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1818567348129040',
+        'call' => AdOceanSdk\Subscribe\Api\SubscribeAccountsListGetApi::class,
+        'params' => AdOceanSdk\Subscribe\Params\SubscribeAccountsListGetParams::class,
+        'response' => AdOceanSdk\Subscribe\Response\SubscribeAccountsListGetResponse::class,
+    ],
+    /**
+    * @desc 取消 Adv 订阅
+    * @doc  https://open.oceanengine.com/labels/7/docs/1818566670161920
+    **/
+    'openSubscribeAccountsRemovePostApi' => [
+        'desc' => '取消 Adv 订阅',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1818566670161920',
+        'call' => AdOceanSdk\Subscribe\Api\SubscribeAccountsRemovePostApi::class,
+        'params' => AdOceanSdk\Subscribe\Params\SubscribeAccountsRemovePostParams::class,
+        'response' => AdOceanSdk\Subscribe\Response\SubscribeAccountsRemovePostResponse::class,
+    ],
+    /**
     * @desc 行动号召字段内容获取
     * @doc  https://open.oceanengine.com/labels/7/docs/1696710684229644
     **/
