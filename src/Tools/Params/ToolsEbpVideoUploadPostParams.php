@@ -30,9 +30,9 @@ class ToolsEbpVideoUploadPostParams extends RequestParams
     public string $video_signature;
 
     /**
-     * @var file $video_file 
+     * @var mixed $video_file 文件上传字段（支持文件路径字符串或流/资源）
      */
-    public file $video_file;
+    public mixed $video_file;
 
     /**
      * @var string $file_name 素材的文件名，可自定义素材名，不传择默认取文件名，最长255个字符同一素材已上传，重新上传不会修改文件名称
