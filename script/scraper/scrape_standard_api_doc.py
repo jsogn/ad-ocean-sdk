@@ -138,8 +138,9 @@ if address_tag is None:
 # 获取紧随其后的 p 标签，提取其直接文本内容（即 API URL，排除 <a> 标签中的文本如"可视化调试"）
 p_tag = address_tag.find_next('p')
 # 先尝试从第一个 <a> 标签中获取 URL（某些页面 URL 仅存在于 <a> 中）
+# 但排除"可视化调试"等工具链接，它们不是真实 API 地址
 first_a = p_tag.find('a')
-if first_a and first_a.get('href'):
+if first_a and first_a.get('href') and 'visual_debug' not in first_a['href']:
     request_url = first_a['href'].strip()
 else:
     for a_tag in p_tag.find_all('a'):
@@ -148,6 +149,16 @@ else:
 
 if not request_url:
     exit('无法提取请求地址，页面结构可能已变化')
+
+# 兼容新版文档页：正文中"请求地址"文本可能与 URL 粘连，且 URL 应包含 open_api 路径
+if 'open_api' not in request_url:
+    # 在文本中查找 open_api 路径（如 https://api.oceanengine.com/open_api/v3.0/...）
+    import re
+    open_api_match = re.search(r'https?://[^\s]+?/open_api/[^\s]*', request_url)
+    if open_api_match:
+        request_url = open_api_match.group(0).strip()
+    else:
+        exit('无法提取请求地址，页面结构可能已变化')
 
 # 提取请求方式
 request_tag = soup.find(string="请求方法") or soup.find(string="请求方式")

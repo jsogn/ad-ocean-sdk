@@ -1,6 +1,28 @@
 <?php
 
 return array (
+  'openEbpMaterialListGetApi' => 
+  array (
+    'desc' => '获取组织维度视频列表（ebp）NEW',
+    'doc' => 'https://open.oceanengine.com/labels/7/docs/1871578054932524?origin=left_nav',
+    'call' => 'AdOceanSdk\\Tools\\Api\\EbpMaterialListGetApi',
+    'params' => 'AdOceanSdk\\Tools\\Params\\EbpMaterialListGetParams',
+    'response' => 'AdOceanSdk\\Tools\\Response\\EbpMaterialListGetResponse',
+    'request_method' => 'GET',
+    'request_url' => 'https://api.oceanengine.com/open_api/v3.0/tools/ebp/material/list/',
+    'generated_files' => 
+    array (
+      0 => 'Tools/Data/EbpMaterialListGetParamFilteringData.php',
+      1 => 'Tools/Params/EbpMaterialListGetParams.php',
+      2 => 'Tools/Data/EbpMaterialListGetResponseDataVideosTagsData.php',
+      3 => 'Tools/Data/EbpMaterialListGetResponseDataVideosData.php',
+      4 => 'Tools/Data/EbpMaterialListGetResponseDataData.php',
+      5 => 'Tools/Data/EbpMaterialListGetResponseData.php',
+      6 => 'Tools/Response/EbpMaterialListGetResponse.php',
+      7 => 'Tools/Api/EbpMaterialListGetApi.php',
+    ),
+    'naming_strategy' => 'legacy',
+  ),
   'openOcProjectMaterialCreatePostApi' => 
   array (
     'desc' => '批量添加投放项目下素材',

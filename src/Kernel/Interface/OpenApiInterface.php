@@ -652,6 +652,12 @@ interface OpenApiInterface
     public function openEbpLevelGetGetApi(\AdOceanSdk\EBP\Params\EbpLevelGetGetParams|array $params = []): \AdOceanSdk\EBP\Response\EbpLevelGetGetResponse;
 
     /**
+     * 获取组织维度视频列表（ebp）NEW
+     * https://open.oceanengine.com/labels/7/docs/1871578054932524?origin=left_nav
+     */
+    public function openEbpMaterialListGetApi(\AdOceanSdk\Tools\Params\EbpMaterialListGetParams|array $params = []): \AdOceanSdk\Tools\Response\EbpMaterialListGetResponse;
+
+    /**
      * 创建事件资产
      * https://open.oceanengine.com/labels/7/docs/1709792943937547
      */

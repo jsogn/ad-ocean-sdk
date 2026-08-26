@@ -1293,6 +1293,18 @@ trait OpenApiMethodsTrait
     }
 
     /**
+     * 获取组织维度视频列表（ebp）NEW
+     * https://open.oceanengine.com/labels/7/docs/1871578054932524?origin=left_nav
+     */
+    public function openEbpMaterialListGetApi(\AdOceanSdk\Tools\Params\EbpMaterialListGetParams|array $params = []): \AdOceanSdk\Tools\Response\EbpMaterialListGetResponse
+    {
+        /** @var \AdOceanSdk\Tools\Response\EbpMaterialListGetResponse $response */
+        $response = $this->callApi(__FUNCTION__, $params);
+
+        return $response;
+    }
+
+    /**
      * 创建事件资产
      * https://open.oceanengine.com/labels/7/docs/1709792943937547
      */

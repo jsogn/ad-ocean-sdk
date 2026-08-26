@@ -1179,6 +1179,17 @@ return [
         'response' => AdOceanSdk\EBP\Response\EbpLevelGetGetResponse::class,
     ],
     /**
+    * @desc 获取组织维度视频列表（ebp）NEW
+    * @doc  https://open.oceanengine.com/labels/7/docs/1871578054932524?origin=left_nav
+    **/
+    'openEbpMaterialListGetApi' => [
+        'desc' => '获取组织维度视频列表（ebp）NEW',
+        'doc' => 'https://open.oceanengine.com/labels/7/docs/1871578054932524?origin=left_nav',
+        'call' => AdOceanSdk\Tools\Api\EbpMaterialListGetApi::class,
+        'params' => AdOceanSdk\Tools\Params\EbpMaterialListGetParams::class,
+        'response' => AdOceanSdk\Tools\Response\EbpMaterialListGetResponse::class,
+    ],
+    /**
     * @desc 创建事件资产
     * @doc  https://open.oceanengine.com/labels/7/docs/1709792943937547
     **/
